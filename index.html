@@ -39,33 +39,26 @@
 
   <!-- Floating Modern Header — Main Website Exploration Hub -->
   <header class="site-main-nav" id="mainHeader">
-    <a class="nav-brand-group" href="#section-01" onclick="App.scrollToSection('section-01', event)" aria-label="Samarthya Home">
+    <a class="nav-brand-group" href="#page-home" onclick="App.navigate('home', event)" aria-label="Samarthya Home">
       <div class="brand-monogram">S</div>
       <div class="brand-text">Samarthya <span class="brand-badge">SIH26093</span></div>
     </a>
 
     <ul class="nav-sections-menu" id="navSectionsMenu">
-      <li class="nav-section-item"><a href="#section-01" class="active" onclick="App.scrollToSection('section-01', event)"><span class="nav-dot"></span> Home</a></li>
-      <li class="nav-section-item"><a href="#page-match" data-page="match" onclick="App.navigate('match', event)"><span class="nav-dot"></span> Find Schemes</a></li>
-      <li class="nav-section-item"><a href="#section-03" onclick="App.scrollToSection('section-03', event)"><span class="nav-dot"></span> Financial Relief</a></li>
-      <li class="nav-section-item"><a href="#section-04" onclick="App.scrollToSection('section-04', event)"><span class="nav-dot"></span> Why Samarthya</a></li>
-      <li class="nav-section-item"><a href="#section-05" onclick="App.scrollToSection('section-05', event)"><span class="nav-dot"></span> Features &amp; Tools</a></li>
-      <li class="nav-section-item"><a href="#page-dashboard" data-page="dashboard" onclick="App.navigate('dashboard', event)"><span class="nav-dot"></span> Dashboard</a></li>
-      <li class="nav-section-item"><a href="#section-06" onclick="App.scrollToSection('section-06', event)"><span class="nav-dot"></span> Official Portals</a></li>
+      <li class="nav-section-item"><a href="#page-home" data-page="home" class="active" onclick="App.navigate('home', event)"><span class="nav-dot"></span> <span data-i18n="navHome">Home</span></a></li>
+      <li class="nav-section-item"><a href="#page-relief" data-page="relief" onclick="App.navigate('relief', event)"><span class="nav-dot"></span> <span data-i18n="navRelief">Financial Relief</span></a></li>
+      <li class="nav-section-item"><a href="#page-why" data-page="why" onclick="App.navigate('why', event)"><span class="nav-dot"></span> <span data-i18n="navWhy">Why Samarthya</span></a></li>
+      <li class="nav-section-item"><a href="#page-features" data-page="features" onclick="App.navigate('features', event)"><span class="nav-dot"></span> <span data-i18n="navFeatures">Features &amp; Tools</span></a></li>
+      <li class="nav-section-item"><a href="#page-dashboard" data-page="dashboard" onclick="App.navigate('dashboard', event)"><span class="nav-dot"></span> <span data-i18n="navDashboard">Dashboard</span></a></li>
+      <li class="nav-section-item"><a href="#page-portals" data-page="portals" onclick="App.navigate('portals', event)"><span class="nav-dot"></span> <span data-i18n="navPortals">Official Portals</span></a></li>
     </ul>
 
     <div class="nav-utilities-group">
       <button type="button" class="nav-cta-btn" onclick="App.navigate('match')" aria-label="Find Eligible Schemes">
-        <span>🎯 Find Schemes</span>
+        <span data-i18n="navFindSchemes">🎯 Find Schemes</span>
       </button>
-      <button class="nav-util-btn" onclick="WisprFlow.toggle()" title="Wispr Voice Matching">
-        🎙️ <span>Voice</span>
-      </button>
-      <button class="nav-util-btn" onclick="SamarthyaAI.toggle()" title="Samarthya Virtual AI">
-        ✨ <span>Ask AI</span>
-      </button>
-      <button class="nav-util-btn" onclick="AccessibilitySuite.togglePanel()" title="Accessibility Suite">
-        ♿ <span>A11y</span>
+      <button type="button" class="nav-util-btn" id="headerVoiceBtn" onclick="WisprFlow.toggle()" title="Wispr Voice Matching">
+        <span data-i18n="navVoice">🎙️ Voice</span>
       </button>
       <div class="lang-select-wrap">
         <select class="nav-lang-select" id="langSelect" onchange="I18N.setLanguage(this.value)"
@@ -98,15 +91,15 @@
             <span class="pulse-ring"></span>
             <span class="pulse-core"></span>
           </span>
-          <span class="pill-text-shimmer">SIH26093 &bull; Zero-Document Statutory AI Engine</span>
+          <span class="pill-text-shimmer" data-i18n="heroPill">SIH26093 &bull; Zero-Document Statutory AI Engine</span>
           <span class="pill-arrow-tag" aria-hidden="true">&rarr;</span>
         </div>
 
         <!-- Element 2: Modern Static Clean Headline -->
         <div class="hero-clean-headline-wrap">
           <h1 class="hero-clean-headline">
-            <span class="headline-row-1">Empowering Beneficiaries</span>
-            <span class="headline-row-2">with Intelligent Access</span>
+            <span class="headline-row-1" data-i18n="heroHeadRow1">Empowering Beneficiaries</span>
+            <span class="headline-row-2" data-i18n="heroHeadRow2">with Intelligent Access</span>
           </h1>
         </div>
 
@@ -120,7 +113,7 @@
               <span class="btn-beam-core"></span>
             </span>
             <span class="btn-beam-body">
-              <span>Check Welfare Eligibility</span>
+              <span data-i18n="heroWelfareBtn">Check Welfare Eligibility</span>
               <span class="btn-beam-icon" aria-hidden="true">&rarr;</span>
             </span>
           </button>
@@ -133,7 +126,7 @@
               <span class="btn-beam-core"></span>
             </span>
             <span class="btn-beam-body">
-              <span>Explore Concessional Credit</span>
+              <span data-i18n="heroCreditBtn">Explore Concessional Credit</span>
               <span class="btn-beam-icon" aria-hidden="true">&rarr;</span>
             </span>
           </button>
@@ -143,22 +136,22 @@
         <div class="hero-micro-metrics-dock" role="region" aria-label="Portal Highlights">
           <div class="metric-dock-item">
             <span class="metric-dock-icon">⚪</span>
-            <span><strong>&lt; 2s</strong> Rule Evaluation</span>
+            <span><strong data-i18n="heroStatLatency">&lt; 2.0s</strong> <span data-i18n="heroStatLatencyLbl">Rule Latency</span></span>
           </div>
           <span class="metric-dock-divider" aria-hidden="true"></span>
           <div class="metric-dock-item">
             <span class="metric-dock-icon">⚪</span>
-            <span><strong>50+</strong> Welfare Schemes</span>
+            <span><strong data-i18n="heroStatSchemes">50+</strong> <span data-i18n="heroStatSchemesLbl">Welfare Schemes</span></span>
           </div>
           <span class="metric-dock-divider" aria-hidden="true"></span>
           <div class="metric-dock-item">
             <span class="metric-dock-icon">⚪</span>
-            <span><strong>6.5%</strong> NSFDC Credit</span>
+            <span><strong data-i18n="heroStatRate">4.0% – 6.5%</strong> <span data-i18n="heroStatRateLbl">NSFDC Credit</span></span>
           </div>
           <span class="metric-dock-divider" aria-hidden="true"></span>
           <div class="metric-dock-item">
             <span class="metric-dock-icon">⚪</span>
-            <span><strong>100%</strong> DPDP Private</span>
+            <span><strong data-i18n="heroStatPrivacy">100%</strong> <span data-i18n="heroStatPrivacyLbl">DPDP Private</span></span>
           </div>
         </div>
 
@@ -172,11 +165,11 @@
 
           <!-- LEFT COLUMN: Big Heading, Subtitle & Statutory Metrics -->
           <div class="rb-mission-left">
-            <span class="rb-section-tag">02 // WEBSITE DETAIL &amp; MISSION</span>
+            <span class="rb-section-tag" data-i18n="sec02Tag">02 // WEBSITE DETAIL &amp; MISSION</span>
             <h2 class="rb-mission-headline">
-              Bridging Entitlements with <span class="rb-gradient-text">Intelligent Guidance</span>
+              <span data-i18n="sec02Title">Bridging Entitlements with</span> <span class="rb-gradient-text" data-i18n="sec02TitleGrad">Intelligent Guidance</span>
             </h2>
-            <p class="rb-mission-lead">
+            <p class="rb-mission-lead" data-i18n="sec02Lead">
               Solving the last-mile delivery crisis for welfare schemes and concessional channel credit across India
               through zero-document client privacy, statutory scorecards, and sub-second rule evaluation.
             </p>
@@ -315,14 +308,19 @@
         </div>
       </div>
     </section>
+  </div> <!-- End page-home -->
 
+  <!-- ==========================================================================
+       WINDOW 2: FINANCIAL RELIEF (BENEFITS & CONCESSIONAL CREDIT)
+       ========================================================================== -->
+  <div class="page" id="page-relief">
     <!-- ==================== 03: BENEFITS ==================== -->
     <section class="site-section rb-section" id="section-03">
       <div class="section-inner">
         <div class="rb-section-header">
-          <span class="rb-section-tag">03 // BENEFITS</span>
-          <h2 class="rb-section-title">Direct Entitlements &amp; Financial Relief</h2>
-          <p class="rb-section-subtitle">Tangible citizen benefits: scholarships, equipment subsidies, lower loan
+          <span class="rb-section-tag" data-i18n="sec03Tag">03 // BENEFITS</span>
+          <h2 class="rb-section-title" data-i18n="sec03Title">Direct Entitlements &amp; Financial Relief</h2>
+          <p class="rb-section-subtitle" data-i18n="sec03Subtitle">Tangible citizen benefits: scholarships, equipment subsidies, lower loan
             interest rates, and interest-free moratorium periods.</p>
         </div>
 
@@ -401,14 +399,19 @@
         </div>
       </div>
     </section>
+  </div> <!-- End page-relief -->
 
+  <!-- ==========================================================================
+       WINDOW 3: WHY SAMARTHYA (PRIVACY-FIRST & STATUTORY TRUST)
+       ========================================================================== -->
+  <div class="page" id="page-why">
     <!-- ==================== 04: WHY US ==================== -->
     <section class="site-section rb-section" id="section-04">
       <div class="section-inner">
         <div class="rb-section-header">
-          <span class="rb-section-tag">04 // WHY US</span>
-          <h2 class="rb-section-title">Privacy-First, Middleman-Free &amp; Frictionless</h2>
-          <p class="rb-section-subtitle">Why beneficiaries trust Samarthya: zero document storage, compliance standards,
+          <span class="rb-section-tag" data-i18n="sec04Tag">04 // WHY US</span>
+          <h2 class="rb-section-title" data-i18n="sec04Title">Privacy-First, Middleman-Free &amp; Frictionless</h2>
+          <p class="rb-section-subtitle" data-i18n="sec04Subtitle">Why beneficiaries trust Samarthya: zero document storage, compliance standards,
             instant rule scoring, and direct application routes.</p>
         </div>
 
@@ -449,14 +452,19 @@
         </div>
       </div>
     </section>
+  </div> <!-- End page-why -->
 
+  <!-- ==========================================================================
+       WINDOW 4: FEATURES & TOOLS (INTERACTIVE CITIZEN UTILITY SUITE)
+       ========================================================================== -->
+  <div class="page" id="page-features">
     <!-- ==================== 05: OUR FEATURES ==================== -->
     <section class="site-section rb-section" id="section-05">
       <div class="section-inner">
         <div class="rb-section-header">
-          <span class="rb-section-tag">05 // OUR FEATURES</span>
-          <h2 class="rb-section-title">Full Suite of Public Tools</h2>
-          <p class="rb-section-subtitle">Access our complete set of interactive tools: Eligibility Matching, EMI
+          <span class="rb-section-tag" data-i18n="sec05Tag">05 // OUR FEATURES</span>
+          <h2 class="rb-section-title" data-i18n="sec05Title">Full Suite of Public Tools</h2>
+          <p class="rb-section-subtitle" data-i18n="sec05Subtitle">Access our complete set of interactive tools: Eligibility Matching, EMI
             Simulator, Nearest Partner Map, and District Camp Mode.</p>
         </div>
 
@@ -486,7 +494,7 @@
           </div>
 
           <!-- Card 2: Wispr Voice Assistant -->
-          <div class="spotlight-card" data-spotlight-color="rgba(56, 189, 248, 0.18)">
+          <div class="spotlight-card" id="wispr-voice-banner" data-spotlight-color="rgba(56, 189, 248, 0.18)">
             <div class="rb-bento-header">
               <div class="rb-bento-icon">🎙️</div>
               <div class="rb-soundwave" aria-hidden="true">
@@ -588,14 +596,19 @@
         </div>
       </div>
     </section>
+  </div> <!-- End page-features -->
 
+  <!-- ==========================================================================
+       WINDOW 5: OFFICIAL PORTALS (GOVERNMENT GATEWAYS & DIRECT LINKS)
+       ========================================================================== -->
+  <div class="page" id="page-portals">
     <!-- ==================== 06: ENDING & OFFICIAL PORTALS ==================== -->
     <section class="site-section rb-section" id="section-06" style="padding-bottom:120px;">
       <div class="section-inner">
         <div class="rb-section-header">
-          <span class="rb-section-tag">06 // ENDING &amp; OFFICIAL PORTALS</span>
-          <h2 class="rb-section-title">Official Government Gateways &amp; Support</h2>
-          <p class="rb-section-subtitle">Direct institutional application links and grievance channels for verified
+          <span class="rb-section-tag" data-i18n="sec06Tag">06 // ENDING &amp; OFFICIAL PORTALS</span>
+          <h2 class="rb-section-title" data-i18n="sec06Title">Official Government Gateways &amp; Support</h2>
+          <p class="rb-section-subtitle" data-i18n="sec06Subtitle">Direct institutional application links and grievance channels for verified
             schemes.</p>
         </div>
 
@@ -1191,17 +1204,21 @@
   <footer class="footer" id="appFooter">
     <div class="footer-container">
       <div class="footer-nav">
-        <a href="#home" onclick="App.navigate('home', event)" data-i18n="navHome">Home</a>
-        <a href="#match" onclick="App.navigate('match', event)" data-i18n="navMatch">Find Schemes</a>
-        <a href="#dashboard" onclick="App.navigate('dashboard', event)" data-i18n="navDashboard">Dashboard</a>
-        <a href="#how" onclick="App.scrollToHow(event)" data-i18n="navHow">How It Works</a>
-        <a href="#about-section" onclick="App.scrollToAbout(event)" data-i18n="navAbout">About</a>
-        <a href="#" onclick="WhatsAppLead.openModal();return false;" style="color:#25D366;font-weight:700">💬 VIP
-          WhatsApp Alerts</a>
+        <a href="#page-home" onclick="App.navigate('home', event)" data-i18n="navHome">Home</a>
+        <a href="#page-relief" onclick="App.navigate('relief', event)" data-i18n="navRelief">Financial Relief</a>
+        <a href="#page-why" onclick="App.navigate('why', event)" data-i18n="navWhy">Why Samarthya</a>
+        <a href="#page-features" onclick="App.navigate('features', event)" data-i18n="navFeatures">Features &amp; Tools</a>
+        <a href="#page-dashboard" onclick="App.navigate('dashboard', event)" data-i18n="navDashboard">Dashboard</a>
+        <a href="#page-portals" onclick="App.navigate('portals', event)" data-i18n="navPortals">Official Portals</a>
+        <a href="#page-match" onclick="App.navigate('match', event)" data-i18n="navMatch">Find Schemes</a>
+        <a href="javascript:void(0)" onclick="WhatsAppLead.openModal(event)" style="color:#25D366;font-weight:700">💬 VIP WhatsApp Alerts</a>
       </div>
       <p class="footer-text" data-i18n="poweredBy">Powered by Samarthya AI Engine • DPDP Act 2023 Compliant</p>
     </div>
   </footer>
+
+  <!-- Drawer Backdrop (Click-Outside Closer for AI Assistant & Accessibility Drawers) -->
+  <div class="drawer-backdrop" id="drawerBackdrop" onclick="AccessibilitySuite.closePanel(); SamarthyaAI.close();"></div>
 
   <!-- GSAP & ScrollTrigger CDN (Awwwards Grade Motion) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

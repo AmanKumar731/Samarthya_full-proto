@@ -19,12 +19,23 @@ const AccessibilitySuite = {
 
   togglePanel() {
     const panel = document.getElementById('a11yPanel');
-    if (panel) panel.classList.toggle('open');
+    const backdrop = document.getElementById('drawerBackdrop');
+    if (panel) {
+      const isOpen = panel.classList.toggle('open');
+      if (backdrop) backdrop.classList.toggle('active', isOpen);
+      if (isOpen && window.SamarthyaAI) {
+        SamarthyaAI.close();
+      }
+    }
   },
 
   closePanel() {
     const panel = document.getElementById('a11yPanel');
+    const backdrop = document.getElementById('drawerBackdrop');
     if (panel) panel.classList.remove('open');
+    if (backdrop && (!window.SamarthyaAI || !SamarthyaAI.isOpen)) {
+      backdrop.classList.remove('active');
+    }
   },
 
   // ============ 1. HIGH CONTRAST MODE ============

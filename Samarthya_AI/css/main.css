@@ -366,7 +366,7 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 96px 24px 80px;
+  padding: 96px clamp(20px, 4vw, 40px) 100px;
   position: relative;
   z-index: 1;
 }
@@ -381,6 +381,24 @@ img {
 .page.active {
   display: block;
   opacity: 1;
+  animation: windowFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes windowFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure standalone window pages start comfortably below the floating navbar */
+.page > .rb-section {
+  padding-top: 105px !important;
+  padding-bottom: 90px !important;
 }
 
 /* ============ Section Headers ============ */
@@ -766,7 +784,7 @@ img {
 /* ============ Footer ============ */
 .footer {
   margin-top: 80px;
-  padding: 36px 24px;
+  padding: 40px 32px 100px 32px;
   background: rgba(7, 9, 14, 0.9);
   border-top: 1px solid var(--border);
   position: relative;

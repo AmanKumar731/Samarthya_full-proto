@@ -31,27 +31,33 @@ const App = {
     if (window.PartnerLocator) PartnerLocator.init();
     this.initHeroVideo();
 
-    // Check URL hash for routing
-    const hash = window.location.hash.replace('#', '');
-    if (hash === 'how') {
-      this.navigate('home', false);
-      setTimeout(() => this.scrollToHow(), 200);
-    } else if (hash === 'about-section') {
-      this.navigate('home', false);
-      setTimeout(() => this.scrollToAbout(), 200);
-    } else if (hash && document.getElementById('page-' + hash)) {
-      this.navigate(hash, false);
-    }
+    // Check URL hash for window routing
+    const rawHash = window.location.hash.replace('#', '');
+    const aliasMap = {
+      'relief': 'relief',
+      'section-03': 'relief',
+      'why': 'why',
+      'section-04': 'why',
+      'features': 'features',
+      'section-05': 'features',
+      'portals': 'portals',
+      'section-06': 'portals',
+      'how': 'features',
+      'about-section': 'why',
+      'match': 'match',
+      'dashboard': 'dashboard',
+      'results': 'results',
+      'home': 'home'
+    };
+    const initialPage = aliasMap[rawHash] || (rawHash && document.getElementById('page-' + rawHash) ? rawHash : 'home');
+    this.navigate(initialPage, false);
 
     // Listen for browser back/forward and hash changes
     window.addEventListener('popstate', () => {
       const currentHash = window.location.hash.replace('#', '') || 'home';
-      if (currentHash === 'how') {
-        App.scrollToHow();
-      } else if (currentHash === 'about-section') {
-        App.scrollToAbout();
-      } else if (document.getElementById('page-' + currentHash) && App.currentPage !== currentHash) {
-        App.navigate(currentHash, false);
+      const mappedPage = aliasMap[currentHash] || currentHash;
+      if (document.getElementById('page-' + mappedPage) && App.currentPage !== mappedPage) {
+        App.navigate(mappedPage, false);
       }
     });
   },
@@ -149,10 +155,20 @@ const App = {
       eventOrPushState.preventDefault();
     }
 
-    if (page === 'how') {
-      this.scrollToHow(eventOrPushState);
-      return;
-    }
+    const aliasMap = {
+      'relief': 'relief',
+      'section-03': 'relief',
+      'why': 'why',
+      'section-04': 'why',
+      'features': 'features',
+      'section-05': 'features',
+      'portals': 'portals',
+      'section-06': 'portals',
+      'how': 'features',
+      'about-section': 'why',
+      'about': 'why'
+    };
+    page = aliasMap[page] || page;
 
     // Hide all pages
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -177,6 +193,9 @@ const App = {
       if (page === 'ngo' && window.NGOMode) {
         NGOMode.renderNGODashboard();
       }
+      if (page === 'features' && window.PartnerLocator && PartnerLocator.map) {
+        setTimeout(() => PartnerLocator.map.invalidateSize(), 200);
+      }
     }
 
     // Update nav links
@@ -187,11 +206,7 @@ const App = {
     const sectionNavLinks = document.querySelectorAll('#navSectionsMenu a');
     sectionNavLinks.forEach(l => {
       l.classList.remove('active');
-      if (page === 'match' && l.getAttribute('data-page') === 'match') {
-        l.classList.add('active');
-      } else if (page === 'dashboard' && l.getAttribute('data-page') === 'dashboard') {
-        l.classList.add('active');
-      } else if (page === 'home' && l.getAttribute('href') === '#section-01') {
+      if (l.getAttribute('data-page') === page) {
         l.classList.add('active');
       }
     });
@@ -206,13 +221,29 @@ const App = {
     const navLinks = document.getElementById('navLinks');
     if (navLinks) navLinks.classList.remove('open');
 
-    // Announce for accessibility
-    if (window.AccessibilitySuite) {
-      AccessibilitySuite.announce(`Navigated to ${page} page`);
+    // Dismiss floating drawers when navigating to prevent obstruction
+    if (window.AccessibilitySuite && typeof AccessibilitySuite.closePanel === 'function') {
+      AccessibilitySuite.closePanel();
+    }
+    if (window.SamarthyaAI && typeof SamarthyaAI.close === 'function') {
+      SamarthyaAI.close();
     }
 
-    if (page === 'home' && window.ScrollTrigger) {
-      setTimeout(() => ScrollTrigger.refresh(), 150);
+    if (page === 'match') {
+      const matchPage = document.getElementById('page-match');
+      if (matchPage && !matchPage.dataset.drawerDismissBound) {
+        matchPage.dataset.drawerDismissBound = 'true';
+        matchPage.addEventListener('focusin', () => {
+          if (window.AccessibilitySuite) AccessibilitySuite.closePanel();
+          if (window.SamarthyaAI) SamarthyaAI.close();
+        });
+        matchPage.addEventListener('click', (e) => {
+          if (e.target.closest('.btn') || e.target.closest('.form-input') || e.target.closest('.form-select') || e.target.closest('.checkbox-item')) {
+            if (window.AccessibilitySuite) AccessibilitySuite.closePanel();
+            if (window.SamarthyaAI) SamarthyaAI.close();
+          }
+        });
+      }
     }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -220,59 +251,26 @@ const App = {
 
   scrollToSection(sectionId, e) {
     if (e && e.preventDefault) e.preventDefault();
-
-    if (this.currentPage !== 'home') {
-      this.navigate('home', false);
-    }
-
-    setTimeout(() => {
-      const targetEl = document.getElementById(sectionId);
-      if (targetEl) {
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-
-      const navLinks = document.querySelectorAll('#navSectionsMenu a');
-      navLinks.forEach(l => {
-        const href = l.getAttribute('href');
-        if (href === '#' + sectionId) {
-          l.classList.add('active');
-        } else {
-          l.classList.remove('active');
-        }
-      });
-
-      if (window.history && window.history.pushState) {
-        window.history.pushState(null, '', '#' + sectionId);
-      }
-    }, 20);
+    const map = {
+      'section-01': 'home',
+      'section-02': 'home',
+      'section-03': 'relief',
+      'section-04': 'why',
+      'section-05': 'features',
+      'section-06': 'portals',
+    };
+    const targetPage = map[sectionId] || 'home';
+    this.navigate(targetPage, e);
   },
 
   scrollToHow(e) {
     if (e && e.preventDefault) e.preventDefault();
-    if (this.currentPage !== 'home') {
-      this.navigate('home', true);
-      setTimeout(() => {
-        const section = document.getElementById('how-it-works-section');
-        if (section) section.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      const section = document.getElementById('how-it-works-section');
-      if (section) section.scrollIntoView({ behavior: 'smooth' });
-    }
+    this.navigate('features', e);
   },
 
   scrollToAbout(e) {
     if (e && e.preventDefault) e.preventDefault();
-    if (this.currentPage !== 'home') {
-      this.navigate('home', true);
-      setTimeout(() => {
-        const section = document.getElementById('about-section');
-        if (section) section.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      const section = document.getElementById('about-section');
-      if (section) section.scrollIntoView({ behavior: 'smooth' });
-    }
+    this.navigate('why', e);
   },
 
   initHeroVideo() {
@@ -364,137 +362,44 @@ const App = {
     const header = document.getElementById('mainHeader') || document.querySelector('.site-main-nav');
     const navMenu = document.getElementById('navSectionsMenu');
     const navLinks = navMenu ? navMenu.querySelectorAll('a') : document.querySelectorAll('.nav-section-item a');
-    const sectionIds = ['section-01', 'section-02', 'section-03', 'section-04', 'section-05', 'section-06'];
-    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
-    // 1. Smooth Navigation Link Handling
+    // 1. Navigation Link Handling: Each link changes the active window
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
+        e.preventDefault();
         const page = link.getAttribute('data-page');
+        const href = link.getAttribute('href');
 
-        if (page === 'match') {
-          e.preventDefault();
-          App.navigate('match', e);
-        } else if (page === 'dashboard') {
-          e.preventDefault();
-          App.navigate('dashboard', e);
+        if (page) {
+          App.navigate(page, e);
+        } else if (href && href.startsWith('#page-')) {
+          App.navigate(href.replace('#page-', ''), e);
         } else if (href && href.startsWith('#section-')) {
-          e.preventDefault();
-          const secId = href.replace('#', '');
-          App.scrollToSection(secId, e);
+          App.scrollToSection(href.replace('#', ''), e);
         }
       });
     });
 
-    // Brand logo click scrolls smoothly to #section-01
+    // Brand logo click navigates to Home window
     const brandGroup = document.querySelector('.nav-brand-group');
     if (brandGroup) {
       brandGroup.addEventListener('click', (e) => {
         e.preventDefault();
-        App.scrollToSection('section-01', e);
+        App.navigate('home', e);
       });
     }
 
-    // 2. High-Performance Scroll-Spy & Dynamic Scrolled Navbar Styling
-    let ticking = false;
-    let sectionTops = [];
-    let docHeight = 0;
-
-    function updateDimensions() {
-      if (App.currentPage !== 'home') return;
-      docHeight = Math.max(
-        document.body.scrollHeight,
-        document.documentElement.scrollHeight,
-        document.body.offsetHeight,
-        document.documentElement.offsetHeight
-      );
-      sectionTops = sections.map(sec => ({
-        id: sec.id,
-        top: sec.offsetTop,
-        bottom: sec.offsetTop + sec.offsetHeight
-      }));
-    }
-
-    updateDimensions();
-
-    function updateNavState() {
-      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
-
-      // Dynamic Scrolled Navbar Styling (isScrolled = scrollY > 40)
-      if (header) {
-        if (scrollY > 40) {
-          if (!header.classList.contains('nav-scrolled')) {
-            header.classList.add('nav-scrolled', 'scrolled');
-          }
-        } else {
-          if (header.classList.contains('nav-scrolled')) {
-            header.classList.remove('nav-scrolled', 'scrolled');
-          }
-        }
-      }
-
-      // Only perform section scroll-spy when on the home continuous page
-      if (App.currentPage !== 'home') {
-        ticking = false;
-        return;
-      }
-
-      // Fast numeric scroll-spy using cached offsets - ZERO layout thrashing!
-      const scrollBottom = window.innerHeight + scrollY;
-      let activeId = 'section-01';
-
-      if (docHeight > 0 && scrollBottom >= docHeight - 80) {
-        activeId = sectionIds[sectionIds.length - 1]; // 'section-06'
-      } else {
-        const thresholdY = scrollY + 150;
-        for (let i = 0; i < sectionTops.length; i++) {
-          const sec = sectionTops[i];
-          if (sec.top <= thresholdY && sec.bottom > thresholdY) {
-            activeId = sec.id;
-            break;
-          } else if (sec.top <= thresholdY) {
-            activeId = sec.id;
-          }
-        }
-      }
-
-      // Update active highlight class only when changed
-      navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        const isSectionLink = href && href.startsWith('#section-');
-        if (isSectionLink) {
-          const shouldBeActive = (href === '#' + activeId);
-          if (shouldBeActive && !link.classList.contains('active')) {
-            link.classList.add('active');
-          } else if (!shouldBeActive && link.classList.contains('active')) {
-            link.classList.remove('active');
-          }
-        }
-      });
-
-      ticking = false;
-    }
-
-    // Single throttled scroll listener using requestAnimationFrame
+    // Dynamic Scrolled Navbar Styling
     window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateNavState);
-        ticking = true;
+      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (header) {
+        if (scrollY > 30) {
+          header.classList.add('nav-scrolled', 'scrolled');
+        } else {
+          header.classList.remove('nav-scrolled', 'scrolled');
+        }
       }
     }, { passive: true });
-
-    // Recalculate dimensions on resize
-    window.addEventListener('resize', () => {
-      updateDimensions();
-      if (!ticking) {
-        window.requestAnimationFrame(updateNavState);
-        ticking = true;
-      }
-    }, { passive: true });
-
-    // Run on initial load
-    updateNavState();
   },
 
   setupKeyboardNav() {
@@ -809,13 +714,87 @@ const FormController = {
     }
   },
 
+  showFieldValidation(stepPanelId, invalidFields, message) {
+    const panel = document.getElementById(stepPanelId);
+    if (!panel) return;
+
+    // Shake the form card
+    const card = panel.querySelector('.form-card');
+    if (card) {
+      card.classList.remove('form-shake');
+      void card.offsetWidth;
+      card.classList.add('form-shake');
+      setTimeout(() => card.classList.remove('form-shake'), 450);
+    }
+
+    // Highlight fields and show error text
+    invalidFields.forEach(({ el, errEl }) => {
+      if (el) {
+        el.classList.add('has-error');
+        const clearHandler = () => {
+          el.classList.remove('has-error');
+          if (errEl) errEl.classList.remove('show');
+          el.removeEventListener('input', clearHandler);
+          el.removeEventListener('change', clearHandler);
+        };
+        el.addEventListener('input', clearHandler);
+        el.addEventListener('change', clearHandler);
+      }
+      if (errEl) {
+        errEl.classList.add('show');
+      }
+    });
+
+    // Show/Update inline validation toast inside card
+    if (card) {
+      let toast = card.querySelector('.form-validation-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'form-validation-toast';
+        card.insertBefore(toast, card.firstChild);
+      }
+      toast.innerHTML = `<span>⚠️</span> <span>${message || 'Please complete all required fields highlighted in red.'}</span>`;
+    }
+
+    // Scroll first invalid field into view smoothly
+    if (invalidFields[0] && invalidFields[0].el) {
+      invalidFields[0].el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (typeof invalidFields[0].el.focus === 'function') {
+        setTimeout(() => invalidFields[0].el.focus(), 150);
+      }
+    }
+  },
+
+  clearFieldValidation(stepPanelId) {
+    const panel = document.getElementById(stepPanelId);
+    if (!panel) return;
+    panel.querySelectorAll('.has-error').forEach(el => el.classList.remove('has-error'));
+    panel.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
+    const toast = panel.querySelector('.form-validation-toast');
+    if (toast) toast.remove();
+  },
+
   validateCurrentStep() {
+    this.clearFieldValidation('formStep' + this.currentStep);
+
     if (this.currentStep === 1) {
-      const dob = document.getElementById('inputDob').value;
-      const gender = document.getElementById('inputGender').value;
-      const state = document.getElementById('inputState').value;
-      if (!dob || !gender || !state) {
-        alert('Please fill all required fields in Personal Info.');
+      const dobInput = document.getElementById('inputDob');
+      const genderSelect = document.getElementById('inputGender');
+      const stateSelect = document.getElementById('inputState');
+      const invalidFields = [];
+
+      if (!dobInput || !dobInput.value) {
+        invalidFields.push({ el: dobInput, errEl: dobInput?.parentElement?.querySelector('.form-error') });
+      }
+      if (!genderSelect || !genderSelect.value) {
+        invalidFields.push({ el: genderSelect, errEl: genderSelect?.parentElement?.querySelector('.form-error') });
+      }
+      if (!stateSelect || !stateSelect.value) {
+        invalidFields.push({ el: stateSelect, errEl: stateSelect?.parentElement?.querySelector('.form-error') });
+      }
+
+      if (invalidFields.length > 0) {
+        this.showFieldValidation('formStep1', invalidFields, 'Please complete Date of Birth, Gender, and State Domicile to proceed.');
         return false;
       }
       return true;
@@ -824,18 +803,28 @@ const FormController = {
     if (this.currentStep === 2) {
       const checked = document.querySelectorAll('#disabilityCheckboxes input:checked');
       if (checked.length === 0) {
+        const boxGrid = document.getElementById('disabilityCheckboxes');
         const err = document.getElementById('disabilityError');
-        if (err) err.style.display = 'block';
+        this.showFieldValidation('formStep2', [{ el: boxGrid, errEl: err }], 'Please select at least one condition or "No Disability".');
         return false;
       }
       return true;
     }
 
     if (this.currentStep === 3) {
-      const edu = document.getElementById('inputEducation').value;
-      const inc = document.getElementById('inputIncome').value;
-      if (!edu || !inc) {
-        alert('Please select both your education level and income range.');
+      const eduSelect = document.getElementById('inputEducation');
+      const incSelect = document.getElementById('inputIncome');
+      const invalidFields = [];
+
+      if (!eduSelect || !eduSelect.value) {
+        invalidFields.push({ el: eduSelect, errEl: eduSelect?.parentElement?.querySelector('.form-error') });
+      }
+      if (!incSelect || !incSelect.value) {
+        invalidFields.push({ el: incSelect, errEl: incSelect?.parentElement?.querySelector('.form-error') });
+      }
+
+      if (invalidFields.length > 0) {
+        this.showFieldValidation('formStep3', invalidFields, 'Please select your current education level and annual income.');
         return false;
       }
       return true;
@@ -962,29 +951,41 @@ const CreditFormController = {
   },
 
   validateCurrentStep() {
+    const panel = document.getElementById('creditFormStep' + this.currentStep);
+    if (panel) {
+      panel.querySelectorAll('.has-error').forEach(el => el.classList.remove('has-error'));
+      panel.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
+      const toast = panel.querySelector('.form-validation-toast');
+      if (toast) toast.remove();
+    }
+
     if (this.currentStep === 1) {
-      const state = document.getElementById('creditInputState')?.value;
-      const gender = document.getElementById('creditInputGender')?.value;
-      if (!state || !gender) {
-        alert('Please select your state domicile and gender.');
+      const state = document.getElementById('creditInputState');
+      const gender = document.getElementById('creditInputGender');
+      const invalidFields = [];
+      if (!state?.value) invalidFields.push({ el: state, errEl: state?.parentElement?.querySelector('.form-error') });
+      if (!gender?.value) invalidFields.push({ el: gender, errEl: gender?.parentElement?.querySelector('.form-error') });
+      if (invalidFields.length > 0) {
+        FormController.showFieldValidation('creditFormStep1', invalidFields, 'Please select your state domicile and gender.');
         return false;
       }
       return true;
     }
 
     if (this.currentStep === 2) {
-      const cost = parseInt(document.getElementById('creditInputCost')?.value || 0);
-      if (cost <= 0) {
-        alert('Please enter a valid estimated project or course cost.');
+      const cost = document.getElementById('creditInputCost');
+      const costVal = parseInt(cost?.value || 0);
+      if (costVal <= 0) {
+        FormController.showFieldValidation('creditFormStep2', [{ el: cost, errEl: cost?.parentElement?.querySelector('.form-error') }], 'Please enter a valid estimated project or course cost.');
         return false;
       }
       return true;
     }
 
     if (this.currentStep === 3) {
-      const income = document.getElementById('creditInputIncome')?.value;
-      if (!income) {
-        alert('Please select your annual household income range.');
+      const income = document.getElementById('creditInputIncome');
+      if (!income?.value) {
+        FormController.showFieldValidation('creditFormStep3', [{ el: income, errEl: income?.parentElement?.querySelector('.form-error') }], 'Please select your annual household income range.');
         return false;
       }
       return true;

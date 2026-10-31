@@ -8,8 +8,8 @@
    ========================================== */
 .a11y-floating-btn {
   position: fixed;
-  bottom: 26px;
-  left: 26px;
+  bottom: 24px;
+  left: 24px;
   z-index: 990;
   background: var(--gradient-button);
   color: #FFFFFF;
@@ -33,8 +33,8 @@
 
 .a11y-panel {
   position: fixed;
-  bottom: 90px;
-  left: 26px;
+  bottom: 86px;
+  left: 24px;
   z-index: 995;
   width: 310px;
   background: rgba(11, 15, 25, 0.96);

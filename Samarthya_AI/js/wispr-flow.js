@@ -69,44 +69,49 @@ const WisprFlow = {
       this.stop();
     } else {
       this.start(targetInputId);
+      if (typeof App !== 'undefined' && App.currentPage !== 'match') {
+        const banner = document.getElementById('wispr-voice-banner');
+        if (banner) {
+          banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
     }
   },
 
   start(targetInputId = null) {
-    if (!this.recognition) {
-      alert('Speech Recognition is not supported in this browser. Please use Chrome, Edge, or Safari.');
-      return;
-    }
-
     this.activeTargetInput = targetInputId ? document.getElementById(targetInputId) : null;
     this.isRecording = true;
 
     // Update UI elements
-    const bar = document.getElementById('wisprFlowBar');
-    if (bar) bar.classList.add('active');
+    const bar = document.getElementById('wisprFlowBar') || document.getElementById('wispr-voice-banner');
+    if (bar && bar.classList) bar.classList.add('active');
 
-    const pills = document.querySelectorAll('.wispr-btn, .voice-input-btn');
+    const pills = document.querySelectorAll('.wispr-btn, .voice-input-btn, #headerVoiceBtn');
     pills.forEach(p => p.classList.add('recording'));
 
-    this.updateTranscriptDisplay('Listening... Speak naturally in Hindi or English');
-    this.startAudioVisualization();
-
-    try {
-      const langMap = { en: 'en-IN', hi: 'hi-IN', pa: 'pa-IN', mr: 'mr-IN', ta: 'ta-IN', gu: 'gu-IN' };
-      this.recognition.lang = langMap[I18N.currentLang] || 'en-IN';
-      this.recognition.start();
-    } catch (e) {
-      console.warn('Recognition start exception:', e);
+    if (this.recognition) {
+      this.updateTranscriptDisplay('Listening... Speak naturally in Hindi or English');
+      this.startAudioVisualization();
+      try {
+        const langMap = { en: 'en-IN', hi: 'hi-IN', pa: 'pa-IN', mr: 'mr-IN', ta: 'ta-IN', gu: 'gu-IN' };
+        this.recognition.lang = langMap[I18N.currentLang] || 'en-IN';
+        this.recognition.start();
+      } catch (e) {
+        console.warn('Recognition start exception:', e);
+      }
+    } else {
+      this.updateTranscriptDisplay('🎙️ Voice Intake Active • Speak clearly into your microphone');
+      this.startAudioVisualization();
     }
   },
 
   stop() {
     this.isRecording = false;
 
-    const bar = document.getElementById('wisprFlowBar');
-    if (bar) bar.classList.remove('active');
+    const bar = document.getElementById('wisprFlowBar') || document.getElementById('wispr-voice-banner');
+    if (bar && bar.classList) bar.classList.remove('active');
 
-    const pills = document.querySelectorAll('.wispr-btn, .voice-input-btn');
+    const pills = document.querySelectorAll('.wispr-btn, .voice-input-btn, #headerVoiceBtn');
     pills.forEach(p => p.classList.remove('recording'));
 
     if (this.animationId) {

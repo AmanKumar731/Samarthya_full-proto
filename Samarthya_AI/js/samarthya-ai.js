@@ -44,6 +44,12 @@ const SamarthyaAI = {
     this.isOpen = !this.isOpen;
     const drawer = document.getElementById('aiDrawer');
     const fab = document.getElementById('aiFloatingBtn');
+    const backdrop = document.getElementById('drawerBackdrop');
+
+    if (this.isOpen && window.AccessibilitySuite) {
+      AccessibilitySuite.closePanel();
+    }
+
     if (drawer) {
       drawer.classList.toggle('open', this.isOpen);
       if (this.isOpen) {
@@ -55,6 +61,9 @@ const SamarthyaAI = {
     }
     if (fab) {
       fab.classList.toggle('active', this.isOpen);
+    }
+    if (backdrop) {
+      backdrop.classList.toggle('active', this.isOpen);
     }
   },
 
@@ -71,8 +80,12 @@ const SamarthyaAI = {
     this.isOpen = false;
     const drawer = document.getElementById('aiDrawer');
     const fab = document.getElementById('aiFloatingBtn');
+    const backdrop = document.getElementById('drawerBackdrop');
     if (drawer) drawer.classList.remove('open');
     if (fab) fab.classList.remove('active');
+    if (backdrop && (!window.AccessibilitySuite || !document.getElementById('a11yPanel')?.classList.contains('open'))) {
+      backdrop.classList.remove('active');
+    }
   },
 
   renderWelcome() {
