@@ -1530,16 +1530,6 @@ body {
 }
 
 @media (max-width: 1040px) {
-  .nav-sections-menu {
-    display: flex;
-    max-width: 50vw;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .nav-section-item a {
-    padding: 5px 8px;
-    font-size: 0.75rem;
-  }
   .hero-split-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1556,11 +1546,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .site-main-nav {
-    top: 10px;
-    width: calc(100% - 20px);
-    padding: 6px 14px;
-  }
   .hero-content-layer {
     padding-top: 85px;
     padding-bottom: 100px;

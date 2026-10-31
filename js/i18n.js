@@ -1929,6 +1929,10 @@ const I18N = {
     if (select && select.value !== lang) {
       select.value = lang;
     }
+    const mobileSelect = document.getElementById('mobileLangSelect');
+    if (mobileSelect && mobileSelect.value !== lang) {
+      mobileSelect.value = lang;
+    }
 
     this.applyTranslations();
   },

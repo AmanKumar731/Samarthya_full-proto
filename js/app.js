@@ -217,7 +217,11 @@ const App = {
       window.location.hash = page;
     }
 
-    // Close mobile nav
+    // Close mobile nav & sync active link
+    if (window.MobileNav) {
+      MobileNav.syncActive(page);
+      MobileNav.close();
+    }
     const navLinks = document.getElementById('navLinks');
     if (navLinks) navLinks.classList.remove('open');
 
