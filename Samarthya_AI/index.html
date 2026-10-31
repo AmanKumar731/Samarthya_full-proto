@@ -17,14 +17,10 @@
   <link rel="stylesheet" href="css/features.css?v=6.0">
   <link rel="stylesheet" href="css/cinematic.css?v=6.0">
   <link rel="stylesheet" href="css/immersive.css?v=6.0">
-  <link rel="stylesheet" href="css/pixel-snow-hero.css?v=8.0">
-  <link rel="stylesheet" href="css/features-bento.css?v=1.0">
-  <link rel="stylesheet" href="css/clean-sections.css?v=1.0">
-  <link rel="stylesheet" href="css/react-bits-showcase.css?v=1.0">
-  <link rel="stylesheet" href="css/bounce-cards.css?v=1.0">
-  <link rel="stylesheet" href="css/scroll-expand.css?v=1.0">
-  <link rel="stylesheet" href="css/scroll-float.css?v=1.0">
-  <link rel="stylesheet" href="css/ascii-ripple.css?v=1.0">
+  <link rel="stylesheet" href="css/pixel-snow-hero.css?v=11.0">
+  <link rel="stylesheet" href="css/features-bento.css?v=11.0">
+  <link rel="stylesheet" href="css/clean-sections.css?v=11.0">
+  <link rel="stylesheet" href="css/react-bits-showcase.css?v=11.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
@@ -41,23 +37,27 @@
     <div class="modal-content-wrap" id="modalContent"></div>
   </div>
 
-  <!-- Floating Modern 6-Section Header -->
+  <!-- Floating Modern Header — Main Website Exploration Hub -->
   <header class="site-main-nav" id="mainHeader">
-    <a class="nav-brand-group" href="#section-01" aria-label="Samarthya Home">
+    <a class="nav-brand-group" href="#section-01" onclick="App.scrollToSection('section-01', event)" aria-label="Samarthya Home">
       <div class="brand-monogram">S</div>
       <div class="brand-text">Samarthya <span class="brand-badge">SIH26093</span></div>
     </a>
 
     <ul class="nav-sections-menu" id="navSectionsMenu">
-      <li class="nav-section-item"><a href="#section-01" class="active"><span class="sec-num">01</span> Landing</a></li>
-      <li class="nav-section-item"><a href="#section-02"><span class="sec-num">02</span> Detail</a></li>
-      <li class="nav-section-item"><a href="#section-03"><span class="sec-num">03</span> Benefits</a></li>
-      <li class="nav-section-item"><a href="#section-04"><span class="sec-num">04</span> Why Us</a></li>
-      <li class="nav-section-item"><a href="#section-05"><span class="sec-num">05</span> Features</a></li>
-      <li class="nav-section-item"><a href="#section-06"><span class="sec-num">06</span> Ending</a></li>
+      <li class="nav-section-item"><a href="#section-01" class="active" onclick="App.scrollToSection('section-01', event)"><span class="nav-dot"></span> Home</a></li>
+      <li class="nav-section-item"><a href="#page-match" data-page="match" onclick="App.navigate('match', event)"><span class="nav-dot"></span> Find Schemes</a></li>
+      <li class="nav-section-item"><a href="#section-03" onclick="App.scrollToSection('section-03', event)"><span class="nav-dot"></span> Financial Relief</a></li>
+      <li class="nav-section-item"><a href="#section-04" onclick="App.scrollToSection('section-04', event)"><span class="nav-dot"></span> Why Samarthya</a></li>
+      <li class="nav-section-item"><a href="#section-05" onclick="App.scrollToSection('section-05', event)"><span class="nav-dot"></span> Features &amp; Tools</a></li>
+      <li class="nav-section-item"><a href="#page-dashboard" data-page="dashboard" onclick="App.navigate('dashboard', event)"><span class="nav-dot"></span> Dashboard</a></li>
+      <li class="nav-section-item"><a href="#section-06" onclick="App.scrollToSection('section-06', event)"><span class="nav-dot"></span> Official Portals</a></li>
     </ul>
 
     <div class="nav-utilities-group">
+      <button type="button" class="nav-cta-btn" onclick="App.navigate('match')" aria-label="Find Eligible Schemes">
+        <span>🎯 Find Schemes</span>
+      </button>
       <button class="nav-util-btn" onclick="WisprFlow.toggle()" title="Wispr Voice Matching">
         🎙️ <span>Voice</span>
       </button>
@@ -102,14 +102,11 @@
           <span class="pill-arrow-tag" aria-hidden="true">&rarr;</span>
         </div>
 
-        <!-- Element 2: Gravity Letters Headline (Prominent Centerpiece) -->
-        <div id="gravityLettersHeadline"
-          class="gravity-letters-container w-full max-w-6xl h-[350px] md:h-[550px] flex items-center justify-center relative z-20"
-          aria-label="Empowering Beneficiaries with Intelligent Access">
-          <!-- Guaranteed Visible Fallback Headline (Instant display & 0 particles safety net) -->
-          <h1 class="hero-headline-canvas-fallback" id="heroFallbackHeadline">
-            <span class="fallback-line-1">Empowering Beneficiaries</span>
-            <span class="fallback-line-2">with Intelligent Access</span>
+        <!-- Element 2: Modern Static Clean Headline -->
+        <div class="hero-clean-headline-wrap">
+          <h1 class="hero-clean-headline">
+            <span class="headline-row-1">Empowering Beneficiaries</span>
+            <span class="headline-row-2">with Intelligent Access</span>
           </h1>
         </div>
 
@@ -320,8 +317,7 @@
     </section>
 
     <!-- ==================== 03: BENEFITS ==================== -->
-    <section class="site-section rb-section overflow-visible" id="section-03"
-      style="padding: 60px 0 80px 0; overflow: visible !important;">
+    <section class="site-section rb-section" id="section-03">
       <div class="section-inner">
         <div class="rb-section-header">
           <span class="rb-section-tag">03 // BENEFITS</span>
@@ -329,48 +325,50 @@
           <p class="rb-section-subtitle">Tangible citizen benefits: scholarships, equipment subsidies, lower loan
             interest rates, and interest-free moratorium periods.</p>
         </div>
-      </div>
 
-      <!-- React Bits ScrollExpand Interactive Stage -->
-      <div id="scrollExpandContainer" class="scroll-expand"
-        style="width: 100%; margin: 24px 0 60px 0; overflow: visible;">
-        <div class="se-overlay-content">
-          <span class="se-overlay-tag">03 // STATUTORY ENTITLEMENTS &amp; ARBITRAGE</span>
-          <h3 class="se-overlay-headline">Subsidized Institutional Credit vs Commercial Market</h3>
-          <p class="se-overlay-desc">Eliminating predatory lending barriers through direct central channel credit: 4.0%
-            floor interest, up to 33% capital subsidy, and 12-month incubation moratorium.</p>
+        <!-- Static High-Contrast Arbitrage Comparison Grid -->
+        <div class="rb-comparison-grid">
+          <!-- Card 1: Commercial Market Lending -->
+          <div class="spotlight-card rb-comp-card" data-spotlight-color="rgba(239, 68, 68, 0.16)">
+            <span class="rb-comp-tag commercial">Commercial Market Lending</span>
+            <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #ef4444; margin-bottom: 16px;">12.5% &ndash; 16.0% <span style="font-size: 1rem; font-weight: 500; color: #94a3b8;">p.a.</span></div>
+            <ul class="rb-comp-list">
+              <li class="rb-comp-item">
+                <span class="rb-comp-bullet negative">&#x2715;</span>
+                <span>Strict real-estate collateral &amp; 2 salaried third-party guarantors required</span>
+              </li>
+              <li class="rb-comp-item">
+                <span class="rb-comp-bullet negative">&#x2715;</span>
+                <span><strong>0% Capital Subsidy</strong> &mdash; 100% principal repayable by borrower</span>
+              </li>
+              <li class="rb-comp-item">
+                <span class="rb-comp-bullet negative">&#x2715;</span>
+                <span><strong>Zero moratorium</strong> &mdash; immediate first-month monthly EMI deductions</span>
+              </li>
+            </ul>
+          </div>
 
-          <div class="se-compare-cards">
-            <div class="se-card-market">
-              <span class="se-card-label">Commercial Market Lending</span>
-              <div class="se-card-rate">12.5% &ndash; 16.0% p.a.</div>
-              <ul class="se-card-points">
-                <li><span style="color:#ef4444">&#x2715;</span> Strict real-estate collateral &amp; 2 salaried
-                  third-party guarantors</li>
-                <li><span style="color:#ef4444">&#x2715;</span> 0% Capital Subsidy &mdash; 100% principal repayable by
-                  borrower</li>
-                <li><span style="color:#ef4444">&#x2715;</span> Zero moratorium &mdash; immediate first-month monthly
-                  EMI deductions</li>
-              </ul>
-            </div>
-
-            <div class="se-card-samarthya">
-              <span class="se-card-label">Samarthya Concessional Channel</span>
-              <div class="se-card-rate">4.0% &ndash; 6.5% p.a.</div>
-              <ul class="se-card-points">
-                <li><span style="color:#34d399">&#x2713;</span> Zero Collateral Guarantee under Central Credit Guarantee
-                  Funds</li>
-                <li><span style="color:#34d399">&#x2713;</span> Up to 33% Capital Subsidy deducted directly from loan
-                  principal</li>
-                <li><span style="color:#34d399">&#x2713;</span> 6 to 12 Months Moratorium &mdash; zero interest during
-                  business gestation</li>
-              </ul>
-            </div>
+          <!-- Card 2: Samarthya Concessional Channel -->
+          <div class="spotlight-card rb-comp-card subsidized" data-spotlight-color="rgba(16, 185, 129, 0.22)">
+            <span class="rb-comp-tag subsidized">Samarthya Concessional Channel</span>
+            <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #34d399; margin-bottom: 16px;">4.0% &ndash; 6.5% <span style="font-size: 1rem; font-weight: 500; color: #94a3b8;">p.a.</span></div>
+            <ul class="rb-comp-list">
+              <li class="rb-comp-item positive">
+                <span class="rb-comp-bullet positive">&#x2713;</span>
+                <span><strong>Zero Collateral Guarantee</strong> under Central Credit Guarantee Funds</span>
+              </li>
+              <li class="rb-comp-item positive">
+                <span class="rb-comp-bullet positive">&#x2713;</span>
+                <span><strong>Up to 33% Capital Subsidy</strong> deducted directly from loan principal</span>
+              </li>
+              <li class="rb-comp-item positive">
+                <span class="rb-comp-bullet positive">&#x2713;</span>
+                <span><strong>6 to 12 Months Moratorium</strong> &mdash; zero interest during business gestation</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
 
-      <div class="section-inner">
         <!-- 4 Core Benefit Pillars (React Bits Spotlight Cards) -->
         <div class="rb-benefits-quad">
           <div class="spotlight-card rb-benefit-card" data-spotlight-color="rgba(56, 189, 248, 0.16)">
@@ -409,11 +407,7 @@
       <div class="section-inner">
         <div class="rb-section-header">
           <span class="rb-section-tag">04 // WHY US</span>
-          <h2 class="rb-section-title scroll-float" data-effect="float" data-split-by="words" data-direction="up"
-            data-order="start" data-from-color="currentColor" data-animation-duration="1" data-ease="back.inOut(2)"
-            data-scroll-start="center bottom+=50%" data-scroll-end="bottom bottom-=40%" data-stagger="0.03"
-            data-distance="120" data-stretch="2.3" data-smoothing="0">Privacy-First, Middleman-Free &amp; Frictionless
-          </h2>
+          <h2 class="rb-section-title">Privacy-First, Middleman-Free &amp; Frictionless</h2>
           <p class="rb-section-subtitle">Why beneficiaries trust Samarthya: zero document storage, compliance standards,
             instant rule scoring, and direct application routes.</p>
         </div>
@@ -446,13 +440,10 @@
           </div>
         </div>
 
-        <!-- Monumental ScrollFloat Statement Banner -->
+        <!-- Monumental Clean Statement Banner -->
         <div class="rb-scroll-float-banner">
           <span class="rb-float-subtag">STATUTORY EMPOWERMENT</span>
-          <div class="scroll-float" data-effect="float" data-split-by="words" data-direction="up" data-order="start"
-            data-from-color="currentColor" data-animation-duration="1" data-ease="back.inOut(2)"
-            data-scroll-start="center bottom+=50%" data-scroll-end="bottom bottom-=40%" data-stagger="0.03"
-            data-distance="120" data-stretch="2.3" data-smoothing="0">
+          <div style="font-family: var(--font-heading); font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 800; color: #FFFFFF; margin-top: 10px; line-height: 1.35; background: linear-gradient(180deg, #ffffff 40%, #cbd5e1 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
             Sub-Second Matching &bull; Zero Document Storage &bull; 100% Direct Entitlements
           </div>
         </div>
@@ -464,10 +455,7 @@
       <div class="section-inner">
         <div class="rb-section-header">
           <span class="rb-section-tag">05 // OUR FEATURES</span>
-          <h2 class="rb-section-title scroll-float" data-effect="float" data-split-by="words" data-direction="up"
-            data-order="start" data-from-color="currentColor" data-animation-duration="1" data-ease="back.inOut(2)"
-            data-scroll-start="center bottom+=50%" data-scroll-end="bottom bottom-=40%" data-stagger="0.03"
-            data-distance="120" data-stretch="2.3" data-smoothing="0">Full Suite of Public Tools</h2>
+          <h2 class="rb-section-title">Full Suite of Public Tools</h2>
           <p class="rb-section-subtitle">Access our complete set of interactive tools: Eligibility Matching, EMI
             Simulator, Nearest Partner Map, and District Camp Mode.</p>
         </div>
@@ -606,10 +594,7 @@
       <div class="section-inner">
         <div class="rb-section-header">
           <span class="rb-section-tag">06 // ENDING &amp; OFFICIAL PORTALS</span>
-          <h2 class="rb-section-title scroll-float" data-effect="float" data-split-by="words" data-direction="up"
-            data-order="start" data-from-color="currentColor" data-animation-duration="1" data-ease="back.inOut(2)"
-            data-scroll-start="center bottom+=50%" data-scroll-end="bottom bottom-=40%" data-stagger="0.03"
-            data-distance="120" data-stretch="2.3" data-smoothing="0">Official Government Gateways &amp; Support</h2>
+          <h2 class="rb-section-title">Official Government Gateways &amp; Support</h2>
           <p class="rb-section-subtitle">Direct institutional application links and grievance channels for verified
             schemes.</p>
         </div>
@@ -666,14 +651,6 @@
               <span>&rarr;</span>
             </div>
           </a>
-        </div>
-
-        <!-- React Bits Pro ASCII Ripple Seamless Background Canvas -->
-        <div class="rb-ascii-ripple-blend" data-ascii-ripple data-font-size="14.5" data-line-height="1.22"
-          data-text-color="#94A3B8" data-ripple-color="#38BDF8" data-trough-color="#818CF8"
-          data-background-color="transparent" data-text-opacity="0.20" data-rain="0.5" data-vignette="0.8"
-          data-drag-strength="0.32" data-drop-strength="1.3" data-refraction="4"
-          data-text="SAMARTHYA AI &bull; STATUTORY WELFARE &amp; CONCESSIONAL CREDIT INTELLIGENCE &bull; ZERO MIDDLEMEN &bull; DPDP ACT 2023 COMPLIANT &bull; 100% DIRECT BENEFICIARY DELIVERY &bull; PRIVACY PRESERVING CLIENT EVALUATION &bull; EMPOWERING CITIZENS ACROSS ALL 28 STATES &amp; 8 UNION TERRITORIES &bull; SUB-SECOND MATCHING ENGINE &bull; DISABILITY CERTIFICATION &bull; SCHOLARSHIPS &bull; MICRO-ENTERPRISE LOANS &bull; ALIMCO ASSISTIVE GEAR &bull; OFFICIAL NATIONAL APIS &bull; EMPOWERING EVERY CITIZEN">
         </div>
 
         <!-- High-Impact Final Call to Action -->
@@ -1254,117 +1231,8 @@
   <script src="js/tracker.js?v=6.0"></script>
   <script src="js/ngo-mode.js?v=6.0"></script>
   <script src="js/report.js?v=6.0"></script>
-  <script src="js/motion-engine.js?v=7.0"></script>
-  <script src="js/gravity-letters.js?v=7.0"></script>
-  <script src="js/react-bits-showcase.js?v=1.0"></script>
-  <script src="js/bounce-cards.js?v=1.0"></script>
-  <script src="js/scroll-expand.js?v=1.0"></script>
-  <script src="js/scroll-float.js?v=1.0"></script>
-  <script src="js/ascii-ripple.js?v=1.0"></script>
-  <script src="js/app.js?v=8.0"></script>
-  <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      // Initialize React Bits ScrollExpand in Section 03
-      const scrollExpandContainer = document.getElementById('scrollExpandContainer');
-      if (scrollExpandContainer && window.ScrollExpand) {
-        window.scrollExpandInstance = new window.ScrollExpand(scrollExpandContainer, {
-          src: 'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=1600&auto=format&fit=crop&q=80',
-          alt: 'Direct Entitlements & Financial Relief',
-          title: 'Direct Entitlements & Financial Relief',
-          scrollHint: 'Scroll to Expand Entitlements',
-          useWindowScroll: true,
-          startWidth: 44,
-          startHeight: 56,
-          startRadius: 24,
-          endRadius: 0,
-          mediaZoom: 1.32,
-          scrollDistance: 1.2,
-          holdDistance: 0.45,
-          smoothing: 0.1,
-          overlayScrim: 0.65
-        });
-      }
-
-      // Initialize React Bits BounceCards in Section 02
-      const bounceContainer = document.getElementById('bounceCardsContainer');
-      if (bounceContainer && window.BounceCards) {
-        const welfareImages = [
-          {
-            src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=480&h=480&fit=crop',
-            alt: 'Student and Beneficiary Welfare',
-            label: 'Student Welfare'
-          },
-          {
-            src: 'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=480&h=480&fit=crop',
-            alt: 'Community Welfare & Camps',
-            label: 'Community Camps'
-          },
-          {
-            src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=480&h=480&fit=crop',
-            alt: 'Digital Welfare Schemes & Data',
-            label: 'Digital Schemes'
-          },
-          {
-            src: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=480&h=480&fit=crop',
-            alt: 'Inclusive Assistive Technology',
-            label: 'Inclusive Tech'
-          }
-        ];
-
-        window.bounceCardsInstance = new window.BounceCards(bounceContainer, {
-          images: welfareImages,
-          containerWidth: 460,
-          containerHeight: 300,
-          cardSize: 180,
-          spread: 75,
-          rotation: 8,
-          arc: -20,
-          pushDistance: 140,
-          hoverScale: 1.05,
-          bounciness: 0.5,
-          animationDelay: 0.3,
-          animationStagger: 0.05,
-          borderWidth: 4,
-          borderColor: '#1e293b',
-          radius: 20,
-          shadow: true,
-          enableHover: true,
-          onCardClick: function (index, card) {
-            console.log('Card clicked: ' + index, card);
-            const pillars = document.querySelectorAll('.rb-pillars-grid .spotlight-card');
-            if (pillars && pillars[index % pillars.length]) {
-              pillars[index % pillars.length].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-              pillars[index % pillars.length].style.borderColor = '#818cf8';
-              pillars[index % pillars.length].style.boxShadow = '0 0 35px rgba(99, 102, 241, 0.5)';
-              setTimeout(() => {
-                pillars[index % pillars.length].style.borderColor = '';
-                pillars[index % pillars.length].style.boxShadow = '';
-              }, 1200);
-            }
-          }
-        });
-      }
-
-      // Initialize Interactive Gravity Letters headline (Crisp white Line 1 + vibrant cyan/indigo Line 2)
-      const headlineEl = document.getElementById('gravityLettersHeadline');
-      if (headlineEl && window.GravityLetters) {
-        window.gravityLettersInstance = new window.GravityLetters(headlineEl, {
-          line1: "Empowering Beneficiaries",
-          line2: "with Intelligent Access",
-          fontSize: 84,
-          fontWeight: 800,
-          fontFamily: "'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif",
-          lineHeight: 1.15,
-          color1: "#FFFFFF",
-          color2Start: "#38BDF8",
-          color2End: "#818CF8",
-          grainStep: 2.6,
-          cutRadius: 52,
-          healDelay: 1300,
-          holdTime: 700
-        });
-      }
-    });</script>
+  <script src="js/react-bits-showcase.js?v=11.0"></script>
+  <script src="js/app.js?v=11.0"></script>
 </body>
 
 </html>

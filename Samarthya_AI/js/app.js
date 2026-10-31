@@ -183,6 +183,19 @@ const App = {
     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
     document.querySelectorAll(`.nav-link[data-page="${page}"]`).forEach(l => l.classList.add('active'));
 
+    // Also update primary header navSectionsMenu links
+    const sectionNavLinks = document.querySelectorAll('#navSectionsMenu a');
+    sectionNavLinks.forEach(l => {
+      l.classList.remove('active');
+      if (page === 'match' && l.getAttribute('data-page') === 'match') {
+        l.classList.add('active');
+      } else if (page === 'dashboard' && l.getAttribute('data-page') === 'dashboard') {
+        l.classList.add('active');
+      } else if (page === 'home' && l.getAttribute('href') === '#section-01') {
+        l.classList.add('active');
+      }
+    });
+
     this.currentPage = page;
     const shouldPushState = typeof eventOrPushState === 'boolean' ? eventOrPushState : true;
     if (shouldPushState && window.location.hash !== '#' + page) {
@@ -203,6 +216,35 @@ const App = {
     }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  },
+
+  scrollToSection(sectionId, e) {
+    if (e && e.preventDefault) e.preventDefault();
+
+    if (this.currentPage !== 'home') {
+      this.navigate('home', false);
+    }
+
+    setTimeout(() => {
+      const targetEl = document.getElementById(sectionId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      const navLinks = document.querySelectorAll('#navSectionsMenu a');
+      navLinks.forEach(l => {
+        const href = l.getAttribute('href');
+        if (href === '#' + sectionId) {
+          l.classList.add('active');
+        } else {
+          l.classList.remove('active');
+        }
+      });
+
+      if (window.history && window.history.pushState) {
+        window.history.pushState(null, '', '#' + sectionId);
+      }
+    }, 20);
   },
 
   scrollToHow(e) {
@@ -325,26 +367,22 @@ const App = {
     const sectionIds = ['section-01', 'section-02', 'section-03', 'section-04', 'section-05', 'section-06'];
     const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
-    // 1. Smooth Scroll on Navigation Link Click
+    // 1. Smooth Navigation Link Handling
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
-        if (href && href.startsWith('#section-')) {
+        const page = link.getAttribute('data-page');
+
+        if (page === 'match') {
           e.preventDefault();
-          const targetEl = document.querySelector(href);
-          if (targetEl) {
-            // Immediate active state update
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-
-            // Smooth scroll to the target section
-            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-            // Update URL hash smoothly without jump
-            if (window.history && window.history.pushState) {
-              window.history.pushState(null, '', href);
-            }
-          }
+          App.navigate('match', e);
+        } else if (page === 'dashboard') {
+          e.preventDefault();
+          App.navigate('dashboard', e);
+        } else if (href && href.startsWith('#section-')) {
+          e.preventDefault();
+          const secId = href.replace('#', '');
+          App.scrollToSection(secId, e);
         }
       });
     });
@@ -354,16 +392,7 @@ const App = {
     if (brandGroup) {
       brandGroup.addEventListener('click', (e) => {
         e.preventDefault();
-        const s1 = document.getElementById('section-01');
-        if (s1) {
-          s1.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          navLinks.forEach(l => l.classList.remove('active'));
-          const firstLink = document.querySelector('#navSectionsMenu a[href="#section-01"]');
-          if (firstLink) firstLink.classList.add('active');
-          if (window.history && window.history.pushState) {
-            window.history.pushState(null, '', '#section-01');
-          }
-        }
+        App.scrollToSection('section-01', e);
       });
     }
 
@@ -373,6 +402,7 @@ const App = {
     let docHeight = 0;
 
     function updateDimensions() {
+      if (App.currentPage !== 'home') return;
       docHeight = Math.max(
         document.body.scrollHeight,
         document.documentElement.scrollHeight,
@@ -404,6 +434,12 @@ const App = {
         }
       }
 
+      // Only perform section scroll-spy when on the home continuous page
+      if (App.currentPage !== 'home') {
+        ticking = false;
+        return;
+      }
+
       // Fast numeric scroll-spy using cached offsets - ZERO layout thrashing!
       const scrollBottom = window.innerHeight + scrollY;
       let activeId = 'section-01';
@@ -426,11 +462,14 @@ const App = {
       // Update active highlight class only when changed
       navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        const shouldBeActive = (href === '#' + activeId);
-        if (shouldBeActive && !link.classList.contains('active')) {
-          link.classList.add('active');
-        } else if (!shouldBeActive && link.classList.contains('active')) {
-          link.classList.remove('active');
+        const isSectionLink = href && href.startsWith('#section-');
+        if (isSectionLink) {
+          const shouldBeActive = (href === '#' + activeId);
+          if (shouldBeActive && !link.classList.contains('active')) {
+            link.classList.add('active');
+          } else if (!shouldBeActive && link.classList.contains('active')) {
+            link.classList.remove('active');
+          }
         }
       });
 
