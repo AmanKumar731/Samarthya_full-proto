@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samarthya — Intelligent Government Scheme Matching Portal</title>
+  <meta name="description"
+    content="Samarthya bridges the gap between special-needs students and government welfare schemes. Instant criteria-based scheme matching powered by AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css?v=6.0">
+  <link rel="stylesheet" href="css/components.css?v=6.0">
+  <link rel="stylesheet" href="css/features.css?v=6.0">
+  <link rel="stylesheet" href="css/cinematic.css?v=6.0">
+  <link rel="stylesheet" href="css/immersive.css?v=6.0">
+  <link rel="stylesheet" href="css/pixel-snow-hero.css?v=8.0">
+  <link rel="stylesheet" href="css/features-bento.css?v=1.0">
+  <link rel="stylesheet" href="css/clean-sections.css?v=1.0">
+  <link rel="stylesheet" href="css/react-bits-showcase.css?v=1.0">
+  <link rel="stylesheet" href="css/bounce-cards.css?v=1.0">
+  <link rel="stylesheet" href="css/scroll-expand.css?v=1.0">
+  <link rel="stylesheet" href="css/scroll-float.css?v=1.0">
+  <link rel="stylesheet" href="css/ascii-ripple.css?v=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Analyzing your profile against 50+ government schemes...</div>
+  </div>
+
+  <!-- Universal Modal (Used for Scheme Details & WhatsApp VIP Lead Capture) -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content-wrap" id="modalContent"></div>
+  </div>
+
+  <!-- Floating Modern 6-Section Header -->
+  <header class="site-main-nav" id="mainHeader">
+    <a class="nav-brand-group" href="#section-01" aria-label="Samarthya Home">
+      <div class="brand-monogram">S</div>
+      <div class="brand-text">Samarthya <span class="brand-badge">SIH26093</span></div>
+    </a>
+
+    <ul class="nav-sections-menu" id="navSectionsMenu">
+      <li class="nav-section-item"><a href="#section-01" class="active"><span class="sec-num">01</span> Landing</a></li>
+      <li class="nav-section-item"><a href="#section-02"><span class="sec-num">02</span> Detail</a></li>
+      <li class="nav-section-item"><a href="#section-03"><span class="sec-num">03</span> Benefits</a></li>
+      <li class="nav-section-item"><a href="#section-04"><span class="sec-num">04</span> Why Us</a></li>
+      <li class="nav-section-item"><a href="#section-05"><span class="sec-num">05</span> Features</a></li>
+      <li class="nav-section-item"><a href="#section-06"><span class="sec-num">06</span> Ending</a></li>
+    </ul>
+
+    <div class="nav-utilities-group">
+      <button class="nav-util-btn" onclick="WisprFlow.toggle()" title="Wispr Voice Matching">
+        🎙️ <span>Voice</span>
+      </button>
+      <button class="nav-util-btn" onclick="SamarthyaAI.toggle()" title="Samarthya Virtual AI">
+        ✨ <span>Ask AI</span>
+      </button>
+      <button class="nav-util-btn" onclick="AccessibilitySuite.togglePanel()" title="Accessibility Suite">
+        ♿ <span>A11y</span>
+      </button>
+      <div class="lang-select-wrap">
+        <select class="nav-lang-select" id="langSelect" onchange="I18N.setLanguage(this.value)"
+          aria-label="Select Language">
+          <option value="en">🌐 English</option>
+          <option value="hi">🌐 हिंदी (Hindi)</option>
+          <option value="pa">🌐 ਪੰਜਾਬੀ (Punjabi)</option>
+          <option value="mr">🌐 मराठी (Marathi)</option>
+          <option value="ta">🌐 தமிழ் (Tamil)</option>
+          <option value="gu">🌐 ગુજરાતી (Gujarati)</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE 1: HOME — CONTINUOUS SCROLLING ARCHITECTURE (6 SECTIONS)
+       ========================================================================== -->
+  <div class="page active" id="page-home">
+
+    <!-- ==================== 01: LANDING PAGE (HERO DARK THEME) ==================== -->
+    <section id="section-01" class="site-section section-landing">
+
+      <!-- Hero Main Content (Ultra-Minimal Centered Canvas) -->
+      <div class="hero-content-layer hero-content-minimal">
+
+        <!-- Element 1: Shimmering Live Status Announcement Pill -->
+        <div class="hero-announcement-pill" aria-label="SIH 26093 Statutory AI Engine Status">
+          <span class="pill-pulse-dot" aria-hidden="true">
+            <span class="pulse-ring"></span>
+            <span class="pulse-core"></span>
+          </span>
+          <span class="pill-text-shimmer">SIH26093 &bull; Zero-Document Statutory AI Engine</span>
+          <span class="pill-arrow-tag" aria-hidden="true">&rarr;</span>
+        </div>
+
+        <!-- Element 2: Gravity Letters Headline (Prominent Centerpiece) -->
+        <div id="gravityLettersHeadline"
+          class="gravity-letters-container w-full max-w-6xl h-[350px] md:h-[550px] flex items-center justify-center relative z-20"
+          aria-label="Empowering Beneficiaries with Intelligent Access">
+          <!-- Guaranteed Visible Fallback Headline (Instant display & 0 particles safety net) -->
+          <h1 class="hero-headline-canvas-fallback" id="heroFallbackHeadline">
+            <span class="fallback-line-1">Empowering Beneficiaries</span>
+            <span class="fallback-line-2">with Intelligent Access</span>
+          </h1>
+        </div>
+
+        <!-- Element 3: The Two MovingGradientButton CTAs (Side by Side) -->
+        <div class="hero-minimal-cta-group">
+          <!-- Button 1: Welfare Schemes (Electric Indigo to Cyan Beam) -->
+          <button type="button" class="moving-gradient-btn btn-beam-indigo btn-large-hero"
+            onclick="App.setPersona('welfare'); App.navigate('match');" aria-label="Check Welfare Eligibility">
+            <span class="btn-beam-track" aria-hidden="true">
+              <span class="btn-beam-glow"></span>
+              <span class="btn-beam-core"></span>
+            </span>
+            <span class="btn-beam-body">
+              <span>Check Welfare Eligibility</span>
+              <span class="btn-beam-icon" aria-hidden="true">&rarr;</span>
+            </span>
+          </button>
+
+          <!-- Button 2: Concessional Credit (Violet to Emerald Green Beam) -->
+          <button type="button" class="moving-gradient-btn btn-beam-emerald btn-large-hero"
+            onclick="App.setPersona('credit'); App.navigate('match');" aria-label="Explore Concessional Credit">
+            <span class="btn-beam-track" aria-hidden="true">
+              <span class="btn-beam-glow"></span>
+              <span class="btn-beam-core"></span>
+            </span>
+            <span class="btn-beam-body">
+              <span>Explore Concessional Credit</span>
+              <span class="btn-beam-icon" aria-hidden="true">&rarr;</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Element 4: Floating Glassmorphic Micro-Metrics Strip (Subtle Trust Strip) -->
+        <div class="hero-micro-metrics-dock" role="region" aria-label="Portal Highlights">
+          <div class="metric-dock-item">
+            <span class="metric-dock-icon">⚪</span>
+            <span><strong>&lt; 2s</strong> Rule Evaluation</span>
+          </div>
+          <span class="metric-dock-divider" aria-hidden="true"></span>
+          <div class="metric-dock-item">
+            <span class="metric-dock-icon">⚪</span>
+            <span><strong>50+</strong> Welfare Schemes</span>
+          </div>
+          <span class="metric-dock-divider" aria-hidden="true"></span>
+          <div class="metric-dock-item">
+            <span class="metric-dock-icon">⚪</span>
+            <span><strong>6.5%</strong> NSFDC Credit</span>
+          </div>
+          <span class="metric-dock-divider" aria-hidden="true"></span>
+          <div class="metric-dock-item">
+            <span class="metric-dock-icon">⚪</span>
+            <span><strong>100%</strong> DPDP Private</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 02: WEBSITE DETAIL & MISSION ==================== -->
+    <section class="site-section rb-section" id="section-02">
+      <div class="section-inner">
+        <div class="rb-mission-split">
+
+          <!-- LEFT COLUMN: Big Heading, Subtitle & Statutory Metrics -->
+          <div class="rb-mission-left">
+            <span class="rb-section-tag">02 // WEBSITE DETAIL &amp; MISSION</span>
+            <h2 class="rb-mission-headline">
+              Bridging Entitlements with <span class="rb-gradient-text">Intelligent Guidance</span>
+            </h2>
+            <p class="rb-mission-lead">
+              Solving the last-mile delivery crisis for welfare schemes and concessional channel credit across India
+              through zero-document client privacy, statutory scorecards, and sub-second rule evaluation.
+            </p>
+
+            <!-- Sleek Metrics Grid inside Left Column -->
+            <div class="rb-mission-metrics">
+              <div class="rb-mission-metric-item">
+                <span class="rb-metric-num" data-countup="50" data-suffix="+">50+</span>
+                <span class="rb-metric-lbl">Central &amp; State Schemes</span>
+              </div>
+              <div class="rb-mission-metric-item">
+                <span class="rb-metric-num">&lt; 2.0s</span>
+                <span class="rb-metric-lbl">Rule Latency</span>
+              </div>
+              <div class="rb-mission-metric-item">
+                <span class="rb-metric-num" data-countup="100" data-suffix="%">100%</span>
+                <span class="rb-metric-lbl">DPDP Device Private</span>
+              </div>
+              <div class="rb-mission-metric-item">
+                <span class="rb-metric-num" data-countup="4.0" data-decimals="1" data-suffix="%">4.0%</span>
+                <span class="rb-metric-lbl">Subsidized Floor APR</span>
+              </div>
+            </div>
+
+            <div class="rb-carousel-cue">
+              <span class="rb-cue-pulse"></span>
+              <span>Hover over cards to expand statutory pillars &rarr;</span>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Interactive 3-Card Hover Carousel -->
+          <div class="rb-mission-right">
+            <div class="rb-hover-carousel" id="missionHoverCarousel">
+
+              <!-- Card 1: RPwD ACT 2016 -->
+              <div class="rb-hover-card is-active spotlight-card" data-card-index="0"
+                data-spotlight-color="rgba(56, 189, 248, 0.22)"
+                style="--theme-color: #38bdf8; --theme-bg: rgba(56, 189, 248, 0.12);">
+                <div class="rb-hover-card-bg"></div>
+                <div class="rb-hover-card-content">
+                  <div class="rb-hover-card-top">
+                    <div class="rb-pillar-icon">⚖️</div>
+                    <span class="rb-pillar-badge">RPwD ACT 2016</span>
+                    <span class="rb-hover-num">01</span>
+                  </div>
+
+                  <div class="rb-hover-card-body">
+                    <h3 class="rb-pillar-title">Statutory Framework &amp; Rights</h3>
+                    <p class="rb-pillar-desc">Comprehensive rule evaluation based on the Rights of Persons with
+                      Disabilities Act 2016 and MoSJE central directives. Transparent score-based eligibility that
+                      eliminates subjective gatekeeping.</p>
+                  </div>
+
+                  <div class="rb-hover-card-footer">
+                    <span class="rb-hover-tag">&#x2713; MoSJE Statutory Norms</span>
+                    <span class="rb-hover-action">Pillar 01 &rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: DPDP ACT 2023 -->
+              <div class="rb-hover-card spotlight-card" data-card-index="1"
+                data-spotlight-color="rgba(16, 185, 129, 0.22)"
+                style="--theme-color: #10b981; --theme-bg: rgba(16, 185, 129, 0.12);">
+                <div class="rb-hover-card-bg"></div>
+                <div class="rb-hover-card-content">
+                  <div class="rb-hover-card-top">
+                    <div class="rb-pillar-icon">🛡️</div>
+                    <span class="rb-pillar-badge"
+                      style="color:#6EE7B7; border-color:rgba(16,185,129,0.3); background:rgba(16,185,129,0.1);">DPDP
+                      ACT 2023</span>
+                    <span class="rb-hover-num">02</span>
+                  </div>
+
+                  <div class="rb-hover-card-body">
+                    <h3 class="rb-pillar-title">Client-Side Privacy Architecture</h3>
+                    <p class="rb-pillar-desc">Zero central document retention. All criteria evaluation, rule scoring,
+                      and income bracket evaluations run purely on your local device without sending identity papers to
+                      cloud databases.</p>
+                  </div>
+
+                  <div class="rb-hover-card-footer">
+                    <span class="rb-hover-tag" style="color:#6EE7B7;">&#x2713; Zero Cloud Retention</span>
+                    <span class="rb-hover-action">Pillar 02 &rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: NSFDC CHANNEL CREDIT -->
+              <div class="rb-hover-card spotlight-card" data-card-index="2"
+                data-spotlight-color="rgba(99, 102, 241, 0.22)"
+                style="--theme-color: #818cf8; --theme-bg: rgba(99, 102, 241, 0.12);">
+                <div class="rb-hover-card-bg"></div>
+                <div class="rb-hover-card-content">
+                  <div class="rb-hover-card-top">
+                    <div class="rb-pillar-icon">💼</div>
+                    <span class="rb-pillar-badge"
+                      style="color:#C7D2FE; border-color:rgba(99,102,241,0.3); background:rgba(99,102,241,0.1);">NSFDC
+                      CHANNEL CREDIT</span>
+                    <span class="rb-hover-num">03</span>
+                  </div>
+
+                  <div class="rb-hover-card-body">
+                    <h3 class="rb-pillar-title">Concessional Micro-Finance</h3>
+                    <p class="rb-pillar-desc">Direct institutional channel access to NSFDC, NBCFDC, and NSKFDC state
+                      credit desks, bridging young divyang and scheduled caste entrepreneurs with subsidized
+                      low-interest capital.</p>
+                  </div>
+
+                  <div class="rb-hover-card-footer">
+                    <span class="rb-hover-tag" style="color:#C7D2FE;">&#x2713; Direct State Desk</span>
+                    <span class="rb-hover-action">Pillar 03 &rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Carousel Navigation Pills -->
+            <div class="rb-carousel-nav" id="missionCarouselNav">
+              <button type="button" class="rb-nav-dot is-active" data-target="0">
+                <span class="rb-dot-bar"></span>
+                <span>01 // Statutory Rights</span>
+              </button>
+              <button type="button" class="rb-nav-dot" data-target="1">
+                <span class="rb-dot-bar"></span>
+                <span>02 // DPDP Privacy</span>
+              </button>
+              <button type="button" class="rb-nav-dot" data-target="2">
+                <span class="rb-dot-bar"></span>
+                <span>03 // Subsidized Credit</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 03: BENEFITS ==================== -->
+    <section class="site-section rb-section overflow-visible" id="section-03"
+      style="padding: 60px 0 80px 0; overflow: visible !important;">
+      <div class="section-inner">
+        <div class="rb-section-header">
+          <span class="rb-section-tag">03 // BENEFITS</span>
+          <h2 class="rb-section-title">Direct Entitlements &amp; Financial Relief</h2>
+          <p class="rb-section-subtitle">Tangible citizen benefits: scholarships, equipment subsidies, lower loan
+            interest rates, and interest-free moratorium periods.</p>
+        </div>
+      </div>
+
+      <!-- React Bits ScrollExpand Interactive Stage -->
+      <div id="scrollExpandContainer" class="scroll-expand"
+        style="width: 100%; margin: 24px 0 60px 0; overflow: visible;">
+        <div class="se-overlay-content">
+          <span class="se-overlay-tag">03 // STATUTORY ENTITLEMENTS &amp; ARBITRAGE</span>
+          <h3 class="se-overlay-headline">Subsidized Institutional Credit vs Commercial Market</h3>
+          <p class="se-overlay-desc">Eliminating predatory lending barriers through direct central channel credit: 4.0%
+            floor interest, up to 33% capital subsidy, and 12-month incubation moratorium.</p>
+
+          <div class="se-compare-cards">
+            <div class="se-card-market">
+              <span class="se-card-label">Commercial Market Lending</span>
+              <div class="se-card-rate">12.5% &ndash; 16.0% p.a.</div>
+              <ul class="se-card-points">
+                <li><span style="color:#ef4444">&#x2715;</span> Strict real-estate collateral &amp; 2 salaried
+                  third-party guarantors</li>
+                <li><span style="color:#ef4444">&#x2715;</span> 0% Capital Subsidy &mdash; 100% principal repayable by
+                  borrower</li>
+                <li><span style="color:#ef4444">&#x2715;</span> Zero moratorium &mdash; immediate first-month monthly
+                  EMI deductions</li>
+              </ul>
+            </div>
+
+            <div class="se-card-samarthya">
+              <span class="se-card-label">Samarthya Concessional Channel</span>
+              <div class="se-card-rate">4.0% &ndash; 6.5% p.a.</div>
+              <ul class="se-card-points">
+                <li><span style="color:#34d399">&#x2713;</span> Zero Collateral Guarantee under Central Credit Guarantee
+                  Funds</li>
+                <li><span style="color:#34d399">&#x2713;</span> Up to 33% Capital Subsidy deducted directly from loan
+                  principal</li>
+                <li><span style="color:#34d399">&#x2713;</span> 6 to 12 Months Moratorium &mdash; zero interest during
+                  business gestation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-inner">
+        <!-- 4 Core Benefit Pillars (React Bits Spotlight Cards) -->
+        <div class="rb-benefits-quad">
+          <div class="spotlight-card rb-benefit-card" data-spotlight-color="rgba(56, 189, 248, 0.16)">
+            <span class="rb-benefit-icon">🎓</span>
+            <h4 class="rb-benefit-title">Higher Education Subsidies</h4>
+            <p class="rb-benefit-desc">100% academic fee waivers, boarding allowances, and ₹31,000/mo research
+              fellowships for SC/PwD scholars.</p>
+          </div>
+
+          <div class="spotlight-card rb-benefit-card" data-spotlight-color="rgba(16, 185, 129, 0.16)">
+            <span class="rb-benefit-icon">🦽</span>
+            <h4 class="rb-benefit-title">ADIP Assistive Technology</h4>
+            <p class="rb-benefit-desc">100% capital grant for motorized tricycles, smart hearing aids, sensory braille
+              devices, and prosthetic fittings.</p>
+          </div>
+
+          <div class="spotlight-card rb-benefit-card" data-spotlight-color="rgba(99, 102, 241, 0.16)">
+            <span class="rb-benefit-icon">♿</span>
+            <h4 class="rb-benefit-title">UDID Swavlamban Pass</h4>
+            <p class="rb-benefit-desc">Single nationwide verified digital disability certificate accepted for rail
+              travel, hospital care, and tax exemptions.</p>
+          </div>
+
+          <div class="spotlight-card rb-benefit-card" data-spotlight-color="rgba(245, 158, 11, 0.16)">
+            <span class="rb-benefit-icon">💼</span>
+            <h4 class="rb-benefit-title">Micro-Enterprise Capital</h4>
+            <p class="rb-benefit-desc">Low-interest business loans up to ₹50 Lakhs for transport, manufacturing, and
+              tech services with collateral rebates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 04: WHY US ==================== -->
+    <section class="site-section rb-section" id="section-04">
+      <div class="section-inner">
+        <div class="rb-section-header">
+          <span class="rb-section-tag">04 // WHY US</span>
+          <h2 class="rb-section-title scroll-float" data-effect="float" data-split-by="words" data-direction="up"
+            data-order="start" data-from-color="currentColor" data-animation-duration="1" data-ease="back.inOut(2)"
+            data-scroll-start="center bottom+=50%" data-scroll-end="bottom bottom-=40%" data-stagger="0.03"
+            data-distance="120" data-stretch="2.3" data-smoothing="0">Privacy-First, Middleman-Free &amp; Frictionless
+          </h2>
+          <p class="rb-section-subtitle">Why beneficiaries trust Samarthya: zero document storage, compliance standards,
+            instant rule scoring, and direct application routes.</p>
+        </div>
+
+        <div class="rb-trust-grid">
+          <div class="spotlight-card rb-trust-card" data-spotlight-color="rgba(56, 189, 248, 0.18)">
+            <span class="rb-trust-num">01 // PRIVACY GUARANTEE</span>
+            <h3 class="rb-trust-title">Zero Document Cloud Storage</h3>
+            <p class="rb-trust-desc">Never hand over physical certificates or upload confidential Aadhaar cards to
+              unauthorized agents. Our evaluation logic runs entirely within your device session.</p>
+            <span class="rb-trust-check-badge">&#x2713; DPDP Act 2023 Verified</span>
+          </div>
+
+          <div class="spotlight-card rb-trust-card" data-spotlight-color="rgba(16, 185, 129, 0.18)">
+            <span class="rb-trust-num">02 // INTEGRITY SHIELD</span>
+            <h3 class="rb-trust-title">Eliminating Predatory Middlemen</h3>
+            <p class="rb-trust-desc">Third-party touts exploit vulnerable applicants by charging illegal 15&ndash;30%
+              commission cuts. Samarthya delivers direct, accredited institutional endpoints with 0% commission.</p>
+            <span class="rb-trust-check-badge" style="color:#6EE7B7; border-color:rgba(16,185,129,0.3);">&#x2713; 100%
+              Direct Channel</span>
+          </div>
+
+          <div class="spotlight-card rb-trust-card" data-spotlight-color="rgba(99, 102, 241, 0.18)">
+            <span class="rb-trust-num">03 // REAL-TIME SCORING</span>
+            <h3 class="rb-trust-title">Sub-Second Algorithmic Matching</h3>
+            <p class="rb-trust-desc">Evaluates 50+ central and state schemes in under 2 seconds. Receive exact reason
+              codes, income threshold calculations, and required statutory document checklists.</p>
+            <span class="rb-trust-check-badge" style="color:#C7D2FE; border-color:rgba(99,102,241,0.3);">&#x2713; &lt;
+              2.0s Rule Latency</span>
+          </div>
+        </div>
+
+        <!-- Monumental ScrollFloat Statement Banner -->
+        <div class="rb-scroll-float-banner">
+          <span class="rb-float-subtag">STATUTORY EMPOWERMENT</span>
+          <div class="scroll-float" data-effect="float" data-split-by="words" data-direction="up" data-order="start"
+            data-from-color="currentColor" data-animation-duration="1" data-ease="back.inOut(2)"
+            data-scroll-start="center bottom+=50%" data-scroll-end="bottom bottom-=40%" data-stagger="0.03"
+            data-distance="120" data-stretch="2.3" data-smoothing="0">
+            Sub-Second Matching &bull; Zero Document Storage &bull; 100% Direct Entitlements
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 05: OUR FEATURES ==================== -->
+    <section class="site-section rb-section" id="section-05">
+      <div class="section-inner">
+        <div class="rb-section-header">
+          <span class="rb-section-tag">05 // OUR FEATURES</span>
+          <h2 class="rb-section-title scroll-float" data-effect="float" data-split-by="words" data-direction="up"
+            data-order="start" data-from-color="currentColor" data-animation-duration="1" data-ease="back.inOut(2)"
+            data-scroll-start="center bottom+=50%" data-scroll-end="bottom bottom-=40%" data-stagger="0.03"
+            data-distance="120" data-stretch="2.3" data-smoothing="0">Full Suite of Public Tools</h2>
+          <p class="rb-section-subtitle">Access our complete set of interactive tools: Eligibility Matching, EMI
+            Simulator, Nearest Partner Map, and District Camp Mode.</p>
+        </div>
+
+        <!-- React Bits Magic Bento Layout -->
+        <div class="rb-bento-grid">
+          <!-- Card 1: Scheme & Credit Matcher (Featured Hero 2-Col) -->
+          <div class="spotlight-card rb-bento-hero" data-spotlight-color="rgba(56, 189, 248, 0.22)">
+            <div class="rb-bento-header">
+              <div class="rb-bento-icon">🎯</div>
+              <span class="rb-bento-badge"><span class="shiny-text">CORE ENGINE // 50+ SCHEMES</span></span>
+            </div>
+            <h3 class="rb-bento-title">Scheme &amp; Credit Matcher</h3>
+            <p class="rb-bento-desc">Instant criteria-based eligibility evaluation across 50+ central &amp; state
+              welfare programs and concessional business credit lines. Zero raw document storage &mdash; engineered in
+              full compliance with the DPDP Act 2023.</p>
+            <div class="rb-bento-chips">
+              <span class="rb-chip">♿ PwD Welfare &amp; UDID</span>
+              <span class="rb-chip">💼 SC/ST Concessional Loans</span>
+              <span class="rb-chip">🎓 Merit &amp; Needs Scholarships</span>
+              <span class="rb-chip">🦽 ALIMCO Assistive Tech</span>
+            </div>
+            <button type="button" class="rb-bento-btn primary" onclick="App.navigate('match')"
+              aria-label="Launch Scheme Matcher">
+              <span>Launch Scheme Matcher (Takes ~60s)</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+          <!-- Card 2: Wispr Voice Assistant -->
+          <div class="spotlight-card" data-spotlight-color="rgba(56, 189, 248, 0.18)">
+            <div class="rb-bento-header">
+              <div class="rb-bento-icon">🎙️</div>
+              <div class="rb-soundwave" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <h3 class="rb-bento-title">Voice Assistant</h3>
+            <p class="rb-bento-desc">Speak naturally in Hindi, English, or regional dialects to populate eligibility
+              criteria automatically without manual form typing.</p>
+            <div class="rb-bento-chips">
+              <span class="rb-chip">हिन्दी</span>
+              <span class="rb-chip">English</span>
+              <span class="rb-chip">मराठी</span>
+              <span class="rb-chip">தமிழ்</span>
+            </div>
+            <button type="button" class="rb-bento-btn" onclick="WisprFlow.toggle()" aria-label="Start Voice Intake">
+              <span>🎙️ Start Voice Intake</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+          <!-- Card 3: Samarthya AI Co-Pilot -->
+          <div class="spotlight-card" data-spotlight-color="rgba(99, 102, 241, 0.18)">
+            <div class="rb-bento-header">
+              <div class="rb-bento-icon">✨</div>
+              <span class="rb-bento-badge" style="color:#C7D2FE;">24/7 ADVISOR</span>
+            </div>
+            <h3 class="rb-bento-title">Samarthya AI Co-Pilot</h3>
+            <p class="rb-bento-desc">Contextual guidance for parents, students, and entrepreneurs. Instant answers on
+              document checklists, eligibility appeals, and official grievance desks.</p>
+            <div class="rb-bento-chips">
+              <span class="rb-chip">UDID Documents?</span>
+              <span class="rb-chip">NSFDC Interest?</span>
+            </div>
+            <button type="button" class="rb-bento-btn" onclick="SamarthyaAI.toggle()" aria-label="Ask Samarthya AI">
+              <span>✨ Ask AI Assistant</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+          <!-- Card 4: Application Tracker -->
+          <div class="spotlight-card" data-spotlight-color="rgba(16, 185, 129, 0.18)">
+            <div class="rb-bento-header">
+              <div class="rb-bento-icon">📋</div>
+              <span class="rb-bento-badge" style="color:#6EE7B7;">OFFLINE PASS</span>
+            </div>
+            <h3 class="rb-bento-title">Application Tracker</h3>
+            <p class="rb-bento-desc">Track status and offline entitlement certificates across National Scholarship
+              Portal, Swavlamban UDID, and NSFDC loans with zero paperwork lock-in.</p>
+            <div class="rb-bento-chips">
+              <span class="rb-chip">Instant QR Pass</span>
+              <span class="rb-chip">Direct API Query</span>
+            </div>
+            <button type="button" class="rb-bento-btn" onclick="App.navigate('dashboard')"
+              aria-label="View Application Dashboard">
+              <span>📋 View Dashboard</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+          <!-- Card 5: Concessional EMI Simulator -->
+          <div class="spotlight-card" data-spotlight-color="rgba(245, 158, 11, 0.18)">
+            <div class="rb-bento-header">
+              <div class="rb-bento-icon">📊</div>
+              <span class="rb-bento-badge" style="color:#FCD34D;">4.0% BASE RATE</span>
+            </div>
+            <h3 class="rb-bento-title">Concessional EMI Simulator</h3>
+            <p class="rb-bento-desc">Calculate subsidized monthly repayments and capital subsidy deductions for SC/ST
+              enterprise credit and PwD self-employment schemes.</p>
+            <div class="rb-bento-chips">
+              <span class="rb-chip">Up to 33% Subsidy</span>
+              <span class="rb-chip">6-12 Mo Moratorium</span>
+            </div>
+            <button type="button" class="rb-bento-btn" onclick="App.navigate('calculator')"
+              aria-label="Calculate Concessional EMI">
+              <span>📊 Calculate EMI</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+          <!-- Card 6: Partner Map & Camp Mode -->
+          <div class="spotlight-card" data-spotlight-color="rgba(56, 189, 248, 0.18)">
+            <div class="rb-bento-header">
+              <div class="rb-bento-icon">📍</div>
+              <span class="rb-bento-badge" style="color:#38BDF8;">750+ DISTRICTS</span>
+            </div>
+            <h3 class="rb-bento-title">Partner Map &amp; Camp Mode</h3>
+            <p class="rb-bento-desc">Interactive GIS locator for 750+ accredited District Welfare Offices, ALIMCO
+              assessment centers, and offline village-level enrollment camps.</p>
+            <div class="rb-bento-chips">
+              <span class="rb-chip">Offline Camp GPS</span>
+              <span class="rb-chip">Verified Welfare Hubs</span>
+            </div>
+            <button type="button" class="rb-bento-btn" onclick="App.navigate('locator')" aria-label="Open Partner Map">
+              <span>📍 Open Partner Map</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 06: ENDING & OFFICIAL PORTALS ==================== -->
+    <section class="site-section rb-section" id="section-06" style="padding-bottom:120px;">
+      <div class="section-inner">
+        <div class="rb-section-header">
+          <span class="rb-section-tag">06 // ENDING &amp; OFFICIAL PORTALS</span>
+          <h2 class="rb-section-title scroll-float" data-effect="float" data-split-by="words" data-direction="up"
+            data-order="start" data-from-color="currentColor" data-animation-duration="1" data-ease="back.inOut(2)"
+            data-scroll-start="center bottom+=50%" data-scroll-end="bottom bottom-=40%" data-stagger="0.03"
+            data-distance="120" data-stretch="2.3" data-smoothing="0">Official Government Gateways &amp; Support</h2>
+          <p class="rb-section-subtitle">Direct institutional application links and grievance channels for verified
+            schemes.</p>
+        </div>
+
+        <div class="rb-portals-grid">
+          <a href="https://scholarships.gov.in" target="_blank" rel="noopener noreferrer"
+            class="spotlight-card rb-portal-card" data-spotlight-color="rgba(56, 189, 248, 0.18)">
+            <div class="rb-portal-top">
+              <span class="rb-portal-icon">🏛️</span>
+              <h3 class="rb-portal-name">National Scholarship Portal</h3>
+              <span class="rb-portal-url">scholarships.gov.in</span>
+            </div>
+            <div class="rb-portal-link-text">
+              <span>Official NSP Gateway</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://www.swavlambancard.gov.in" target="_blank" rel="noopener noreferrer"
+            class="spotlight-card rb-portal-card" data-spotlight-color="rgba(16, 185, 129, 0.18)">
+            <div class="rb-portal-top">
+              <span class="rb-portal-icon">♿</span>
+              <h3 class="rb-portal-name">Swavlamban Card (UDID)</h3>
+              <span class="rb-portal-url">swavlambancard.gov.in</span>
+            </div>
+            <div class="rb-portal-link-text">
+              <span>Apply for UDID</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://nsfdc.nic.in" target="_blank" rel="noopener noreferrer" class="spotlight-card rb-portal-card"
+            data-spotlight-color="rgba(99, 102, 241, 0.18)">
+            <div class="rb-portal-top">
+              <span class="rb-portal-icon">💼</span>
+              <h3 class="rb-portal-name">NSFDC Official Portal</h3>
+              <span class="rb-portal-url">nsfdc.nic.in</span>
+            </div>
+            <div class="rb-portal-link-text">
+              <span>Channel Credit Portal</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://alimco.in" target="_blank" rel="noopener noreferrer" class="spotlight-card rb-portal-card"
+            data-spotlight-color="rgba(245, 158, 11, 0.18)">
+            <div class="rb-portal-top">
+              <span class="rb-portal-icon">🦽</span>
+              <h3 class="rb-portal-name">ALIMCO Assistive Devices</h3>
+              <span class="rb-portal-url">alimco.in</span>
+            </div>
+            <div class="rb-portal-link-text">
+              <span>ADIP Equipment Desk</span>
+              <span>&rarr;</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- React Bits Pro ASCII Ripple Seamless Background Canvas -->
+        <div class="rb-ascii-ripple-blend" data-ascii-ripple data-font-size="14.5" data-line-height="1.22"
+          data-text-color="#94A3B8" data-ripple-color="#38BDF8" data-trough-color="#818CF8"
+          data-background-color="transparent" data-text-opacity="0.20" data-rain="0.5" data-vignette="0.8"
+          data-drag-strength="0.32" data-drop-strength="1.3" data-refraction="4"
+          data-text="SAMARTHYA AI &bull; STATUTORY WELFARE &amp; CONCESSIONAL CREDIT INTELLIGENCE &bull; ZERO MIDDLEMEN &bull; DPDP ACT 2023 COMPLIANT &bull; 100% DIRECT BENEFICIARY DELIVERY &bull; PRIVACY PRESERVING CLIENT EVALUATION &bull; EMPOWERING CITIZENS ACROSS ALL 28 STATES &amp; 8 UNION TERRITORIES &bull; SUB-SECOND MATCHING ENGINE &bull; DISABILITY CERTIFICATION &bull; SCHOLARSHIPS &bull; MICRO-ENTERPRISE LOANS &bull; ALIMCO ASSISTIVE GEAR &bull; OFFICIAL NATIONAL APIS &bull; EMPOWERING EVERY CITIZEN">
+        </div>
+
+        <!-- High-Impact Final Call to Action -->
+        <div class="rb-cta-card">
+          <div>
+            <h3 class="rb-cta-title">Ready to check your eligible schemes?</h3>
+            <p class="rb-cta-desc">Zero paperwork required for initial evaluation. Complete your criteria intake in
+              under 60 seconds and access verified direct entitlements.</p>
+          </div>
+          <button type="button" class="rb-cta-button" onclick="App.navigate('match')"
+            aria-label="Get Started with Scheme Matcher">
+            Get Started Now &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== PAGE 2: SCHEME FINDER (MATCH) ==================== -->
+  <section class="page" id="page-match">
+
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">SCHEME FINDER</div>
+        <h1 class="section-title" data-i18n="formTitle">Eligibility Criteria Intake</h1>
+        <p class="section-subtitle" data-i18n="formSubtitle">Select your target category to evaluate welfare schemes or
+          concessional enterprise credit.</p>
+      </div>
+
+      <!-- Persona Selector Bar (Targeting SIH26093) -->
+      <div style="display:flex;justify-content:center;margin-bottom:28px">
+        <div class="persona-selector-wrap">
+          <button class="persona-btn active" id="finderPersonaWelfare" onclick="App.setPersona('welfare')">
+            <span class="persona-icon">♿</span>
+            <span data-i18n="personaWelfareShort">PwD Welfare Schemes</span>
+          </button>
+          <button class="persona-btn" id="finderPersonaCredit" onclick="App.setPersona('credit')">
+            <span class="persona-icon">💼</span>
+            <span data-i18n="personaCreditShort">SC Enterprise Loans</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Welfare Track Intake Form (Existing) -->
+      <div id="welfareFormContainer">
+        <div class="form-container">
+          <!-- Form Progress -->
+          <div class="form-progress">
+            <div class="form-step-indicator">
+              <div class="step-dot active" id="stepDot1" onclick="FormController.goToStep(1)" role="button" tabindex="0"
+                title="Step 1: Personal Info">1</div>
+              <div class="step-line" id="stepLine1"></div>
+              <div class="step-dot" id="stepDot2" onclick="FormController.goToStep(2)" role="button" tabindex="0"
+                title="Step 2: Disability Details">2</div>
+              <div class="step-line" id="stepLine2"></div>
+              <div class="step-dot" id="stepDot3" onclick="FormController.goToStep(3)" role="button" tabindex="0"
+                title="Step 3: Education & Income">3</div>
+            </div>
+          </div>
+          <div class="step-labels">
+            <span class="step-label active" onclick="FormController.goToStep(1)" style="cursor:pointer"
+              data-i18n="formStep1">Personal Info</span>
+            <span class="step-label" onclick="FormController.goToStep(2)" style="cursor:pointer"
+              data-i18n="formStep2">Disability Details</span>
+            <span class="step-label" onclick="FormController.goToStep(3)" style="cursor:pointer"
+              data-i18n="formStep3">Education & Income</span>
+          </div>
+
+          <!-- Step 1: Personal Info -->
+          <div class="form-panel active" id="formStep1">
+            <div class="form-card">
+              <div class="form-group">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                  <label class="form-label" data-i18n="formName" style="margin:0">Student Name (optional)</label>
+                  <button type="button" class="voice-input-btn" onclick="WisprFlow.toggle('inputName')">
+                    🎙️ Wispr Voice Fill
+                  </button>
+                </div>
+                <input type="text" class="form-input" id="inputName" placeholder="Enter student name or alias...">
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="formDob">Date of Birth</span> <span
+                    class="required">*</span></label>
+                <input type="date" class="form-input" id="inputDob" required>
+                <div class="form-error" data-i18n="formRequired">Required field</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="formGender">Gender</span> <span
+                    class="required">*</span></label>
+                <select class="form-select" id="inputGender" required>
+                  <option value="">— Select —</option>
+                  <option value="male" data-i18n="formGenderM">Male</option>
+                  <option value="female" data-i18n="formGenderF">Female</option>
+                  <option value="other" data-i18n="formGenderO">Other</option>
+                </select>
+                <div class="form-error" data-i18n="formRequired">Required field</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="formState">State / UT Domicile</span> <span
+                    class="required">*</span></label>
+                <select class="form-select" id="inputState" required>
+                  <option value="">— Select State —</option>
+                </select>
+                <div class="form-error" data-i18n="formRequired">Required field</div>
+              </div>
+              <div class="form-actions">
+                <div></div>
+                <button class="btn btn-primary" onclick="FormController.nextStep()">
+                  <span data-i18n="formNext">Next Step</span> <span>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Disability Details -->
+          <div class="form-panel" id="formStep2">
+            <div class="form-card">
+              <div class="form-group">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                  <label class="form-label" style="margin:0"><span data-i18n="formDisabilityType">Disability
+                      Type(s)</span> <span class="required">*</span></label>
+                  <button type="button" class="voice-input-btn" onclick="WisprFlow.toggle()">
+                    🎙️ Speak Disability
+                  </button>
+                </div>
+                <div class="checkbox-grid" id="disabilityCheckboxes"></div>
+                <div class="form-error" id="disabilityError" data-i18n="formRequired">Please select at least one
+                  condition</div>
+              </div>
+              <div class="form-group" id="disabilityPercentGroup">
+                <label class="form-label"><span data-i18n="formDisabilityPercent">Disability Percentage</span> <span
+                    class="required">*</span></label>
+                <div class="range-container">
+                  <div class="range-value" id="percentDisplay">40%</div>
+                  <input type="range" class="form-range" id="inputPercent" min="0" max="100" value="40"
+                    oninput="FormController.updatePercent(this.value)">
+                  <div class="range-labels">
+                    <span>0%</span>
+                    <span>40% (Benchmark for Govt Schemes)</span>
+                    <span>100%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-secondary" onclick="FormController.prevStep()">
+                  <span>←</span> <span data-i18n="formPrev">Back</span>
+                </button>
+                <button class="btn btn-primary" onclick="FormController.nextStep()">
+                  <span data-i18n="formNext">Next Step</span> <span>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Education & Income -->
+          <div class="form-panel" id="formStep3">
+            <div class="form-card">
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="formEducation">Current Education Level</span> <span
+                    class="required">*</span></label>
+                <select class="form-select" id="inputEducation" required>
+                  <option value="">— Select Education Level —</option>
+                </select>
+                <div class="form-error" data-i18n="formRequired">Required field</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="formIncome">Annual Household Income (₹)</span> <span
+                    class="required">*</span></label>
+                <select class="form-select" id="inputIncome" required>
+                  <option value="">— Select Income Range —</option>
+                  <option value="50000">Below ₹50,000</option>
+                  <option value="100000">₹50,000 — ₹1,00,000</option>
+                  <option value="150000">₹1,00,000 — ₹2,00,000</option>
+                  <option value="250000">₹2,00,000 — ₹2,50,000</option>
+                  <option value="300000">₹2,50,000 — ₹3,00,000</option>
+                  <option value="500000">₹3,00,000 — ₹5,00,000</option>
+                  <option value="600000">₹5,00,000 — ₹6,00,000</option>
+                  <option value="800000">₹6,00,000 — ₹8,00,000</option>
+                  <option value="1000000">₹8,00,000 — ₹10,00,000</option>
+                  <option value="1500000">Above ₹10,00,000</option>
+                </select>
+                <div class="form-error" data-i18n="formRequired">Required field</div>
+              </div>
+
+              <!-- Anti-Bot Honeypot (Silent) -->
+              <input type="text" id="hpField" name="website_hp"
+                style="opacity:0;position:absolute;top:-9999px;left:-9999px;height:0;width:0;" tabindex="-1"
+                autocomplete="off">
+
+              <div class="form-actions">
+                <button class="btn btn-secondary" onclick="FormController.prevStep()">
+                  <span>←</span> <span data-i18n="formPrev">Back</span>
+                </button>
+                <button class="btn btn-success" onclick="FormController.submit()" id="submitBtn">
+                  <span>⚡</span> <span data-i18n="formSubmit">Find Matching Schemes</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End welfareFormContainer -->
+
+      <!-- Credit Track Intake Form (SIH26093) -->
+      <div id="creditFormContainer" style="display:none">
+        <div class="form-container">
+          <!-- Credit Progress Indicator -->
+          <div class="form-progress">
+            <div class="form-step-indicator">
+              <div class="step-dot credit-step-dot active" id="creditStepDot1"
+                onclick="CreditFormController.goToStep(1)" role="button" tabindex="0"
+                title="Step 1: SC Category & Domicile">1</div>
+              <div class="step-line" id="creditStepLine1"></div>
+              <div class="step-dot credit-step-dot" id="creditStepDot2" onclick="CreditFormController.goToStep(2)"
+                role="button" tabindex="0" title="Step 2: Project Details">2</div>
+              <div class="step-line" id="creditStepLine2"></div>
+              <div class="step-dot credit-step-dot" id="creditStepDot3" onclick="CreditFormController.goToStep(3)"
+                role="button" tabindex="0" title="Step 3: Family Income Ceiling">3</div>
+            </div>
+          </div>
+          <div class="step-labels">
+            <span class="step-label credit-step-label active" onclick="CreditFormController.goToStep(1)"
+              style="cursor:pointer" data-i18n="creditStep1">SC Category &amp; Domicile</span>
+            <span class="step-label credit-step-label" onclick="CreditFormController.goToStep(2)" style="cursor:pointer"
+              data-i18n="creditStep2">Project &amp; Enterprise</span>
+            <span class="step-label credit-step-label" onclick="CreditFormController.goToStep(3)" style="cursor:pointer"
+              data-i18n="creditStep3">Income Ceiling (≤₹5L)</span>
+          </div>
+
+          <!-- Credit Step 1: SC Category & Domicile -->
+          <div class="form-panel credit-form-panel active" id="creditFormStep1">
+            <div class="form-card">
+              <div class="form-group">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                  <label class="form-label" style="margin:0">Entrepreneur / Student Name (optional)</label>
+                  <button type="button" class="voice-input-btn" onclick="WisprFlow.toggle('creditInputName')">
+                    🎙️ Wispr Voice Fill
+                  </button>
+                </div>
+                <input type="text" class="form-input" id="creditInputName"
+                  placeholder="Enter full name or business alias...">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><span>Gender</span> <span class="required">*</span></label>
+                <select class="form-select" id="creditInputGender" required>
+                  <option value="">— Select Gender —</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female (1.0% Concession &amp; Mahila Samriddhi)</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><span>State / UT Domicile</span> <span class="required">*</span></label>
+                <select class="form-select" id="creditInputState" required>
+                  <option value="">— Select State / UT —</option>
+                </select>
+              </div>
+
+              <!-- SC Category Self-Declaration Checkbox -->
+              <div class="form-group"
+                style="background:rgba(99,102,241,0.08);border:1.2px solid rgba(99,102,241,0.3);border-radius:12px;padding:16px">
+                <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;margin:0">
+                  <input type="checkbox" id="creditInputCasteCert" checked
+                    style="width:20px;height:20px;margin-top:2px;accent-color:#6366f1">
+                  <div>
+                    <strong style="color:#fff;font-size:14px" data-i18n="creditCasteCert">
+                      I hold or am eligible for a Scheduled Caste (SC) category certificate
+                    </strong>
+                    <p style="font-size:12px;color:var(--text-secondary);margin-top:4px"
+                      data-i18n="creditCasteCertNote">
+                      Self-declaration under DPDP Act 2023. Zero Aadhaar or document upload required client-side.
+                      Certificate will be verified at Channel Partner branch before loan disbursal.
+                    </p>
+                  </div>
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <div></div>
+                <button class="btn btn-primary" onclick="CreditFormController.nextStep()">
+                  <span>Next: Project Details</span> <span>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Credit Step 2: Project Details -->
+          <div class="form-panel credit-form-panel" id="creditFormStep2">
+            <div class="form-card">
+              <div class="form-group">
+                <label class="form-label" data-i18n="creditPurpose">Funding Purpose <span
+                    class="required">*</span></label>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                  <label
+                    style="background:rgba(255,255,255,0.04);border:1.5px solid var(--border);border-radius:12px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:10px">
+                    <input type="radio" name="creditPurpose" value="business" checked
+                      onchange="CreditFormController.setPurpose('business')">
+                    <div>
+                      <strong style="color:#fff;display:block;font-size:13px">💼 Business &amp; Enterprise</strong>
+                      <span style="font-size:11px;color:var(--text-muted)">Trade, Services, Manufacturing, Agri</span>
+                    </div>
+                  </label>
+                  <label
+                    style="background:rgba(255,255,255,0.04);border:1.5px solid var(--border);border-radius:12px;padding:14px;cursor:pointer;display:flex;align-items:center;gap:10px">
+                    <input type="radio" name="creditPurpose" value="education"
+                      onchange="CreditFormController.setPurpose('education')">
+                    <div>
+                      <strong style="color:#fff;display:block;font-size:13px">🎓 Higher Education</strong>
+                      <span style="font-size:11px;color:var(--text-muted)">Engineering, Medical, Overseas</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Business Sector Row -->
+              <div class="form-group" id="creditBizSectorRow">
+                <label class="form-label" data-i18n="creditSector">Project Sector / Enterprise Type <span
+                    class="required">*</span></label>
+                <select class="form-select" id="creditInputSector">
+                  <option value="">— Select Industry / Sector —</option>
+                </select>
+              </div>
+
+              <!-- Education Course Row -->
+              <div class="form-group" id="creditEduCourseRow" style="display:none">
+                <label class="form-label">Degree / Course Stream <span class="required">*</span></label>
+                <select class="form-select" id="creditInputCourse">
+                  <option value="">— Select Course Stream —</option>
+                </select>
+              </div>
+
+              <!-- Estimated Project or Course Cost with Preset Chips -->
+              <div class="form-group">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+                  <label class="form-label" style="margin:0" data-i18n="creditCost">Estimated Project / Course Cost (₹)
+                    <span class="required">*</span></label>
+                  <span style="font-size:11.5px;color:var(--accent-mint)">● Micro Finance ≤ ₹1.4L • Term Loan ≤
+                    ₹50L</span>
+                </div>
+                <input type="number" class="form-input" id="creditInputCost" value="140000" min="10000" max="10000000"
+                  placeholder="e.g. 140000">
+
+                <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">
+                  <span style="font-size:11px;color:var(--text-muted);align-self:center">Quick Presets:</span>
+                  <button type="button" class="cost-preset-btn" onclick="CreditFormController.setCost(50000)">₹50K
+                    (Artisan)</button>
+                  <button type="button" class="cost-preset-btn" onclick="CreditFormController.setCost(140000)">₹1.4L
+                    (Micro Max)</button>
+                  <button type="button" class="cost-preset-btn" onclick="CreditFormController.setCost(500000)">₹5L
+                    (Retail Shop)</button>
+                  <button type="button" class="cost-preset-btn" onclick="CreditFormController.setCost(1500000)">₹15L
+                    (Workshop)</button>
+                  <button type="button" class="cost-preset-btn" onclick="CreditFormController.setCost(3000000)">₹30L
+                    (Factory Unit)</button>
+                  <button type="button" class="cost-preset-btn" onclick="CreditFormController.setCost(5000000)">₹50L
+                    (Term Max)</button>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-secondary" onclick="CreditFormController.prevStep()">
+                  <span>←</span> <span>Back</span>
+                </button>
+                <button class="btn btn-primary" onclick="CreditFormController.nextStep()">
+                  <span>Next: Income Eligibility</span> <span>→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Credit Step 3: Family Income Ceiling -->
+          <div class="form-panel credit-form-panel" id="creditFormStep3">
+            <div class="form-card">
+              <div class="form-group">
+                <label class="form-label"><span data-i18n="creditIncomeLimit">Annual Household Income (₹)</span> <span
+                    class="required">*</span></label>
+                <select class="form-select" id="creditInputIncome" required>
+                  <option value="">— Select Annual Household Income Range —</option>
+                  <option value="80000">Below ₹1,00,000 / year (Priority BPL Category)</option>
+                  <option value="150000">₹1,00,000 — ₹2,00,000 / year</option>
+                  <option value="250000">₹2,00,000 — ₹3,00,000 / year</option>
+                  <option value="400000" selected>₹3,00,000 — ₹5,00,000 / year (Eligible under NSFDC Cap)</option>
+                  <option value="600000">₹5,00,000 — ₹7,50,000 (Exceeds ₹5L NSFDC Ceiling)</option>
+                  <option value="1000000">Above ₹7,50,000 / year (Commercial Lending Only)</option>
+                </select>
+                <div style="font-size:12px;color:var(--text-muted);margin-top:6px" data-i18n="creditIncomeLimitNote">
+                  ℹ️ NSFDC concessional loans are statutory channel funds reserved for SC families with annual income ≤
+                  ₹5,00,000.
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-secondary" onclick="CreditFormController.prevStep()">
+                  <span>←</span> <span>Back</span>
+                </button>
+                <button class="btn btn-success" onclick="CreditFormController.submit()">
+                  <span>⚡</span> <span>Evaluate Concessional Schemes &amp; Rates</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End creditFormContainer -->
+
+      <!-- Results Area (Welfare Schemes) -->
+      <div id="resultsArea" style="display:none; padding-top: 40px; padding-bottom: 60px;"></div>
+
+      <!-- Results Area (Credit & Enterprise Schemes - SIH26093) -->
+      <div id="creditResultsArea" style="display:none; padding-top: 30px; padding-bottom: 60px;"></div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 3: DASHBOARD & APPLICATION TRACKER ==================== -->
+  <section class="page" id="page-dashboard">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">APPLICATIONS &amp; DEADLINES</div>
+        <h1 class="section-title" data-i18n="dashTitle">Application Dashboard</h1>
+        <p class="section-subtitle">Track your bookmarked schemes, application stages, and export calendar reminders.
+        </p>
+      </div>
+      <div id="dashboardContent">
+        <div class="form-card" style="text-align:center;padding:48px 24px">
+          <div style="font-size:42px;margin-bottom:12px">📊</div>
+          <h3 style="font-size:20px;font-weight:800;color:#fff;margin-bottom:8px">No Application Tracked Yet</h3>
+          <p style="font-size:14px;color:var(--text-secondary);max-width:440px;margin:0 auto 24px">Complete the scheme
+            search to see matched entitlements and track applications.</p>
+          <button class="btn btn-primary" onclick="App.navigate('match')">
+            <span>Find Schemes Now</span> <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FLOATING WIDGETS ==================== -->
+
+  <!-- 1. Wispr Flow AI Voice Waveform Bar -->
+  <div class="wispr-flow-bar" id="wisprFlowBar">
+    <div class="wispr-left-info">
+      <div class="wispr-live-dot"></div>
+      <div class="wispr-text-meta">
+        <span class="wispr-brand-title">Wispr Flow AI Voice</span>
+        <span class="wispr-live-transcript" id="wisprLiveTranscript">Listening... Speak in Hindi or English</span>
+      </div>
+    </div>
+    <canvas class="wispr-canvas-wave" id="wisprCanvas"></canvas>
+    <button class="wispr-stop-btn" onclick="WisprFlow.stop()">✕ Stop</button>
+  </div>
+
+  <!-- 2. Dedicated Samarthya AI Floating FAB & Drawer -->
+  <button class="ai-floating-btn" id="aiFloatingBtn" onclick="SamarthyaAI.toggle()"
+    aria-label="Open Samarthya AI Chatbot" title="Samarthya AI Assistant">
+    ✨
+  </button>
+
+  <div class="ai-drawer" id="aiDrawer">
+    <div class="ai-header">
+      <div class="ai-header-info">
+        <div class="ai-avatar">✨</div>
+        <div>
+          <div class="ai-title">Samarthya AI Assistant</div>
+          <div class="ai-status">● Online • 50+ Schemes Knowledge</div>
+        </div>
+      </div>
+      <button class="ai-close-btn" onclick="SamarthyaAI.close()">✕</button>
+    </div>
+
+    <div class="ai-chat-body" id="aiChatBody"></div>
+
+    <div class="ai-footer">
+      <input type="text" class="ai-input" id="aiChatInput" placeholder="Ask about scholarships, ADIP, documents..."
+        onkeydown="if(event.key==='Enter')SamarthyaAI.handleSend()">
+      <button class="voice-input-btn" style="padding:6px 10px" onclick="WisprFlow.toggle()"
+        title="Dictate to AI">🎙️</button>
+      <button class="ai-send-btn" onclick="SamarthyaAI.handleSend()">➤</button>
+    </div>
+  </div>
+
+  <!-- 3. Accessibility Tools Panel -->
+  <button class="a11y-floating-btn" id="a11yFloatingBtn" onclick="AccessibilitySuite.togglePanel()"
+    aria-label="Open Accessibility Tools" title="Accessibility Tools">
+    ♿
+  </button>
+
+  <div class="a11y-panel" id="a11yPanel">
+    <div class="a11y-panel-header">
+      <div class="a11y-panel-title">
+        <span>♿</span>
+        <span>Accessibility Suite</span>
+      </div>
+      <button class="a11y-panel-close" onclick="AccessibilitySuite.closePanel()">✕</button>
+    </div>
+
+    <div class="a11y-controls-grid">
+      <div class="a11y-control-row">
+        <span class="a11y-control-label">🌓 High Contrast</span>
+        <button class="a11y-toggle-btn" id="a11yBtnContrast"
+          onclick="AccessibilitySuite.toggleHighContrast()">Toggle</button>
+      </div>
+
+      <div class="a11y-control-row">
+        <span class="a11y-control-label">📖 Dyslexia Font</span>
+        <button class="a11y-toggle-btn" id="a11yBtnDyslexia"
+          onclick="AccessibilitySuite.toggleDyslexiaFont()">Toggle</button>
+      </div>
+
+      <div class="a11y-control-row">
+        <span class="a11y-control-label">🔍 Text Scaling</span>
+        <div class="font-size-group">
+          <button class="font-size-btn active" onclick="AccessibilitySuite.setFontSize(0)">A</button>
+          <button class="font-size-btn" onclick="AccessibilitySuite.setFontSize(1)">A+</button>
+          <button class="font-size-btn" onclick="AccessibilitySuite.setFontSize(2)">A++</button>
+        </div>
+      </div>
+
+      <div class="a11y-control-row">
+        <span class="a11y-control-label">🔊 Voice Narrator</span>
+        <button class="a11y-toggle-btn" onclick="AccessibilitySuite.readActiveSection()">Read Page</button>
+      </div>
+
+      <div class="a11y-control-row">
+        <span class="a11y-control-label">🤟 Sign Language (ISL)</span>
+        <button class="a11y-toggle-btn" onclick="AccessibilitySuite.openISLAssistant()">Open Guide</button>
+      </div>
+
+      <div class="a11y-control-row">
+        <span class="a11y-control-label">🛑 Reduced Motion</span>
+        <button class="a11y-toggle-btn" id="a11yBtnMotion"
+          onclick="AccessibilitySuite.toggleReducedMotion()">Toggle</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="appFooter">
+    <div class="footer-container">
+      <div class="footer-nav">
+        <a href="#home" onclick="App.navigate('home', event)" data-i18n="navHome">Home</a>
+        <a href="#match" onclick="App.navigate('match', event)" data-i18n="navMatch">Find Schemes</a>
+        <a href="#dashboard" onclick="App.navigate('dashboard', event)" data-i18n="navDashboard">Dashboard</a>
+        <a href="#how" onclick="App.scrollToHow(event)" data-i18n="navHow">How It Works</a>
+        <a href="#about-section" onclick="App.scrollToAbout(event)" data-i18n="navAbout">About</a>
+        <a href="#" onclick="WhatsAppLead.openModal();return false;" style="color:#25D366;font-weight:700">💬 VIP
+          WhatsApp Alerts</a>
+      </div>
+      <p class="footer-text" data-i18n="poweredBy">Powered by Samarthya AI Engine • DPDP Act 2023 Compliant</p>
+    </div>
+  </footer>
+
+  <!-- GSAP & ScrollTrigger CDN (Awwwards Grade Motion) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Leaflet Interactive Maps -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Procedural Web Audio Sound Engine -->
+  <script src="js/immersive-audio.js?v=6.0"></script>
+  <script src="js/sound-engine.js?v=7.0"></script>
+
+  <!-- Core Scripts with Cache Buster v7.0 -->
+  <script src="js/db.js?v=6.0"></script>
+  <script src="js/schemes.js?v=6.0"></script>
+  <script src="js/credit-schemes.js?v=6.0"></script>
+  <script src="js/matcher.js?v=6.0"></script>
+  <script src="js/credit-matcher.js?v=6.0"></script>
+  <script src="js/financial-calculator.js?v=6.0"></script>
+  <script src="js/partner-locator.js?v=6.0"></script>
+  <script src="js/i18n.js?v=6.0"></script>
+  <script src="js/accessibility.js?v=6.0"></script>
+  <script src="js/wispr-flow.js?v=6.0"></script>
+  <script src="js/samarthya-ai.js?v=6.0"></script>
+  <script src="js/whatsapp-lead.js?v=6.0"></script>
+  <script src="js/tracker.js?v=6.0"></script>
+  <script src="js/ngo-mode.js?v=6.0"></script>
+  <script src="js/report.js?v=6.0"></script>
+  <script src="js/motion-engine.js?v=7.0"></script>
+  <script src="js/gravity-letters.js?v=7.0"></script>
+  <script src="js/react-bits-showcase.js?v=1.0"></script>
+  <script src="js/bounce-cards.js?v=1.0"></script>
+  <script src="js/scroll-expand.js?v=1.0"></script>
+  <script src="js/scroll-float.js?v=1.0"></script>
+  <script src="js/ascii-ripple.js?v=1.0"></script>
+  <script src="js/app.js?v=8.0"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      // Initialize React Bits ScrollExpand in Section 03
+      const scrollExpandContainer = document.getElementById('scrollExpandContainer');
+      if (scrollExpandContainer && window.ScrollExpand) {
+        window.scrollExpandInstance = new window.ScrollExpand(scrollExpandContainer, {
+          src: 'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=1600&auto=format&fit=crop&q=80',
+          alt: 'Direct Entitlements & Financial Relief',
+          title: 'Direct Entitlements & Financial Relief',
+          scrollHint: 'Scroll to Expand Entitlements',
+          useWindowScroll: true,
+          startWidth: 44,
+          startHeight: 56,
+          startRadius: 24,
+          endRadius: 0,
+          mediaZoom: 1.32,
+          scrollDistance: 1.2,
+          holdDistance: 0.45,
+          smoothing: 0.1,
+          overlayScrim: 0.65
+        });
+      }
+
+      // Initialize React Bits BounceCards in Section 02
+      const bounceContainer = document.getElementById('bounceCardsContainer');
+      if (bounceContainer && window.BounceCards) {
+        const welfareImages = [
+          {
+            src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=480&h=480&fit=crop',
+            alt: 'Student and Beneficiary Welfare',
+            label: 'Student Welfare'
+          },
+          {
+            src: 'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=480&h=480&fit=crop',
+            alt: 'Community Welfare & Camps',
+            label: 'Community Camps'
+          },
+          {
+            src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=480&h=480&fit=crop',
+            alt: 'Digital Welfare Schemes & Data',
+            label: 'Digital Schemes'
+          },
+          {
+            src: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=480&h=480&fit=crop',
+            alt: 'Inclusive Assistive Technology',
+            label: 'Inclusive Tech'
+          }
+        ];
+
+        window.bounceCardsInstance = new window.BounceCards(bounceContainer, {
+          images: welfareImages,
+          containerWidth: 460,
+          containerHeight: 300,
+          cardSize: 180,
+          spread: 75,
+          rotation: 8,
+          arc: -20,
+          pushDistance: 140,
+          hoverScale: 1.05,
+          bounciness: 0.5,
+          animationDelay: 0.3,
+          animationStagger: 0.05,
+          borderWidth: 4,
+          borderColor: '#1e293b',
+          radius: 20,
+          shadow: true,
+          enableHover: true,
+          onCardClick: function (index, card) {
+            console.log('Card clicked: ' + index, card);
+            const pillars = document.querySelectorAll('.rb-pillars-grid .spotlight-card');
+            if (pillars && pillars[index % pillars.length]) {
+              pillars[index % pillars.length].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              pillars[index % pillars.length].style.borderColor = '#818cf8';
+              pillars[index % pillars.length].style.boxShadow = '0 0 35px rgba(99, 102, 241, 0.5)';
+              setTimeout(() => {
+                pillars[index % pillars.length].style.borderColor = '';
+                pillars[index % pillars.length].style.boxShadow = '';
+              }, 1200);
+            }
+          }
+        });
+      }
+
+      // Initialize Interactive Gravity Letters headline (Crisp white Line 1 + vibrant cyan/indigo Line 2)
+      const headlineEl = document.getElementById('gravityLettersHeadline');
+      if (headlineEl && window.GravityLetters) {
+        window.gravityLettersInstance = new window.GravityLetters(headlineEl, {
+          line1: "Empowering Beneficiaries",
+          line2: "with Intelligent Access",
+          fontSize: 84,
+          fontWeight: 800,
+          fontFamily: "'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif",
+          lineHeight: 1.15,
+          color1: "#FFFFFF",
+          color2Start: "#38BDF8",
+          color2End: "#818CF8",
+          grainStep: 2.6,
+          cutRadius: 52,
+          healDelay: 1300,
+          holdTime: 700
+        });
+      }
+    });</script>
+</body>
+
+</html>

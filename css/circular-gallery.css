@@ -1,0 +1,302 @@
+/* ==========================================================================
+   CIRCULAR GALLERY — REACT BITS INTEGRATION & SHOWCASE STYLES
+   Curved Arched Ribbon WebGL 2 Gallery (JavaScript + CSS)
+   ========================================================================== */
+
+/* Core Component Styles (React Bits Spec) */
+.circular-gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+  contain: layout paint size;
+}
+
+.circular-gallery[data-pointer] {
+  cursor: pointer;
+}
+
+.circular-gallery[data-dragging] {
+  cursor: grabbing;
+}
+
+.circular-gallery-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.circular-gallery-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.circular-gallery-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9);
+  will-change: transform, opacity;
+  pointer-events: none;
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.circular-gallery-caption {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(92%, 42rem);
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(10, 15, 29, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 16px 24px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px rgba(99, 102, 241, 0.15);
+}
+
+.circular-gallery-caption-text {
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9;
+  color: #E2E8F0;
+  font-size: 0.98rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.circular-gallery-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #FFFFFF;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.circular-gallery-close[data-visible] {
+  opacity: 0.95;
+  pointer-events: auto;
+}
+
+.circular-gallery-close:hover {
+  opacity: 1;
+  background: rgba(99, 102, 241, 0.85);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.08);
+}
+
+.circular-gallery-close:focus-visible {
+  outline: 2px solid #38BDF8;
+  outline-offset: 3px;
+}
+
+.circular-gallery-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   SECTION 03 SHOWCASE CONTAINER — HUD FRAMEWORK & CONTROLS
+   ========================================================================== */
+
+.cg-showcase-panel {
+  position: relative;
+  width: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.09) 0%, rgba(10, 15, 29, 0.95) 70%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px -10px rgba(99, 102, 241, 0.12);
+  margin-top: 1.5rem;
+}
+
+/* Telemetry Header */
+.cg-telemetry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: rgba(15, 23, 42, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  flex-wrap: wrap;
+  gap: 12px;
+  z-index: 5;
+}
+
+.cg-telemetry-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cg-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 10px #10B981;
+  animation: cgPulse 2s infinite ease-in-out;
+}
+
+@keyframes cgPulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.cg-telemetry-title {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  color: #94A3B8;
+  text-transform: uppercase;
+}
+
+.cg-telemetry-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono, monospace);
+  color: #A5B4FC;
+  letter-spacing: 0.05em;
+}
+
+.cg-telemetry-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cg-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(30, 41, 59, 0.6);
+  color: #F8FAFC;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cg-nav-btn:hover {
+  background: rgba(99, 102, 241, 0.3);
+  border-color: rgba(99, 102, 241, 0.5);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.cg-nav-btn:active {
+  transform: translateY(1px);
+}
+
+.cg-nav-btn:focus-visible {
+  outline: 2px solid #38BDF8;
+  outline-offset: 2px;
+}
+
+/* Gallery Viewport Stage */
+.cg-viewport-stage {
+  position: relative;
+  width: 100%;
+  height: 580px;
+  background: radial-gradient(ellipse at 50% 60%, rgba(30, 27, 75, 0.35) 0%, rgba(7, 9, 14, 0.98) 75%);
+}
+
+@media (max-width: 992px) {
+  .cg-viewport-stage {
+    height: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cg-viewport-stage {
+    height: 400px;
+  }
+  .cg-telemetry-header {
+    padding: 12px 16px;
+  }
+}
+
+/* Guidance HUD Footer Bar */
+.cg-hint-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(11, 17, 32, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  color: #64748B;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cg-hint-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cg-hint-item kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 0.72rem;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  color: #CBD5E1;
+}
+
+.cg-active-indicator {
+  color: #38BDF8;
+  font-weight: 600;
+}

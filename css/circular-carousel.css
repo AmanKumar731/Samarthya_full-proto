@@ -1,0 +1,474 @@
+/* ==========================================================================
+   CircularCarousel — React Bits 3D Interactive Carousel Styles
+   ========================================================================== */
+
+.circular-carousel {
+  --cc-fade: #090a0f;
+  --cc-radius: 14px;
+  --cc-inner: 0.4;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: none;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.circular-carousel[data-axis='x'] {
+  touch-action: pan-x;
+}
+
+.circular-carousel[data-draggable] {
+  cursor: grab;
+}
+
+.circular-carousel[data-dragging] {
+  cursor: grabbing;
+}
+
+.circular-carousel:focus-visible {
+  box-shadow: inset 0 0 0 2px rgba(99, 102, 241, 0.6);
+}
+
+.circular-carousel__view {
+  position: absolute;
+  inset: 0;
+}
+
+.circular-carousel[data-shape='wheel'] .circular-carousel__view {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000000 18%, #000000 82%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000000 18%, #000000 82%, transparent);
+}
+
+.circular-carousel[data-shape='panorama'] .circular-carousel__view {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000000 12%, #000000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000000 12%, #000000 88%, transparent);
+}
+
+.circular-carousel__stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.circular-carousel[data-ready] .circular-carousel__stage {
+  opacity: 1;
+}
+
+.circular-carousel__camera,
+.circular-carousel__ring,
+.circular-carousel__card {
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+
+.circular-carousel__camera {
+  position: relative;
+}
+
+.circular-carousel__ring,
+.circular-carousel__card {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.circular-carousel__tile {
+  position: absolute;
+  outline: 1px solid transparent;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.circular-carousel__frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+.circular-carousel__card:hover .circular-carousel__frame {
+  box-shadow: 0 20px 45px -8px rgba(99, 102, 241, 0.35), 0 0 0 1px rgba(99, 102, 241, 0.45);
+}
+
+.circular-carousel__photo {
+  position: absolute;
+  display: block;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  filter: saturate(1.1) brightness(0.92);
+  transition: filter 0.3s ease;
+}
+
+.circular-carousel__card:hover .circular-carousel__photo {
+  filter: saturate(1.25) brightness(1.05);
+}
+
+.circular-carousel__photo--leaving {
+  animation: circular-carousel-leave 700ms cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+
+.circular-carousel__shade,
+.circular-carousel__inner {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.circular-carousel__shade {
+  background: var(--cc-fade);
+  opacity: var(--cc-depth, 0);
+  transition: opacity 0.15s ease-out;
+}
+
+.circular-carousel__inner {
+  background: #090a0f;
+  opacity: var(--cc-inner);
+}
+
+/* Feature Card Badge */
+.circular-carousel__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: 6px;
+  color: #38BDF8;
+  font-family: 'Fira Code', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Caption bar */
+.circular-carousel__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  color: inherit;
+  text-align: center;
+  pointer-events: none;
+  z-index: 10;
+  animation: circular-carousel-reveal 900ms ease both;
+}
+
+.circular-carousel__title {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #F8FAFC;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  animation: circular-carousel-title 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.circular-carousel__subtitle {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #94A3B8;
+  margin-top: 2px;
+}
+
+.circular-carousel__count {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: #6366F1;
+  background: rgba(15, 23, 42, 0.7);
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.circular-carousel__slash {
+  opacity: 0.5;
+  color: #94A3B8;
+}
+
+.circular-carousel__digits {
+  display: inline-flex;
+}
+
+.circular-carousel__digit {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+}
+
+.circular-carousel__reel {
+  display: flex;
+  flex-direction: column;
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.circular-carousel__reel > span {
+  height: 1em;
+}
+
+.circular-carousel__live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Section 05 Showcase Enclosure
+   ========================================================================== */
+
+.circular-carousel-showcase-box {
+  position: relative;
+  width: 100%;
+  margin: 36px 0 48px 0;
+  border-radius: 24px;
+  background: radial-gradient(circle at 50% 25%, rgba(99, 102, 241, 0.08) 0%, rgba(15, 23, 42, 0.75) 60%, rgba(9, 10, 15, 0.98) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  box-shadow: 0 24px 70px -15px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circular-carousel-showcase-box:hover {
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 30px 80px -15px rgba(99, 102, 241, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.circular-carousel-stage-container {
+  width: 100%;
+  height: 520px;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .circular-carousel-stage-container {
+    height: 440px;
+  }
+}
+
+@media (max-width: 600px) {
+  .circular-carousel-stage-container {
+    height: 360px;
+  }
+}
+
+/* HUD Top Bar */
+.cc-showcase-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 26px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(15, 23, 42, 0.45);
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  color: #94A3B8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cc-showcase-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(99, 102, 241, 0.16);
+  color: #A5B4FC;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.cc-showcase-pill .pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: #38BDF8;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #38BDF8;
+  animation: pulse-cc-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-cc-dot {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+
+/* HUD Preset Buttons & Controls */
+.cc-controls-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cc-btn-preset {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #CBD5E1;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cc-btn-preset:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: #FFFFFF;
+}
+
+.cc-btn-preset.active {
+  background: #6366F1;
+  border-color: #818CF8;
+  color: #FFFFFF;
+  font-weight: 600;
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.5);
+}
+
+/* Bottom Hint & Action Bar */
+.cc-showcase-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(10, 14, 26, 0.6);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 12px;
+  color: #64748B;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cc-hints-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cc-hint-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cc-hint-item kbd {
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: #CBD5E1;
+  font-size: 10px;
+  font-family: 'Fira Code', monospace;
+}
+
+.cc-nav-arrows {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cc-arrow-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #E2E8F0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.cc-arrow-btn:hover {
+  background: rgba(99, 102, 241, 0.25);
+  border-color: #6366F1;
+  color: #FFFFFF;
+  transform: scale(1.08);
+}
+
+@keyframes circular-carousel-title {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes circular-carousel-leave {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes circular-carousel-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circular-carousel__stage,
+  .circular-carousel__reel {
+    transition: none;
+  }
+
+  .circular-carousel__caption,
+  .circular-carousel__title {
+    animation: none;
+  }
+}

@@ -1,0 +1,274 @@
+/* Section 03 Container Resets & Overflow Preservation */
+#section-03,
+#section-03.site-section,
+#section-03.rb-section {
+  overflow: visible !important;
+  contain: none !important;
+  content-visibility: visible !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#section-03 .section-inner {
+  padding-left: 24px;
+  padding-right: 24px;
+  overflow: visible !important;
+}
+
+.scroll-expand {
+  position: relative;
+  width: 100%;
+  overflow: visible !important;
+}
+
+.scroll-expand--scroller {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior: contain;
+}
+
+.scroll-expand--scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-expand__track {
+  position: relative;
+  width: 100%;
+  overflow: visible !important;
+}
+
+.scroll-expand__stage {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  --se-title-size: clamp(2rem, 5.5vw, 4.2rem);
+  background: #07090e;
+  z-index: 20;
+  transform: translateZ(0);
+}
+
+.scroll-expand__frame {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(21% 29% 21% 29% round 24px);
+  will-change: clip-path;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85);
+}
+
+.scroll-expand__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+  transform-origin: center;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.scroll-expand__scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(7, 9, 14, 0.95) 0%,
+    rgba(7, 9, 14, 0.6) 50%,
+    rgba(7, 9, 14, 0.85) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+
+.scroll-expand__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5% 6%;
+  opacity: 0;
+  will-change: opacity, transform;
+  pointer-events: auto;
+  z-index: 5;
+}
+
+.scroll-expand__title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 6%;
+  text-align: center;
+  font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif);
+  font-size: var(--se-title-size);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: #fff;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.85);
+  pointer-events: none;
+  will-change: opacity, transform;
+  z-index: 4;
+}
+
+.scroll-expand__hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  text-align: center;
+  font-family: var(--font-mono, 'Fira Code', monospace);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  will-change: opacity, transform;
+  text-transform: uppercase;
+  z-index: 4;
+}
+
+.scroll-expand__hint::before {
+  content: '↓ ';
+  font-size: 0.95rem;
+  color: #38bdf8;
+}
+
+/* Custom Overlay Content for Section 03 */
+.se-overlay-content {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.se-overlay-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono, 'Fira Code', monospace);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #2dd4bf;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.se-overlay-headline {
+  font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.se-overlay-desc {
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+  color: #cbd5e1;
+  max-width: 720px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.se-compare-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.se-card-market {
+  padding: 22px 24px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+.se-card-samarthya {
+  padding: 22px 24px;
+  border-radius: 16px;
+  background: rgba(6, 78, 59, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.3);
+}
+
+.se-card-label {
+  font-family: var(--font-mono, 'Fira Code', monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.se-card-market .se-card-label {
+  color: #f87171;
+}
+
+.se-card-samarthya .se-card-label {
+  color: #34d399;
+}
+
+.se-card-rate {
+  font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 6px 0 10px;
+  line-height: 1.1;
+}
+
+.se-card-market .se-card-rate {
+  color: #fca5a5;
+}
+
+.se-card-samarthya .se-card-rate {
+  color: #6ee7b7;
+}
+
+.se-card-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.se-card-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .se-compare-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .se-card-rate {
+    font-size: 1.4rem;
+  }
+}

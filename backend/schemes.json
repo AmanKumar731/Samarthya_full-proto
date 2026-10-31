@@ -1,0 +1,3608 @@
+{
+  "INDIAN_STATES": [
+    {
+      "id": "andhra_pradesh",
+      "label": "Andhra Pradesh"
+    },
+    {
+      "id": "arunachal_pradesh",
+      "label": "Arunachal Pradesh"
+    },
+    {
+      "id": "assam",
+      "label": "Assam"
+    },
+    {
+      "id": "bihar",
+      "label": "Bihar"
+    },
+    {
+      "id": "chhattisgarh",
+      "label": "Chhattisgarh"
+    },
+    {
+      "id": "goa",
+      "label": "Goa"
+    },
+    {
+      "id": "gujarat",
+      "label": "Gujarat"
+    },
+    {
+      "id": "haryana",
+      "label": "Haryana"
+    },
+    {
+      "id": "himachal_pradesh",
+      "label": "Himachal Pradesh"
+    },
+    {
+      "id": "jharkhand",
+      "label": "Jharkhand"
+    },
+    {
+      "id": "karnataka",
+      "label": "Karnataka"
+    },
+    {
+      "id": "kerala",
+      "label": "Kerala"
+    },
+    {
+      "id": "madhya_pradesh",
+      "label": "Madhya Pradesh"
+    },
+    {
+      "id": "maharashtra",
+      "label": "Maharashtra"
+    },
+    {
+      "id": "manipur",
+      "label": "Manipur"
+    },
+    {
+      "id": "meghalaya",
+      "label": "Meghalaya"
+    },
+    {
+      "id": "mizoram",
+      "label": "Mizoram"
+    },
+    {
+      "id": "nagaland",
+      "label": "Nagaland"
+    },
+    {
+      "id": "odisha",
+      "label": "Odisha"
+    },
+    {
+      "id": "punjab",
+      "label": "Punjab"
+    },
+    {
+      "id": "rajasthan",
+      "label": "Rajasthan"
+    },
+    {
+      "id": "sikkim",
+      "label": "Sikkim"
+    },
+    {
+      "id": "tamil_nadu",
+      "label": "Tamil Nadu"
+    },
+    {
+      "id": "telangana",
+      "label": "Telangana"
+    },
+    {
+      "id": "tripura",
+      "label": "Tripura"
+    },
+    {
+      "id": "uttar_pradesh",
+      "label": "Uttar Pradesh"
+    },
+    {
+      "id": "uttarakhand",
+      "label": "Uttarakhand"
+    },
+    {
+      "id": "west_bengal",
+      "label": "West Bengal"
+    },
+    {
+      "id": "delhi",
+      "label": "Delhi (NCT)"
+    },
+    {
+      "id": "jammu_kashmir",
+      "label": "Jammu & Kashmir"
+    },
+    {
+      "id": "ladakh",
+      "label": "Ladakh"
+    },
+    {
+      "id": "puducherry",
+      "label": "Puducherry"
+    },
+    {
+      "id": "chandigarh",
+      "label": "Chandigarh"
+    },
+    {
+      "id": "andaman",
+      "label": "Andaman & Nicobar Islands"
+    },
+    {
+      "id": "dadra_nagar",
+      "label": "Dadra and Nagar Haveli & Daman and Diu"
+    },
+    {
+      "id": "lakshadweep",
+      "label": "Lakshadweep"
+    }
+  ],
+  "EDUCATION_LEVELS": [
+    {
+      "id": "pre_primary",
+      "label": "Pre-Primary / Anganwadi",
+      "labelHi": "प्री-प्राइमरी / आंगनवाड़ी"
+    },
+    {
+      "id": "primary",
+      "label": "Primary (Class 1-5)",
+      "labelHi": "प्राथमिक (कक्षा 1-5)"
+    },
+    {
+      "id": "upper_primary",
+      "label": "Upper Primary (Class 6-8)",
+      "labelHi": "उच्च प्राथमिक (कक्षा 6-8)"
+    },
+    {
+      "id": "secondary",
+      "label": "Secondary (Class 9-10)",
+      "labelHi": "माध्यमिक (कक्षा 9-10)"
+    },
+    {
+      "id": "higher_secondary",
+      "label": "Higher Secondary (Class 11-12)",
+      "labelHi": "उच्च माध्यमिक (कक्षा 11-12)"
+    },
+    {
+      "id": "graduate",
+      "label": "Under-Graduate / Bachelor's",
+      "labelHi": "स्नातक / बैचलर"
+    },
+    {
+      "id": "post_graduate",
+      "label": "Post-Graduate / Master's",
+      "labelHi": "स्नातकोत्तर / मास्टर"
+    },
+    {
+      "id": "professional",
+      "label": "Professional Course (Medical / Law / Engineering)",
+      "labelHi": "पेशेवर पाठ्यक्रम (मेडिकल/कानून/इंजीनियरिंग)"
+    },
+    {
+      "id": "vocational",
+      "label": "Vocational / ITI / Diploma",
+      "labelHi": "व्यावसायिक / आईटीआई / डिप्लोमा"
+    },
+    {
+      "id": "not_enrolled",
+      "label": "Not Currently Enrolled",
+      "labelHi": "वर्तमान में नामांकित नहीं"
+    }
+  ],
+  "DISABILITY_TYPES": [
+    {
+      "id": "none",
+      "label": "No Disability / General",
+      "labelHi": "कोई दिव्यांगता नहीं / सामान्य"
+    },
+    {
+      "id": "visual",
+      "label": "Visual Impairment",
+      "labelHi": "दृष्टि बाधित"
+    },
+    {
+      "id": "hearing",
+      "label": "Hearing Impairment",
+      "labelHi": "श्रवण बाधित"
+    },
+    {
+      "id": "locomotor",
+      "label": "Locomotor Disability",
+      "labelHi": "चलने-फिरने में अक्षमता"
+    },
+    {
+      "id": "cerebral_palsy",
+      "label": "Cerebral Palsy",
+      "labelHi": "मस्तिष्काघात (सेरेब्रल पाल्सी)"
+    },
+    {
+      "id": "intellectual",
+      "label": "Intellectual Disability",
+      "labelHi": "बौद्धिक अक्षमता"
+    },
+    {
+      "id": "mental_illness",
+      "label": "Mental Illness",
+      "labelHi": "मानसिक रोग"
+    },
+    {
+      "id": "autism",
+      "label": "Autism Spectrum Disorder",
+      "labelHi": "ऑटिज्म स्पेक्ट्रम"
+    },
+    {
+      "id": "learning",
+      "label": "Specific Learning Disability",
+      "labelHi": "विशिष्ट अधिगम अक्षमता"
+    },
+    {
+      "id": "speech",
+      "label": "Speech & Language Disability",
+      "labelHi": "वाक् एवं भाषा अक्षमता"
+    },
+    {
+      "id": "multiple",
+      "label": "Multiple Disabilities",
+      "labelHi": "बहु अक्षमता"
+    },
+    {
+      "id": "blood_disorder",
+      "label": "Blood Disorder (Thalassemia / Sickle Cell)",
+      "labelHi": "रक्त विकार (थैलेसीमिया)"
+    },
+    {
+      "id": "acid_attack",
+      "label": "Acid Attack Victim",
+      "labelHi": "एसिड अटैक पीड़ित"
+    },
+    {
+      "id": "dwarfism",
+      "label": "Dwarfism",
+      "labelHi": "बौनापन"
+    },
+    {
+      "id": "muscular_dystrophy",
+      "label": "Muscular Dystrophy",
+      "labelHi": "मस्कुलर डिस्ट्रोफी"
+    }
+  ],
+  "SCHEME_CATEGORIES": {
+    "scholarship": {
+      "icon": "🎓",
+      "label": "Scholarships",
+      "labelHi": "छात्रवृत्ति",
+      "color": "#A855F7"
+    },
+    "stipend": {
+      "icon": "💰",
+      "label": "Stipends & Allowances",
+      "labelHi": "वजीफा एवं भत्ता",
+      "color": "#10B981"
+    },
+    "assistive": {
+      "icon": "🦽",
+      "label": "Assistive Devices",
+      "labelHi": "सहायक उपकरण",
+      "color": "#3B82F6"
+    },
+    "employment": {
+      "icon": "💼",
+      "label": "Employment & Skill",
+      "labelHi": "रोजगार एवं कौशल",
+      "color": "#F59E0B"
+    },
+    "healthcare": {
+      "icon": "🏥",
+      "label": "Healthcare",
+      "labelHi": "स्वास्थ्य सेवा",
+      "color": "#EC4899"
+    },
+    "transport": {
+      "icon": "🚌",
+      "label": "Transport & Travel",
+      "labelHi": "परिवहन एवं यात्रा",
+      "color": "#6366F1"
+    },
+    "housing": {
+      "icon": "🏠",
+      "label": "Housing & Support",
+      "labelHi": "आवास एवं सहायता",
+      "color": "#14B8A6"
+    },
+    "pension": {
+      "icon": "🧓",
+      "label": "Pension & Financial",
+      "labelHi": "पेंशन एवं वित्तीय",
+      "color": "#F97316"
+    }
+  },
+  "SCHEME_DATABASE": [
+    {
+      "id": "pre_matric_pwd",
+      "name": "Pre-Matric Scholarship for Students with Disabilities",
+      "nameHi": "दिव्यांग विद्यार्थियों के लिए प्री-मैट्रिक छात्रवृत्ति",
+      "ministry": "Ministry of Social Justice & Empowerment",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "acid_attack",
+          "dwarfism",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": [
+          "primary",
+          "upper_primary",
+          "secondary"
+        ],
+        "maxIncome": 250000,
+        "ageRange": [
+          5,
+          18
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹700/month (Day Scholar) — ₹1,100/month (Hosteller)",
+        "description": "Monthly maintenance allowance + books/stationery grant + disability-related ad hoc grants"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Income Certificate (below ₹2.5 lakh)",
+        "School Bonafide Certificate",
+        "Aadhaar Card",
+        "Bank Account (student/parent)",
+        "Passport-size Photograph"
+      ],
+      "applyUrl": "https://scholarships.gov.in/",
+      "deadline": "2026-12-31"
+    },
+    {
+      "id": "post_matric_pwd",
+      "name": "Post-Matric Scholarship for Students with Disabilities",
+      "nameHi": "दिव्यांग विद्यार्थियों के लिए पोस्ट-मैट्रिक छात्रवृत्ति",
+      "ministry": "Ministry of Social Justice & Empowerment",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "acid_attack",
+          "dwarfism",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": [
+          "higher_secondary",
+          "graduate",
+          "post_graduate",
+          "professional",
+          "vocational"
+        ],
+        "maxIncome": 250000,
+        "ageRange": [
+          14,
+          35
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹1,200/month (Day Scholar) — ₹3,000/month (Hosteller)",
+        "description": "Full tuition fee waiver + maintenance allowance + reader allowance for blind students + helper allowance"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Income Certificate (below ₹2.5 lakh)",
+        "Previous Year Mark Sheet",
+        "College / Institute Admission Letter",
+        "Aadhaar Card",
+        "Bank Account Details"
+      ],
+      "applyUrl": "https://scholarships.gov.in/",
+      "deadline": "2026-11-30"
+    },
+    {
+      "id": "national_scholarship_pwd",
+      "name": "National Scholarship for Persons with Disabilities (Top Class)",
+      "nameHi": "दिव्यांगजनों के लिए राष्ट्रीय छात्रवृत्ति (टॉप क्लास)",
+      "ministry": "Department of Empowerment of Persons with Disabilities",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "acid_attack",
+          "dwarfism",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": [
+          "graduate",
+          "post_graduate",
+          "professional"
+        ],
+        "maxIncome": 600000,
+        "ageRange": [
+          17,
+          35
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Up to ₹2,00,000/year",
+        "description": "Full tuition fee + maintenance allowance + book grant for TOP-class institutions (IITs, NITs, AIIMS, etc.)"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Admission Letter from Notified Institute",
+        "Income Certificate (below ₹6 lakh)",
+        "Marksheet of last qualifying exam",
+        "Aadhaar Card",
+        "Bank Account"
+      ],
+      "applyUrl": "https://scholarships.gov.in/",
+      "deadline": "2026-10-31"
+    },
+    {
+      "id": "adip_scheme",
+      "name": "ADIP Scheme (Assistive Devices / Implants / Prosthetics)",
+      "nameHi": "एडिप योजना (सहायक उपकरण / प्रत्यारोपण)",
+      "ministry": "Department of Empowerment of Persons with Disabilities",
+      "category": "assistive",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "multiple",
+          "muscular_dystrophy",
+          "dwarfism"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Up to ₹10,000 per device (free for income ≤₹15,000/month)",
+        "description": "Free or subsidized wheelchairs, hearing aids, crutches, prosthetic limbs, Braille kits, artificial limbs, and more"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Income Certificate (below ₹3 lakh)",
+        "Aadhaar Card",
+        "Medical Prescription for Device",
+        "Photograph"
+      ],
+      "applyUrl": "https://www.disabilityaffairs.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "nhfdc_edu_loan",
+      "name": "NHFDC Educational Loan for Disabled Students",
+      "nameHi": "एनएचएफडीसी दिव्यांग छात्रों के लिए शिक्षा ऋण",
+      "ministry": "National Handicapped Finance & Development Corporation",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "acid_attack",
+          "dwarfism",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": [
+          "higher_secondary",
+          "graduate",
+          "post_graduate",
+          "professional",
+          "vocational"
+        ],
+        "maxIncome": 500000,
+        "ageRange": [
+          16,
+          35
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Up to ₹10,00,000 at 4% interest",
+        "description": "Concessional education loan for higher studies in India and abroad at subsidized interest rate"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Admission Letter",
+        "Income Certificate",
+        "Aadhaar Card",
+        "Bank Details",
+        "Surety/Collateral (if above ₹5 lakh)"
+      ],
+      "applyUrl": "https://nhfdc.nic.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "sugamya_bharat",
+      "name": "Sugamya Bharat Abhiyan – Accessible India Campaign",
+      "nameHi": "सुगम्य भारत अभियान",
+      "ministry": "Department of Empowerment of Persons with Disabilities",
+      "category": "transport",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Accessibility Infrastructure",
+        "description": "Ensures accessible govt buildings, transport, and ICT ecosystem — sign language interpreters, Braille, ramps"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Aadhaar Card"
+      ],
+      "applyUrl": "https://www.disabilityaffairs.gov.in/content/page/accessible-india-campaign.php",
+      "deadline": "2027-12-31"
+    },
+    {
+      "id": "ddrs",
+      "name": "Deendayal Disabled Rehabilitation Scheme (DDRS)",
+      "nameHi": "दीनदयाल दिव्यांग पुनर्वास योजना (डीडीआरएस)",
+      "ministry": "Department of Empowerment of Persons with Disabilities",
+      "category": "healthcare",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Rehabilitation Services",
+        "description": "Grants to NGOs for special education, vocational training, rehab centers, community-based rehab, and pre-school training"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Aadhaar Card",
+        "Referral from medical authority or NGO"
+      ],
+      "applyUrl": "https://www.disabilityaffairs.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "igdps",
+      "name": "Indira Gandhi National Disability Pension Scheme",
+      "nameHi": "इंदिरा गांधी राष्ट्रीय दिव्यांग पेंशन योजना",
+      "ministry": "Ministry of Rural Development",
+      "category": "pension",
+      "eligibility": {
+        "disabilityPercentMin": 80,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 200000,
+        "ageRange": [
+          18,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹300/month (Central) + State Top-up",
+        "description": "Monthly pension for severely disabled persons (80%+) living below poverty line. States add their own top-up."
+      },
+      "requiredDocuments": [
+        "Disability Certificate (80%+)",
+        "BPL Card / Income Certificate",
+        "Aadhaar Card",
+        "Age Proof",
+        "Bank Account Details"
+      ],
+      "applyUrl": "https://nsap.nic.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "disha_scheme",
+      "name": "DISHA – Early Intervention and School Readiness Scheme",
+      "nameHi": "दिशा – प्रारंभिक हस्तक्षेप एवं विद्यालय तत्परता योजना",
+      "ministry": "National Trust (Ministry of Social Justice & Empowerment)",
+      "category": "healthcare",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "multiple"
+        ],
+        "educationLevels": [
+          "pre_primary",
+          "primary",
+          "not_enrolled"
+        ],
+        "maxIncome": 9999999,
+        "ageRange": [
+          0,
+          10
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Intervention Services",
+        "description": "Early intervention, therapy (physio, occupational, speech), and school readiness training for children 0-10 years"
+      },
+      "requiredDocuments": [
+        "Disability Certificate",
+        "Aadhaar Card (child/parent)",
+        "Age Proof (birth certificate)",
+        "Medical Assessment Report"
+      ],
+      "applyUrl": "https://thenationaltrust.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "vikaas_scheme",
+      "name": "VIKAAS – Day Care Scheme for PwD",
+      "nameHi": "विकास – दिव्यांगजनों के लिए डे केयर योजना",
+      "ministry": "National Trust (Ministry of Social Justice & Empowerment)",
+      "category": "healthcare",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          10,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Day Care & Skill Training",
+        "description": "Free skill development, daily living activities training, and occupational therapy in registered day care centers"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Aadhaar Card",
+        "Medical Records"
+      ],
+      "applyUrl": "https://thenationaltrust.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "gharaunda_scheme",
+      "name": "GHARAUNDA – Group Home for Adult PwD",
+      "nameHi": "घरौंदा – वयस्क दिव्यांगजनों के लिए ग्रुप होम",
+      "ministry": "National Trust (Ministry of Social Justice & Empowerment)",
+      "category": "housing",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          18,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Residential Care – Free / Subsidized",
+        "description": "Group homes providing shelter, food, and care for PwD adults who lack family support — lifelong accommodation"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Aadhaar Card",
+        "Medical Assessment",
+        "Guardian Details"
+      ],
+      "applyUrl": "https://thenationaltrust.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "railway_concession_pwd",
+      "name": "Railway Travel Concession for Persons with Disabilities",
+      "nameHi": "दिव्यांगजनों के लिए रेलवे यात्रा रियायत",
+      "ministry": "Ministry of Railways",
+      "category": "transport",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "50%-75% Fare Concession",
+        "description": "Up to 75% concession in all classes for visually impaired, 50-75% for other disabilities + free escort ticket"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Aadhaar Card / Photo ID",
+        "Concession Certificate from railway counter"
+      ],
+      "applyUrl": "https://www.irctc.co.in/",
+      "deadline": "2027-12-31"
+    },
+    {
+      "id": "air_travel_pwd",
+      "name": "Air Travel Concession for PwD (Air India)",
+      "nameHi": "दिव्यांगजनों के लिए हवाई यात्रा रियायत",
+      "ministry": "Ministry of Civil Aviation",
+      "category": "transport",
+      "eligibility": {
+        "disabilityPercentMin": 80,
+        "disabilityTypes": [
+          "visual",
+          "locomotor",
+          "cerebral_palsy",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          5,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "50% Fare Concession (Economy Class)",
+        "description": "Concessional air fare on select airlines for severely disabled persons and their escorts"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (80%+)",
+        "Aadhaar Card / ID",
+        "Booking through authorized portal"
+      ],
+      "applyUrl": "https://www.airindia.com/",
+      "deadline": "2027-12-31"
+    },
+    {
+      "id": "nrlm_pwd",
+      "name": "National Rural Livelihoods Mission – PwD Component",
+      "nameHi": "राष्ट्रीय ग्रामीण आजीविका मिशन – दिव्यांग घटक",
+      "ministry": "Ministry of Rural Development",
+      "category": "employment",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          18,
+          60
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Up to ₹50,000 + Subsidized Loan",
+        "description": "Skill training, seed capital, self-help group formation, and subsidized credit for self-employment in rural areas"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "BPL / Income Certificate",
+        "Aadhaar Card",
+        "Bank Account",
+        "Rural Address Proof"
+      ],
+      "applyUrl": "https://aajeevika.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "sipda_skill",
+      "name": "SIPDA – Skill Training for Persons with Disabilities",
+      "nameHi": "सिपडा – दिव्यांगजनों के लिए कौशल प्रशिक्षण",
+      "ministry": "Department of Empowerment of Persons with Disabilities",
+      "category": "employment",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "learning",
+          "speech",
+          "multiple"
+        ],
+        "educationLevels": [
+          "secondary",
+          "higher_secondary",
+          "graduate",
+          "vocational",
+          "not_enrolled"
+        ],
+        "maxIncome": 500000,
+        "ageRange": [
+          15,
+          45
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Skill Training + ₹2,000/month Stipend",
+        "description": "Free vocational and digital skill training with monthly stipend, food, and hostel facility for PwD students"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Education Certificate",
+        "Aadhaar Card",
+        "Bank Account",
+        "Photograph"
+      ],
+      "applyUrl": "https://www.disabilityaffairs.gov.in/",
+      "deadline": "2026-09-30"
+    },
+    {
+      "id": "udid_card",
+      "name": "UDID Card – Unique Disability ID",
+      "nameHi": "यूडीआईडी कार्ड – विशिष्ट दिव्यांग पहचान पत्र",
+      "ministry": "Department of Empowerment of Persons with Disabilities",
+      "category": "healthcare",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "acid_attack",
+          "dwarfism",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Universal Disability ID – Free",
+        "description": "Single document for all PwD benefits across India. Links to disability certificates, Aadhaar, and all scheme portals."
+      },
+      "requiredDocuments": [
+        "Disability Certificate from CMO/Board",
+        "Aadhaar Card",
+        "Passport-size Photograph",
+        "Medical Reports"
+      ],
+      "applyUrl": "https://www.swavlambancard.gov.in/",
+      "deadline": "2027-12-31"
+    },
+    {
+      "id": "trust_fund_scholarship",
+      "name": "Trust Fund Scholarship for PwD Students",
+      "nameHi": "ट्रस्ट फंड छात्रवृत्ति – दिव्यांग छात्रों के लिए",
+      "ministry": "Ministry of Social Justice & Empowerment",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "learning",
+          "multiple"
+        ],
+        "educationLevels": [
+          "higher_secondary",
+          "graduate",
+          "post_graduate",
+          "professional",
+          "vocational"
+        ],
+        "maxIncome": 300000,
+        "ageRange": [
+          15,
+          30
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹10,000 — ₹30,000/year",
+        "description": "Annual scholarship for technical and professional courses — engineering, medical, management & vocational streams"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Income Certificate",
+        "Admission Letter",
+        "Previous Marksheet",
+        "Aadhaar Card",
+        "Bank Account"
+      ],
+      "applyUrl": "https://scholarships.gov.in/",
+      "deadline": "2026-11-30"
+    },
+    {
+      "id": "rte_pwd",
+      "name": "Right to Education (RTE) – Free Education for PwD Children",
+      "nameHi": "शिक्षा का अधिकार (RTE) – दिव्यांग बच्चों के लिए निःशुल्क शिक्षा",
+      "ministry": "Ministry of Education",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 0,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "acid_attack",
+          "dwarfism",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": [
+          "pre_primary",
+          "primary",
+          "upper_primary"
+        ],
+        "maxIncome": 9999999,
+        "ageRange": [
+          3,
+          14
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Compulsory Education",
+        "description": "Guaranteed free and compulsory elementary education (3-14 years) with special educator support, accessible infrastructure"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (if applicable)",
+        "Age Proof (birth certificate)",
+        "Address Proof",
+        "Aadhaar Card"
+      ],
+      "applyUrl": "https://www.education.gov.in/",
+      "deadline": "2027-12-31"
+    },
+    {
+      "id": "ayushman_pwd",
+      "name": "Ayushman Bharat PM-JAY – Health Insurance for PwD",
+      "nameHi": "आयुष्मान भारत PM-JAY – दिव्यांगजनों के लिए स्वास्थ्य बीमा",
+      "ministry": "Ministry of Health & Family Welfare",
+      "category": "healthcare",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "acid_attack",
+          "dwarfism",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹5,00,000/year Health Cover (Free)",
+        "description": "Cashless secondary and tertiary hospitalization at empaneled hospitals — surgery, therapy, diagnostics, and medication"
+      },
+      "requiredDocuments": [
+        "Aadhaar Card",
+        "BPL / SECC Card",
+        "Disability Certificate (optional, priority listing)",
+        "Family Details"
+      ],
+      "applyUrl": "https://pmjay.gov.in/",
+      "deadline": "2027-12-31"
+    },
+    {
+      "id": "tax_exemption_pwd",
+      "name": "Income Tax Deduction under Section 80U / 80DD",
+      "nameHi": "धारा 80U/80DD के तहत आयकर कटौती",
+      "ministry": "Ministry of Finance (CBDT)",
+      "category": "pension",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "acid_attack",
+          "dwarfism",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹75,000 — ₹1,25,000 Tax Deduction",
+        "description": "₹75K deduction for disability (40-79%), ₹1.25L deduction for severe disability (80%+). Also available via 80DD for dependent."
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "PAN Card",
+        "ITR Filing / Form 10-IA"
+      ],
+      "applyUrl": "https://www.incometax.gov.in/",
+      "deadline": "2027-07-31"
+    },
+    {
+      "id": "nhfdc_micro_credit",
+      "name": "NHFDC Micro-Credit for PwD Self-Employment",
+      "nameHi": "एनएचएफडीसी सूक्ष्म-ऋण – दिव्यांग स्व-रोजगार",
+      "ministry": "National Handicapped Finance & Development Corporation",
+      "category": "employment",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          18,
+          55
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Up to ₹50,000 at 5% Interest",
+        "description": "Micro-credit loan for small business, petty trade, or ancillary activities. Simplified process, minimal documentation."
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Income Certificate",
+        "Aadhaar Card",
+        "Business Plan (brief)",
+        "Bank Account"
+      ],
+      "applyUrl": "https://nhfdc.nic.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "free_coaching_pwd",
+      "name": "Free Coaching for Competitive Exams (PwD Category)",
+      "nameHi": "प्रतियोगी परीक्षाओं के लिए निःशुल्क कोचिंग (दिव्यांग वर्ग)",
+      "ministry": "Ministry of Social Justice & Empowerment",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "learning",
+          "speech",
+          "multiple"
+        ],
+        "educationLevels": [
+          "higher_secondary",
+          "graduate",
+          "post_graduate"
+        ],
+        "maxIncome": 600000,
+        "ageRange": [
+          16,
+          35
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Coaching + ₹3,000/month Stipend",
+        "description": "Free coaching for UPSC, SSC, banking, CAT, GATE, and similar exams + monthly maintenance allowance"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Education Certificate",
+        "Income Certificate (below ₹6 lakh)",
+        "Aadhaar Card",
+        "Bank Account"
+      ],
+      "applyUrl": "https://socialjustice.gov.in/",
+      "deadline": "2026-08-31"
+    },
+    {
+      "id": "svanidhi_pwd",
+      "name": "PM SVANidhi – Micro Loan for PwD Street Vendors",
+      "nameHi": "पीएम स्वनिधि – दिव्यांग स्ट्रीट वेंडर्स के लिए सूक्ष्म ऋण",
+      "ministry": "Ministry of Housing & Urban Affairs",
+      "category": "employment",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          18,
+          65
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹10,000 — ₹50,000 Working Capital (7% Subsidy)",
+        "description": "Collateral-free working capital micro-loan with 7% interest subsidy and digital payment cashback incentive"
+      },
+      "requiredDocuments": [
+        "Disability Certificate",
+        "Street Vendor Certificate / Letter of Recommendation",
+        "Aadhaar Card",
+        "Bank Account"
+      ],
+      "applyUrl": "https://pmsvanidhi.mohua.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "nphce_pwd",
+      "name": "National Programme for Healthcare of the Elderly (NPHCE)",
+      "nameHi": "वृद्धजनों के स्वास्थ्य हेतु राष्ट्रीय कार्यक्रम",
+      "ministry": "Ministry of Health & Family Welfare",
+      "category": "healthcare",
+      "eligibility": {
+        "disabilityPercentMin": 0,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          60,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Geriatric Healthcare",
+        "description": "Free outpatient services, physiotherapy, and geriatric care at district hospitals for elderly PwD"
+      },
+      "requiredDocuments": [
+        "Age Proof (above 60)",
+        "Aadhaar Card",
+        "Disability Certificate (if applicable)"
+      ],
+      "applyUrl": "https://mohfw.gov.in/",
+      "deadline": "2027-12-31"
+    },
+    {
+      "id": "state_disability_pension",
+      "name": "State Disability Pension (varies by state)",
+      "nameHi": "राज्य दिव्यांग पेंशन (राज्य अनुसार)",
+      "ministry": "State Social Welfare Departments",
+      "category": "pension",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy",
+          "blood_disorder"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          18,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹500 — ₹2,500/month (varies by state)",
+        "description": "Monthly pension to disabled persons from state welfare funds. Amount varies: UP ₹500, Delhi ₹2,500, Kerala ₹1,500, etc."
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Income Certificate / BPL Card",
+        "Aadhaar Card",
+        "Domicile/Residence Proof",
+        "Bank Account"
+      ],
+      "applyUrl": "https://www.india.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "nfpwd_fellowship",
+      "name": "National Fellowship for Persons with Disabilities (NFPwD)",
+      "nameHi": "दिव्यांगजनों के लिए राष्ट्रीय फेलोशिप (NFPwD)",
+      "ministry": "University Grants Commission (UGC)",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "acid_attack",
+          "dwarfism",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": [
+          "post_graduate"
+        ],
+        "maxIncome": 9999999,
+        "ageRange": [
+          20,
+          40
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹31,000/month (JRF) — ₹35,000/month (SRF)",
+        "description": "Junior/Senior Research Fellowship for M.Phil/Ph.D scholars with disabilities — covers tuition, contingency, escort, reader allowance"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "M.Phil / Ph.D Admission Letter",
+        "UGC NET / Qualifying Score",
+        "Aadhaar Card",
+        "Bank Account"
+      ],
+      "applyUrl": "https://scholarships.gov.in/",
+      "deadline": "2026-10-15"
+    },
+    {
+      "id": "pmkvy_pwd",
+      "name": "PM Kaushal Vikas Yojana 4.0 – PwD Skill Track",
+      "nameHi": "पीएम कौशल विकास योजना 4.0 – दिव्यांग कौशल ट्रैक",
+      "ministry": "Ministry of Skill Development & Entrepreneurship",
+      "category": "employment",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "learning",
+          "speech",
+          "multiple"
+        ],
+        "educationLevels": [
+          "secondary",
+          "higher_secondary",
+          "graduate",
+          "vocational",
+          "not_enrolled"
+        ],
+        "maxIncome": 9999999,
+        "ageRange": [
+          15,
+          45
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Skill Training + Certification + Placement",
+        "description": "NSQF-aligned skill training in 500+ job roles, with accessible training centers, free meals, and placement assistance"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Aadhaar Card",
+        "Education Certificate",
+        "Bank Account"
+      ],
+      "applyUrl": "https://www.pmkvyofficial.org/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "cochlear_implant",
+      "name": "Cochlear Implant Surgery Programme for Deaf Children",
+      "nameHi": "बधिर बच्चों के लिए कॉक्लियर इम्प्लांट सर्जरी कार्यक्रम",
+      "ministry": "Department of Empowerment of Persons with Disabilities",
+      "category": "assistive",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "hearing"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 600000,
+        "ageRange": [
+          1,
+          12
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Surgery Cost Up to ₹6,00,000 (Free)",
+        "description": "Free cochlear implant surgery + device + post-surgery auditory-verbal therapy for pre-lingual deaf children"
+      },
+      "requiredDocuments": [
+        "Hearing Assessment / Audiometry Report",
+        "Disability Certificate",
+        "Income Certificate (below ₹6 lakh)",
+        "Age Proof (1-12 years)",
+        "Aadhaar Card of child and parent",
+        "Medical fitness certificate"
+      ],
+      "applyUrl": "https://www.disabilityaffairs.gov.in/",
+      "deadline": "2026-12-31"
+    },
+    {
+      "id": "rpwd_reservation",
+      "name": "Reservation in Government Employment (RPwD Act 2016)",
+      "nameHi": "सरकारी नौकरियों में आरक्षण (RPwD अधिनियम 2016)",
+      "ministry": "Department of Personnel & Training",
+      "category": "employment",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "acid_attack",
+          "dwarfism",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": [
+          "graduate",
+          "post_graduate",
+          "professional",
+          "vocational"
+        ],
+        "maxIncome": 9999999,
+        "ageRange": [
+          18,
+          40
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "4% Reservation in All Govt Posts",
+        "description": "4% reservation across all government and PSU jobs (1% each for visual, hearing, locomotor, and intellectual disabilities)"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+) / UDID Card",
+        "Education Qualification Certificates",
+        "Aadhaar Card",
+        "Age Proof"
+      ],
+      "applyUrl": "https://www.india.gov.in/",
+      "deadline": "2027-12-31"
+    },
+    {
+      "id": "pm_daksha",
+      "name": "PM-DAKSHA – Skill Training & Livelihood for Marginalised",
+      "nameHi": "पीएम-दक्ष – सीमांत वर्ग के लिए कौशल प्रशिक्षण और आजीविका",
+      "ministry": "Ministry of Social Justice & Empowerment",
+      "category": "employment",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "learning",
+          "speech",
+          "multiple"
+        ],
+        "educationLevels": [
+          "secondary",
+          "higher_secondary",
+          "graduate",
+          "vocational",
+          "not_enrolled"
+        ],
+        "maxIncome": 300000,
+        "ageRange": [
+          18,
+          45
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Training + ₹1,500/month + Placement",
+        "description": "Up-skilling/re-skilling with monthly stipend, residential facility, certification, and 70% placement assistance"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Caste/Category Certificate (if applicable)",
+        "Income Certificate",
+        "Aadhaar Card",
+        "Bank Account"
+      ],
+      "applyUrl": "https://pmdaksh.dosje.gov.in/",
+      "deadline": "2026-12-31"
+    },
+    {
+      "id": "inclusive_education",
+      "name": "Inclusive Education for CWSN under Samagra Shiksha",
+      "nameHi": "समग्र शिक्षा के तहत विशेष आवश्यकता वाले बच्चों की समावेशी शिक्षा",
+      "ministry": "Ministry of Education",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": [
+          "pre_primary",
+          "primary",
+          "upper_primary",
+          "secondary",
+          "higher_secondary"
+        ],
+        "maxIncome": 9999999,
+        "ageRange": [
+          3,
+          22
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹3,500/child/year + Transport + Aids",
+        "description": "Per-child grant for assistive devices, transport allowance, special educator support, therapeutic services, books allowance"
+      },
+      "requiredDocuments": [
+        "Disability Certificate",
+        "School Enrollment Proof",
+        "Age Proof",
+        "Aadhaar Card"
+      ],
+      "applyUrl": "https://samagra.education.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "divyangjan_finance",
+      "name": "National Divyangjan Finance & Development Scheme",
+      "nameHi": "राष्ट्रीय दिव्यांगजन वित्त एवं विकास योजना",
+      "ministry": "NHFDC",
+      "category": "pension",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 500000,
+        "ageRange": [
+          18,
+          60
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Loan up to ₹25,00,000 at 5-8% Interest",
+        "description": "Concessional loans for self-employment, business, education, vehicle purchase, and home modification"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Income Certificate",
+        "Aadhaar Card",
+        "Business / Purpose Plan",
+        "Bank Account",
+        "Collateral (for higher amounts)"
+      ],
+      "applyUrl": "https://nhfdc.nic.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "up_divyang_pension",
+      "name": "Uttar Pradesh Divyangjan Maintenance Grant Scheme",
+      "nameHi": "उत्तर प्रदेश दिव्यांग भरण-पोषण अनुदान योजना",
+      "ministry": "Department for Empowerment of Persons with Disabilities, UP",
+      "category": "pension",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy",
+          "blood_disorder"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 200000,
+        "ageRange": [
+          18,
+          99
+        ],
+        "gender": "all",
+        "states": [
+          "uttar_pradesh"
+        ]
+      },
+      "benefits": {
+        "amount": "₹1,000/month Financial Aid",
+        "description": "Monthly direct benefit transfer (DBT) to eligible disabled residents of Uttar Pradesh below poverty line"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Income Certificate (below ₹2 lakh)",
+        "UP Domicile Certificate",
+        "Aadhaar Card",
+        "Bank Account (Aadhaar Linked)"
+      ],
+      "applyUrl": "https://sspy-up.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "bihar_mukhyamantri_divyang",
+      "name": "Bihar Mukhyamantri Divyangjan Swavalamban Yojana",
+      "nameHi": "बिहार मुख्यमंत्री दिव्यांगजन स्वावलंबन योजना",
+      "ministry": "Social Welfare Department, Government of Bihar",
+      "category": "stipend",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": [
+          "primary",
+          "upper_primary",
+          "secondary",
+          "higher_secondary",
+          "graduate",
+          "vocational"
+        ],
+        "maxIncome": 250000,
+        "ageRange": [
+          6,
+          45
+        ],
+        "gender": "all",
+        "states": [
+          "bihar"
+        ]
+      },
+      "benefits": {
+        "amount": "₹1,200 — ₹2,500/month Educational Allowance + Battery Tricycle",
+        "description": "Monthly scholarship allowance for students and free motorized tricycles for higher education / working PwD"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Bihar Residence Proof",
+        "School / College ID Proof",
+        "Income Certificate",
+        "Aadhaar Card"
+      ],
+      "applyUrl": "https://state.bihar.gov.in/socialwelfare/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "delhi_disabled_pension",
+      "name": "Delhi Financial Assistance for Persons with Special Needs",
+      "nameHi": "दिल्ली विशेष आवश्यकता वाले व्यक्तियों के लिए वित्तीय सहायता योजना",
+      "ministry": "Department of Social Welfare, Govt of NCT of Delhi",
+      "category": "pension",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": [
+          "delhi"
+        ]
+      },
+      "benefits": {
+        "amount": "₹2,500/month Allowance",
+        "description": "Monthly pension and living maintenance allowance for PwD residents of Delhi NCT"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Proof of 5-year Residence in Delhi",
+        "Income Certificate",
+        "Aadhaar Card",
+        "Bank Passbook Details"
+      ],
+      "applyUrl": "https://edistrict.delhigovt.nic.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "maharashtra_divyang_scholarship",
+      "name": "Maharashtra State Post-Matric Scholarship for Divyang Students",
+      "nameHi": "महाराष्ट्र राज्य पोस्ट-मैट्रिक दिव्यांग छात्रवृत्ति योजना",
+      "ministry": "Social Justice & Special Assistance Dept, Maharashtra",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple"
+        ],
+        "educationLevels": [
+          "higher_secondary",
+          "graduate",
+          "post_graduate",
+          "professional",
+          "vocational"
+        ],
+        "maxIncome": 250000,
+        "ageRange": [
+          15,
+          35
+        ],
+        "gender": "all",
+        "states": [
+          "maharashtra"
+        ]
+      },
+      "benefits": {
+        "amount": "Full Tuition Waiver + ₹1,500/month Maintenance",
+        "description": "Complete tuition and exam fee waiver along with hostel and transport stipends across Maharashtra"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Domicile Certificate of Maharashtra",
+        "College Bonafide Certificate",
+        "Income Certificate",
+        "Aadhaar Card"
+      ],
+      "applyUrl": "https://mahadbt.maharashtra.gov.in/",
+      "deadline": "2026-11-30"
+    },
+    {
+      "id": "tamilnadu_differently_abled_stipend",
+      "name": "Tamil Nadu Maintenance Allowance for Severely Differently Abled",
+      "nameHi": "तमिलनाडु गंभीर रूप से दिव्यांगजनों हेतु रखरखाव भत्ता",
+      "ministry": "Welfare of Differently Abled Persons Department, TN",
+      "category": "stipend",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": [
+          "tamil_nadu"
+        ]
+      },
+      "benefits": {
+        "amount": "₹2,000/month Allowance + Free Reader Allowance",
+        "description": "Monthly maintenance support + reader allowance for visually impaired students in schools and colleges"
+      },
+      "requiredDocuments": [
+        "National Disability Identity Card / Certificate",
+        "TN Residence Certificate",
+        "Aadhaar Card",
+        "Bank Passbook Copy"
+      ],
+      "applyUrl": "https://www.tn.gov.in/scda",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "karnataka_nagalu_pension",
+      "name": "Karnataka State Disability Pension & Education Stipend (Mythri Scheme)",
+      "nameHi": "कर्नाटक राज्य दिव्यांग पेंशन एवं शिक्षा वजीफा योजना",
+      "ministry": "Directorate for the Empowerment of Differently Abled, Karnataka",
+      "category": "pension",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 200000,
+        "ageRange": [
+          6,
+          99
+        ],
+        "gender": "all",
+        "states": [
+          "karnataka"
+        ]
+      },
+      "benefits": {
+        "amount": "₹1,200 — ₹2,000/month Pension & Educational Allowance",
+        "description": "Financial assistance and laptop / braille device subsidy for students in schools and universities"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Karnataka Domicile Certificate",
+        "Income Certificate",
+        "Aadhaar Card",
+        "Bank Account Details"
+      ],
+      "applyUrl": "https://dwd.karnataka.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "westbengal_manabik_pension",
+      "name": "West Bengal Manabik Pension Scheme for Persons with Disabilities",
+      "nameHi": "पश्चिम बंगाल मानबिक पेंशन योजना",
+      "ministry": "Department of Women & Child Development and Social Welfare, WB",
+      "category": "pension",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 100000,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": [
+          "west_bengal"
+        ]
+      },
+      "benefits": {
+        "amount": "₹1,000/month Pension",
+        "description": "Monthly cash assistance to disabled citizens of West Bengal with household income below ₹1 lakh/year"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "West Bengal Resident Proof",
+        "Income Certificate",
+        "Aadhaar Card",
+        "Bank Passbook"
+      ],
+      "applyUrl": "https://wb.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "rajasthan_vishesh_yogjyan",
+      "name": "Rajasthan Vishesh Yogyajan Higher Education Aid & Stipend",
+      "nameHi": "राजस्थान विशेष योग्यजन उच्च शिक्षा सहायता एवं छात्रवृत्ति",
+      "ministry": "Social Justice & Empowerment Department, Rajasthan",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple"
+        ],
+        "educationLevels": [
+          "secondary",
+          "higher_secondary",
+          "graduate",
+          "post_graduate",
+          "professional",
+          "vocational"
+        ],
+        "maxIncome": 250000,
+        "ageRange": [
+          12,
+          35
+        ],
+        "gender": "all",
+        "states": [
+          "rajasthan"
+        ]
+      },
+      "benefits": {
+        "amount": "₹1,000 — ₹2,500/month + Free Scooty/Tricycle Support",
+        "description": "Monthly scholarship stipend plus free motorized scooty allotment for college-going disabled students"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Rajasthan Jan Aadhaar / Bhamashah Card",
+        "College Marksheet",
+        "Income Certificate",
+        "Aadhaar Card"
+      ],
+      "applyUrl": "https://sjmsnew.rajasthan.gov.in/",
+      "deadline": "2026-11-30"
+    },
+    {
+      "id": "mp_divyang_education_stipend",
+      "name": "Madhya Pradesh Divyang Vidyarthi Protsahan Yojana",
+      "nameHi": "मध्य प्रदेश दिव्यांग विद्यार्थी प्रोत्साहन योजना",
+      "ministry": "Social Justice & Disabled Welfare Dept, Madhya Pradesh",
+      "category": "stipend",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "learning",
+          "multiple"
+        ],
+        "educationLevels": [
+          "primary",
+          "upper_primary",
+          "secondary",
+          "higher_secondary",
+          "graduate",
+          "post_graduate"
+        ],
+        "maxIncome": 300000,
+        "ageRange": [
+          6,
+          30
+        ],
+        "gender": "all",
+        "states": [
+          "madhya_pradesh"
+        ]
+      },
+      "benefits": {
+        "amount": "₹600 — ₹1,500/month Stipend + Free Laptop Award for Top Performers",
+        "description": "Monthly stipend support for schooling and higher education, plus laptop incentives for meritorious PwD students"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "MP Samagra ID",
+        "School / University Bonafide Certificate",
+        "Income Certificate",
+        "Aadhaar Card"
+      ],
+      "applyUrl": "https://socialjustice.mp.gov.in/",
+      "deadline": "2026-12-31"
+    },
+    {
+      "id": "kerala_aswasakiranam",
+      "name": "Kerala Aswasakiranam Scheme – Caregiver Allowance for PwD",
+      "nameHi": "केरल आश्वासन किरणम योजना – देखभालकर्ता सहायता",
+      "ministry": "Social Justice Department, Government of Kerala",
+      "category": "healthcare",
+      "eligibility": {
+        "disabilityPercentMin": 60,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 250000,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": [
+          "kerala"
+        ]
+      },
+      "benefits": {
+        "amount": "₹600/month Caregiver Stipend",
+        "description": "Monthly financial assistance given directly to caregivers of physically/mentally bedridden disabled individuals in Kerala"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (60%+)",
+        "Kerala Resident Proof",
+        "Medical Officer Certificate",
+        "Aadhaar Card of Patient & Caregiver",
+        "Bank Account Details"
+      ],
+      "applyUrl": "http://www.sjd.kerala.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "haryana_divyang_pension",
+      "name": "Haryana State Divyang Pension & Higher Education Allowance",
+      "nameHi": "हरियाणा राज्य दिव्यांग पेंशन एवं उच्च शिक्षा सहायता योजना",
+      "ministry": "Social Justice & Empowerment Department, Haryana",
+      "category": "pension",
+      "eligibility": {
+        "disabilityPercentMin": 60,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          18,
+          99
+        ],
+        "gender": "all",
+        "states": [
+          "haryana"
+        ]
+      },
+      "benefits": {
+        "amount": "₹3,000/month Pension",
+        "description": "Monthly disability pension allowance provided to Haryana residents with 60%+ disability"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (60%+)",
+        "Parivar Pehchan Patra (PPP) Haryana",
+        "Domicile Certificate",
+        "Aadhaar Card",
+        "Bank Account"
+      ],
+      "applyUrl": "https://pension.socialjusticehry.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "punjab_divyang_pension",
+      "name": "Punjab State Disability Pension & Education Financial Support",
+      "nameHi": "पंजाब राज्य दिव्यांगता पेंशन एवं शिक्षा सहायता",
+      "ministry": "Department of Social Security and Women & Child Development, Punjab",
+      "category": "pension",
+      "eligibility": {
+        "disabilityPercentMin": 50,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 200000,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": [
+          "punjab"
+        ]
+      },
+      "benefits": {
+        "amount": "₹1,500/month Pension",
+        "description": "Monthly financial assistance to disabled residents in Punjab"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (50%+)",
+        "Punjab Residence Proof",
+        "Income Certificate",
+        "Aadhaar Card",
+        "Bank Account Passbook"
+      ],
+      "applyUrl": "https://connect.punjab.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "pradhan_mantri_awas_pwd",
+      "name": "Pradhan Mantri Awas Yojana (PMAY) – Priority Housing for PwD",
+      "nameHi": "प्रधानमंत्री आवास योजना – दिव्यांगजन प्राथमिकता आवास",
+      "ministry": "Ministry of Housing & Urban Affairs / Ministry of Rural Development",
+      "category": "housing",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "multiple",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          18,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Up to ₹2,67,000 Subsidy / Ground Floor Allocation",
+        "description": "Mandatory ground floor housing unit reservation + Interest subsidy for PwD applicants under PMAY Urban and Gramin"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Income Certificate / BPL Card",
+        "Aadhaar Card",
+        "No-Pucca-House Declaration Certificate",
+        "Bank Account Details"
+      ],
+      "applyUrl": "https://pmaymis.gov.in/",
+      "deadline": "2027-12-31"
+    },
+    {
+      "id": "pm_vishwakarma_pwd",
+      "name": "PM Vishwakarma Scheme – Specialized Artisan Support for PwD",
+      "nameHi": "पीएम विश्वकर्मा योजना – दिव्यांग कारीगर विशेष सहायता",
+      "ministry": "Ministry of Micro, Small and Medium Enterprises (MSME)",
+      "category": "employment",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 500000,
+        "ageRange": [
+          18,
+          65
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹15,000 Tool Kit Grant + ₹3,00,000 Loan at 5%",
+        "description": "Skill training with ₹500/day stipend, free accessible toolkits, and collateral-free enterprise loan for traditional artisans"
+      },
+      "requiredDocuments": [
+        "Disability Certificate / UDID Card",
+        "Artisan Trade Certificate / Recommendation",
+        "Aadhaar Card",
+        "Bank Account Details"
+      ],
+      "applyUrl": "https://pmvishwakarma.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "national_overseas_scholarship_pwd",
+      "name": "National Overseas Scholarship for Students with Disabilities",
+      "nameHi": "दिव्यांग विद्यार्थियों के लिए राष्ट्रीय ओवरसीज छात्रवृत्ति",
+      "ministry": "Department of Empowerment of Persons with Disabilities",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple"
+        ],
+        "educationLevels": [
+          "graduate",
+          "post_graduate"
+        ],
+        "maxIncome": 800000,
+        "ageRange": [
+          18,
+          35
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Up to $15,400/year (US) / £9,900/year (UK) + Airfare + Tuition",
+        "description": "Full financial assistance for Master's and Ph.D degrees in top foreign universities abroad"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Unconditional Offer Letter from Top 500 Foreign University",
+        "Income Certificate (below ₹8 lakh)",
+        "Passport Copy",
+        "Academic Marksheets & GRE/IELTS Scores"
+      ],
+      "applyUrl": "https://nosmsje.gov.in/",
+      "deadline": "2026-09-15"
+    },
+    {
+      "id": "samarth_scheme",
+      "name": "Samarth Scheme – Respite Care for Autism & Cerebral Palsy",
+      "nameHi": "समर्थ योजना – सेरेब्रल पाल्सी एवं ऑटिज्म देखभाल सहायता",
+      "ministry": "National Trust (Ministry of Social Justice & Empowerment)",
+      "category": "healthcare",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "cerebral_palsy",
+          "autism",
+          "intellectual",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          0,
+          99
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Respite Care & Residential Support",
+        "description": "Short-term and long-term respite care centers providing therapeutic support, nutrition, and relief to families"
+      },
+      "requiredDocuments": [
+        "Disability Certificate under National Trust Act",
+        "Aadhaar Card",
+        "Guardian Authorization Letter",
+        "Medical Diagnostic Report"
+      ],
+      "applyUrl": "https://thenationaltrust.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "prerna_scheme",
+      "name": "Prerna Scheme – Marketing Assistance for PwD Micro-Entrepreneurs",
+      "nameHi": "प्रेरणा योजना – दिव्यांग सूक्ष्म उद्यमियों हेतु विपणन सहायता",
+      "ministry": "National Trust (MSJE)",
+      "category": "employment",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 500000,
+        "ageRange": [
+          18,
+          60
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Financial Assistance up to ₹10,000 per Exhibition/Stall",
+        "description": "Support for PwD artisans and entrepreneurs to participate in trade fairs, exhibitions, and online marketplaces"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "UDID Card",
+        "Product Sample / Business Profile",
+        "Aadhaar Card",
+        "Bank Details"
+      ],
+      "applyUrl": "https://thenationaltrust.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "sahayog_scheme",
+      "name": "Sahayog Scheme – Caregiver Training and Support Program",
+      "nameHi": "सहयोग योजना – देखभालकर्ता प्रशिक्षण एवं सहायता",
+      "ministry": "National Trust (MSJE)",
+      "category": "healthcare",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "multiple"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 9999999,
+        "ageRange": [
+          18,
+          50
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Certified Caregiver Training + ₹1,000 Monthly Support",
+        "description": "Training program for parents, family members, and professional caregivers to provide specialized care for severe PwD"
+      },
+      "requiredDocuments": [
+        "Aadhaar Card",
+        "Dependent PwD Disability Certificate",
+        "Educational Qualification Proof"
+      ],
+      "applyUrl": "https://thenationaltrust.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "badhte_kadam",
+      "name": "Badhte Kadam – Community Inclusive Education & Awareness Drive",
+      "nameHi": "बढ़ते कदम – समुदाय आधारित समावेशी शिक्षा अभियान",
+      "ministry": "National Trust (MSJE)",
+      "category": "scholarship",
+      "eligibility": {
+        "disabilityPercentMin": 0,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple"
+        ],
+        "educationLevels": [
+          "pre_primary",
+          "primary",
+          "upper_primary",
+          "secondary"
+        ],
+        "maxIncome": 9999999,
+        "ageRange": [
+          3,
+          18
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Inclusive Learning Material & School Support Kits",
+        "description": "Community-level identification, inclusion, and provision of adaptive learning materials for special students in schools"
+      },
+      "requiredDocuments": [
+        "School Identity Card / Enrollment Letter",
+        "Disability Assessment Certificate",
+        "Aadhaar Card"
+      ],
+      "applyUrl": "https://thenationaltrust.gov.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "niti_aayog_accessible_tech",
+      "name": "NITI Aayog Inclusive Assistive Technology Innovation Grant",
+      "nameHi": "नीति आयोग समावेशी सहायक तकनीक नवाचार अनुदान",
+      "ministry": "NITI Aayog (Atal Innovation Mission)",
+      "category": "assistive",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "learning",
+          "speech",
+          "multiple"
+        ],
+        "educationLevels": [
+          "graduate",
+          "post_graduate",
+          "professional",
+          "vocational"
+        ],
+        "maxIncome": 9999999,
+        "ageRange": [
+          18,
+          45
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Grant up to ₹5,00,000 for Assistive Innovation",
+        "description": "Funding grant for disabled students and innovators building low-cost accessible hardware, AI tools, or software devices"
+      },
+      "requiredDocuments": [
+        "Disability Certificate / UDID Card",
+        "Project Innovation Proposal / Prototype",
+        "Institute Affiliation Letter",
+        "Aadhaar Card"
+      ],
+      "applyUrl": "https://aim.gov.in/",
+      "deadline": "2026-10-31"
+    },
+    {
+      "id": "skill_council_pwd",
+      "name": "SCPwD Industry-Aligned Certified Vocational Training",
+      "nameHi": "दिव्यांगजन कौशल परिषद उद्योग-उन्मुख प्रमाणित प्रशिक्षण",
+      "ministry": "Skill Council for Persons with Disabilities (MSDE)",
+      "category": "employment",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "autism",
+          "learning",
+          "speech",
+          "multiple"
+        ],
+        "educationLevels": [
+          "secondary",
+          "higher_secondary",
+          "graduate",
+          "vocational",
+          "not_enrolled"
+        ],
+        "maxIncome": 600000,
+        "ageRange": [
+          18,
+          40
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "Free Training + ₹2,500/month Stipend + Direct Job Placement",
+        "description": "Specialized IT, retail, hospitality, and BPO skills training tailored to specific disability profiles with placement drive"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Educational Qualification Marksheet",
+        "Aadhaar Card",
+        "Bank Account Passbook"
+      ],
+      "applyUrl": "https://scpwd.in/",
+      "deadline": "2027-03-31"
+    },
+    {
+      "id": "swavlamban_health_insurance",
+      "name": "Swavlamban Health Insurance Scheme for Persons with Disabilities",
+      "nameHi": "स्वावलंबन स्वास्थ्य बीमा योजना",
+      "ministry": "Department of Empowerment of Persons with Disabilities & New India Assurance",
+      "category": "healthcare",
+      "eligibility": {
+        "disabilityPercentMin": 40,
+        "disabilityTypes": [
+          "visual",
+          "hearing",
+          "locomotor",
+          "cerebral_palsy",
+          "intellectual",
+          "mental_illness",
+          "autism",
+          "learning",
+          "speech",
+          "multiple",
+          "blood_disorder",
+          "muscular_dystrophy"
+        ],
+        "educationLevels": "all",
+        "maxIncome": 300000,
+        "ageRange": [
+          0,
+          65
+        ],
+        "gender": "all",
+        "states": "all"
+      },
+      "benefits": {
+        "amount": "₹3,00,000/year Health Insurance (90% Subsidized Premium)",
+        "description": "Affordable health insurance covering OPD treatment, pre-existing conditions, corrective surgery, and therapy for PwD family"
+      },
+      "requiredDocuments": [
+        "Disability Certificate (40%+)",
+        "Income Certificate (below ₹3 lakh)",
+        "Aadhaar Card",
+        "Family Details"
+      ],
+      "applyUrl": "https://www.disabilityaffairs.gov.in/",
+      "deadline": "2027-03-31"
+    }
+  ],
+  "CREDIT_SCHEME_DATABASE": [
+    {
+      "id": "nsfdc_micro_finance",
+      "name": "NSFDC Micro Finance Scheme (Mahila Samriddhi & Micro Credit)",
+      "nameHi": "एनएसएफडीसी माइक्रो फाइनेंस योजना (महिला समृद्धि एवं सूक्ष्म ऋण)",
+      "category": "micro_finance",
+      "categoryLabel": "Micro Credit",
+      "categoryLabelHi": "सूक्ष्म ऋण",
+      "ministry": "National Scheduled Castes Finance & Development Corporation (MoSJE)",
+      "maxAmount": 140000,
+      "maxAmountDisplay": "₹1.40 Lakh",
+      "indicativeRateMin": 6.5,
+      "indicativeRateMax": 8,
+      "indicativeRateDisplay": "6.5% – 8.0% p.a.",
+      "tenureMonthsMin": 12,
+      "tenureMonthsMax": 60,
+      "defaultTenureMonths": 36,
+      "moratoriumMonthsMin": 3,
+      "moratoriumMonthsMax": 6,
+      "defaultMoratoriumMonths": 3,
+      "nsfdcSharePercent": 90,
+      "promoterContributionPercent": 10,
+      "description": "Concessional credit designed for small trade, service, artisan activities, and tiny rural/urban ventures for SC entrepreneurs.",
+      "descriptionHi": "अनुसूचित जाति के उद्यमियों के लिए छोटे व्यापार, सेवा, कारीगर गतिविधियों और लघु उद्यमों हेतु रियायती ऋण।",
+      "benefits": {
+        "amount": "Up to ₹1.40 Lakh",
+        "amountHi": "₹1.40 लाख तक",
+        "description": "Quick sanction via Channel Partners with zero collateral for loans up to ₹1.4L at only 6.5–8% interest rate.",
+        "descriptionHi": "6.5–8% ब्याज दर पर ₹1.4 लाख तक के ऋण हेतु बिना किसी बंधक (Zero Collateral) के त्वरित स्वीकृति।"
+      },
+      "eligibility": {
+        "caste": [
+          "SC"
+        ],
+        "maxFamilyIncome": 500000,
+        "minAge": 18,
+        "maxAge": 55,
+        "allowedPurposes": [
+          "business"
+        ],
+        "allowedSectors": [
+          "trade",
+          "service",
+          "manufacturing",
+          "agri_allied",
+          "other"
+        ]
+      },
+      "documents": [
+        "Caste Certificate (SC)",
+        "Family Income Certificate (≤ ₹5L/year)",
+        "Aadhaar Card (at Partner Branch)",
+        "Basic Project Proposal / Quotation",
+        "Bank Account Passbook"
+      ],
+      "applyUrl": "https://nsfdc.nic.in/en/micro-credit-scheme",
+      "channelTypes": [
+        "SCA",
+        "PSB",
+        "RRB",
+        "NBFC-MFI"
+      ]
+    },
+    {
+      "id": "nsfdc_term_loan",
+      "name": "NSFDC Term Loan Scheme (Enterprise & Business Expansion)",
+      "nameHi": "एनएसएफडीसी मियादी ऋण योजना (उद्यम एवं व्यवसाय विस्तार)",
+      "category": "term_loan",
+      "categoryLabel": "Term Loan",
+      "categoryLabelHi": "मियादी ऋण",
+      "ministry": "National Scheduled Castes Finance & Development Corporation (MoSJE)",
+      "maxAmount": 5000000,
+      "maxAmountDisplay": "₹50.00 Lakh",
+      "indicativeRateMin": 8,
+      "indicativeRateMax": 12,
+      "indicativeRateDisplay": "8.0% – 12.0% (Capped at 15%)",
+      "tenureMonthsMin": 24,
+      "tenureMonthsMax": 120,
+      "defaultTenureMonths": 60,
+      "moratoriumMonthsMin": 6,
+      "moratoriumMonthsMax": 12,
+      "defaultMoratoriumMonths": 6,
+      "nsfdcSharePercent": 90,
+      "promoterContributionPercent": 10,
+      "description": "Medium and long-term project finance for viable income-generating manufacturing, trading, transport, and commercial ventures.",
+      "descriptionHi": "व्यवहार्य आय-सृजन विनिर्माण, व्यापार, परिवहन और वाणिज्यिक उद्यमों के लिए मध्यम व दीर्घकालिक परियोजना वित्त।",
+      "benefits": {
+        "amount": "Up to ₹50.00 Lakh",
+        "amountHi": "₹50.00 लाख तक",
+        "description": "Up to 90% project cost financed by NSFDC at concessional rates with up to 12 months moratorium.",
+        "descriptionHi": "12 महीने तक के अधिस्थगन (Moratorium) के साथ रियायती दरों पर एनएसएफडीसी द्वारा 90% तक परियोजना वित्तपोषित।"
+      },
+      "eligibility": {
+        "caste": [
+          "SC"
+        ],
+        "maxFamilyIncome": 500000,
+        "minAge": 18,
+        "maxAge": 55,
+        "allowedPurposes": [
+          "business"
+        ],
+        "allowedSectors": [
+          "trade",
+          "service",
+          "manufacturing",
+          "agri_allied",
+          "other"
+        ]
+      },
+      "documents": [
+        "Caste Certificate (SC)",
+        "Income Certificate (≤ ₹5L/year)",
+        "Detailed Project Report (DPR) / Quotations",
+        "Bank Account Statement (6 Months)",
+        "Valid KYC & Address Proof"
+      ],
+      "applyUrl": "https://nsfdc.nic.in/en/term-loan-scheme",
+      "channelTypes": [
+        "SCA",
+        "PSB",
+        "RRB"
+      ]
+    },
+    {
+      "id": "nsfdc_education_loan",
+      "name": "NSFDC Concessional Education Loan Scheme (Inland & Overseas)",
+      "nameHi": "एनएसएफडीसी रियायती शिक्षा ऋण योजना (स्वदेशी एवं विदेश अध्ययन)",
+      "category": "education_loan",
+      "categoryLabel": "Education Loan",
+      "categoryLabelHi": "शिक्षा ऋण",
+      "ministry": "National Scheduled Castes Finance & Development Corporation (MoSJE)",
+      "maxAmount": 2000000,
+      "maxAmountDisplay": "₹20.00 Lakh (India) / ₹40.00 Lakh (Abroad)",
+      "indicativeRateMin": 6.5,
+      "indicativeRateMax": 8,
+      "indicativeRateDisplay": "6.5% (Women) / 7.5% – 8.0% (Men)",
+      "tenureMonthsMin": 36,
+      "tenureMonthsMax": 120,
+      "defaultTenureMonths": 84,
+      "moratoriumMonthsMin": 6,
+      "moratoriumMonthsMax": 24,
+      "defaultMoratoriumMonths": 12,
+      "nsfdcSharePercent": 90,
+      "promoterContributionPercent": 10,
+      "description": "Highly concessional educational finance for pursuing professional, technical, or doctoral degrees in premier Indian institutions or abroad.",
+      "descriptionHi": "शीर्ष भारतीय संस्थानों या विदेशों में व्यावसायिक, तकनीकी या डॉक्टरेट डिग्री प्राप्त करने हेतु अत्यंत रियायती शिक्षा ऋण।",
+      "benefits": {
+        "amount": "Up to ₹20L (India) / ₹40L (Abroad)",
+        "amountHi": "₹20L (भारत) / ₹40L (विदेश) तक",
+        "description": "Zero repayment during course tenure + 6 months post-study moratorium. Extra 1.0% interest concession for female students.",
+        "descriptionHi": "कोर्स अवधि + 6 महीने तक शून्य ईएमआई। महिला विद्यार्थियों के लिए ब्याज दर में 1.0% की अतिरिक्त विशेष छूट।"
+      },
+      "eligibility": {
+        "caste": [
+          "SC"
+        ],
+        "maxFamilyIncome": 500000,
+        "minAge": 16,
+        "maxAge": 40,
+        "allowedPurposes": [
+          "education"
+        ],
+        "allowedSectors": [
+          "engineering",
+          "medical",
+          "management",
+          "law",
+          "polytechnic",
+          "other"
+        ]
+      },
+      "documents": [
+        "Caste Certificate (SC)",
+        "Family Income Certificate (≤ ₹5L/year)",
+        "Admission Letter / Fee Structure from Recognized College",
+        "Previous Academic Marksheets (10th/12th/Degree)",
+        "Guarantor / Student KYC"
+      ],
+      "applyUrl": "https://nsfdc.nic.in/en/education-loan-scheme",
+      "channelTypes": [
+        "SCA",
+        "PSB",
+        "RRB"
+      ]
+    }
+  ],
+  "CHANNEL_PARTNERS_DATABASE": [
+    {
+      "id": "sca_dsfddc_delhi",
+      "name": "Delhi SC/ST/OBC/Minorities Financial & Development Corp (DSFDC)",
+      "type": "SCA",
+      "typeLabel": "State Channelizing Agency",
+      "address": "Ambedkar Bhawan, Sector 16, Rohini",
+      "district": "North West Delhi",
+      "state": "delhi",
+      "pincode": "110089",
+      "lat": 28.7186,
+      "lng": 77.1089,
+      "contact": {
+        "phone": "011-27882481",
+        "email": "contact@dsfdc.delhi.gov.in",
+        "web": "http://dsfdc.delhi.gov.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 4.8,
+      "avgDisbursalDays": 18,
+      "portalUrl": "http://dsfdc.delhi.gov.in"
+    },
+    {
+      "id": "psb_pnb_parliament_delhi",
+      "name": "Punjab National Bank — Specialised MSME Credit Branch",
+      "type": "PSB",
+      "typeLabel": "Public Sector Bank",
+      "address": "7, Bhikaji Cama Place, RK Puram",
+      "district": "New Delhi",
+      "state": "delhi",
+      "pincode": "110066",
+      "lat": 28.5683,
+      "lng": 77.1868,
+      "contact": {
+        "phone": "011-26102303",
+        "email": "bo0153@pnb.co.in",
+        "web": "https://www.pnbindia.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 5.2,
+      "avgDisbursalDays": 14,
+      "portalUrl": "https://www.pnbindia.in/micro-finance.html"
+    },
+    {
+      "id": "psb_sbi_connaught_delhi",
+      "name": "State Bank of India — SME Centre & Channel Finance",
+      "type": "PSB",
+      "typeLabel": "Public Sector Bank",
+      "address": "11, Parliament Street, Connaught Place",
+      "district": "Central Delhi",
+      "state": "delhi",
+      "pincode": "110001",
+      "lat": 28.6289,
+      "lng": 77.2144,
+      "contact": {
+        "phone": "011-23374201",
+        "email": "sbi.00691@sbi.co.in",
+        "web": "https://sbi.co.in"
+      },
+      "schemesHandled": [
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 3.9,
+      "avgDisbursalDays": 16,
+      "portalUrl": "https://sbi.co.in/web/business/sme/credit"
+    },
+    {
+      "id": "sca_upscfdc_lucknow",
+      "name": "UP Scheduled Castes Finance & Development Corp (UPSCFDC)",
+      "type": "SCA",
+      "typeLabel": "State Channelizing Agency",
+      "address": "B-2, Pragati Deep, Picup Bhawan Marg, Gomti Nagar",
+      "district": "Lucknow",
+      "state": "uttar_pradesh",
+      "pincode": "226010",
+      "lat": 26.8536,
+      "lng": 80.9984,
+      "contact": {
+        "phone": "0522-2720815",
+        "email": "md.upscfdc@gmail.com",
+        "web": "http://upscfdc.up.nic.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 6.1,
+      "avgDisbursalDays": 21,
+      "portalUrl": "http://upscfdc.up.nic.in"
+    },
+    {
+      "id": "rrb_aryavart_lucknow",
+      "name": "Aryavart Bank — Head Office Micro Credit & Priority Lending",
+      "type": "RRB",
+      "typeLabel": "Regional Rural Bank",
+      "address": "A-2/46, Vijay Khand, Gomti Nagar",
+      "district": "Lucknow",
+      "state": "uttar_pradesh",
+      "pincode": "226010",
+      "lat": 26.8589,
+      "lng": 81.0021,
+      "contact": {
+        "phone": "0522-2392900",
+        "email": "priority@aryavartbank-rrb.com",
+        "web": "https://aryavart-rrb.com"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 5.7,
+      "avgDisbursalDays": 15,
+      "portalUrl": "https://aryavart-rrb.com/schemes.html"
+    },
+    {
+      "id": "psb_bob_hazratganj",
+      "name": "Bank of Baroda — Priority Sector & Financial Inclusion Hub",
+      "type": "PSB",
+      "typeLabel": "Public Sector Bank",
+      "address": "V-4, Hazratganj Main Road",
+      "district": "Lucknow",
+      "state": "uttar_pradesh",
+      "pincode": "226001",
+      "lat": 26.8488,
+      "lng": 80.9458,
+      "contact": {
+        "phone": "0522-2287411",
+        "email": "hzrluc@bankofbaroda.com",
+        "web": "https://www.bankofbaroda.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 4.4,
+      "avgDisbursalDays": 12,
+      "portalUrl": "https://www.bankofbaroda.in/personal-banking/loans"
+    },
+    {
+      "id": "rrb_baroda_up_kanpur",
+      "name": "Baroda UP Bank — Regional Office Kanpur Dehat",
+      "type": "RRB",
+      "typeLabel": "Regional Rural Bank",
+      "address": "123/456, Kalpi Road, Fazalganj",
+      "district": "Kanpur",
+      "state": "uttar_pradesh",
+      "pincode": "208012",
+      "lat": 26.4673,
+      "lng": 80.3129,
+      "contact": {
+        "phone": "0512-2216500",
+        "email": "kanpur@barodauprrb.co.in",
+        "web": "https://barodaupbank.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan"
+      ],
+      "fundHealthStatus": "high-npa",
+      "npaPercentage": 17.4,
+      "avgDisbursalDays": 45,
+      "portalUrl": "https://barodaupbank.in"
+    },
+    {
+      "id": "sca_mpbcdc_mumbai",
+      "name": "Mahatama Phule Backward Class Development Corp (MPBCDC)",
+      "type": "SCA",
+      "typeLabel": "State Channelizing Agency",
+      "address": "Supreme Headquarters, 6th Floor, Bandra East",
+      "district": "Mumbai Suburban",
+      "state": "maharashtra",
+      "pincode": "400051",
+      "lat": 19.0607,
+      "lng": 72.8535,
+      "contact": {
+        "phone": "022-26591240",
+        "email": "contact@mpbcdc.gov.in",
+        "web": "https://mpbcdc.maharashtra.gov.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 5.9,
+      "avgDisbursalDays": 20,
+      "portalUrl": "https://mpbcdc.maharashtra.gov.in"
+    },
+    {
+      "id": "psb_canara_nariman_mumbai",
+      "name": "Canara Bank — MSME Sulabh & Concessional Credit Desk",
+      "type": "PSB",
+      "typeLabel": "Public Sector Bank",
+      "address": "Maker Chambers III, Nariman Point",
+      "district": "Mumbai City",
+      "state": "maharashtra",
+      "pincode": "400021",
+      "lat": 18.9269,
+      "lng": 72.8223,
+      "contact": {
+        "phone": "022-22851120",
+        "email": "cb0134@canarabank.com",
+        "web": "https://canarabank.com"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 4.1,
+      "avgDisbursalDays": 14,
+      "portalUrl": "https://canarabank.com/pages/msme-schemes"
+    },
+    {
+      "id": "mfi_nabfins_pune",
+      "name": "NABFINS Limited (NABARD Subsidiary Microfinance)",
+      "type": "NBFC-MFI",
+      "typeLabel": "NBFC Micro Finance Institution",
+      "address": "Shivajinagar Agriculture College Road",
+      "district": "Pune",
+      "state": "maharashtra",
+      "pincode": "411005",
+      "lat": 18.5314,
+      "lng": 73.8446,
+      "contact": {
+        "phone": "020-25531980",
+        "email": "pune.branch@nabfins.org",
+        "web": "https://nabfins.org"
+      },
+      "schemesHandled": [
+        "micro_finance"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 2.3,
+      "avgDisbursalDays": 8,
+      "portalUrl": "https://nabfins.org/microcredit"
+    },
+    {
+      "id": "sca_ksfdc_bangalore",
+      "name": "Karnataka Dr. B.R. Ambedkar Development Corp Ltd",
+      "type": "SCA",
+      "typeLabel": "State Channelizing Agency",
+      "address": "9th Floor, Vishveshwaraiah Mini Tower, Dr. Ambedkar Veedhi",
+      "district": "Bengaluru Urban",
+      "state": "karnataka",
+      "pincode": "560001",
+      "lat": 12.9791,
+      "lng": 77.5913,
+      "contact": {
+        "phone": "080-22864262",
+        "email": "mdambedkarcorp@gmail.com",
+        "web": "https://adcl.karnataka.gov.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 5.1,
+      "avgDisbursalDays": 19,
+      "portalUrl": "https://adcl.karnataka.gov.in"
+    },
+    {
+      "id": "psb_union_bank_bangalore",
+      "name": "Union Bank of India — Gandhi Nagar Financial Inclusion Branch",
+      "type": "PSB",
+      "typeLabel": "Public Sector Bank",
+      "address": "K.G. Road, Gandhi Nagar",
+      "district": "Bengaluru Urban",
+      "state": "karnataka",
+      "pincode": "560009",
+      "lat": 12.9767,
+      "lng": 77.5753,
+      "contact": {
+        "phone": "080-22261911",
+        "email": "ubkgroad@unionbankofindia.bank",
+        "web": "https://www.unionbankofindia.co.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 4.6,
+      "avgDisbursalDays": 13,
+      "portalUrl": "https://www.unionbankofindia.co.in"
+    },
+    {
+      "id": "rrb_karnataka_gramin_bellary",
+      "name": "Karnataka Gramin Bank — Head Office Rural Finance Cell",
+      "type": "RRB",
+      "typeLabel": "Regional Rural Bank",
+      "address": "Near Railway Station Road",
+      "district": "Bellary",
+      "state": "karnataka",
+      "pincode": "583101",
+      "lat": 15.1394,
+      "lng": 76.9214,
+      "contact": {
+        "phone": "08392-236400",
+        "email": "fi@karnatakagraminbank.com",
+        "web": "https://karnatakagraminbank.com"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan"
+      ],
+      "fundHealthStatus": "unavailable",
+      "npaPercentage": 19.8,
+      "avgDisbursalDays": 60,
+      "portalUrl": "https://karnatakagraminbank.com"
+    },
+    {
+      "id": "sca_tgsc_hyderabad",
+      "name": "Telangana Scheduled Castes Co-operative Development Corp (TSSCCDC)",
+      "type": "SCA",
+      "typeLabel": "State Channelizing Agency",
+      "address": "Damodaram Sanjeevaiah Sankshema Bhavan, Masab Tank",
+      "district": "Hyderabad",
+      "state": "telangana",
+      "pincode": "500028",
+      "lat": 17.4042,
+      "lng": 78.4485,
+      "contact": {
+        "phone": "040-23395992",
+        "email": "vcmd.tssccdc@gmail.com",
+        "web": "https://tssccdc.telangana.gov.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 6.3,
+      "avgDisbursalDays": 17,
+      "portalUrl": "https://tssccdc.telangana.gov.in"
+    },
+    {
+      "id": "psb_indian_bank_chennai",
+      "name": "Indian Bank — Corporate MSME & Government Lending Desk",
+      "type": "PSB",
+      "typeLabel": "Public Sector Bank",
+      "address": "254-260, Avvai Shanmugam Salai, Royapettah",
+      "district": "Chennai",
+      "state": "tamil_nadu",
+      "pincode": "600014",
+      "lat": 13.0489,
+      "lng": 80.2589,
+      "contact": {
+        "phone": "044-28134300",
+        "email": "priority@indianbank.co.in",
+        "web": "https://www.indianbank.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 3.8,
+      "avgDisbursalDays": 11,
+      "portalUrl": "https://www.indianbank.in"
+    },
+    {
+      "id": "sca_tahdco_chennai",
+      "name": "Tamil Nadu Adi Dravidar Housing and Development Corp (TAHDCO)",
+      "type": "SCA",
+      "typeLabel": "State Channelizing Agency",
+      "address": "No. 31, Cenotaph Road, Teynampet",
+      "district": "Chennai",
+      "state": "tamil_nadu",
+      "pincode": "600018",
+      "lat": 13.0336,
+      "lng": 80.2447,
+      "contact": {
+        "phone": "044-24310242",
+        "email": "tahdcoho@gmail.com",
+        "web": "https://tahdco.tn.gov.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 5.4,
+      "avgDisbursalDays": 16,
+      "portalUrl": "https://tahdco.tn.gov.in"
+    },
+    {
+      "id": "sca_bmsfdc_patna",
+      "name": "Bihar State SC Co-operative Development Corp (BMSFDC)",
+      "type": "SCA",
+      "typeLabel": "State Channelizing Agency",
+      "address": "Vikas Bhawan, Bailey Road",
+      "district": "Patna",
+      "state": "bihar",
+      "pincode": "800015",
+      "lat": 25.6093,
+      "lng": 85.1235,
+      "contact": {
+        "phone": "0612-2217641",
+        "email": "contact@bmsfdc.bihar.gov.in",
+        "web": "http://scst.bihar.gov.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan"
+      ],
+      "fundHealthStatus": "high-npa",
+      "npaPercentage": 18.2,
+      "avgDisbursalDays": 50,
+      "portalUrl": "http://scst.bihar.gov.in"
+    },
+    {
+      "id": "psb_pnb_patna_kankerbagh",
+      "name": "Punjab National Bank — Patna South Lead Bank Office",
+      "type": "PSB",
+      "typeLabel": "Public Sector Bank",
+      "address": "Kankerbagh Main Road, Near Old Bypass",
+      "district": "Patna",
+      "state": "bihar",
+      "pincode": "800020",
+      "lat": 25.5941,
+      "lng": 85.1504,
+      "contact": {
+        "phone": "0612-2354110",
+        "email": "bo2451@pnb.co.in",
+        "web": "https://www.pnbindia.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 6.8,
+      "avgDisbursalDays": 19,
+      "portalUrl": "https://www.pnbindia.in"
+    },
+    {
+      "id": "sca_wbscstdfc_kolkata",
+      "name": "West Bengal SC & ST Development & Finance Corp",
+      "type": "SCA",
+      "typeLabel": "State Channelizing Agency",
+      "address": "CF-217/A1, Sector-I, Salt Lake City",
+      "district": "Kolkata",
+      "state": "west_bengal",
+      "pincode": "700064",
+      "lat": 22.5855,
+      "lng": 88.4116,
+      "contact": {
+        "phone": "033-23348043",
+        "email": "wbscstdfc@gmail.com",
+        "web": "http://wbbmdc.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 5.7,
+      "avgDisbursalDays": 18,
+      "portalUrl": "http://wbscstdfc.gov.in"
+    },
+    {
+      "id": "psb_uco_kolkata_dalhousie",
+      "name": "UCO Bank — Head Office Financial Inclusion Department",
+      "type": "PSB",
+      "typeLabel": "Public Sector Bank",
+      "address": "10, BTM Sarani, Brabourne Road",
+      "district": "Kolkata",
+      "state": "west_bengal",
+      "pincode": "700001",
+      "lat": 22.5726,
+      "lng": 88.3512,
+      "contact": {
+        "phone": "033-44557990",
+        "email": "hofi@ucobank.co.in",
+        "web": "https://www.ucobank.com"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 4.9,
+      "avgDisbursalDays": 15,
+      "portalUrl": "https://www.ucobank.com"
+    },
+    {
+      "id": "sca_gscedc_gandhinagar",
+      "name": "Gujarat Scheduled Castes Economic Development Corp (GSCEDC)",
+      "type": "SCA",
+      "typeLabel": "State Channelizing Agency",
+      "address": "Block No. 4, 3rd Floor, Dr. Jivraj Mehta Bhavan",
+      "district": "Gandhinagar",
+      "state": "gujarat",
+      "pincode": "382010",
+      "lat": 23.2156,
+      "lng": 72.6369,
+      "contact": {
+        "phone": "079-23253247",
+        "email": "gscedc@gujarat.gov.in",
+        "web": "https://sje.gujarat.gov.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 4.2,
+      "avgDisbursalDays": 14,
+      "portalUrl": "https://sje.gujarat.gov.in"
+    },
+    {
+      "id": "sca_rscdfc_jaipur",
+      "name": "Rajasthan Scheduled Castes & Scheduled Tribes Finance Corp (Anuja Nigam)",
+      "type": "SCA",
+      "typeLabel": "State Channelizing Agency",
+      "address": "Nehru Sahkar Bhawan, 4th Floor, 22 Godam",
+      "district": "Jaipur",
+      "state": "rajasthan",
+      "pincode": "302005",
+      "lat": 26.8978,
+      "lng": 75.7942,
+      "contact": {
+        "phone": "0141-2740263",
+        "email": "anujanigam@gmail.com",
+        "web": "https://anujanigam.rajasthan.gov.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 5.6,
+      "avgDisbursalDays": 16,
+      "portalUrl": "https://anujanigam.rajasthan.gov.in"
+    },
+    {
+      "id": "psb_pnb_jaipur_mi_road",
+      "name": "Punjab National Bank — Jaipur SME Hub",
+      "type": "PSB",
+      "typeLabel": "Public Sector Bank",
+      "address": "Mirza Ismail Road, Jayanti Market",
+      "district": "Jaipur",
+      "state": "rajasthan",
+      "pincode": "302001",
+      "lat": 26.9174,
+      "lng": 75.8115,
+      "contact": {
+        "phone": "0141-2364022",
+        "email": "bo0210@pnb.co.in",
+        "web": "https://www.pnbindia.in"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan",
+        "education_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 4.8,
+      "avgDisbursalDays": 13,
+      "portalUrl": "https://www.pnbindia.in"
+    },
+    {
+      "id": "mfi_satin_agra",
+      "name": "Satin Creditcare Network — Priority Financial Services",
+      "type": "NBFC-MFI",
+      "typeLabel": "NBFC Micro Finance Institution",
+      "address": "Sanjay Place Commercial Complex",
+      "district": "Agra",
+      "state": "uttar_pradesh",
+      "pincode": "282002",
+      "lat": 27.1983,
+      "lng": 78.0056,
+      "contact": {
+        "phone": "0562-4001920",
+        "email": "agra.mfi@satincreditcare.com",
+        "web": "https://satincreditcare.com"
+      },
+      "schemesHandled": [
+        "micro_finance"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 3.1,
+      "avgDisbursalDays": 7,
+      "portalUrl": "https://satincreditcare.com"
+    },
+    {
+      "id": "rrb_prathama_moradabad",
+      "name": "Prathama UP Gramin Bank — Head Office Financial Inclusion",
+      "type": "RRB",
+      "typeLabel": "Regional Rural Bank",
+      "address": "Ram Ganga Vihar, Phase-II",
+      "district": "Moradabad",
+      "state": "uttar_pradesh",
+      "pincode": "244001",
+      "lat": 28.8512,
+      "lng": 78.7618,
+      "contact": {
+        "phone": "0591-2455172",
+        "email": "priority@prathamaupbank.com",
+        "web": "https://prathamaupbank.com"
+      },
+      "schemesHandled": [
+        "micro_finance",
+        "term_loan"
+      ],
+      "fundHealthStatus": "healthy",
+      "npaPercentage": 5.3,
+      "avgDisbursalDays": 16,
+      "portalUrl": "https://prathamaupbank.com"
+    }
+  ],
+  "PROJECT_SECTORS": [
+    {
+      "id": "trade",
+      "label": "Retail & Wholesale Trade",
+      "labelHi": "खुदरा एवं थोक व्यापार",
+      "icon": "🏪"
+    },
+    {
+      "id": "service",
+      "label": "Services (Repairs, Transport, Tech, Salon)",
+      "labelHi": "सेवाएं (मरम्मत, परिवहन, तकनीक, सैलून)",
+      "icon": "🛠️"
+    },
+    {
+      "id": "manufacturing",
+      "label": "Manufacturing / Small Industrial Unit",
+      "labelHi": "विनिर्माण / लघु उद्योग इकाई",
+      "icon": "⚙️"
+    },
+    {
+      "id": "agri_allied",
+      "label": "Agri-Allied (Dairy, Poultry, Fishery, Food)",
+      "labelHi": "कृषि संबद्ध (डेयरी, मुर्गी पालन, मत्स्य, खाद्य)",
+      "icon": "🌾"
+    },
+    {
+      "id": "other",
+      "label": "Other Enterprise / Innovative Venture",
+      "labelHi": "अन्य उद्यम / नवाचारी व्यवसाय",
+      "icon": "💡"
+    }
+  ],
+  "EDUCATION_COURSES": [
+    {
+      "id": "engineering",
+      "label": "Engineering & Technology (B.Tech / M.Tech)",
+      "labelHi": "इंजीनियरिंग एवं प्रौद्योगिकी"
+    },
+    {
+      "id": "medical",
+      "label": "Medical & Dental (MBBS / BDS / MD / MS)",
+      "labelHi": "चिकित्सा एवं दंत चिकित्सा"
+    },
+    {
+      "id": "management",
+      "label": "Management & Business Studies (MBA / PGDM)",
+      "labelHi": "प्रबंधन एवं व्यवसाय अध्ययन"
+    },
+    {
+      "id": "law",
+      "label": "Law & Legal Studies (LLB / LLM)",
+      "labelHi": "विधि एवं कानूनी अध्ययन"
+    },
+    {
+      "id": "polytechnic",
+      "label": "Diploma / Polytechnic / Vocational Skills",
+      "labelHi": "डिप्लोमा / पॉलिटेक्निक / व्यावसायिक कौशल"
+    },
+    {
+      "id": "other",
+      "label": "Other Premier University Degree",
+      "labelHi": "अन्य प्रमुख विश्वविद्यालय डिग्री"
+    }
+  ]
+}

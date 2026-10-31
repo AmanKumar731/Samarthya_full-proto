@@ -1,7 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/Samarthya_AI/index.html" },
-    { "source": "/(.*)", "destination": "/Samarthya_AI/$1" }
+    { "source": "/Samarthya_AI/(.*)", "destination": "/$1" },
+    { "source": "/Samarthya_AI", "destination": "/index.html" }
   ]
 }

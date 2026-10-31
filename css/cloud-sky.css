@@ -1,0 +1,162 @@
+/* ==========================================================================
+   ORIGINKIT CLOUDSKY: BRIGHT DAYTIME BLUE SKY & WHITE CLOUDS
+   ========================================================================== */
+
+.hero-cloud-sky-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none !important;
+  background: #0075FF;
+}
+
+.cloud-sky-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none !important;
+}
+
+/* Smooth transition from bright daytime sky into Section 02 dark theme */
+.hero-bottom-sky-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(to bottom, rgba(0, 117, 255, 0) 0%, rgba(9, 10, 15, 0.4) 40%, rgba(9, 10, 15, 0.85) 75%, #090A0F 100%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ==========================================================================
+   DAYTIME HIGH-CONTRAST FOREGROUND STYLING
+   Pure White Line 1 & Deep Royal Blue/Indigo Line 2
+   ========================================================================== */
+
+/* Fallback Headline for instant high-contrast readability against sunny sky */
+.hero-headline-canvas-fallback .fallback-line-1 {
+  display: block;
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25), 0 0 35px rgba(255, 255, 255, 0.6) !important;
+}
+
+.hero-headline-canvas-fallback .fallback-line-2 {
+  display: block;
+  background: linear-gradient(135deg, #1E1B4B 0%, #312E81 45%, #3730A3 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 2px 14px rgba(30, 27, 75, 0.3)) !important;
+}
+
+/* ==========================================================================
+   DYNAMIC SCROLLED NAVBAR & ACTIVE SECTION TAB STYLING
+   ========================================================================== */
+
+/* At Top (scrollY <= 40 on Hero Sky): Lighter, translucent glass pill */
+.site-main-nav {
+  background: rgba(9, 13, 22, 0.60) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+  padding: 8px 18px !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* On Scroll (scrollY > 40): Compact, high-contrast dark obsidian glass bar */
+.site-main-nav.nav-scrolled,
+.site-main-nav.scrolled {
+  background: rgba(9, 13, 22, 0.90) !important;
+  border: 1px solid rgba(99, 102, 241, 0.30) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.60), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  padding: 6px 18px !important;
+}
+
+/* Navbar Navigation Links: Sleek tabs */
+.nav-section-item a {
+  padding: 6px 12px !important;
+  border-radius: 9999px !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.25rem !important;
+  font-weight: 500 !important;
+  color: #94A3B8 !important;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  white-space: nowrap !important;
+  border: 1px solid transparent !important;
+}
+
+.nav-section-item a:hover {
+  color: #F8FAFC !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Active tab highlight: bg-white/10 text-white border border-white/15 shadow-sm */
+.nav-section-item a.active {
+  color: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+}
+
+.nav-section-item a .sec-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #6366F1;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-section-item a.active .sec-num {
+  color: #A5B4FC !important;
+  font-weight: 700 !important;
+}
+
+/* ==========================================================================
+   STATUS PILL & METRICS DOCK (Sleek Dark Obsidian Glass)
+   ========================================================================== */
+
+.hero-announcement-pill,
+.hero-micro-metrics-dock {
+  background: rgba(9, 13, 22, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+}
+
+.hero-announcement-pill {
+  color: #FFFFFF !important;
+}
+
+.pill-text-shimmer {
+  color: #F8FAFC !important;
+}
+
+.hero-micro-metrics-dock {
+  color: #E2E8F0 !important;
+}
+
+.metric-dock-item strong {
+  color: #FFFFFF !important;
+}
+
+.metric-dock-divider {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Ensure foreground content layer is positioned at z-20 above sky */
+.hero-content-layer.hero-content-minimal {
+  position: relative;
+  z-index: 20 !important;
+  pointer-events: auto;
+}
