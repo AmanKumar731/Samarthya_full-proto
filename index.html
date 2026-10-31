@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samarthya — Intelligent Government Scheme Matching Portal</title>
+  <title>Sanjeevani Grid — Intelligent Government Scheme Matching Portal</title>
   <meta name="description"
-    content="Samarthya bridges the gap between special-needs students and government welfare schemes. Instant criteria-based scheme matching powered by AI.">
+    content="Sanjeevani Grid bridges the gap between special-needs students and government welfare schemes. Instant criteria-based scheme matching powered by AI.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/main.css?v=6.0">
   <link rel="stylesheet" href="css/components.css?v=6.0">
@@ -21,6 +21,13 @@
   <link rel="stylesheet" href="css/features-bento.css?v=11.0">
   <link rel="stylesheet" href="css/clean-sections.css?v=11.0">
   <link rel="stylesheet" href="css/react-bits-showcase.css?v=11.0">
+  <link rel="stylesheet" href="css/section01-hero.css?v=12.0">
+  <link rel="stylesheet" href="css/section02-mission.css?v=12.0">
+  <link rel="stylesheet" href="css/section03-benefits.css?v=12.0">
+  <link rel="stylesheet" href="css/section04-why.css?v=12.0">
+  <link rel="stylesheet" href="css/section05-features.css?v=12.0">
+  <link rel="stylesheet" href="css/dashboard.css?v=12.0">
+  <link rel="stylesheet" href="css/section06-portals.css?v=12.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
@@ -39,15 +46,15 @@
 
   <!-- Floating Modern Header — Main Website Exploration Hub -->
   <header class="site-main-nav" id="mainHeader">
-    <a class="nav-brand-group" href="#page-home" onclick="App.navigate('home', event)" aria-label="Samarthya Home">
+    <a class="nav-brand-group" href="#page-home" onclick="App.navigate('home', event)" aria-label="Sanjeevani Grid Home">
       <div class="brand-monogram">S</div>
-      <div class="brand-text">Samarthya <span class="brand-badge">SIH26093</span></div>
+      <div class="brand-text">Sanjeevani Grid <span class="brand-badge">SIH26093</span></div>
     </a>
 
     <ul class="nav-sections-menu" id="navSectionsMenu">
       <li class="nav-section-item"><a href="#page-home" data-page="home" class="active" onclick="App.navigate('home', event)"><span class="nav-dot"></span> <span data-i18n="navHome">Home</span></a></li>
       <li class="nav-section-item"><a href="#page-relief" data-page="relief" onclick="App.navigate('relief', event)"><span class="nav-dot"></span> <span data-i18n="navRelief">Financial Relief</span></a></li>
-      <li class="nav-section-item"><a href="#page-why" data-page="why" onclick="App.navigate('why', event)"><span class="nav-dot"></span> <span data-i18n="navWhy">Why Samarthya</span></a></li>
+      <li class="nav-section-item"><a href="#page-why" data-page="why" onclick="App.navigate('why', event)"><span class="nav-dot"></span> <span data-i18n="navWhy">Why Sanjeevani Grid</span></a></li>
       <li class="nav-section-item"><a href="#page-features" data-page="features" onclick="App.navigate('features', event)"><span class="nav-dot"></span> <span data-i18n="navFeatures">Features &amp; Tools</span></a></li>
       <li class="nav-section-item"><a href="#page-dashboard" data-page="dashboard" onclick="App.navigate('dashboard', event)"><span class="nav-dot"></span> <span data-i18n="navDashboard">Dashboard</span></a></li>
       <li class="nav-section-item"><a href="#page-portals" data-page="portals" onclick="App.navigate('portals', event)"><span class="nav-dot"></span> <span data-i18n="navPortals">Official Portals</span></a></li>
@@ -79,233 +86,585 @@
        ========================================================================== -->
   <div class="page active" id="page-home">
 
-    <!-- ==================== 01: LANDING PAGE (HERO DARK THEME) ==================== -->
-    <section id="section-01" class="site-section section-landing">
+    <!-- ==================== 01: LANDING PAGE / HERO SECTION ==================== -->
+    <section id="section-01" class="site-section sec01-hero-section">
+      <!-- Ambient Lighting & Decorative Subtle Accents -->
+      <div class="sec01-ambient-glow" aria-hidden="true"></div>
+      <div class="sec01-decor-dots" aria-hidden="true"></div>
+      <div class="sec01-decor-arc" aria-hidden="true"></div>
 
-      <!-- Hero Main Content (Ultra-Minimal Centered Canvas) -->
-      <div class="hero-content-layer hero-content-minimal">
+      <!-- Main Centered Content Container -->
+      <div class="sec01-hero-container">
 
-        <!-- Element 1: Shimmering Live Status Announcement Pill -->
-        <div class="hero-announcement-pill" aria-label="SIH 26093 Statutory AI Engine Status">
-          <span class="pill-pulse-dot" aria-hidden="true">
-            <span class="pulse-ring"></span>
-            <span class="pulse-core"></span>
+        <!-- 1. Small Announcement Pill -->
+        <div class="sec01-announcement-pill" aria-label="SIH26093 Statutory AI Engine Status">
+          <span class="sec01-pill-status" aria-hidden="true">
+            <span class="sec01-pill-dot-ring"></span>
+            <span class="sec01-pill-dot-core"></span>
           </span>
-          <span class="pill-text-shimmer" data-i18n="heroPill">SIH26093 &bull; Zero-Document Statutory AI Engine</span>
-          <span class="pill-arrow-tag" aria-hidden="true">&rarr;</span>
+          <span class="sec01-pill-text" data-i18n="heroPill">SIH26093 &bull; Zero-Document Statutory AI Engine</span>
+          <svg class="sec01-pill-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
         </div>
 
-        <!-- Element 2: Modern Static Clean Headline -->
-        <div class="hero-clean-headline-wrap">
-          <h1 class="hero-clean-headline">
-            <span class="headline-row-1" data-i18n="heroHeadRow1">Empowering Beneficiaries</span>
-            <span class="headline-row-2" data-i18n="heroHeadRow2">with Intelligent Access</span>
-          </h1>
-        </div>
+        <!-- 2. Large Two-Line Headline -->
+        <h1 class="sec01-hero-headline">
+          <span class="sec01-head-row-1" data-i18n="heroHeadRow1">Empowering Beneficiaries</span>
+          <span class="sec01-head-row-2">
+            <span data-i18n="heroHeadWith">with</span> <span class="sec01-gradient-heading" data-i18n="heroHeadIntelligent">Intelligent Access</span>
+          </span>
+        </h1>
 
-        <!-- Element 3: The Two MovingGradientButton CTAs (Side by Side) -->
-        <div class="hero-minimal-cta-group">
-          <!-- Button 1: Welfare Schemes (Electric Indigo to Cyan Beam) -->
-          <button type="button" class="moving-gradient-btn btn-beam-indigo btn-large-hero"
-            onclick="App.setPersona('welfare'); App.navigate('match');" aria-label="Check Welfare Eligibility">
-            <span class="btn-beam-track" aria-hidden="true">
-              <span class="btn-beam-glow"></span>
-              <span class="btn-beam-core"></span>
+        <!-- 3. Supporting Description Paragraph -->
+        <p class="sec01-hero-description" data-i18n="heroDesc">
+          An AI-driven platform for SC beneficiaries to discover suitable welfare schemes, access concessional credit, and connect with verified channel partners.
+        </p>
+
+        <!-- 4. Primary and Secondary CTA Buttons -->
+        <div class="sec01-cta-row">
+          <!-- Primary CTA Button: Welfare Eligibility -->
+          <button type="button" class="sec01-btn-primary"
+            onclick="App.setPersona('welfare'); App.navigate('match', event);" aria-label="Check Welfare Eligibility">
+            <span class="sec01-btn-icon" aria-hidden="true">
+              <!-- Lucide: Sparkles -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                <path d="M5 3v4"></path>
+                <path d="M19 17v4"></path>
+                <path d="M3 5h4"></path>
+                <path d="M17 19h4"></path>
+              </svg>
             </span>
-            <span class="btn-beam-body">
-              <span data-i18n="heroWelfareBtn">Check Welfare Eligibility</span>
-              <span class="btn-beam-icon" aria-hidden="true">&rarr;</span>
+            <span data-i18n="heroWelfareBtn">Check Welfare Eligibility</span>
+            <span class="sec01-btn-arrow" aria-hidden="true">
+              <!-- Lucide: ArrowRight -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
             </span>
           </button>
 
-          <!-- Button 2: Concessional Credit (Violet to Emerald Green Beam) -->
-          <button type="button" class="moving-gradient-btn btn-beam-emerald btn-large-hero"
-            onclick="App.setPersona('credit'); App.navigate('match');" aria-label="Explore Concessional Credit">
-            <span class="btn-beam-track" aria-hidden="true">
-              <span class="btn-beam-glow"></span>
-              <span class="btn-beam-core"></span>
+          <!-- Secondary CTA Button: Concessional Credit -->
+          <button type="button" class="sec01-btn-secondary"
+            onclick="App.setPersona('credit'); App.navigate('match', event);" aria-label="Explore Concessional Credit">
+            <span class="sec01-btn-icon" aria-hidden="true">
+              <!-- Lucide: Layers in electric blue -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
             </span>
-            <span class="btn-beam-body">
-              <span data-i18n="heroCreditBtn">Explore Concessional Credit</span>
-              <span class="btn-beam-icon" aria-hidden="true">&rarr;</span>
+            <span data-i18n="heroCreditBtn">Explore Concessional Credit</span>
+            <span class="sec01-btn-arrow" aria-hidden="true">
+              <!-- Lucide: ArrowRight -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
             </span>
           </button>
         </div>
 
-        <!-- Element 4: Floating Glassmorphic Micro-Metrics Strip (Subtle Trust Strip) -->
-        <div class="hero-micro-metrics-dock" role="region" aria-label="Portal Highlights">
-          <div class="metric-dock-item">
-            <span class="metric-dock-icon">⚪</span>
-            <span><strong data-i18n="heroStatLatency">&lt; 2.0s</strong> <span data-i18n="heroStatLatencyLbl">Rule Latency</span></span>
+        <!-- 5. Horizontal Statistics Bar -->
+        <div class="sec01-stats-bar" role="region" aria-label="Key Performance Indicators">
+          <!-- Item 1: Rule Latency -->
+          <div class="sec01-stat-cell">
+            <span class="sec01-stat-icon" aria-hidden="true">
+              <!-- Lucide: Zap -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </span>
+            <div class="sec01-stat-content">
+              <strong class="sec01-stat-val" data-i18n="heroStatLatency">&lt; 2.0s</strong>
+              <span class="sec01-stat-txt" data-i18n="heroStatLatencyLbl">Rule Latency</span>
+            </div>
           </div>
-          <span class="metric-dock-divider" aria-hidden="true"></span>
-          <div class="metric-dock-item">
-            <span class="metric-dock-icon">⚪</span>
-            <span><strong data-i18n="heroStatSchemes">50+</strong> <span data-i18n="heroStatSchemesLbl">Welfare Schemes</span></span>
+
+          <span class="sec01-stat-sep" aria-hidden="true"></span>
+
+          <!-- Item 2: Welfare Schemes -->
+          <div class="sec01-stat-cell">
+            <span class="sec01-stat-icon" aria-hidden="true">
+              <!-- Lucide: Layers -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </span>
+            <div class="sec01-stat-content">
+              <strong class="sec01-stat-val" data-countup="50" data-suffix="+" data-i18n="heroStatSchemes">50+</strong>
+              <span class="sec01-stat-txt" data-i18n="heroStatSchemesLbl">Welfare Schemes</span>
+            </div>
           </div>
-          <span class="metric-dock-divider" aria-hidden="true"></span>
-          <div class="metric-dock-item">
-            <span class="metric-dock-icon">⚪</span>
-            <span><strong data-i18n="heroStatRate">4.0% – 6.5%</strong> <span data-i18n="heroStatRateLbl">NSFDC Credit</span></span>
+
+          <span class="sec01-stat-sep" aria-hidden="true"></span>
+
+          <!-- Item 3: NSFDC Credit -->
+          <div class="sec01-stat-cell">
+            <span class="sec01-stat-icon" aria-hidden="true">
+              <!-- Lucide: ChartNoAxesColumnIncreasing -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" x2="12" y1="20" y2="10"></line>
+                <line x1="18" x2="18" y1="20" y2="4"></line>
+                <line x1="6" x2="6" y1="20" y2="16"></line>
+              </svg>
+            </span>
+            <div class="sec01-stat-content">
+              <strong class="sec01-stat-val" data-i18n="heroStatRate">4.0% – 6.5%</strong>
+              <span class="sec01-stat-txt" data-i18n="heroStatRateLbl">NSFDC Credit</span>
+            </div>
           </div>
-          <span class="metric-dock-divider" aria-hidden="true"></span>
-          <div class="metric-dock-item">
-            <span class="metric-dock-icon">⚪</span>
-            <span><strong data-i18n="heroStatPrivacy">100%</strong> <span data-i18n="heroStatPrivacyLbl">DPDP Private</span></span>
+
+          <span class="sec01-stat-sep" aria-hidden="true"></span>
+
+          <!-- Item 4: DPDP Private -->
+          <div class="sec01-stat-cell">
+            <span class="sec01-stat-icon" aria-hidden="true">
+              <!-- Lucide: ShieldCheck -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </span>
+            <div class="sec01-stat-content">
+              <strong class="sec01-stat-val" data-countup="100" data-suffix="%" data-i18n="heroStatPrivacy">100%</strong>
+              <span class="sec01-stat-txt" data-i18n="heroStatPrivacyLbl">DPDP Private</span>
+            </div>
           </div>
         </div>
 
       </div>
+
+      <!-- 6. Atmospheric Flowing SVG Waves at Bottom -->
+      <div class="sec01-wave-canvas" aria-hidden="true">
+        <svg class="sec01-wave-svg" viewBox="0 0 1440 220" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sec01WaveGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#E4ECFF" stop-opacity="0.75" />
+              <stop offset="45%" stop-color="#D4E2FF" stop-opacity="0.6" />
+              <stop offset="100%" stop-color="#F0F4FF" stop-opacity="0.8" />
+            </linearGradient>
+
+            <linearGradient id="sec01WaveGrad2" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="0%" stop-color="#D4E2FF" stop-opacity="0.7" />
+              <stop offset="50%" stop-color="#AFCBFF" stop-opacity="0.45" />
+              <stop offset="100%" stop-color="#E4ECFF" stop-opacity="0.6" />
+            </linearGradient>
+
+            <linearGradient id="sec01WaveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#F0F4FF" stop-opacity="0.95" />
+              <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#F0F4FF" stop-opacity="0.95" />
+            </linearGradient>
+
+            <linearGradient id="sec01RibbonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#245BFF" stop-opacity="0.1" />
+              <stop offset="35%" stop-color="#245BFF" stop-opacity="0.65" />
+              <stop offset="70%" stop-color="#155EEF" stop-opacity="0.75" />
+              <stop offset="100%" stop-color="#633CFF" stop-opacity="0.15" />
+            </linearGradient>
+
+            <filter id="sec01RibbonGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+
+          <!-- Wave 1: Flowing from bottom-left across -->
+          <path class="sec01-wave-path-1" d="M-60 140 C220 70 480 200 780 120 C1060 50 1280 170 1520 100 L1520 220 L-60 220 Z" fill="url(#sec01WaveGrad1)" />
+
+          <!-- Wave 2: Diagonally flowing toward bottom-right -->
+          <path class="sec01-wave-path-2" d="M-40 170 C280 110 520 210 860 140 C1140 80 1340 180 1500 130 L1500 220 L-40 220 Z" fill="url(#sec01WaveGrad2)" />
+
+          <!-- Narrow Electric-Blue Accent Curved Line (Focal Ribbon) -->
+          <path class="sec01-wave-accent-line" d="M-20 162 C300 102 540 202 880 132 C1160 72 1360 172 1480 122" stroke="url(#sec01RibbonGrad)" stroke-width="2.5" fill="none" filter="url(#sec01RibbonGlow)" />
+
+          <!-- Wave 3: Foreground Crest merging into bottom -->
+          <path class="sec01-wave-path-3" d="M-20 190 C320 150 640 210 980 165 C1220 135 1380 190 1480 175 L1480 220 L-20 220 Z" fill="url(#sec01WaveGrad3)" />
+        </svg>
+      </div>
     </section>
 
     <!-- ==================== 02: WEBSITE DETAIL & MISSION ==================== -->
-    <section class="site-section rb-section" id="section-02">
-      <div class="section-inner">
-        <div class="rb-mission-split">
+    <section class="site-section sec02-mission-section" id="section-02">
+      <!-- Ambient Atmospheric Lighting -->
+      <div class="sec02-ambient-glow" aria-hidden="true"></div>
 
-          <!-- LEFT COLUMN: Big Heading, Subtitle & Statutory Metrics -->
-          <div class="rb-mission-left">
-            <span class="rb-section-tag" data-i18n="sec02Tag">02 // WEBSITE DETAIL &amp; MISSION</span>
-            <h2 class="rb-mission-headline">
-              <span data-i18n="sec02Title">Bridging Entitlements with</span> <span class="rb-gradient-text" data-i18n="sec02TitleGrad">Intelligent Guidance</span>
+      <div class="sec02-container">
+        
+        <!-- TOP: Eyebrow Section Label -->
+        <div class="sec02-eyebrow-wrap">
+          <span class="sec02-eyebrow-label" data-i18n="sec02Tag">
+            <span class="sec02-eyebrow-dot" aria-hidden="true"></span>
+            02 // WEBSITE DETAIL &amp; MISSION
+          </span>
+        </div>
+
+        <!-- MIDDLE: Hero Split Composition -->
+        <div class="sec02-hero-split">
+          
+          <!-- Left Column: Heading, Description & Statistics Row -->
+          <div class="sec02-hero-content">
+            <h2 class="sec02-main-heading">
+              <span data-i18n="sec02Title">Bridging Entitlements with</span><br>
+              <span class="sec02-gradient-heading" data-i18n="sec02TitleGrad">Intelligent Guidance</span>
             </h2>
-            <p class="rb-mission-lead" data-i18n="sec02Lead">
+
+            <p class="sec02-description" data-i18n="sec02Lead">
               Solving the last-mile delivery crisis for welfare schemes and concessional channel credit across India
               through zero-document client privacy, statutory scorecards, and sub-second rule evaluation.
             </p>
 
-            <!-- Sleek Metrics Grid inside Left Column -->
-            <div class="rb-mission-metrics">
-              <div class="rb-mission-metric-item">
-                <span class="rb-metric-num" data-countup="50" data-suffix="+">50+</span>
-                <span class="rb-metric-lbl">Central &amp; State Schemes</span>
+            <!-- Statistics Row (Horizontal with 4 Metrics and Delicate Dividers) -->
+            <div class="sec02-stats-row">
+              <div class="sec02-stat-item">
+                <div class="sec02-stat-icon-wrap" aria-hidden="true">
+                  <!-- Lucide: Layers -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <div class="sec02-stat-meta">
+                  <div class="sec02-stat-value" data-countup="50" data-suffix="+">50+</div>
+                  <div class="sec02-stat-label" data-i18n="sec02Metric1Lbl">Central &amp; State Schemes</div>
+                </div>
               </div>
-              <div class="rb-mission-metric-item">
-                <span class="rb-metric-num">&lt; 2.0s</span>
-                <span class="rb-metric-lbl">Rule Latency</span>
-              </div>
-              <div class="rb-mission-metric-item">
-                <span class="rb-metric-num" data-countup="100" data-suffix="%">100%</span>
-                <span class="rb-metric-lbl">DPDP Device Private</span>
-              </div>
-              <div class="rb-mission-metric-item">
-                <span class="rb-metric-num" data-countup="4.0" data-decimals="1" data-suffix="%">4.0%</span>
-                <span class="rb-metric-lbl">Subsidized Floor APR</span>
-              </div>
-            </div>
 
-            <div class="rb-carousel-cue">
-              <span class="rb-cue-pulse"></span>
-              <span>Hover over cards to expand statutory pillars &rarr;</span>
+              <div class="sec02-stat-divider" aria-hidden="true"></div>
+
+              <div class="sec02-stat-item">
+                <div class="sec02-stat-icon-wrap" aria-hidden="true">
+                  <!-- Lucide: Zap -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <div class="sec02-stat-meta">
+                  <div class="sec02-stat-value">&lt; 2.0s</div>
+                  <div class="sec02-stat-label" data-i18n="sec02Metric2Lbl">Rule Latency</div>
+                </div>
+              </div>
+
+              <div class="sec02-stat-divider" aria-hidden="true"></div>
+
+              <div class="sec02-stat-item">
+                <div class="sec02-stat-icon-wrap" aria-hidden="true">
+                  <!-- Lucide: ShieldCheck -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                </div>
+                <div class="sec02-stat-meta">
+                  <div class="sec02-stat-value" data-countup="100" data-suffix="%">100%</div>
+                  <div class="sec02-stat-label" data-i18n="sec02Metric3Lbl">DPDP Device Private</div>
+                </div>
+              </div>
+
+              <div class="sec02-stat-divider" aria-hidden="true"></div>
+
+              <div class="sec02-stat-item">
+                <div class="sec02-stat-icon-wrap" aria-hidden="true">
+                  <!-- Lucide: ChartNoAxesColumnIncreasing -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" x2="12" y1="20" y2="10"></line>
+                    <line x1="18" x2="18" y1="20" y2="4"></line>
+                    <line x1="6" x2="6" y1="20" y2="16"></line>
+                  </svg>
+                </div>
+                <div class="sec02-stat-meta">
+                  <div class="sec02-stat-value" data-countup="4.0" data-decimals="1" data-suffix="%">4.0%</div>
+                  <div class="sec02-stat-label" data-i18n="sec02Metric4Lbl">Subsidized Floor APR</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- RIGHT COLUMN: Interactive 3-Card Hover Carousel -->
-          <div class="rb-mission-right">
-            <div class="rb-hover-carousel" id="missionHoverCarousel">
+          <!-- Right Column: Central Justice Scale Visual -->
+          <div class="sec02-hero-visual">
+            <div class="sec02-scale-backdrop">
+              <!-- Soft Atmospheric Glow & Orbit Rings -->
+              <div class="sec02-scale-glow" aria-hidden="true"></div>
+              <div class="sec02-scale-ring-outer" aria-hidden="true"></div>
+              <div class="sec02-scale-ring-inner" aria-hidden="true"></div>
 
-              <!-- Card 1: RPwD ACT 2016 -->
-              <div class="rb-hover-card is-active spotlight-card" data-card-index="0"
-                data-spotlight-color="rgba(56, 189, 248, 0.22)"
-                style="--theme-color: #38bdf8; --theme-bg: rgba(56, 189, 248, 0.12);">
-                <div class="rb-hover-card-bg"></div>
-                <div class="rb-hover-card-content">
-                  <div class="rb-hover-card-top">
-                    <div class="rb-pillar-icon">⚖️</div>
-                    <span class="rb-pillar-badge">RPwD ACT 2016</span>
-                    <span class="rb-hover-num">01</span>
-                  </div>
+              <!-- High-Fidelity 3D-Styled Justice Scale SVG -->
+              <div class="sec02-scale-illustration" aria-label="3D Justice Scale symbol of statutory rights">
+                <svg viewBox="0 0 320 320" width="290" height="290" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <filter id="sec02DropShadow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#10152F" flood-opacity="0.12" />
+                    </filter>
+                    <filter id="sec02BlueGlow" x="-30%" y="-30%" width="160%" height="160%">
+                      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#245BFF" flood-opacity="0.5" />
+                    </filter>
 
-                  <div class="rb-hover-card-body">
-                    <h3 class="rb-pillar-title">Statutory Framework &amp; Rights</h3>
-                    <p class="rb-pillar-desc">Comprehensive rule evaluation based on the Rights of Persons with
-                      Disabilities Act 2016 and MoSJE central directives. Transparent score-based eligibility that
-                      eliminates subjective gatekeeping.</p>
-                  </div>
+                    <linearGradient id="metalPillar" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#8E9CB2" />
+                      <stop offset="25%" stop-color="#DCE4F0" />
+                      <stop offset="50%" stop-color="#FFFFFF" />
+                      <stop offset="75%" stop-color="#C2CEE0" />
+                      <stop offset="90%" stop-color="#93A2BA" />
+                      <stop offset="100%" stop-color="#6E7F9B" />
+                    </linearGradient>
 
-                  <div class="rb-hover-card-footer">
-                    <span class="rb-hover-tag">&#x2713; MoSJE Statutory Norms</span>
-                    <span class="rb-hover-action">Pillar 01 &rarr;</span>
-                  </div>
-                </div>
+                    <linearGradient id="metalBase" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#FFFFFF" />
+                      <stop offset="35%" stop-color="#D7E1F0" />
+                      <stop offset="70%" stop-color="#9AABCE" />
+                      <stop offset="100%" stop-color="#6F80A0" />
+                    </linearGradient>
+
+                    <linearGradient id="metalBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#FFFFFF" />
+                      <stop offset="40%" stop-color="#E2EAF7" />
+                      <stop offset="70%" stop-color="#99AACC" />
+                      <stop offset="100%" stop-color="#6B7E9F" />
+                    </linearGradient>
+
+                    <linearGradient id="electricBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#1765FF" />
+                      <stop offset="50%" stop-color="#245BFF" />
+                      <stop offset="100%" stop-color="#633CFF" />
+                    </linearGradient>
+
+                    <radialGradient id="dishInterior" cx="50%" cy="30%" r="60%">
+                      <stop offset="0%" stop-color="#FFFFFF" />
+                      <stop offset="45%" stop-color="#E4ECF8" />
+                      <stop offset="80%" stop-color="#B2C2DC" />
+                      <stop offset="100%" stop-color="#7689A8" />
+                    </radialGradient>
+
+                    <linearGradient id="dishUnder" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#A5B6D4" />
+                      <stop offset="40%" stop-color="#E6EEF8" />
+                      <stop offset="75%" stop-color="#7689A8" />
+                      <stop offset="100%" stop-color="#4B5E7D" />
+                    </linearGradient>
+
+                    <radialGradient id="pedestalShadow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="rgba(23, 101, 255, 0.28)" />
+                      <stop offset="60%" stop-color="rgba(16, 21, 47, 0.08)" />
+                      <stop offset="100%" stop-color="transparent" />
+                    </radialGradient>
+                  </defs>
+
+                  <!-- Ground Contact Shadow -->
+                  <ellipse cx="160" cy="272" rx="72" ry="12" fill="url(#pedestalShadow)" />
+
+                  <!-- Pedestal Base (Multi-tiered 3D Disc) -->
+                  <ellipse cx="160" cy="262" rx="58" ry="10" fill="#7B8DAA" />
+                  <ellipse cx="160" cy="260" rx="58" ry="10" fill="url(#metalBase)" />
+                  <ellipse cx="160" cy="259" rx="56" ry="8" fill="#FFFFFF" opacity="0.6" />
+                  <ellipse cx="160" cy="254" rx="42" ry="7" fill="#6A7C99" />
+                  <ellipse cx="160" cy="252" rx="42" ry="7" fill="url(#metalBase)" />
+                  <ellipse cx="160" cy="246" rx="26" ry="5" fill="#5F718F" />
+                  <ellipse cx="160" cy="244" rx="26" ry="5" fill="url(#metalBase)" />
+                  <ellipse cx="160" cy="243" rx="24" ry="4.5" fill="none" stroke="url(#electricBlue)" stroke-width="2" filter="url(#sec02BlueGlow)" />
+
+                  <!-- Main Central Column Pillar -->
+                  <rect x="154" y="82" width="12" height="160" rx="4" fill="url(#metalPillar)" filter="url(#sec02DropShadow)" />
+                  <line x1="160" y1="84" x2="160" y2="240" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+                  <line x1="162" y1="90" x2="162" y2="235" stroke="#245BFF" stroke-width="1.2" opacity="0.35" />
+
+                  <!-- Pillar Accent Collars -->
+                  <ellipse cx="160" cy="200" rx="10" ry="3" fill="#687A99" />
+                  <ellipse cx="160" cy="199" rx="10" ry="3" fill="url(#metalBase)" />
+                  <ellipse cx="160" cy="142" rx="11" ry="3.2" fill="#687A99" />
+                  <ellipse cx="160" cy="141" rx="11" ry="3.2" fill="url(#metalBase)" />
+                  <circle cx="160" cy="141" r="3" fill="url(#electricBlue)" />
+
+                  <!-- Top Pivot Core & Decorative Finial Tip -->
+                  <ellipse cx="160" cy="84" rx="13" ry="4" fill="#687A99" />
+                  <ellipse cx="160" cy="82" rx="13" ry="4" fill="url(#metalBase)" />
+                  <circle cx="160" cy="82" r="9" fill="url(#metalBase)" filter="url(#sec02DropShadow)" />
+                  <circle cx="160" cy="82" r="6" fill="#10152F" />
+                  <circle cx="160" cy="82" r="4.5" fill="url(#electricBlue)" filter="url(#sec02BlueGlow)" />
+                  <circle cx="160" cy="82" r="2" fill="#FFFFFF" />
+
+                  <!-- Crown Finial Spike -->
+                  <path d="M160 52 L163 68 L157 68 Z" fill="url(#metalBase)" />
+                  <circle cx="160" cy="50" r="4.5" fill="url(#metalBase)" filter="url(#sec02DropShadow)" />
+                  <circle cx="158.5" cy="48.5" r="1.5" fill="#FFFFFF" />
+
+                  <!-- Main Balance Beam (Curved Arch Across Left and Right) -->
+                  <path d="M68 96 C105 84 135 80 160 84 C185 80 215 84 252 96 C255 97 254 92 252 90 C215 78 185 74 160 78 C135 74 105 78 68 90 C66 92 65 97 68 96 Z" fill="#5F708D" />
+                  <path d="M68 94 C105 82 135 78 160 82 C185 78 215 82 252 94 C254 94.8 253 91.5 251.5 90 C214.5 77 185 73.5 160 76.5 C135 73.5 105.5 77 68.5 90 C67 91.5 66 94.8 68 94 Z" fill="url(#metalBeam)" filter="url(#sec02DropShadow)" />
+                  <path d="M72 91 C106 80 135 76 160 79 C185 76 214 80 248 91" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.8" />
+
+                  <!-- Pivot Rings -->
+                  <circle cx="68" cy="94" r="5.5" fill="url(#metalBase)" />
+                  <circle cx="68" cy="94" r="3" fill="#10152F" />
+                  <circle cx="68" cy="94" r="2" fill="url(#electricBlue)" />
+
+                  <circle cx="252" cy="94" r="5.5" fill="url(#metalBase)" />
+                  <circle cx="252" cy="94" r="3" fill="#10152F" />
+                  <circle cx="252" cy="94" r="2" fill="url(#electricBlue)" />
+
+                  <!-- LEFT SUSPENDED PAN GROUP -->
+                  <g class="sec02-pan-left">
+                    <line x1="68" y1="96" x2="44" y2="174" stroke="url(#metalPillar)" stroke-width="1.3" opacity="0.85" />
+                    <line x1="68" y1="96" x2="68" y2="178" stroke="url(#metalPillar)" stroke-width="1.3" opacity="0.95" />
+                    <line x1="68" y1="96" x2="92" y2="174" stroke="url(#metalPillar)" stroke-width="1.3" opacity="0.85" />
+                    <path d="M42 174 C42 196 94 196 94 174 Z" fill="url(#dishUnder)" filter="url(#sec02DropShadow)" />
+                    <ellipse cx="68" cy="174" rx="27" ry="7" fill="url(#dishInterior)" />
+                    <ellipse cx="68" cy="174" rx="25.5" ry="5.8" fill="url(#metalPillar)" opacity="0.3" />
+                    <path d="M43 174 C50 178 86 178 93 174" stroke="#FFFFFF" stroke-width="1.4" fill="none" opacity="0.9" />
+                    <ellipse cx="68" cy="174" rx="14" ry="3.5" fill="url(#electricBlue)" opacity="0.25" filter="url(#sec02BlueGlow)" />
+                  </g>
+
+                  <!-- RIGHT SUSPENDED PAN GROUP -->
+                  <g class="sec02-pan-right">
+                    <line x1="252" y1="96" x2="228" y2="174" stroke="url(#metalPillar)" stroke-width="1.3" opacity="0.85" />
+                    <line x1="252" y1="96" x2="252" y2="178" stroke="url(#metalPillar)" stroke-width="1.3" opacity="0.95" />
+                    <line x1="252" y1="96" x2="276" y2="174" stroke="url(#metalPillar)" stroke-width="1.3" opacity="0.85" />
+                    <path d="M226 174 C226 196 278 196 278 174 Z" fill="url(#dishUnder)" filter="url(#sec02DropShadow)" />
+                    <ellipse cx="252" cy="174" rx="27" ry="7" fill="url(#dishInterior)" />
+                    <ellipse cx="252" cy="174" rx="25.5" ry="5.8" fill="url(#metalPillar)" opacity="0.3" />
+                    <path d="M227 174 C234 178 270 178 277 174" stroke="#FFFFFF" stroke-width="1.4" fill="none" opacity="0.9" />
+                    <ellipse cx="252" cy="174" rx="14" ry="3.5" fill="url(#electricBlue)" opacity="0.25" filter="url(#sec02BlueGlow)" />
+                  </g>
+                </svg>
               </div>
-
-              <!-- Card 2: DPDP ACT 2023 -->
-              <div class="rb-hover-card spotlight-card" data-card-index="1"
-                data-spotlight-color="rgba(16, 185, 129, 0.22)"
-                style="--theme-color: #10b981; --theme-bg: rgba(16, 185, 129, 0.12);">
-                <div class="rb-hover-card-bg"></div>
-                <div class="rb-hover-card-content">
-                  <div class="rb-hover-card-top">
-                    <div class="rb-pillar-icon">🛡️</div>
-                    <span class="rb-pillar-badge"
-                      style="color:#6EE7B7; border-color:rgba(16,185,129,0.3); background:rgba(16,185,129,0.1);">DPDP
-                      ACT 2023</span>
-                    <span class="rb-hover-num">02</span>
-                  </div>
-
-                  <div class="rb-hover-card-body">
-                    <h3 class="rb-pillar-title">Client-Side Privacy Architecture</h3>
-                    <p class="rb-pillar-desc">Zero central document retention. All criteria evaluation, rule scoring,
-                      and income bracket evaluations run purely on your local device without sending identity papers to
-                      cloud databases.</p>
-                  </div>
-
-                  <div class="rb-hover-card-footer">
-                    <span class="rb-hover-tag" style="color:#6EE7B7;">&#x2713; Zero Cloud Retention</span>
-                    <span class="rb-hover-action">Pillar 02 &rarr;</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 3: NSFDC CHANNEL CREDIT -->
-              <div class="rb-hover-card spotlight-card" data-card-index="2"
-                data-spotlight-color="rgba(99, 102, 241, 0.22)"
-                style="--theme-color: #818cf8; --theme-bg: rgba(99, 102, 241, 0.12);">
-                <div class="rb-hover-card-bg"></div>
-                <div class="rb-hover-card-content">
-                  <div class="rb-hover-card-top">
-                    <div class="rb-pillar-icon">💼</div>
-                    <span class="rb-pillar-badge"
-                      style="color:#C7D2FE; border-color:rgba(99,102,241,0.3); background:rgba(99,102,241,0.1);">NSFDC
-                      CHANNEL CREDIT</span>
-                    <span class="rb-hover-num">03</span>
-                  </div>
-
-                  <div class="rb-hover-card-body">
-                    <h3 class="rb-pillar-title">Concessional Micro-Finance</h3>
-                    <p class="rb-pillar-desc">Direct institutional channel access to NSFDC, NBCFDC, and NSKFDC state
-                      credit desks, bridging young divyang and scheduled caste entrepreneurs with subsidized
-                      low-interest capital.</p>
-                  </div>
-
-                  <div class="rb-hover-card-footer">
-                    <span class="rb-hover-tag" style="color:#C7D2FE;">&#x2713; Direct State Desk</span>
-                    <span class="rb-hover-action">Pillar 03 &rarr;</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Carousel Navigation Pills -->
-            <div class="rb-carousel-nav" id="missionCarouselNav">
-              <button type="button" class="rb-nav-dot is-active" data-target="0">
-                <span class="rb-dot-bar"></span>
-                <span>01 // Statutory Rights</span>
-              </button>
-              <button type="button" class="rb-nav-dot" data-target="1">
-                <span class="rb-dot-bar"></span>
-                <span>02 // DPDP Privacy</span>
-              </button>
-              <button type="button" class="rb-nav-dot" data-target="2">
-                <span class="rb-dot-bar"></span>
-                <span>03 // Subsidized Credit</span>
-              </button>
             </div>
           </div>
 
         </div>
+
+        <!-- LOWER MIDDLE: Three Feature Cards in a Horizontal Row -->
+        <div class="sec02-cards-row" id="sec02CardsRow">
+          
+          <!-- Card 01: Statutory Framework & Rights -->
+          <div class="sec02-feature-card is-active" data-card-id="0" role="region" aria-label="Statutory Framework Card">
+            <div class="sec02-card-head">
+              <div class="sec02-card-icon" aria-hidden="true">
+                <!-- Lucide: Scale -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
+                  <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path>
+                  <path d="M7 21h10"></path>
+                  <path d="M12 3v18"></path>
+                  <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path>
+                </svg>
+              </div>
+              <span class="sec02-card-pill">01</span>
+            </div>
+            <div class="sec02-card-body">
+              <h3 class="sec02-card-title" data-i18n="sec02Card1Title">Statutory Framework &amp; Rights</h3>
+              <p class="sec02-card-desc" data-i18n="sec02Card1Desc">
+                Comprehensive rule evaluation based on the Rights of Persons with Disabilities Act 2016 and MoSJE central directives.
+              </p>
+            </div>
+            <a href="#page-relief" class="sec02-card-link" onclick="App.navigate('relief', event)">
+              <span data-i18n="sec02Card1Action">MoSJE Statutory Norms Pillar 01</span>
+              <span class="sec02-card-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          <!-- Card 02: Client-Side Privacy Architecture -->
+          <div class="sec02-feature-card" data-card-id="1" role="region" aria-label="Client-Side Privacy Architecture Card">
+            <div class="sec02-card-head">
+              <div class="sec02-card-icon" aria-hidden="true">
+                <!-- Lucide: ShieldCheck -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </div>
+              <span class="sec02-card-pill">02</span>
+            </div>
+            <div class="sec02-card-body">
+              <h3 class="sec02-card-title" data-i18n="sec02Card2Title">Client-Side Privacy Architecture</h3>
+              <p class="sec02-card-desc" data-i18n="sec02Card2Desc">
+                Zero central document retention. All criteria evaluation, rule scoring, and income bracket evaluations run on your device.
+              </p>
+            </div>
+            <a href="#page-relief" class="sec02-card-link" onclick="App.navigate('relief', event)">
+              <span data-i18n="sec02Card2Action">Zero Cloud Retention Pillar 02</span>
+              <span class="sec02-card-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          <!-- Card 03: Concessional Micro-Finance -->
+          <div class="sec02-feature-card" data-card-id="2" role="region" aria-label="Concessional Micro-Finance Card">
+            <div class="sec02-card-head">
+              <div class="sec02-card-icon" aria-hidden="true">
+                <!-- Lucide: BriefcaseBusiness -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 12h.01"></path>
+                  <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+                  <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
+                  <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                </svg>
+              </div>
+              <span class="sec02-card-pill">03</span>
+            </div>
+            <div class="sec02-card-body">
+              <h3 class="sec02-card-title" data-i18n="sec02Card3Title">Concessional Micro-Finance</h3>
+              <p class="sec02-card-desc" data-i18n="sec02Card3Desc">
+                Direct institutional channel access to NSFDC, NBCFDC, and NSKFDC state credit desks, bridging young divyang and scheduled caste entrepreneurs.
+              </p>
+            </div>
+            <a href="#page-relief" class="sec02-card-link" onclick="App.navigate('relief', event)">
+              <span data-i18n="sec02Card3Action">Direct State Desk Pillar 03</span>
+              <span class="sec02-card-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- BOTTOM: Three-Item Pillar Navigation Indicator -->
+        <div class="sec02-pillar-nav" id="sec02PillarNav" role="tablist" aria-label="Statutory Pillars Navigation">
+          <button type="button" class="sec02-nav-item is-active" data-index="0" role="tab" aria-selected="true">
+            <span data-i18n="sec02Nav1">01 / Statutory Rights</span>
+          </button>
+          <span class="sec02-nav-separator" aria-hidden="true">/</span>
+          <button type="button" class="sec02-nav-item" data-index="1" role="tab" aria-selected="false">
+            <span data-i18n="sec02Nav2">02 / DPDP Privacy</span>
+          </button>
+          <span class="sec02-nav-separator" aria-hidden="true">/</span>
+          <button type="button" class="sec02-nav-item" data-index="2" role="tab" aria-selected="false">
+            <span data-i18n="sec02Nav3">03 / Subsidized Credit</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM: Flowing Layered Wave Animation (Behind Content) -->
+      <div class="sec02-wave-container" aria-hidden="true">
+        <svg class="sec02-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="sec02WaveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#CADBFF" stop-opacity="0.45" />
+              <stop offset="50%" stop-color="#DCE7FF" stop-opacity="0.4" />
+              <stop offset="100%" stop-color="#CADBFF" stop-opacity="0.45" />
+            </linearGradient>
+            <linearGradient id="sec02WaveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#DCE7FF" stop-opacity="0.6" />
+              <stop offset="50%" stop-color="#E8EEFF" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#DCE7FF" stop-opacity="0.6" />
+            </linearGradient>
+            <linearGradient id="sec02WaveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#E8EEFF" stop-opacity="0.85" />
+              <stop offset="50%" stop-color="#F1F4FF" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#E8EEFF" stop-opacity="0.85" />
+            </linearGradient>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="sec02-wave-parallax">
+            <use href="#gentle-wave" x="48" y="0" fill="url(#sec02WaveGrad1)" class="sec02-wave-layer wave-layer-1" />
+            <use href="#gentle-wave" x="48" y="3" fill="url(#sec02WaveGrad2)" class="sec02-wave-layer wave-layer-2" />
+            <use href="#gentle-wave" x="48" y="5" fill="url(#sec02WaveGrad3)" class="sec02-wave-layer wave-layer-3" />
+          </g>
+        </svg>
       </div>
     </section>
   </div> <!-- End page-home -->
@@ -314,142 +673,323 @@
        WINDOW 2: FINANCIAL RELIEF (BENEFITS & CONCESSIONAL CREDIT)
        ========================================================================== -->
   <div class="page" id="page-relief">
-    <!-- ==================== 03: BENEFITS ==================== -->
-    <section class="site-section rb-section" id="section-03">
-      <div class="section-inner">
-        <div class="rb-section-header">
-          <span class="rb-section-tag" data-i18n="sec03Tag">03 // BENEFITS</span>
-          <h2 class="rb-section-title" data-i18n="sec03Title">Direct Entitlements &amp; Financial Relief</h2>
-          <p class="rb-section-subtitle" data-i18n="sec03Subtitle">Tangible citizen benefits: scholarships, equipment subsidies, lower loan
-            interest rates, and interest-free moratorium periods.</p>
+    <!-- ==================== 03: BENEFITS & FINANCIAL RELIEF ==================== -->
+    <section class="site-section rb-section sec03-benefits-section" id="section-03">
+      <!-- Ambient Background Glow & Decorative Grid -->
+      <div class="sec03-ambient-glow" aria-hidden="true"></div>
+      <div class="sec03-ambient-pattern" aria-hidden="true"></div>
+
+      <div class="sec03-container">
+        <!-- Section Header: Eyebrow, Main Heading, Supporting Description -->
+        <div class="sec03-header">
+          <div class="sec03-eyebrow">
+            <span class="sec03-eyebrow-dot" aria-hidden="true"></span>
+            <span data-i18n="sec03Tag">03 // BENEFITS</span>
+          </div>
+          <h2 class="sec03-heading" data-i18n="sec03Title">Direct Entitlements &amp; <span class="sec03-gradient-highlight">Financial Relief</span></h2>
+          <p class="sec03-subtitle" data-i18n="sec03Subtitle">Tangible citizen benefits: scholarships, equipment subsidies, lower loan interest rates, and interest-free moratorium periods.</p>
         </div>
 
-        <!-- Static High-Contrast Arbitrage Comparison Grid -->
-        <div class="rb-comparison-grid">
-          <!-- Card 1: Commercial Market Lending -->
-          <div class="spotlight-card rb-comp-card" data-spotlight-color="rgba(239, 68, 68, 0.16)">
-            <span class="rb-comp-tag commercial">Commercial Market Lending</span>
-            <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #ef4444; margin-bottom: 16px;">12.5% &ndash; 16.0% <span style="font-size: 1rem; font-weight: 500; color: #94a3b8;">p.a.</span></div>
-            <ul class="rb-comp-list">
-              <li class="rb-comp-item">
-                <span class="rb-comp-bullet negative">&#x2715;</span>
-                <span>Strict real-estate collateral &amp; 2 salaried third-party guarantors required</span>
+        <!-- Two Large Financial Comparison Panels -->
+        <div class="sec03-comparison-row">
+          <!-- Left Card: Commercial Market Lending -->
+          <div class="sec03-comp-card commercial">
+            <div class="sec03-comp-tag commercial">
+              <span class="sec03-comp-tag-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"/>
+                  <line x1="12" y1="20" x2="12" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="14"/>
+                </svg>
+              </span>
+              <span data-i18n="sec03Comp1Tag">Commercial Market Lending</span>
+            </div>
+            
+            <div class="sec03-rate-row">
+              <div class="sec03-rate-val commercial">
+                12.5% &ndash; 16.0% <span class="sec03-rate-unit" data-i18n="sec03Pa">p.a.</span>
+              </div>
+            </div>
+
+            <ul class="sec03-comp-list">
+              <li class="sec03-comp-item">
+                <span class="sec03-bullet commercial" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                  </svg>
+                </span>
+                <span class="sec03-item-text" data-i18n="sec03Comp1B1">Strict real-estate collateral &amp; 2 salaried third-party guarantors required</span>
               </li>
-              <li class="rb-comp-item">
-                <span class="rb-comp-bullet negative">&#x2715;</span>
-                <span><strong>0% Capital Subsidy</strong> &mdash; 100% principal repayable by borrower</span>
+              <li class="sec03-comp-item">
+                <span class="sec03-bullet commercial" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                  </svg>
+                </span>
+                <span class="sec03-item-text" data-i18n="sec03Comp1B2"><strong>0% Capital Subsidy</strong> &mdash; 100% principal repayable by borrower</span>
               </li>
-              <li class="rb-comp-item">
-                <span class="rb-comp-bullet negative">&#x2715;</span>
-                <span><strong>Zero moratorium</strong> &mdash; immediate first-month monthly EMI deductions</span>
+              <li class="sec03-comp-item">
+                <span class="sec03-bullet commercial" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                  </svg>
+                </span>
+                <span class="sec03-item-text" data-i18n="sec03Comp1B3"><strong>Zero moratorium</strong> &mdash; immediate first-month monthly EMI deductions</span>
               </li>
             </ul>
           </div>
 
-          <!-- Card 2: Samarthya Concessional Channel -->
-          <div class="spotlight-card rb-comp-card subsidized" data-spotlight-color="rgba(16, 185, 129, 0.22)">
-            <span class="rb-comp-tag subsidized">Samarthya Concessional Channel</span>
-            <div style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: #34d399; margin-bottom: 16px;">4.0% &ndash; 6.5% <span style="font-size: 1rem; font-weight: 500; color: #94a3b8;">p.a.</span></div>
-            <ul class="rb-comp-list">
-              <li class="rb-comp-item positive">
-                <span class="rb-comp-bullet positive">&#x2713;</span>
-                <span><strong>Zero Collateral Guarantee</strong> under Central Credit Guarantee Funds</span>
+          <!-- Right Card: Sanjeevani Grid Concessional Channel -->
+          <div class="sec03-comp-card subsidized">
+            <div class="sec03-comp-tag subsidized">
+              <span class="sec03-comp-tag-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/>
+                  <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>
+                  <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/>
+                </svg>
+              </span>
+              <span data-i18n="sec03Comp2Tag">Sanjeevani Grid Concessional Channel</span>
+            </div>
+
+            <div class="sec03-rate-row">
+              <div class="sec03-rate-val subsidized">
+                4.0% &ndash; 6.5% <span class="sec03-rate-unit" data-i18n="sec03Pa">p.a.</span>
+              </div>
+            </div>
+
+            <ul class="sec03-comp-list">
+              <li class="sec03-comp-item">
+                <span class="sec03-bullet subsidized" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </span>
+                <span class="sec03-item-text" data-i18n="sec03Comp2B1"><strong class="sec03-highlight-blue">Zero Collateral Guarantee</strong> under Central Credit Guarantee Funds</span>
               </li>
-              <li class="rb-comp-item positive">
-                <span class="rb-comp-bullet positive">&#x2713;</span>
-                <span><strong>Up to 33% Capital Subsidy</strong> deducted directly from loan principal</span>
+              <li class="sec03-comp-item">
+                <span class="sec03-bullet subsidized" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </span>
+                <span class="sec03-item-text" data-i18n="sec03Comp2B2"><strong class="sec03-highlight-blue">Up to 33% Capital Subsidy</strong> deducted directly from loan principal</span>
               </li>
-              <li class="rb-comp-item positive">
-                <span class="rb-comp-bullet positive">&#x2713;</span>
-                <span><strong>6 to 12 Months Moratorium</strong> &mdash; zero interest during business gestation</span>
+              <li class="sec03-comp-item">
+                <span class="sec03-bullet subsidized" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </span>
+                <span class="sec03-item-text" data-i18n="sec03Comp2B3"><strong class="sec03-highlight-blue">6 to 12 Months Moratorium</strong> &mdash; zero interest during business gestation</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- 4 Core Benefit Pillars (React Bits Spotlight Cards) -->
-        <div class="rb-benefits-quad">
-          <div class="spotlight-card rb-benefit-card" data-spotlight-color="rgba(56, 189, 248, 0.16)">
-            <span class="rb-benefit-icon">🎓</span>
-            <h4 class="rb-benefit-title">Higher Education Subsidies</h4>
-            <p class="rb-benefit-desc">100% academic fee waivers, boarding allowances, and ₹31,000/mo research
-              fellowships for SC/PwD scholars.</p>
+        <!-- Four Equal-Width Benefit Cards -->
+        <div class="sec03-benefits-row">
+          <!-- Card 01: Higher Education Subsidies -->
+          <div class="sec03-benefit-card">
+            <div class="sec03-icon-box" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#245BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+                <path d="M22 10v6"/>
+                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
+              </svg>
+            </div>
+            <h4 class="sec03-card-title" data-i18n="sec03Quad1Title">Higher Education Subsidies</h4>
+            <p class="sec03-card-desc" data-i18n="sec03Quad1Desc">100% academic fee waivers, boarding allowances, and ₹31,000/mo research fellowships for SC/PwD scholars.</p>
           </div>
 
-          <div class="spotlight-card rb-benefit-card" data-spotlight-color="rgba(16, 185, 129, 0.16)">
-            <span class="rb-benefit-icon">🦽</span>
-            <h4 class="rb-benefit-title">ADIP Assistive Technology</h4>
-            <p class="rb-benefit-desc">100% capital grant for motorized tricycles, smart hearing aids, sensory braille
-              devices, and prosthetic fittings.</p>
+          <!-- Card 02: ADIP Assistive Technology -->
+          <div class="sec03-benefit-card">
+            <div class="sec03-icon-box" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="16" cy="4" r="1"/>
+                <path d="m18 19 1-7-6 1"/>
+                <path d="m5 8 3-3 5.5 3-2.36 3.5"/>
+                <path d="M4.24 14.5a5 5 0 0 0 6.88 6"/>
+                <path d="M13.76 17.5a5 5 0 0 0-4-7.5"/>
+              </svg>
+            </div>
+            <h4 class="sec03-card-title" data-i18n="sec03Quad2Title">ADIP Assistive Technology</h4>
+            <p class="sec03-card-desc" data-i18n="sec03Quad2Desc">100% capital grant for motorized tricycles, smart hearing aids, sensory braille devices, and prosthetic fittings.</p>
           </div>
 
-          <div class="spotlight-card rb-benefit-card" data-spotlight-color="rgba(99, 102, 241, 0.16)">
-            <span class="rb-benefit-icon">♿</span>
-            <h4 class="rb-benefit-title">UDID Swavlamban Pass</h4>
-            <p class="rb-benefit-desc">Single nationwide verified digital disability certificate accepted for rail
-              travel, hospital care, and tax exemptions.</p>
+          <!-- Card 03: UDID Swavlamban Pass -->
+          <div class="sec03-benefit-card">
+            <div class="sec03-icon-box" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#245BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 2v2"/>
+                <path d="M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <circle cx="12" cy="10" r="3"/>
+                <line x1="8" y1="2" x2="8" y2="4"/>
+              </svg>
+            </div>
+            <h4 class="sec03-card-title" data-i18n="sec03Quad3Title">UDID Swavlamban Pass</h4>
+            <p class="sec03-card-desc" data-i18n="sec03Quad3Desc">Single nationwide verified digital disability certificate accepted for rail travel, hospital care, and tax exemptions.</p>
           </div>
 
-          <div class="spotlight-card rb-benefit-card" data-spotlight-color="rgba(245, 158, 11, 0.16)">
-            <span class="rb-benefit-icon">💼</span>
-            <h4 class="rb-benefit-title">Micro-Enterprise Capital</h4>
-            <p class="rb-benefit-desc">Low-interest business loans up to ₹50 Lakhs for transport, manufacturing, and
-              tech services with collateral rebates.</p>
+          <!-- Card 04: Micro-Enterprise Capital -->
+          <div class="sec03-benefit-card">
+            <div class="sec03-icon-box" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 12h.01"/>
+                <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                <path d="M22 13a18.15 18.15 0 0 1-20 0"/>
+                <rect width="20" height="14" x="2" y="6" rx="2"/>
+              </svg>
+            </div>
+            <h4 class="sec03-card-title" data-i18n="sec03Quad4Title">Micro-Enterprise Capital</h4>
+            <p class="sec03-card-desc" data-i18n="sec03Quad4Desc">Low-interest business loans up to ₹50 Lakhs for transport, manufacturing, and tech services with collateral rebates.</p>
           </div>
         </div>
+      </div>
+
+      <!-- Bottom Background — Layered Organic Flowing Waves -->
+      <div class="sec03-waves-wrap" aria-hidden="true">
+        <svg class="sec03-waves-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="sec03WaveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#D4E3FF" stop-opacity="0.45" />
+              <stop offset="50%" stop-color="#BFD5FF" stop-opacity="0.4" />
+              <stop offset="100%" stop-color="#D4E3FF" stop-opacity="0.45" />
+            </linearGradient>
+            <linearGradient id="sec03WaveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#E4EDFF" stop-opacity="0.65" />
+              <stop offset="50%" stop-color="#D4E3FF" stop-opacity="0.6" />
+              <stop offset="100%" stop-color="#E4EDFF" stop-opacity="0.65" />
+            </linearGradient>
+            <linearGradient id="sec03WaveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#EFF4FF" stop-opacity="0.9" />
+              <stop offset="50%" stop-color="#E4EDFF" stop-opacity="0.85" />
+              <stop offset="100%" stop-color="#EFF4FF" stop-opacity="0.9" />
+            </linearGradient>
+            <path id="sec03WavePath" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g>
+            <use href="#sec03WavePath" x="48" y="0" fill="url(#sec03WaveGrad1)" class="sec03-wave-layer sec03-wave-1" />
+            <use href="#sec03WavePath" x="48" y="3" fill="url(#sec03WaveGrad2)" class="sec03-wave-layer sec03-wave-2" />
+            <use href="#sec03WavePath" x="48" y="5" fill="url(#sec03WaveGrad3)" class="sec03-wave-layer sec03-wave-3" />
+          </g>
+        </svg>
       </div>
     </section>
   </div> <!-- End page-relief -->
 
   <!-- ==========================================================================
-       WINDOW 3: WHY SAMARTHYA (PRIVACY-FIRST & STATUTORY TRUST)
+       WINDOW 3: WHY SANJEEVANI GRID (PRIVACY-FIRST & STATUTORY TRUST)
        ========================================================================== -->
   <div class="page" id="page-why">
     <!-- ==================== 04: WHY US ==================== -->
-    <section class="site-section rb-section" id="section-04">
-      <div class="section-inner">
-        <div class="rb-section-header">
-          <span class="rb-section-tag" data-i18n="sec04Tag">04 // WHY US</span>
-          <h2 class="rb-section-title" data-i18n="sec04Title">Privacy-First, Middleman-Free &amp; Frictionless</h2>
-          <p class="rb-section-subtitle" data-i18n="sec04Subtitle">Why beneficiaries trust Samarthya: zero document storage, compliance standards,
-            instant rule scoring, and direct application routes.</p>
+    <section class="site-section rb-section sec04-why-section" id="section-04">
+      <!-- Ambient Background Glow & Decorative Grid -->
+      <div class="sec04-ambient-glow" aria-hidden="true"></div>
+      <div class="sec04-ambient-grid" aria-hidden="true"></div>
+
+      <div class="sec04-container">
+        <!-- Section Header: Eyebrow, Main Heading, Supporting Description -->
+        <div class="sec04-header">
+          <div class="sec04-eyebrow">
+            <span class="sec04-eyebrow-dot" aria-hidden="true"></span>
+            <span data-i18n="sec04Tag">04 // WHY US</span>
+          </div>
+          <h2 class="sec04-heading" data-i18n="sec04Title">Privacy-First, Middleman-Free &amp; <span class="sec04-heading-highlight">Frictionless</span></h2>
+          <p class="sec04-subtitle" data-i18n="sec04Subtitle">Why beneficiaries trust Sanjeevani Grid: zero document storage, compliance standards, instant rule scoring, and direct application routes.</p>
         </div>
 
-        <div class="rb-trust-grid">
-          <div class="spotlight-card rb-trust-card" data-spotlight-color="rgba(56, 189, 248, 0.18)">
-            <span class="rb-trust-num">01 // PRIVACY GUARANTEE</span>
-            <h3 class="rb-trust-title">Zero Document Cloud Storage</h3>
-            <p class="rb-trust-desc">Never hand over physical certificates or upload confidential Aadhaar cards to
-              unauthorized agents. Our evaluation logic runs entirely within your device session.</p>
-            <span class="rb-trust-check-badge">&#x2713; DPDP Act 2023 Verified</span>
+        <!-- Three Feature Cards in Single Row -->
+        <div class="sec04-cards-row">
+          <!-- Card 01: Privacy Guarantee -->
+          <div class="sec04-card">
+            <div class="sec04-card-top">
+              <div class="sec04-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+              </div>
+              <span class="sec04-card-tag" data-i18n="sec04Card1Num">01 // PRIVACY GUARANTEE</span>
+            </div>
+            <h3 class="sec04-card-title" data-i18n="sec04Card1Title">Zero Document Cloud Storage</h3>
+            <p class="sec04-card-desc" data-i18n="sec04Card1Desc">Never hand over physical certificates or upload confidential Aadhaar cards to unauthorized agents. Our evaluation logic runs entirely within your device session.</p>
+            <span class="sec04-badge verified" data-i18n="sec04Card1Badge">&#x2713; DPDP Act 2023 Verified</span>
           </div>
 
-          <div class="spotlight-card rb-trust-card" data-spotlight-color="rgba(16, 185, 129, 0.18)">
-            <span class="rb-trust-num">02 // INTEGRITY SHIELD</span>
-            <h3 class="rb-trust-title">Eliminating Predatory Middlemen</h3>
-            <p class="rb-trust-desc">Third-party touts exploit vulnerable applicants by charging illegal 15&ndash;30%
-              commission cuts. Samarthya delivers direct, accredited institutional endpoints with 0% commission.</p>
-            <span class="rb-trust-check-badge" style="color:#6EE7B7; border-color:rgba(16,185,129,0.3);">&#x2713; 100%
-              Direct Channel</span>
+          <!-- Card 02: Integrity Shield -->
+          <div class="sec04-card">
+            <div class="sec04-card-top">
+              <div class="sec04-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 21a8 8 0 0 0-16 0"/>
+                  <circle cx="10" cy="8" r="5"/>
+                  <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/>
+                </svg>
+              </div>
+              <span class="sec04-card-tag" data-i18n="sec04Card2Num">02 // INTEGRITY SHIELD</span>
+            </div>
+            <h3 class="sec04-card-title" data-i18n="sec04Card2Title">Eliminating Predatory Middlemen</h3>
+            <p class="sec04-card-desc" data-i18n="sec04Card2Desc">Third-party touts exploit vulnerable applicants by charging illegal 15–30% commission cuts. Sanjeevani Grid delivers direct, accredited institutional endpoints with 0% commission.</p>
+            <span class="sec04-badge verified" data-i18n="sec04Card2Badge">&#x2713; 100% Direct Channel</span>
           </div>
 
-          <div class="spotlight-card rb-trust-card" data-spotlight-color="rgba(99, 102, 241, 0.18)">
-            <span class="rb-trust-num">03 // REAL-TIME SCORING</span>
-            <h3 class="rb-trust-title">Sub-Second Algorithmic Matching</h3>
-            <p class="rb-trust-desc">Evaluates 50+ central and state schemes in under 2 seconds. Receive exact reason
-              codes, income threshold calculations, and required statutory document checklists.</p>
-            <span class="rb-trust-check-badge" style="color:#C7D2FE; border-color:rgba(99,102,241,0.3);">&#x2713; &lt;
-              2.0s Rule Latency</span>
+          <!-- Card 03: Real-Time Scoring -->
+          <div class="sec04-card">
+            <div class="sec04-card-top">
+              <div class="sec04-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+                </svg>
+              </div>
+              <span class="sec04-card-tag" data-i18n="sec04Card3Num">03 // REAL-TIME SCORING</span>
+            </div>
+            <h3 class="sec04-card-title" data-i18n="sec04Card3Title">Sub-Second Algorithmic Matching</h3>
+            <p class="sec04-card-desc" data-i18n="sec04Card3Desc">Evaluates 50+ central and state schemes in under 2 seconds. Receive exact reason codes, income threshold calculations, and required statutory document checklists.</p>
+            <span class="sec04-badge performance" data-i18n="sec04Card3Badge">&#x2713; &lt; 2.0s Rule Latency</span>
           </div>
         </div>
 
-        <!-- Monumental Clean Statement Banner -->
-        <div class="rb-scroll-float-banner">
-          <span class="rb-float-subtag">STATUTORY EMPOWERMENT</span>
-          <div style="font-family: var(--font-heading); font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 800; color: #FFFFFF; margin-top: 10px; line-height: 1.35; background: linear-gradient(180deg, #ffffff 40%, #cbd5e1 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
-            Sub-Second Matching &bull; Zero Document Storage &bull; 100% Direct Entitlements
-          </div>
+        <!-- Statutory Empowerment Concluding Statement Area -->
+        <div class="sec04-statement-wrap">
+          <span class="sec04-statement-subtag" data-i18n="sec04BannerTag">STATUTORY EMPOWERMENT</span>
+          <h3 class="sec04-statement-text" data-i18n="sec04BannerText">
+            Sub-Second Matching &bull; Zero Document Storage &bull; 100% Direct <span class="sec04-statement-highlight">Entitlements</span>
+          </h3>
         </div>
+      </div>
+
+      <!-- Bottom Background — Layered Organic Flowing Waves -->
+      <div class="sec04-waves-wrap" aria-hidden="true">
+        <svg class="sec04-waves-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="sec04WaveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#C6DBFF" stop-opacity="0.45" />
+              <stop offset="50%" stop-color="#B5D0FF" stop-opacity="0.4" />
+              <stop offset="100%" stop-color="#C6DBFF" stop-opacity="0.45" />
+            </linearGradient>
+            <linearGradient id="sec04WaveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#D8E7FF" stop-opacity="0.65" />
+              <stop offset="50%" stop-color="#C6DBFF" stop-opacity="0.6" />
+              <stop offset="100%" stop-color="#D8E7FF" stop-opacity="0.65" />
+            </linearGradient>
+            <linearGradient id="sec04WaveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#EFF4FF" stop-opacity="0.9" />
+              <stop offset="50%" stop-color="#E5EEFF" stop-opacity="0.85" />
+              <stop offset="100%" stop-color="#EFF4FF" stop-opacity="0.9" />
+            </linearGradient>
+            <path id="sec04WavePath" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g>
+            <use href="#sec04WavePath" x="48" y="0" fill="url(#sec04WaveGrad1)" class="sec04-wave-layer sec04-wave-1" />
+            <use href="#sec04WavePath" x="48" y="3" fill="url(#sec04WaveGrad2)" class="sec04-wave-layer sec04-wave-2" />
+            <use href="#sec04WavePath" x="48" y="5" fill="url(#sec04WaveGrad3)" class="sec04-wave-layer sec04-wave-3" />
+          </g>
+        </svg>
       </div>
     </section>
   </div> <!-- End page-why -->
@@ -459,141 +999,184 @@
        ========================================================================== -->
   <div class="page" id="page-features">
     <!-- ==================== 05: OUR FEATURES ==================== -->
-    <section class="site-section rb-section" id="section-05">
-      <div class="section-inner">
-        <div class="rb-section-header">
-          <span class="rb-section-tag" data-i18n="sec05Tag">05 // OUR FEATURES</span>
-          <h2 class="rb-section-title" data-i18n="sec05Title">Full Suite of Public Tools</h2>
-          <p class="rb-section-subtitle" data-i18n="sec05Subtitle">Access our complete set of interactive tools: Eligibility Matching, EMI
-            Simulator, Nearest Partner Map, and District Camp Mode.</p>
+    <section class="site-section rb-section sec05-features-section" id="section-05">
+      <!-- Ambient Background Glow & Decorative Grid -->
+      <div class="sec05-ambient-glow" aria-hidden="true"></div>
+      <div class="sec05-ambient-grid" aria-hidden="true"></div>
+
+      <div class="sec05-container">
+        <!-- Section Header: Eyebrow, Main Heading, Supporting Description -->
+        <div class="sec05-header">
+          <div class="sec05-eyebrow">
+            <span class="sec05-eyebrow-dot" aria-hidden="true"></span>
+            <span data-i18n="sec05Tag">05 // OUR FEATURES</span>
+          </div>
+          <h2 class="sec05-heading" data-i18n="sec05Title">Full Suite of <span class="sec05-heading-highlight">Public Tools</span></h2>
+          <p class="sec05-subtitle" data-i18n="sec05Subtitle">Access our complete set of interactive tools: Eligibility Matching, EMI Simulator, Nearest Partner Map, and District Camp Mode.</p>
         </div>
 
-        <!-- React Bits Magic Bento Layout -->
-        <div class="rb-bento-grid">
-          <!-- Card 1: Scheme & Credit Matcher (Featured Hero 2-Col) -->
-          <div class="spotlight-card rb-bento-hero" data-spotlight-color="rgba(56, 189, 248, 0.22)">
-            <div class="rb-bento-header">
-              <div class="rb-bento-icon">🎯</div>
-              <span class="rb-bento-badge"><span class="shiny-text">CORE ENGINE // 50+ SCHEMES</span></span>
+        <!-- Bento Features Grid (Row 1: 2 cols + 1 col | Row 2: 1 col + 1 col + 1 col) -->
+        <div class="sec05-grid">
+          <!-- Card 01: Scheme & Credit Matcher (Hero 2-Col) -->
+          <div class="sec05-card hero-card">
+            <div class="sec05-card-header">
+              <div class="sec05-icon-box" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="6"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+              </div>
+              <span class="sec05-badge blue" data-i18n="sec05Card1Badge">CORE ENGINE // 50+ SCHEMES</span>
             </div>
-            <h3 class="rb-bento-title">Scheme &amp; Credit Matcher</h3>
-            <p class="rb-bento-desc">Instant criteria-based eligibility evaluation across 50+ central &amp; state
-              welfare programs and concessional business credit lines. Zero raw document storage &mdash; engineered in
-              full compliance with the DPDP Act 2023.</p>
-            <div class="rb-bento-chips">
-              <span class="rb-chip">♿ PwD Welfare &amp; UDID</span>
-              <span class="rb-chip">💼 SC/ST Concessional Loans</span>
-              <span class="rb-chip">🎓 Merit &amp; Needs Scholarships</span>
-              <span class="rb-chip">🦽 ALIMCO Assistive Tech</span>
+            <h3 class="sec05-card-title" data-i18n="sec05Card1Title">Scheme &amp; Credit Matcher</h3>
+            <p class="sec05-card-desc" data-i18n="sec05Card1Desc">Instant criteria-based eligibility evaluation across 50+ central &amp; state welfare programs and concessional business credit lines. Zero raw document storage &mdash; engineered in full compliance with the DPDP Act 2023.</p>
+            <div class="sec05-chips-wrap">
+              <span class="sec05-chip" data-i18n="sec05Card1Chip1">♿ PwD Welfare &amp; UDID</span>
+              <span class="sec05-chip" data-i18n="sec05Card1Chip2">💼 SC/ST Concessional Loans</span>
+              <span class="sec05-chip" data-i18n="sec05Card1Chip3">🎓 Merit &amp; Needs Scholarships</span>
+              <span class="sec05-chip" data-i18n="sec05Card1Chip4">🦽 ALIMCO Assistive Tech</span>
             </div>
-            <button type="button" class="rb-bento-btn primary" onclick="App.navigate('match')"
-              aria-label="Launch Scheme Matcher">
-              <span>Launch Scheme Matcher (Takes ~60s)</span>
-              <span>&rarr;</span>
+            <button type="button" class="sec05-btn primary" onclick="App.navigate('match')" aria-label="Launch Scheme Matcher">
+              <span data-i18n="sec05Card1Btn">Launch Scheme Matcher (Takes ~60s)</span>
+              <span class="sec05-btn-arrow">&rarr;</span>
             </button>
           </div>
 
-          <!-- Card 2: Wispr Voice Assistant -->
-          <div class="spotlight-card" id="wispr-voice-banner" data-spotlight-color="rgba(56, 189, 248, 0.18)">
-            <div class="rb-bento-header">
-              <div class="rb-bento-icon">🎙️</div>
-              <div class="rb-soundwave" aria-hidden="true">
+          <!-- Card 02: Voice Assistant (1-Col) -->
+          <div class="sec05-card">
+            <div class="sec05-card-header">
+              <div class="sec05-icon-box" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                  <line x1="12" y1="19" x2="12" y2="22"/>
+                </svg>
+              </div>
+              <div class="sec05-soundwave" aria-hidden="true">
                 <span></span><span></span><span></span><span></span><span></span>
               </div>
             </div>
-            <h3 class="rb-bento-title">Voice Assistant</h3>
-            <p class="rb-bento-desc">Speak naturally in Hindi, English, or regional dialects to populate eligibility
-              criteria automatically without manual form typing.</p>
-            <div class="rb-bento-chips">
-              <span class="rb-chip">हिन्दी</span>
-              <span class="rb-chip">English</span>
-              <span class="rb-chip">मराठी</span>
-              <span class="rb-chip">தமிழ்</span>
+            <h3 class="sec05-card-title" data-i18n="sec05Card2Title">Voice Assistant</h3>
+            <p class="sec05-card-desc" data-i18n="sec05Card2Desc">Speak naturally in Hindi, English, or regional dialects to populate eligibility criteria automatically without manual form typing.</p>
+            <div class="sec05-chips-wrap">
+              <span class="sec05-chip">हिन्दी</span>
+              <span class="sec05-chip">English</span>
+              <span class="sec05-chip">मराठी</span>
+              <span class="sec05-chip">தமிழ்</span>
             </div>
-            <button type="button" class="rb-bento-btn" onclick="WisprFlow.toggle()" aria-label="Start Voice Intake">
-              <span>🎙️ Start Voice Intake</span>
-              <span>&rarr;</span>
+            <button type="button" class="sec05-btn secondary" onclick="WisprFlow.toggle()" aria-label="Start Voice Intake">
+              <span>🎙️ <span data-i18n="sec05Card2Btn">Start Voice Intake</span></span>
+              <span class="sec05-btn-arrow">&rarr;</span>
             </button>
           </div>
 
-          <!-- Card 3: Samarthya AI Co-Pilot -->
-          <div class="spotlight-card" data-spotlight-color="rgba(99, 102, 241, 0.18)">
-            <div class="rb-bento-header">
-              <div class="rb-bento-icon">✨</div>
-              <span class="rb-bento-badge" style="color:#C7D2FE;">24/7 ADVISOR</span>
+          <!-- Card 03: Sanjeevani Grid AI Co-Pilot (1-Col) -->
+          <div class="sec05-card">
+            <div class="sec05-card-header">
+              <div class="sec05-icon-box" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                  <path d="M5 3v4"/>
+                  <path d="M19 17v4"/>
+                  <path d="M3 5h4"/>
+                  <path d="M17 19h4"/>
+                </svg>
+              </div>
+              <span class="sec05-badge purple" data-i18n="sec05Card3Badge">24/7 ADVISOR</span>
             </div>
-            <h3 class="rb-bento-title">Samarthya AI Co-Pilot</h3>
-            <p class="rb-bento-desc">Contextual guidance for parents, students, and entrepreneurs. Instant answers on
-              document checklists, eligibility appeals, and official grievance desks.</p>
-            <div class="rb-bento-chips">
-              <span class="rb-chip">UDID Documents?</span>
-              <span class="rb-chip">NSFDC Interest?</span>
+            <h3 class="sec05-card-title" data-i18n="sec05Card3Title">Sanjeevani Grid AI Co-Pilot</h3>
+            <p class="sec05-card-desc" data-i18n="sec05Card3Desc">Contextual guidance for parents, students, and entrepreneurs. Instant answers on document checklists, eligibility appeals, and official grievance desks.</p>
+            <div class="sec05-chips-wrap">
+              <span class="sec05-chip">UDID Documents?</span>
+              <span class="sec05-chip">NSFDC Interest?</span>
             </div>
-            <button type="button" class="rb-bento-btn" onclick="SamarthyaAI.toggle()" aria-label="Ask Samarthya AI">
-              <span>✨ Ask AI Assistant</span>
-              <span>&rarr;</span>
+            <button type="button" class="sec05-btn secondary" onclick="SamarthyaAI.toggle()" aria-label="Ask Sanjeevani Grid AI">
+              <span>✨ <span data-i18n="sec05Card3Btn">Ask AI Assistant</span></span>
+              <span class="sec05-btn-arrow">&rarr;</span>
             </button>
           </div>
 
-          <!-- Card 4: Application Tracker -->
-          <div class="spotlight-card" data-spotlight-color="rgba(16, 185, 129, 0.18)">
-            <div class="rb-bento-header">
-              <div class="rb-bento-icon">📋</div>
-              <span class="rb-bento-badge" style="color:#6EE7B7;">OFFLINE PASS</span>
+          <!-- Card 04: Application Tracker (1-Col) -->
+          <div class="sec05-card">
+            <div class="sec05-card-header">
+              <div class="sec05-icon-box" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                  <path d="M12 11h4"/>
+                  <path d="M12 16h4"/>
+                  <path d="M8 11h.01"/>
+                  <path d="M8 16h.01"/>
+                </svg>
+              </div>
+              <span class="sec05-badge green" data-i18n="sec05Card4Badge">OFFLINE PASS</span>
             </div>
-            <h3 class="rb-bento-title">Application Tracker</h3>
-            <p class="rb-bento-desc">Track status and offline entitlement certificates across National Scholarship
-              Portal, Swavlamban UDID, and NSFDC loans with zero paperwork lock-in.</p>
-            <div class="rb-bento-chips">
-              <span class="rb-chip">Instant QR Pass</span>
-              <span class="rb-chip">Direct API Query</span>
+            <h3 class="sec05-card-title" data-i18n="sec05Card4Title">Application Tracker</h3>
+            <p class="sec05-card-desc" data-i18n="sec05Card4Desc">Track status and offline entitlement certificates across National Scholarship Portal, Swavlamban UDID, and NSFDC loans with zero paperwork lock-in.</p>
+            <div class="sec05-chips-wrap">
+              <span class="sec05-chip" data-i18n="sec05Card4Chip1">Instant QR Pass</span>
+              <span class="sec05-chip" data-i18n="sec05Card4Chip2">Direct API Query</span>
             </div>
-            <button type="button" class="rb-bento-btn" onclick="App.navigate('dashboard')"
-              aria-label="View Application Dashboard">
-              <span>📋 View Dashboard</span>
-              <span>&rarr;</span>
+            <button type="button" class="sec05-btn secondary" onclick="App.navigate('dashboard')" aria-label="View Application Dashboard">
+              <span>📋 <span data-i18n="sec05Card4Btn">View Dashboard</span></span>
+              <span class="sec05-btn-arrow">&rarr;</span>
             </button>
           </div>
 
-          <!-- Card 5: Concessional EMI Simulator -->
-          <div class="spotlight-card" data-spotlight-color="rgba(245, 158, 11, 0.18)">
-            <div class="rb-bento-header">
-              <div class="rb-bento-icon">📊</div>
-              <span class="rb-bento-badge" style="color:#FCD34D;">4.0% BASE RATE</span>
+          <!-- Card 05: Concessional EMI Simulator (1-Col) -->
+          <div class="sec05-card">
+            <div class="sec05-card-header">
+              <div class="sec05-icon-box" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#155EEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"/>
+                  <line x1="12" y1="20" x2="12" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="14"/>
+                </svg>
+              </div>
+              <span class="sec05-badge amber" data-i18n="sec05Card5Badge">4.0% BASE RATE</span>
             </div>
-            <h3 class="rb-bento-title">Concessional EMI Simulator</h3>
-            <p class="rb-bento-desc">Calculate subsidized monthly repayments and capital subsidy deductions for SC/ST
-              enterprise credit and PwD self-employment schemes.</p>
-            <div class="rb-bento-chips">
-              <span class="rb-chip">Up to 33% Subsidy</span>
-              <span class="rb-chip">6-12 Mo Moratorium</span>
+            <h3 class="sec05-card-title" data-i18n="sec05Card5Title">Concessional EMI Simulator</h3>
+            <p class="sec05-card-desc" data-i18n="sec05Card5Desc">Calculate subsidized monthly repayments and capital subsidy deductions for SC/ST enterprise credit and PwD self-employment schemes.</p>
+            <div class="sec05-chips-wrap">
+              <span class="sec05-chip" data-i18n="sec05Card5Chip1">Up to 33% Subsidy</span>
+              <span class="sec05-chip" data-i18n="sec05Card5Chip2">6-12 Mo Moratorium</span>
             </div>
-            <button type="button" class="rb-bento-btn" onclick="App.navigate('calculator')"
-              aria-label="Calculate Concessional EMI">
-              <span>📊 Calculate EMI</span>
-              <span>&rarr;</span>
-            </button>
-          </div>
-
-          <!-- Card 6: Partner Map & Camp Mode -->
-          <div class="spotlight-card" data-spotlight-color="rgba(56, 189, 248, 0.18)">
-            <div class="rb-bento-header">
-              <div class="rb-bento-icon">📍</div>
-              <span class="rb-bento-badge" style="color:#38BDF8;">750+ DISTRICTS</span>
-            </div>
-            <h3 class="rb-bento-title">Partner Map &amp; Camp Mode</h3>
-            <p class="rb-bento-desc">Interactive GIS locator for 750+ accredited District Welfare Offices, ALIMCO
-              assessment centers, and offline village-level enrollment camps.</p>
-            <div class="rb-bento-chips">
-              <span class="rb-chip">Offline Camp GPS</span>
-              <span class="rb-chip">Verified Welfare Hubs</span>
-            </div>
-            <button type="button" class="rb-bento-btn" onclick="App.navigate('locator')" aria-label="Open Partner Map">
-              <span>📍 Open Partner Map</span>
-              <span>&rarr;</span>
+            <button type="button" class="sec05-btn secondary" onclick="App.navigate('calculator')" aria-label="Calculate Concessional EMI">
+              <span>📊 <span data-i18n="sec05Card5Btn">Calculate EMI</span></span>
+              <span class="sec05-btn-arrow">&rarr;</span>
             </button>
           </div>
         </div>
+      </div>
+
+      <!-- Bottom Background — Layered Organic Flowing Waves -->
+      <div class="sec05-waves-wrap" aria-hidden="true">
+        <svg class="sec05-waves-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="sec05WaveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#C3D9FF" stop-opacity="0.45" />
+              <stop offset="50%" stop-color="#B5D0FF" stop-opacity="0.4" />
+              <stop offset="100%" stop-color="#C3D9FF" stop-opacity="0.45" />
+            </linearGradient>
+            <linearGradient id="sec05WaveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#D6E5FF" stop-opacity="0.65" />
+              <stop offset="50%" stop-color="#C3D9FF" stop-opacity="0.6" />
+              <stop offset="100%" stop-color="#D6E5FF" stop-opacity="0.65" />
+            </linearGradient>
+            <linearGradient id="sec05WaveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#EFF4FF" stop-opacity="0.9" />
+              <stop offset="50%" stop-color="#E5EEFF" stop-opacity="0.85" />
+              <stop offset="100%" stop-color="#EFF4FF" stop-opacity="0.9" />
+            </linearGradient>
+            <path id="sec05WavePath" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g>
+            <use href="#sec05WavePath" x="48" y="0" fill="url(#sec05WaveGrad1)" class="sec05-wave-layer sec05-wave-1" />
+            <use href="#sec05WavePath" x="48" y="3" fill="url(#sec05WaveGrad2)" class="sec05-wave-layer sec05-wave-2" />
+            <use href="#sec05WavePath" x="48" y="5" fill="url(#sec05WaveGrad3)" class="sec05-wave-layer sec05-wave-3" />
+          </g>
+        </svg>
       </div>
     </section>
   </div> <!-- End page-features -->
@@ -603,84 +1186,146 @@
        ========================================================================== -->
   <div class="page" id="page-portals">
     <!-- ==================== 06: ENDING & OFFICIAL PORTALS ==================== -->
-    <section class="site-section rb-section" id="section-06" style="padding-bottom:120px;">
-      <div class="section-inner">
-        <div class="rb-section-header">
-          <span class="rb-section-tag" data-i18n="sec06Tag">06 // ENDING &amp; OFFICIAL PORTALS</span>
-          <h2 class="rb-section-title" data-i18n="sec06Title">Official Government Gateways &amp; Support</h2>
-          <p class="rb-section-subtitle" data-i18n="sec06Subtitle">Direct institutional application links and grievance channels for verified
-            schemes.</p>
-        </div>
-
-        <div class="rb-portals-grid">
-          <a href="https://scholarships.gov.in" target="_blank" rel="noopener noreferrer"
-            class="spotlight-card rb-portal-card" data-spotlight-color="rgba(56, 189, 248, 0.18)">
-            <div class="rb-portal-top">
-              <span class="rb-portal-icon">🏛️</span>
-              <h3 class="rb-portal-name">National Scholarship Portal</h3>
-              <span class="rb-portal-url">scholarships.gov.in</span>
-            </div>
-            <div class="rb-portal-link-text">
-              <span>Official NSP Gateway</span>
-              <span>&rarr;</span>
-            </div>
-          </a>
-
-          <a href="https://www.swavlambancard.gov.in" target="_blank" rel="noopener noreferrer"
-            class="spotlight-card rb-portal-card" data-spotlight-color="rgba(16, 185, 129, 0.18)">
-            <div class="rb-portal-top">
-              <span class="rb-portal-icon">♿</span>
-              <h3 class="rb-portal-name">Swavlamban Card (UDID)</h3>
-              <span class="rb-portal-url">swavlambancard.gov.in</span>
-            </div>
-            <div class="rb-portal-link-text">
-              <span>Apply for UDID</span>
-              <span>&rarr;</span>
-            </div>
-          </a>
-
-          <a href="https://nsfdc.nic.in" target="_blank" rel="noopener noreferrer" class="spotlight-card rb-portal-card"
-            data-spotlight-color="rgba(99, 102, 241, 0.18)">
-            <div class="rb-portal-top">
-              <span class="rb-portal-icon">💼</span>
-              <h3 class="rb-portal-name">NSFDC Official Portal</h3>
-              <span class="rb-portal-url">nsfdc.nic.in</span>
-            </div>
-            <div class="rb-portal-link-text">
-              <span>Channel Credit Portal</span>
-              <span>&rarr;</span>
-            </div>
-          </a>
-
-          <a href="https://alimco.in" target="_blank" rel="noopener noreferrer" class="spotlight-card rb-portal-card"
-            data-spotlight-color="rgba(245, 158, 11, 0.18)">
-            <div class="rb-portal-top">
-              <span class="rb-portal-icon">🦽</span>
-              <h3 class="rb-portal-name">ALIMCO Assistive Devices</h3>
-              <span class="rb-portal-url">alimco.in</span>
-            </div>
-            <div class="rb-portal-link-text">
-              <span>ADIP Equipment Desk</span>
-              <span>&rarr;</span>
-            </div>
-          </a>
-        </div>
-
-        <!-- High-Impact Final Call to Action -->
-        <div class="rb-cta-card">
-          <div>
-            <h3 class="rb-cta-title">Ready to check your eligible schemes?</h3>
-            <p class="rb-cta-desc">Zero paperwork required for initial evaluation. Complete your criteria intake in
-              under 60 seconds and access verified direct entitlements.</p>
+    <section class="site-section sec06-section" id="section-06">
+      <div class="sec06-container">
+        <div class="sec06-header">
+          <div class="sec06-eyebrow" data-i18n="sec06Tag">
+            <span class="sec06-indicator-dot" aria-hidden="true"></span>
+            <span>06 // ENDING &amp; OFFICIAL PORTALS</span>
           </div>
-          <button type="button" class="rb-cta-button" onclick="App.navigate('match')"
-            aria-label="Get Started with Scheme Matcher">
-            Get Started Now &rarr;
+          <h2 class="sec06-heading" data-i18n="sec06Title">
+            Official <span class="sec06-heading-highlight">Government Gateways</span> &amp; Support
+          </h2>
+          <p class="sec06-description" data-i18n="sec06Subtitle">
+            Direct institutional application links and grievance channels for verified schemes.
+          </p>
+        </div>
+
+        <div class="sec06-portal-grid">
+          <!-- CARD 01 — NATIONAL SCHOLARSHIP PORTAL -->
+          <a href="https://scholarships.gov.in" target="_blank" rel="noopener noreferrer" class="sec06-portal-card" aria-label="National Scholarship Portal">
+            <div>
+              <div class="sec06-card-icon-wrap">
+                <svg class="sec06-card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="3" y1="22" x2="21" y2="22"></line>
+                  <line x1="6" y1="18" x2="6" y2="11"></line>
+                  <line x1="10" y1="18" x2="10" y2="11"></line>
+                  <line x1="14" y1="18" x2="14" y2="11"></line>
+                  <line x1="18" y1="18" x2="18" y2="11"></line>
+                  <polygon points="12 2 20 7 4 7"></polygon>
+                  <line x1="2" y1="11" x2="22" y2="11"></line>
+                </svg>
+              </div>
+              <h3 class="sec06-card-title" data-i18n="sec06P1Name">National Scholarship Portal</h3>
+              <span class="sec06-card-domain">scholarships.gov.in</span>
+            </div>
+            <div>
+              <div class="sec06-card-divider"></div>
+              <div class="sec06-card-action">
+                <span data-i18n="sec06P1Link">Official NSP Gateway</span>
+                <span class="sec06-card-arrow">→</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD 02 — SWAVLAMBAN CARD (UDID) -->
+          <a href="https://www.swavlambancard.gov.in" target="_blank" rel="noopener noreferrer" class="sec06-portal-card" aria-label="Swavlamban Card UDID">
+            <div>
+              <div class="sec06-card-icon-wrap">
+                <svg class="sec06-card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="5" r="2"></circle>
+                  <path d="M5 9h14"></path>
+                  <path d="m9 9-2 11"></path>
+                  <path d="m15 9 2 11"></path>
+                  <path d="m8 14 4 2 4-2"></path>
+                </svg>
+              </div>
+              <h3 class="sec06-card-title" data-i18n="sec06P2Name">Swavlamban Card (UDID)</h3>
+              <span class="sec06-card-domain">swavlambancard.gov.in</span>
+            </div>
+            <div>
+              <div class="sec06-card-divider"></div>
+              <div class="sec06-card-action">
+                <span data-i18n="sec06P2Link">Apply for UDID</span>
+                <span class="sec06-card-arrow">→</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD 03 — NSFDC OFFICIAL PORTAL -->
+          <a href="https://nsfdc.nic.in" target="_blank" rel="noopener noreferrer" class="sec06-portal-card" aria-label="NSFDC Official Portal">
+            <div>
+              <div class="sec06-card-icon-wrap">
+                <svg class="sec06-card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 12h.01"></path>
+                  <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+                  <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
+                  <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                </svg>
+              </div>
+              <h3 class="sec06-card-title" data-i18n="sec06P3Name">NSFDC Official Portal</h3>
+              <span class="sec06-card-domain">nsfdc.nic.in</span>
+            </div>
+            <div>
+              <div class="sec06-card-divider"></div>
+              <div class="sec06-card-action">
+                <span data-i18n="sec06P3Link">Channel Credit Portal</span>
+                <span class="sec06-card-arrow">→</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD 04 — ALIMCO ASSISTIVE DEVICES -->
+          <a href="https://alimco.in" target="_blank" rel="noopener noreferrer" class="sec06-portal-card" aria-label="ALIMCO Assistive Devices">
+            <div>
+              <div class="sec06-card-icon-wrap">
+                <svg class="sec06-card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="4" r="2"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                  <path d="M7 13a5 5 0 1 0 7 4.58"></path>
+                  <path d="m18 19 3 2"></path>
+                  <path d="m9 11 3 3"></path>
+                </svg>
+              </div>
+              <h3 class="sec06-card-title" data-i18n="sec06P4Name">ALIMCO Assistive Devices</h3>
+              <span class="sec06-card-domain">alimco.in</span>
+            </div>
+            <div>
+              <div class="sec06-card-divider"></div>
+              <div class="sec06-card-action">
+                <span data-i18n="sec06P4Link">ADIP Equipment Desk</span>
+                <span class="sec06-card-arrow">→</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- High-Impact Concluding Call-to-Action Banner -->
+        <div class="sec06-cta-banner">
+          <div class="sec06-cta-content">
+            <h3 class="sec06-cta-title" data-i18n="sec06CtaTitle">Ready to check your eligible schemes?</h3>
+            <p class="sec06-cta-desc" data-i18n="sec06CtaDesc">Zero paperwork required for initial evaluation. Complete your criteria intake in under 60 seconds and access verified direct entitlements.</p>
+          </div>
+          <button type="button" class="sec06-cta-btn" onclick="App.navigate('match', event)" aria-label="Get Started with Scheme Matcher">
+            <span data-i18n="sec06CtaBtn">Get Started Now</span>
+            <span class="sec06-cta-btn-arrow">→</span>
           </button>
         </div>
       </div>
-    </section>
 
+      <!-- Flowing Blue SVG Waves at the Bottom -->
+      <div class="sec06-waves-container" aria-hidden="true">
+        <svg class="sec06-wave-svg sec06-wave-layer-1" viewBox="0 0 2880 200" fill="none" preserveAspectRatio="none">
+          <path d="M0,80 C360,140 720,20 1080,80 C1440,140 1800,20 2160,80 C2520,140 2880,20 2880,80 L2880,200 L0,200 Z" fill="#EFF4FF" fill-opacity="0.85" />
+        </svg>
+        <svg class="sec06-wave-svg sec06-wave-layer-2" viewBox="0 0 2880 200" fill="none" preserveAspectRatio="none">
+          <path d="M0,100 C400,30 800,160 1200,90 C1600,20 2000,150 2400,90 C2640,60 2880,110 2880,110 L2880,200 L0,200 Z" fill="#E5EEFF" fill-opacity="0.75" />
+        </svg>
+        <svg class="sec06-wave-svg sec06-wave-layer-3" viewBox="0 0 2880 200" fill="none" preserveAspectRatio="none">
+          <path d="M0,120 C320,170 640,70 960,130 C1280,180 1600,80 1920,130 C2240,180 2560,90 2880,130 L2880,200 L0,200 Z" fill="#D8E7FF" fill-opacity="0.55" />
+        </svg>
+      </div>
+    </section>
   </div>
 
   <!-- ==================== PAGE 2: SCHEME FINDER (MATCH) ==================== -->
@@ -688,7 +1333,7 @@
 
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">SCHEME FINDER</div>
+        <div class="section-tag" data-i18n="finderTag">SCHEME FINDER</div>
         <h1 class="section-title" data-i18n="formTitle">Eligibility Criteria Intake</h1>
         <p class="section-subtitle" data-i18n="formSubtitle">Select your target category to evaluate welfare schemes or
           concessional enterprise credit.</p>
@@ -739,11 +1384,11 @@
               <div class="form-group">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
                   <label class="form-label" data-i18n="formName" style="margin:0">Student Name (optional)</label>
-                  <button type="button" class="voice-input-btn" onclick="WisprFlow.toggle('inputName')">
+                  <button type="button" class="voice-input-btn" onclick="WisprFlow.toggle('inputName')" data-i18n="wisprVoiceFillBtn">
                     🎙️ Wispr Voice Fill
                   </button>
                 </div>
-                <input type="text" class="form-input" id="inputName" placeholder="Enter student name or alias...">
+                <input type="text" class="form-input" id="inputName" placeholder="Enter student name or alias..." data-i18n-placeholder="formNamePh">
               </div>
               <div class="form-group">
                 <label class="form-label"><span data-i18n="formDob">Date of Birth</span> <span
@@ -755,7 +1400,7 @@
                 <label class="form-label"><span data-i18n="formGender">Gender</span> <span
                     class="required">*</span></label>
                 <select class="form-select" id="inputGender" required>
-                  <option value="">— Select —</option>
+                  <option value="" data-i18n="selectGender">— Select —</option>
                   <option value="male" data-i18n="formGenderM">Male</option>
                   <option value="female" data-i18n="formGenderF">Female</option>
                   <option value="other" data-i18n="formGenderO">Other</option>
@@ -766,7 +1411,7 @@
                 <label class="form-label"><span data-i18n="formState">State / UT Domicile</span> <span
                     class="required">*</span></label>
                 <select class="form-select" id="inputState" required>
-                  <option value="">— Select State —</option>
+                  <option value="" data-i18n="selectState">— Select State —</option>
                 </select>
                 <div class="form-error" data-i18n="formRequired">Required field</div>
               </div>
@@ -786,7 +1431,7 @@
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
                   <label class="form-label" style="margin:0"><span data-i18n="formDisabilityType">Disability
                       Type(s)</span> <span class="required">*</span></label>
-                  <button type="button" class="voice-input-btn" onclick="WisprFlow.toggle()">
+                  <button type="button" class="voice-input-btn" onclick="WisprFlow.toggle()" data-i18n="voiceSpeakDis">
                     🎙️ Speak Disability
                   </button>
                 </div>
@@ -803,7 +1448,7 @@
                     oninput="FormController.updatePercent(this.value)">
                   <div class="range-labels">
                     <span>0%</span>
-                    <span>40% (Benchmark for Govt Schemes)</span>
+                    <span data-i18n="rangeBenchmark">40% (Benchmark for Govt Schemes)</span>
                     <span>100%</span>
                   </div>
                 </div>
@@ -826,7 +1471,7 @@
                 <label class="form-label"><span data-i18n="formEducation">Current Education Level</span> <span
                     class="required">*</span></label>
                 <select class="form-select" id="inputEducation" required>
-                  <option value="">— Select Education Level —</option>
+                  <option value="" data-i18n="selectEducation">— Select Education Level —</option>
                 </select>
                 <div class="form-error" data-i18n="formRequired">Required field</div>
               </div>
@@ -834,17 +1479,17 @@
                 <label class="form-label"><span data-i18n="formIncome">Annual Household Income (₹)</span> <span
                     class="required">*</span></label>
                 <select class="form-select" id="inputIncome" required>
-                  <option value="">— Select Income Range —</option>
-                  <option value="50000">Below ₹50,000</option>
-                  <option value="100000">₹50,000 — ₹1,00,000</option>
-                  <option value="150000">₹1,00,000 — ₹2,00,000</option>
-                  <option value="250000">₹2,00,000 — ₹2,50,000</option>
-                  <option value="300000">₹2,50,000 — ₹3,00,000</option>
-                  <option value="500000">₹3,00,000 — ₹5,00,000</option>
-                  <option value="600000">₹5,00,000 — ₹6,00,000</option>
-                  <option value="800000">₹6,00,000 — ₹8,00,000</option>
-                  <option value="1000000">₹8,00,000 — ₹10,00,000</option>
-                  <option value="1500000">Above ₹10,00,000</option>
+                  <option value="" data-i18n="selectIncome">— Select Income Range —</option>
+                  <option value="50000" data-i18n="incBelow50">Below ₹50,000</option>
+                  <option value="100000" data-i18n="inc50To100">₹50,000 — ₹1,00,000</option>
+                  <option value="150000" data-i18n="inc100To200">₹1,00,000 — ₹2,00,000</option>
+                  <option value="250000" data-i18n="inc200To250">₹2,00,000 — ₹2,50,000</option>
+                  <option value="300000" data-i18n="inc250To300">₹2,50,000 — ₹3,00,000</option>
+                  <option value="500000" data-i18n="inc300To500">₹3,00,000 — ₹5,00,000</option>
+                  <option value="600000" data-i18n="inc500To600">₹5,00,000 — ₹6,00,000</option>
+                  <option value="800000" data-i18n="inc600To800">₹6,00,000 — ₹8,00,000</option>
+                  <option value="1000000" data-i18n="inc800To1000">₹8,00,000 — ₹10,00,000</option>
+                  <option value="1500000" data-i18n="incAbove1000">Above ₹10,00,000</option>
                 </select>
                 <div class="form-error" data-i18n="formRequired">Required field</div>
               </div>
@@ -898,29 +1543,29 @@
             <div class="form-card">
               <div class="form-group">
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-                  <label class="form-label" style="margin:0">Entrepreneur / Student Name (optional)</label>
-                  <button type="button" class="voice-input-btn" onclick="WisprFlow.toggle('creditInputName')">
+                  <label class="form-label" style="margin:0" data-i18n="creditNameLbl">Entrepreneur / Student Name (optional)</label>
+                  <button type="button" class="voice-input-btn" onclick="WisprFlow.toggle('creditInputName')" data-i18n="wisprVoiceFillBtn">
                     🎙️ Wispr Voice Fill
                   </button>
                 </div>
                 <input type="text" class="form-input" id="creditInputName"
-                  placeholder="Enter full name or business alias...">
+                  placeholder="Enter full name or business alias..." data-i18n-placeholder="creditNamePh">
               </div>
 
               <div class="form-group">
-                <label class="form-label"><span>Gender</span> <span class="required">*</span></label>
+                <label class="form-label"><span data-i18n="formGender">Gender</span> <span class="required">*</span></label>
                 <select class="form-select" id="creditInputGender" required>
-                  <option value="">— Select Gender —</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female (1.0% Concession &amp; Mahila Samriddhi)</option>
-                  <option value="other">Other</option>
+                  <option value="" data-i18n="selectGender">— Select Gender —</option>
+                  <option value="male" data-i18n="formGenderM">Male</option>
+                  <option value="female" data-i18n="creditGenderF">Female (1.0% Concession &amp; Mahila Samriddhi)</option>
+                  <option value="other" data-i18n="formGenderO">Other</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label class="form-label"><span>State / UT Domicile</span> <span class="required">*</span></label>
+                <label class="form-label"><span data-i18n="formState">State / UT Domicile</span> <span class="required">*</span></label>
                 <select class="form-select" id="creditInputState" required>
-                  <option value="">— Select State / UT —</option>
+                  <option value="" data-i18n="selectStateUt">— Select State / UT —</option>
                 </select>
               </div>
 
@@ -946,7 +1591,7 @@
               <div class="form-actions">
                 <div></div>
                 <button class="btn btn-primary" onclick="CreditFormController.nextStep()">
-                  <span>Next: Project Details</span> <span>→</span>
+                  <span data-i18n="creditNextProject">Next: Project Details</span> <span>→</span>
                 </button>
               </div>
             </div>
@@ -964,8 +1609,8 @@
                     <input type="radio" name="creditPurpose" value="business" checked
                       onchange="CreditFormController.setPurpose('business')">
                     <div>
-                      <strong style="color:#fff;display:block;font-size:13px">💼 Business &amp; Enterprise</strong>
-                      <span style="font-size:11px;color:var(--text-muted)">Trade, Services, Manufacturing, Agri</span>
+                      <strong style="color:#fff;display:block;font-size:13px" data-i18n="creditPurposeBiz">💼 Business &amp; Enterprise</strong>
+                      <span style="font-size:11px;color:var(--text-muted)" data-i18n="creditPurposeBizSub">Trade, Services, Manufacturing, Agri</span>
                     </div>
                   </label>
                   <label
@@ -973,8 +1618,8 @@
                     <input type="radio" name="creditPurpose" value="education"
                       onchange="CreditFormController.setPurpose('education')">
                     <div>
-                      <strong style="color:#fff;display:block;font-size:13px">🎓 Higher Education</strong>
-                      <span style="font-size:11px;color:var(--text-muted)">Engineering, Medical, Overseas</span>
+                      <strong style="color:#fff;display:block;font-size:13px" data-i18n="creditPurposeEdu">🎓 Higher Education</strong>
+                      <span style="font-size:11px;color:var(--text-muted)" data-i18n="creditPurposeEduSub">Engineering, Medical, Overseas</span>
                     </div>
                   </label>
                 </div>
@@ -985,15 +1630,15 @@
                 <label class="form-label" data-i18n="creditSector">Project Sector / Enterprise Type <span
                     class="required">*</span></label>
                 <select class="form-select" id="creditInputSector">
-                  <option value="">— Select Industry / Sector —</option>
+                  <option value="" data-i18n="selectSector">— Select Industry / Sector —</option>
                 </select>
               </div>
 
               <!-- Education Course Row -->
               <div class="form-group" id="creditEduCourseRow" style="display:none">
-                <label class="form-label">Degree / Course Stream <span class="required">*</span></label>
+                <label class="form-label"><span data-i18n="creditCourse">Degree / Course Stream</span> <span class="required">*</span></label>
                 <select class="form-select" id="creditInputCourse">
-                  <option value="">— Select Course Stream —</option>
+                  <option value="" data-i18n="selectCourse">— Select Course Stream —</option>
                 </select>
               </div>
 
@@ -1002,14 +1647,14 @@
                 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
                   <label class="form-label" style="margin:0" data-i18n="creditCost">Estimated Project / Course Cost (₹)
                     <span class="required">*</span></label>
-                  <span style="font-size:11.5px;color:var(--accent-mint)">● Micro Finance ≤ ₹1.4L • Term Loan ≤
+                  <span style="font-size:11.5px;color:var(--accent-mint)" data-i18n="creditCostSubtag">● Micro Finance ≤ ₹1.4L • Term Loan ≤
                     ₹50L</span>
                 </div>
                 <input type="number" class="form-input" id="creditInputCost" value="140000" min="10000" max="10000000"
                   placeholder="e.g. 140000">
 
                 <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">
-                  <span style="font-size:11px;color:var(--text-muted);align-self:center">Quick Presets:</span>
+                  <span style="font-size:11px;color:var(--text-muted);align-self:center" data-i18n="quickPresets">Quick Presets:</span>
                   <button type="button" class="cost-preset-btn" onclick="CreditFormController.setCost(50000)">₹50K
                     (Artisan)</button>
                   <button type="button" class="cost-preset-btn" onclick="CreditFormController.setCost(140000)">₹1.4L
@@ -1027,10 +1672,10 @@
 
               <div class="form-actions">
                 <button class="btn btn-secondary" onclick="CreditFormController.prevStep()">
-                  <span>←</span> <span>Back</span>
+                  <span>←</span> <span data-i18n="formPrev">Back</span>
                 </button>
                 <button class="btn btn-primary" onclick="CreditFormController.nextStep()">
-                  <span>Next: Income Eligibility</span> <span>→</span>
+                  <span data-i18n="creditNextIncome">Next: Income Eligibility</span> <span>→</span>
                 </button>
               </div>
             </div>
@@ -1043,13 +1688,13 @@
                 <label class="form-label"><span data-i18n="creditIncomeLimit">Annual Household Income (₹)</span> <span
                     class="required">*</span></label>
                 <select class="form-select" id="creditInputIncome" required>
-                  <option value="">— Select Annual Household Income Range —</option>
-                  <option value="80000">Below ₹1,00,000 / year (Priority BPL Category)</option>
-                  <option value="150000">₹1,00,000 — ₹2,00,000 / year</option>
-                  <option value="250000">₹2,00,000 — ₹3,00,000 / year</option>
-                  <option value="400000" selected>₹3,00,000 — ₹5,00,000 / year (Eligible under NSFDC Cap)</option>
-                  <option value="600000">₹5,00,000 — ₹7,50,000 (Exceeds ₹5L NSFDC Ceiling)</option>
-                  <option value="1000000">Above ₹7,50,000 / year (Commercial Lending Only)</option>
+                  <option value="" data-i18n="creditIncomeSelect">— Select Annual Household Income Range —</option>
+                  <option value="80000" data-i18n="creditInc1">Below ₹1,00,000 / year (Priority BPL Category)</option>
+                  <option value="150000" data-i18n="creditInc2">₹1,00,000 — ₹2,00,000 / year</option>
+                  <option value="250000" data-i18n="creditInc3">₹2,00,000 — ₹3,00,000 / year</option>
+                  <option value="400000" selected data-i18n="creditInc4">₹3,00,000 — ₹5,00,000 / year (Eligible under NSFDC Cap)</option>
+                  <option value="600000" data-i18n="creditInc5">₹5,00,000 — ₹7,50,000 (Exceeds ₹5L NSFDC Ceiling)</option>
+                  <option value="1000000" data-i18n="creditInc6">Above ₹7,50,000 / year (Commercial Lending Only)</option>
                 </select>
                 <div style="font-size:12px;color:var(--text-muted);margin-top:6px" data-i18n="creditIncomeLimitNote">
                   ℹ️ NSFDC concessional loans are statutory channel funds reserved for SC families with annual income ≤
@@ -1059,10 +1704,10 @@
 
               <div class="form-actions">
                 <button class="btn btn-secondary" onclick="CreditFormController.prevStep()">
-                  <span>←</span> <span>Back</span>
+                  <span>←</span> <span data-i18n="formPrev">Back</span>
                 </button>
                 <button class="btn btn-success" onclick="CreditFormController.submit()">
-                  <span>⚡</span> <span>Evaluate Concessional Schemes &amp; Rates</span>
+                  <span data-i18n="creditEvaluateBtn">⚡ Evaluate Concessional Schemes &amp; Rates</span>
                 </button>
               </div>
             </div>
@@ -1079,25 +1724,116 @@
   </section>
 
   <!-- ==================== PAGE 3: DASHBOARD & APPLICATION TRACKER ==================== -->
-  <section class="page" id="page-dashboard">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">APPLICATIONS &amp; DEADLINES</div>
-        <h1 class="section-title" data-i18n="dashTitle">Application Dashboard</h1>
-        <p class="section-subtitle">Track your bookmarked schemes, application stages, and export calendar reminders.
-        </p>
+  <section class="page dash-page-section" id="page-dashboard">
+    <div class="dash-layout-container">
+      <div class="dash-header">
+        <div class="dash-pill-tag" data-i18n="dashTag">APPLICATIONS &amp; DEADLINES</div>
+        <h1 class="dash-main-heading" data-i18n="dashTitle">Application <span class="dash-heading-highlight">Dashboard</span></h1>
+        <p class="dash-main-description" data-i18n="dashSubtitle">Track your bookmarked schemes, application stages, and export calendar reminders.</p>
       </div>
+
       <div id="dashboardContent">
-        <div class="form-card" style="text-align:center;padding:48px 24px">
-          <div style="font-size:42px;margin-bottom:12px">📊</div>
-          <h3 style="font-size:20px;font-weight:800;color:#fff;margin-bottom:8px">No Application Tracked Yet</h3>
-          <p style="font-size:14px;color:var(--text-secondary);max-width:440px;margin:0 auto 24px">Complete the scheme
-            search to see matched entitlements and track applications.</p>
-          <button class="btn btn-primary" onclick="App.navigate('match')">
-            <span>Find Schemes Now</span> <span>→</span>
+        <div class="dash-empty-container">
+          <div class="dash-illustration-wrap">
+            <svg class="dash-vector-svg" viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Analytics Dashboard Illustration">
+              <defs>
+                <radialGradient id="dashBgDiscInit" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#E8F1FF" stop-opacity="0.9" />
+                  <stop offset="65%" stop-color="#EFF6FF" stop-opacity="0.6" />
+                  <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="dashBar1Init" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#3B82F6" />
+                  <stop offset="100%" stop-color="#155EEF" />
+                </linearGradient>
+                <linearGradient id="dashBar2Init" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#10B981" />
+                  <stop offset="100%" stop-color="#059669" />
+                </linearGradient>
+                <linearGradient id="dashBar3Init" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#245BFF" />
+                  <stop offset="100%" stop-color="#0E46D7" />
+                </linearGradient>
+                <linearGradient id="glassRimInit" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#245BFF" />
+                  <stop offset="50%" stop-color="#60A5FA" />
+                  <stop offset="100%" stop-color="#155EEF" />
+                </linearGradient>
+                <filter id="docShadowInit" x="20" y="10" width="160" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#155EEF" flood-opacity="0.09" />
+                </filter>
+                <filter id="glassShadowInit" x="110" y="70" width="100" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#155EEF" flood-opacity="0.18" />
+                </filter>
+              </defs>
+
+              <circle cx="110" cy="85" r="76" fill="url(#dashBgDiscInit)" />
+              <ellipse cx="110" cy="144" rx="72" ry="8" fill="#155EEF" fill-opacity="0.06" />
+
+              <g filter="url(#docShadowInit)">
+                <rect x="42" y="22" width="120" height="114" rx="14" fill="#FFFFFF" stroke="#CFE0FF" stroke-width="1.5" />
+                <rect x="56" y="34" width="44" height="6" rx="3" fill="#E0ECFF" />
+                <circle cx="146" cy="37" r="3" fill="#D7E6FF" />
+
+                <line x1="56" y1="48" x2="148" y2="48" stroke="#F1F5FF" stroke-width="1.5" stroke-linecap="round" />
+                <line x1="56" y1="62" x2="148" y2="62" stroke="#F1F5FF" stroke-width="1.5" stroke-linecap="round" />
+                <line x1="56" y1="76" x2="148" y2="76" stroke="#F1F5FF" stroke-width="1.5" stroke-linecap="round" />
+                <line x1="56" y1="90" x2="148" y2="90" stroke="#F1F5FF" stroke-width="1.5" stroke-linecap="round" />
+                <line x1="56" y1="104" x2="148" y2="104" stroke="#F1F5FF" stroke-width="1.5" stroke-linecap="round" />
+
+                <line x1="56" y1="116" x2="134" y2="116" stroke="#E1EDFF" stroke-width="2" stroke-linecap="round" />
+
+                <rect x="65" y="74" width="16" height="42" rx="4" fill="url(#dashBar1Init)" />
+                <rect x="88" y="52" width="16" height="64" rx="4" fill="url(#dashBar2Init)" />
+                <rect x="111" y="64" width="16" height="52" rx="4" fill="url(#dashBar3Init)" />
+              </g>
+
+              <g filter="url(#glassShadowInit)">
+                <line x1="162" y1="126" x2="186" y2="150" stroke="#101A3A" stroke-width="6.5" stroke-linecap="round" />
+                <line x1="164" y1="128" x2="184" y2="148" stroke="#245BFF" stroke-width="2.5" stroke-linecap="round" />
+                
+                <circle cx="145" cy="109" r="23" fill="#FFFFFF" fill-opacity="0.88" stroke="url(#glassRimInit)" stroke-width="3.5" />
+                
+                <path d="M 132 101 A 15 15 0 0 1 151 93" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.9" />
+                
+                <rect x="140" y="103" width="5" height="11" rx="2" fill="#245BFF" opacity="0.9" />
+                <rect x="147" y="107" width="5" height="7" rx="2" fill="#10B981" opacity="0.8" />
+              </g>
+
+              <path d="M 182 38 Q 182 46 190 46 Q 182 46 182 54 Q 182 46 174 46 Q 182 46 182 38 Z" fill="#245BFF" opacity="0.85" />
+              <circle cx="38" cy="78" r="3" fill="#3B82F6" opacity="0.6" />
+              <circle cx="180" cy="88" r="2.5" fill="#10B981" opacity="0.7" />
+            </svg>
+          </div>
+
+          <h3 class="dash-empty-title" data-i18n="dashEmptyTitle">No Application Tracked Yet</h3>
+          <p class="dash-empty-description" data-i18n="dashEmptyDesc">Complete the scheme search to see matched entitlements and track applications.</p>
+          
+          <button class="dash-cta-btn" onclick="App.navigate('match', event)" aria-label="Find Schemes Now">
+            <span class="dash-cta-icon-search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <span data-i18n="dashFindBtn">Find Schemes Now</span>
+            <span class="dash-cta-arrow">→</span>
           </button>
         </div>
       </div>
+    </div>
+
+    <!-- Soft Blue Flowing Waves at the Bottom -->
+    <div class="dash-waves-container" aria-hidden="true">
+      <svg class="dash-wave-svg dash-wave-layer-1" viewBox="0 0 2880 200" fill="none" preserveAspectRatio="none">
+        <path d="M0,80 C360,140 720,20 1080,80 C1440,140 1800,20 2160,80 C2520,140 2880,20 2880,80 L2880,200 L0,200 Z" fill="#EFF4FF" fill-opacity="0.85" />
+      </svg>
+      <svg class="dash-wave-svg dash-wave-layer-2" viewBox="0 0 2880 200" fill="none" preserveAspectRatio="none">
+        <path d="M0,100 C400,30 800,160 1200,90 C1600,20 2000,150 2400,90 C2640,60 2880,110 2880,110 L2880,200 L0,200 Z" fill="#E4EDFF" fill-opacity="0.75" />
+      </svg>
+      <svg class="dash-wave-svg dash-wave-layer-3" viewBox="0 0 2880 200" fill="none" preserveAspectRatio="none">
+        <path d="M0,120 C320,170 640,70 960,130 C1280,180 1600,80 1920,130 C2240,180 2560,90 2880,130 L2880,200 L0,200 Z" fill="#D7E6FF" fill-opacity="0.55" />
+      </svg>
     </div>
   </section>
 
@@ -1108,17 +1844,17 @@
     <div class="wispr-left-info">
       <div class="wispr-live-dot"></div>
       <div class="wispr-text-meta">
-        <span class="wispr-brand-title">Wispr Flow AI Voice</span>
-        <span class="wispr-live-transcript" id="wisprLiveTranscript">Listening... Speak in Hindi or English</span>
+        <span class="wispr-brand-title" data-i18n="wisprTitle">Wispr Flow AI Voice</span>
+        <span class="wispr-live-transcript" id="wisprLiveTranscript" data-i18n="wisprListening">Listening... Speak in Hindi or English</span>
       </div>
     </div>
     <canvas class="wispr-canvas-wave" id="wisprCanvas"></canvas>
-    <button class="wispr-stop-btn" onclick="WisprFlow.stop()">✕ Stop</button>
+    <button class="wispr-stop-btn" onclick="WisprFlow.stop()" data-i18n="wisprStop">✕ Stop</button>
   </div>
 
-  <!-- 2. Dedicated Samarthya AI Floating FAB & Drawer -->
+  <!-- 2. Dedicated Sanjeevani Grid AI Floating FAB & Drawer -->
   <button class="ai-floating-btn" id="aiFloatingBtn" onclick="SamarthyaAI.toggle()"
-    aria-label="Open Samarthya AI Chatbot" title="Samarthya AI Assistant">
+    aria-label="Open Sanjeevani Grid AI Chatbot" title="Sanjeevani Grid AI Assistant">
     ✨
   </button>
 
@@ -1127,8 +1863,8 @@
       <div class="ai-header-info">
         <div class="ai-avatar">✨</div>
         <div>
-          <div class="ai-title">Samarthya AI Assistant</div>
-          <div class="ai-status">● Online • 50+ Schemes Knowledge</div>
+          <div class="ai-title" data-i18n="aiTitle">Sanjeevani Grid AI Assistant</div>
+          <div class="ai-status" data-i18n="aiStatus">● Online • 50+ Schemes Knowledge</div>
         </div>
       </div>
       <button class="ai-close-btn" onclick="SamarthyaAI.close()">✕</button>
@@ -1138,6 +1874,7 @@
 
     <div class="ai-footer">
       <input type="text" class="ai-input" id="aiChatInput" placeholder="Ask about scholarships, ADIP, documents..."
+        data-i18n-placeholder="aiPlaceholder"
         onkeydown="if(event.key==='Enter')SamarthyaAI.handleSend()">
       <button class="voice-input-btn" style="padding:6px 10px" onclick="WisprFlow.toggle()"
         title="Dictate to AI">🎙️</button>
@@ -1155,26 +1892,26 @@
     <div class="a11y-panel-header">
       <div class="a11y-panel-title">
         <span>♿</span>
-        <span>Accessibility Suite</span>
+        <span data-i18n="a11yTitle">Accessibility Suite</span>
       </div>
       <button class="a11y-panel-close" onclick="AccessibilitySuite.closePanel()">✕</button>
     </div>
 
     <div class="a11y-controls-grid">
       <div class="a11y-control-row">
-        <span class="a11y-control-label">🌓 High Contrast</span>
+        <span class="a11y-control-label" data-i18n="a11yContrast">🌓 High Contrast</span>
         <button class="a11y-toggle-btn" id="a11yBtnContrast"
-          onclick="AccessibilitySuite.toggleHighContrast()">Toggle</button>
+          onclick="AccessibilitySuite.toggleHighContrast()" data-i18n="a11yToggle">Toggle</button>
       </div>
 
       <div class="a11y-control-row">
-        <span class="a11y-control-label">📖 Dyslexia Font</span>
+        <span class="a11y-control-label" data-i18n="a11yDyslexia">📖 Dyslexia Font</span>
         <button class="a11y-toggle-btn" id="a11yBtnDyslexia"
-          onclick="AccessibilitySuite.toggleDyslexiaFont()">Toggle</button>
+          onclick="AccessibilitySuite.toggleDyslexiaFont()" data-i18n="a11yToggle">Toggle</button>
       </div>
 
       <div class="a11y-control-row">
-        <span class="a11y-control-label">🔍 Text Scaling</span>
+        <span class="a11y-control-label" data-i18n="a11yTextScale">🔍 Text Scaling</span>
         <div class="font-size-group">
           <button class="font-size-btn active" onclick="AccessibilitySuite.setFontSize(0)">A</button>
           <button class="font-size-btn" onclick="AccessibilitySuite.setFontSize(1)">A+</button>
@@ -1183,19 +1920,19 @@
       </div>
 
       <div class="a11y-control-row">
-        <span class="a11y-control-label">🔊 Voice Narrator</span>
-        <button class="a11y-toggle-btn" onclick="AccessibilitySuite.readActiveSection()">Read Page</button>
+        <span class="a11y-control-label" data-i18n="a11yVoice">🔊 Voice Narrator</span>
+        <button class="a11y-toggle-btn" onclick="AccessibilitySuite.readActiveSection()" data-i18n="a11yReadPage">Read Page</button>
       </div>
 
       <div class="a11y-control-row">
-        <span class="a11y-control-label">🤟 Sign Language (ISL)</span>
-        <button class="a11y-toggle-btn" onclick="AccessibilitySuite.openISLAssistant()">Open Guide</button>
+        <span class="a11y-control-label" data-i18n="a11ySign">🤟 Sign Language (ISL)</span>
+        <button class="a11y-toggle-btn" onclick="AccessibilitySuite.openISLAssistant()" data-i18n="a11yOpenGuide">Open Guide</button>
       </div>
 
       <div class="a11y-control-row">
-        <span class="a11y-control-label">🛑 Reduced Motion</span>
+        <span class="a11y-control-label" data-i18n="a11yMotion">🛑 Reduced Motion</span>
         <button class="a11y-toggle-btn" id="a11yBtnMotion"
-          onclick="AccessibilitySuite.toggleReducedMotion()">Toggle</button>
+          onclick="AccessibilitySuite.toggleReducedMotion()" data-i18n="a11yToggle">Toggle</button>
       </div>
     </div>
   </div>
@@ -1206,14 +1943,14 @@
       <div class="footer-nav">
         <a href="#page-home" onclick="App.navigate('home', event)" data-i18n="navHome">Home</a>
         <a href="#page-relief" onclick="App.navigate('relief', event)" data-i18n="navRelief">Financial Relief</a>
-        <a href="#page-why" onclick="App.navigate('why', event)" data-i18n="navWhy">Why Samarthya</a>
+        <a href="#page-why" onclick="App.navigate('why', event)" data-i18n="navWhy">Why Sanjeevani Grid</a>
         <a href="#page-features" onclick="App.navigate('features', event)" data-i18n="navFeatures">Features &amp; Tools</a>
         <a href="#page-dashboard" onclick="App.navigate('dashboard', event)" data-i18n="navDashboard">Dashboard</a>
         <a href="#page-portals" onclick="App.navigate('portals', event)" data-i18n="navPortals">Official Portals</a>
         <a href="#page-match" onclick="App.navigate('match', event)" data-i18n="navMatch">Find Schemes</a>
-        <a href="javascript:void(0)" onclick="WhatsAppLead.openModal(event)" style="color:#25D366;font-weight:700">💬 VIP WhatsApp Alerts</a>
+        <a href="javascript:void(0)" onclick="WhatsAppLead.openModal(event)" style="color:#25D366;font-weight:700" data-i18n="navVipWhatsapp">💬 VIP WhatsApp Alerts</a>
       </div>
-      <p class="footer-text" data-i18n="poweredBy">Powered by Samarthya AI Engine • DPDP Act 2023 Compliant</p>
+      <p class="footer-text" data-i18n="poweredBy">Powered by Sanjeevani Grid AI Engine • DPDP Act 2023 Compliant</p>
     </div>
   </footer>
 
@@ -1249,6 +1986,7 @@
   <script src="js/ngo-mode.js?v=6.0"></script>
   <script src="js/report.js?v=6.0"></script>
   <script src="js/react-bits-showcase.js?v=11.0"></script>
+  <script src="js/section02-mission.js?v=12.0"></script>
   <script src="js/app.js?v=11.0"></script>
 </body>
 

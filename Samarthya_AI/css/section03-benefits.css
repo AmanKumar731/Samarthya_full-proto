@@ -1,0 +1,493 @@
+/* ==========================================================================
+   SANJEEVANI GRID — SECTION 03: BENEFITS & FINANCIAL RELIEF REDESIGN
+   Fintech-grade visual identity inspired by Stripe, Apple, Linear, Mercury.
+   Clean white surface, soft blue ambient light, navy typography, electric blue accents,
+   subtle red & green comparison accents, 4 benefit cards, and flowing waves.
+   ========================================================================== */
+
+/* ---------- Section 03 Main Container ---------- */
+#section-03.sec03-benefits-section {
+  position: relative;
+  width: 100%;
+  background-color: #F8FAFF;
+  background-image: 
+    radial-gradient(100% 70% at 50% 0%, #FFFFFF 0%, #F8FAFF 60%, #F0F5FF 100%);
+  padding: 96px 0 140px 0;
+  overflow: hidden;
+  color: #34466B;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Background Soft Blue Ambient Glow Behind Section */
+.sec03-ambient-glow {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 780px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(36, 91, 255, 0.055) 0%, rgba(21, 94, 239, 0.02) 50%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Top Subtle Grid Accent */
+.sec03-ambient-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 240px;
+  background-image: 
+    linear-gradient(to right, rgba(21, 94, 239, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(21, 94, 239, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---------- Main Centered Container ---------- */
+.sec03-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+/* ---------- Section Header ---------- */
+.sec03-header {
+  margin-bottom: 34px;
+  text-align: left;
+}
+
+/* Section Eyebrow Label */
+.sec03-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #101A3A;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.sec03-eyebrow-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #245BFF;
+  box-shadow: 0 0 8px rgba(36, 91, 255, 0.65);
+  flex-shrink: 0;
+}
+
+/* Main Heading */
+.sec03-heading {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: clamp(34px, 3.8vw, 46px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+  color: #101A3A;
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+.sec03-gradient-highlight {
+  background: linear-gradient(135deg, #155EEF 0%, #245BFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Supporting Description */
+.sec03-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 17.5px;
+  font-weight: 450;
+  line-height: 1.6;
+  color: #46577A;
+  max-width: 850px;
+  margin: 0;
+  text-align: left;
+}
+
+/* ---------- Financial Comparison Panels ---------- */
+.sec03-comparison-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin-bottom: 26px;
+}
+
+.sec03-comp-card {
+  position: relative;
+  border-radius: 22px;
+  padding: 30px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 305px;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Left Card — Commercial Market Lending */
+.sec03-comp-card.commercial {
+  background-color: #FFFAFA;
+  border: 1px solid #FFD7D7;
+  box-shadow: 0 4px 20px -2px rgba(239, 68, 68, 0.05), 0 1px 3px rgba(16, 26, 58, 0.03);
+}
+
+.sec03-comp-card.commercial:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px -6px rgba(239, 68, 68, 0.08), 0 2px 6px rgba(16, 26, 58, 0.04);
+}
+
+/* Right Card — Sanjeevani Grid Concessional Channel */
+.sec03-comp-card.subsidized {
+  background: linear-gradient(145deg, #F5F8FF 0%, #FFFFFF 100%);
+  border: 1px solid #AFCBFF;
+  box-shadow: 0 10px 30px -10px rgba(36, 91, 255, 0.12), 0 2px 8px rgba(36, 91, 255, 0.05);
+}
+
+.sec03-comp-card.subsidized:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -8px rgba(36, 91, 255, 0.16), 0 3px 10px rgba(36, 91, 255, 0.06);
+  border-color: #92B8FF;
+}
+
+/* Comparison Card Top Pills */
+.sec03-comp-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 650;
+  margin-bottom: 18px;
+  letter-spacing: 0.1px;
+}
+
+.sec03-comp-tag.commercial {
+  background: #FFF0F0;
+  border: 1px solid #FFD0D0;
+  color: #EF3340;
+}
+
+.sec03-comp-tag.subsidized {
+  background: #EDF3FF;
+  border: 1px solid #CCE0FF;
+  color: #155EEF;
+}
+
+.sec03-comp-tag-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* Interest Rates */
+.sec03-rate-row {
+  margin-bottom: 22px;
+}
+
+.sec03-rate-val {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1.2px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.sec03-rate-val.commercial {
+  color: #EF3340;
+}
+
+.sec03-rate-val.subsidized {
+  color: #155EEF;
+}
+
+.sec03-rate-unit {
+  font-size: 16px;
+  font-weight: 500;
+  color: #64748B;
+  letter-spacing: 0;
+}
+
+/* Comparison Points List */
+.sec03-comp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sec03-comp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #34466B;
+}
+
+.sec03-bullet {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.sec03-bullet.commercial {
+  background: #FFF0F0;
+  border: 1px solid #FFD0D0;
+  color: #EF4444;
+}
+
+.sec03-bullet.subsidized {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #10B981;
+}
+
+.sec03-item-text {
+  flex: 1;
+}
+
+.sec03-item-text strong {
+  font-weight: 700;
+  color: #101A3A;
+}
+
+.sec03-highlight-blue {
+  color: #155EEF;
+  font-weight: 700;
+}
+
+/* ---------- Four Equal-Width Benefit Cards ---------- */
+.sec03-benefits-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.sec03-benefit-card {
+  background-color: #FFFFFF;
+  border: 1px solid #DFE8FA;
+  border-radius: 20px;
+  padding: 28px 26px;
+  min-height: 260px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0 4px 20px -2px rgba(21, 94, 239, 0.05), 0 1px 3px rgba(16, 26, 58, 0.03);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sec03-benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px -8px rgba(36, 91, 255, 0.12), 0 2px 6px rgba(16, 26, 58, 0.04);
+  border-color: #BED5FF;
+}
+
+/* Icon Box inside Benefit Card */
+.sec03-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #EFF4FF;
+  border: 1px solid #DCE7FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sec03-benefit-card:hover .sec03-icon-box {
+  background: #E5EEFF;
+  transform: scale(1.04);
+}
+
+.sec03-card-title {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 19.5px;
+  font-weight: 750;
+  color: #101A3A;
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+}
+
+.sec03-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 450;
+  color: #526486;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ---------- Bottom Background — Flowing Blue Waves ---------- */
+.sec03-waves-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sec03-waves-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 130px;
+}
+
+.sec03-wave-layer {
+  transform-origin: center bottom;
+}
+
+.sec03-wave-1 {
+  animation: sec03WaveMove1 22s cubic-bezier(0.5, 0.2, 0.5, 0.8) infinite alternate;
+}
+
+.sec03-wave-2 {
+  animation: sec03WaveMove2 18s cubic-bezier(0.4, 0.1, 0.6, 0.9) infinite alternate;
+}
+
+.sec03-wave-3 {
+  animation: sec03WaveMove3 26s cubic-bezier(0.45, 0.15, 0.55, 0.85) infinite alternate;
+}
+
+@keyframes sec03WaveMove1 {
+  0% { transform: translate3d(-35px, 0, 0); }
+  100% { transform: translate3d(40px, -5px, 0); }
+}
+
+@keyframes sec03WaveMove2 {
+  0% { transform: translate3d(40px, 0, 0); }
+  100% { transform: translate3d(-35px, 6px, 0); }
+}
+
+@keyframes sec03WaveMove3 {
+  0% { transform: translate3d(-20px, 3px, 0); }
+  100% { transform: translate3d(25px, -3px, 0); }
+}
+
+/* ---------- Responsive Breakpoints ---------- */
+@media (max-width: 1080px) {
+  .sec03-benefits-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .sec03-benefit-card {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 820px) {
+  #section-03.sec03-benefits-section {
+    padding: 70px 0 110px 0;
+  }
+  .sec03-container {
+    padding: 0 20px;
+  }
+  .sec03-comparison-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .sec03-comp-card {
+    min-height: auto;
+    padding: 26px 24px;
+  }
+  .sec03-heading {
+    font-size: 32px;
+    letter-spacing: -1.3px;
+  }
+  .sec03-subtitle {
+    font-size: 16px;
+  }
+  .sec03-rate-val {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 580px) {
+  #section-03.sec03-benefits-section {
+    padding: 56px 0 90px 0;
+  }
+  .sec03-benefits-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .sec03-benefit-card {
+    padding: 22px 20px;
+    min-height: auto;
+  }
+  .sec03-heading {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+  .sec03-rate-val {
+    font-size: 28px;
+  }
+  .sec03-comp-item {
+    font-size: 14.5px;
+  }
+  .sec03-card-title {
+    font-size: 18px;
+  }
+  .sec03-card-desc {
+    font-size: 14px;
+  }
+  .sec03-waves-wrap {
+    height: 100px;
+  }
+}
+
+/* Reduced Motion Mode Support */
+@media (prefers-reduced-motion: reduce) {
+  .sec03-wave-1,
+  .sec03-wave-2,
+  .sec03-wave-3 {
+    animation: none !important;
+  }
+  .sec03-comp-card,
+  .sec03-benefit-card,
+  .sec03-icon-box {
+    transition: none !important;
+  }
+}

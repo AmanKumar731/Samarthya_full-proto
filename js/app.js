@@ -429,7 +429,7 @@ const App = {
       INDIAN_STATES.forEach(s => {
         const opt = document.createElement('option');
         opt.value = s.id;
-        opt.textContent = s.label;
+        opt.textContent = (window.I18N && I18N.getStateLabel) ? I18N.getStateLabel(s.id) : s.label;
         stateSelect.appendChild(opt);
       });
     }
@@ -440,7 +440,7 @@ const App = {
       EDUCATION_LEVELS.forEach(e => {
         const opt = document.createElement('option');
         opt.value = e.id;
-        opt.textContent = I18N.currentLang === 'hi' ? e.labelHi : e.label;
+        opt.textContent = (window.I18N && I18N.getEducationLabel) ? I18N.getEducationLabel(e.id) : (I18N.currentLang === 'hi' ? e.labelHi : e.label);
         eduSelect.appendChild(opt);
       });
     }
@@ -452,10 +452,11 @@ const App = {
         const item = document.createElement('div');
         item.className = 'checkbox-item';
         item.setAttribute('data-value', d.id);
+        const disLabel = (window.I18N && I18N.getDisabilityLabel) ? I18N.getDisabilityLabel(d.id) : (I18N.currentLang === 'hi' ? d.labelHi : d.label);
         item.innerHTML = `
           <input type="checkbox" value="${d.id}">
           <span class="checkbox-custom"></span>
-          <span>${I18N.currentLang === 'hi' ? d.labelHi : d.label}</span>
+          <span>${disLabel}</span>
         `;
         item.addEventListener('click', (e) => {
           const cb = item.querySelector('input[type="checkbox"]');
@@ -494,7 +495,7 @@ const App = {
       INDIAN_STATES.forEach(s => {
         const opt = document.createElement('option');
         opt.value = s.id;
-        opt.textContent = s.label;
+        opt.textContent = (window.I18N && I18N.getStateLabel) ? I18N.getStateLabel(s.id) : s.label;
         stateSelect.appendChild(opt);
       });
     }
@@ -505,7 +506,8 @@ const App = {
       PROJECT_SECTORS.forEach(sec => {
         const opt = document.createElement('option');
         opt.value = sec.id;
-        opt.textContent = `${sec.icon} ${I18N.currentLang === 'hi' ? sec.labelHi : sec.label}`;
+        const secLabel = (window.I18N && I18N.getSectorLabel) ? I18N.getSectorLabel(sec.id) : (I18N.currentLang === 'hi' ? sec.labelHi : sec.label);
+        opt.textContent = `${sec.icon} ${secLabel}`;
         sectorSelect.appendChild(opt);
       });
     }
@@ -516,7 +518,8 @@ const App = {
       EDUCATION_COURSES.forEach(c => {
         const opt = document.createElement('option');
         opt.value = c.id;
-        opt.textContent = I18N.currentLang === 'hi' ? c.labelHi : c.label;
+        const cLabel = (window.I18N && I18N.getCourseLabel) ? I18N.getCourseLabel(c.id) : (I18N.currentLang === 'hi' ? c.labelHi : c.label);
+        opt.textContent = cLabel;
         courseSelect.appendChild(opt);
       });
     }
@@ -1389,53 +1392,9 @@ const ResultsRenderer = {
 // ============ Dashboard Renderer ============
 const DashboardRenderer = {
   render(results, profile) {
-    const container = document.getElementById('dashboardContent');
-    const stats = SamarthyaMatcher.getStats(results);
-
-    let totalCashValue = 0;
-    results.slice(0, 8).forEach(r => {
-      const amtStr = r.scheme.benefits ? r.scheme.benefits.amount : '';
-      const matchNum = amtStr.match(/₹([\d,]+)/);
-      if (matchNum) {
-        totalCashValue += parseInt(matchNum[1].replace(/,/g, ''));
-      }
-    });
-    if (totalCashValue === 0) totalCashValue = 145000;
-
-    container.innerHTML = `
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:28px">
-        <div class="form-card" style="text-align:center;padding:20px">
-          <div style="font-size:24px;margin-bottom:6px">🎯</div>
-          <div style="font-family:var(--font-heading);font-size:28px;font-weight:800;color:var(--accent-mint)">${results.length}</div>
-          <div style="font-size:12px;color:var(--text-muted)">Matched Schemes</div>
-        </div>
-        <div class="form-card" style="text-align:center;padding:20px">
-          <div style="font-size:24px;margin-bottom:6px">✅</div>
-          <div style="font-family:var(--font-heading);font-size:28px;font-weight:800;color:#38BDF8">${stats.highlyEligible}</div>
-          <div style="font-size:12px;color:var(--text-muted)">High Priority Fits</div>
-        </div>
-        <div class="form-card" style="text-align:center;padding:20px">
-          <div style="font-size:24px;margin-bottom:6px">💰</div>
-          <div style="font-family:var(--font-heading);font-size:28px;font-weight:800;color:var(--accent-gold)">₹${totalCashValue.toLocaleString('en-IN')}</div>
-          <div style="font-size:12px;color:var(--text-muted)">Est. Annual Entitlements</div>
-        </div>
-      </div>
-
-      <div style="margin-top:36px">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-          <div>
-            <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0">📂 My Applications Tracker</h3>
-            <p style="font-size:13px;color:var(--text-muted);margin:2px 0 0">Live 5-stage DBT verification pipeline</p>
-          </div>
-          <button class="btn-sm btn-primary" onclick="App.navigate('match')">+ Find More Schemes</button>
-        </div>
-        <div id="trackerApplicationsList" class="tracker-container"></div>
-      </div>
-    `;
-
-    setTimeout(() => {
-      if (window.ApplicationTracker) ApplicationTracker.renderTracker();
-    }, 100);
+    if (window.ApplicationTracker) {
+      ApplicationTracker.renderTracker();
+    }
   }
 };
 

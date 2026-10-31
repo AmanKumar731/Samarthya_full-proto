@@ -50,7 +50,7 @@ const BeneficiaryReport = {
       <!DOCTYPE html>
       <html>
       <head>
-        <title>Samarthya — Government Scheme Eligibility Report (${p.name})</title>
+        <title>Sanjeevani Grid — Government Scheme Eligibility Report (${p.name})</title>
         <style>
           body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -102,7 +102,7 @@ const BeneficiaryReport = {
 
         <div class="header">
           <div>
-            <div class="logo">🏛️ SAMARTHYA PORTAL</div>
+            <div class="logo">🏛️ SANJEEVANI GRID PORTAL</div>
             <div style="font-size:12px;color:#64748b">National Welfare Scheme Entitlement Report</div>
           </div>
           <div style="text-align:right;font-size:12px;color:#64748b">
@@ -123,7 +123,7 @@ const BeneficiaryReport = {
         ${schemesListHtml}
 
         <div class="footer-note">
-          This is a computer-generated entitlement report based on verified demographic criteria. No official government fees are charged by Samarthya.<br>
+          This is a computer-generated entitlement report based on verified demographic criteria. No official government fees are charged by Sanjeevani Grid.<br>
           For official applications, submit directly on National Scholarship Portal (scholarships.gov.in) or Swavlamban (swavlambancard.gov.in).
         </div>
 
@@ -145,11 +145,11 @@ const BeneficiaryReport = {
   shareOnWhatsApp() {
     const matchedCount = App.matchResults ? App.matchResults.length : '50+';
     const text = encodeURIComponent(
-      `🎯 *Samarthya Government Scheme Matching Portal*\n\n` +
+      `🎯 *Sanjeevani Grid Government Scheme Matching Portal*\n\n` +
       `Mujhe PwD students ke liye ${matchedCount} government scholarships aur assistive appliance schemes mili hain!\n\n` +
       `Agar aapke parivaar ya jaan-pehchan mein koi special-needs student hai toh unhe yeh 100% Free link bhejein:\n` +
       `👉 https://whatsapp.com/channel/0029Vb90zigATRShQNhLtm2j\n\n` +
-      `#Samarthya #DivyangjanWelfare #GovernmentSchemes`
+      `#SanjeevaniGrid #DivyangjanWelfare #GovernmentSchemes`
     );
     window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
   },

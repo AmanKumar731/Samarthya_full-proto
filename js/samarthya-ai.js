@@ -1,6 +1,6 @@
 // ============================================
-// Samarthya — Dedicated AI Chatbot Engine
-// Domain-Restricted Intelligence: Samarthya & Government PwD Schemes
+// Sanjeevani Grid — Dedicated AI Chatbot Engine
+// Domain-Restricted Intelligence: Sanjeevani Grid & Government PwD Schemes
 // ============================================
 
 const SamarthyaAI = {
@@ -10,7 +10,7 @@ const SamarthyaAI = {
 
   // Knowledge base definitions
   knowledgeBase: {
-    projectName: "Samarthya",
+    projectName: "Sanjeevani Grid",
     projectTagline: "Intelligent Government Scheme Matching Portal for Persons with Disabilities (PwD)",
     coreFeatures: [
       "AI-Powered rule matching across 50+ central and state government welfare schemes",
@@ -27,13 +27,13 @@ const SamarthyaAI = {
 
   // Suggested starter prompts
   quickSuggestions: [
-    "What is Samarthya and how does it work?",
+    "What is Sanjeevani Grid and how does it work?",
     "How do NSFDC concessional loans work for SC entrepreneurs?",
     "Which scholarships are available for 40%+ disability?",
     "How do I apply for free assistive devices under ADIP?",
     "Which channel partner should I apply through for credit?",
     "What is the interest rate and moratorium on NSFDC loans?",
-    "Does Samarthya require my Aadhaar card?"
+    "Does Sanjeevani Grid require my Aadhaar card?"
   ],
 
   init() {
@@ -96,9 +96,9 @@ const SamarthyaAI = {
       <div class="ai-msg ai-msg-assistant animate-in">
         <div class="ai-msg-avatar">✨</div>
         <div class="ai-msg-content">
-          <div class="ai-bot-badge">Samarthya AI Intelligence</div>
-          <p><strong>Namaste! 🙏 I am your dedicated Samarthya AI Assistant.</strong></p>
-          <p>I have complete knowledge of the <strong>Samarthya Portal</strong> and all <strong>50+ Central & State Welfare Schemes</strong> for students with disabilities.</p>
+          <div class="ai-bot-badge">Sanjeevani Grid AI Intelligence</div>
+          <p><strong>Namaste! 🙏 I am your dedicated Sanjeevani Grid AI Assistant.</strong></p>
+          <p>I have complete knowledge of the <strong>Sanjeevani Grid Portal</strong> and all <strong>50+ Central & State Welfare Schemes</strong> for students with disabilities.</p>
           <p style="margin-top:8px;font-size:13px;color:var(--text-muted)">Ask me anything about eligibility criteria, required documents, scholarship allowances, assistive aids, or application procedures!</p>
         </div>
       </div>
@@ -216,16 +216,16 @@ const SamarthyaAI = {
       q.includes('emi') || q.includes('moratorium') || q.includes('term loan') || q.includes('micro finance');
 
     const isExplicitlyOffTopic = offTopicKeywords.some(w => q.includes(w)) &&
-      !q.includes('samarthya') && !q.includes('scheme') && !q.includes('disability') && !q.includes('scholarship') &&
+      !q.includes('sanjeevani') && !q.includes('samarthya') && !q.includes('scheme') && !q.includes('disability') && !q.includes('scholarship') &&
       !isCreditTopic;
 
     if (isExplicitlyOffTopic) {
       return `
         <div class="ai-restricted-notice">
           <span style="font-size:18px">🛡️</span>
-          <strong>Samarthya Domain Assistant</strong>
+          <strong>Sanjeevani Grid Domain Assistant</strong>
         </div>
-        <p>Main <strong>Samarthya Portal</strong>, <strong>PwD Welfare Schemes</strong> aur <strong>NSFDC Concessional Credit Schemes (SC Entrepreneurs)</strong> ke baare mein jaankari dene ke liye trained hoon.</p>
+        <p>Main <strong>Sanjeevani Grid Portal</strong>, <strong>PwD Welfare Schemes</strong> aur <strong>NSFDC Concessional Credit Schemes (SC Entrepreneurs)</strong> ke baare mein jaankari dene ke liye trained hoon.</p>
         <p style="margin-top:8px">Aap mujhse pooch sakte hain:</p>
         <ul style="margin-top:6px;padding-left:18px;font-size:13px;line-height:1.6">
           <li>PwD Scholarships &amp; Assistive Aids (ADIP, NSP)</li>
@@ -273,9 +273,9 @@ const SamarthyaAI = {
           <li><strong>Regional Rural Banks (RRBs) &amp; NBFC-MFIs:</strong> Aryavart Bank, NABFINS, Satin Creditcare.</li>
         </ul>
         <div class="ai-feature-card" style="margin-top:10px">
-          <strong>🛡️ Samarthya "Nearest Capable" Filter:</strong>
+          <strong>🛡️ Sanjeevani Grid "Nearest Capable" Filter:</strong>
           <p style="font-size:12px;color:var(--text-secondary);margin-top:4px">
-            Many applicants face delays because they unknowingly apply at branches with high NPA backlogs or paused fund quotas. Samarthya's Geo-Spatial Locator filters out high-NPA branches by default to route you to healthy lenders!
+            Many applicants face delays because they unknowingly apply at branches with high NPA backlogs or paused fund quotas. Sanjeevani Grid's Geo-Spatial Locator filters out high-NPA branches by default to route you to healthy lenders!
           </p>
         </div>
       `;
@@ -295,11 +295,11 @@ const SamarthyaAI = {
       `;
     }
 
-    // 5. What is Samarthya / About
-    if (q.includes('what is samarthya') || q.includes('about samarthya') || q.includes('samarthya kya hai') || q.includes('how does it work') || q.includes('kaise kaam karta')) {
+    // 5. What is Sanjeevani Grid / About
+    if (q.includes('what is sanjeevani') || q.includes('about sanjeevani') || q.includes('sanjeevani kya hai') || q.includes('what is samarthya') || q.includes('about samarthya') || q.includes('samarthya kya hai') || q.includes('how does it work') || q.includes('kaise kaam karta')) {
       return `
-        <h4 style="color:var(--accent-mint);margin-bottom:6px">🚀 About Samarthya</h4>
-        <p><strong>Samarthya</strong> is an intelligent government scheme matching portal with dual-track intelligence:</p>
+        <h4 style="color:var(--accent-mint);margin-bottom:6px">🚀 About Sanjeevani Grid</h4>
+        <p><strong>Sanjeevani Grid</strong> is an intelligent government scheme matching portal with dual-track intelligence:</p>
         <div class="ai-feature-card">
           <div style="font-weight:700;color:#fff;margin-bottom:4px">Dual Track Capabilities:</div>
           <ul style="padding-left:18px;font-size:13px;line-height:1.6">
@@ -317,9 +317,9 @@ const SamarthyaAI = {
     if (q.includes('aadhaar') || q.includes('document upload') || q.includes('privacy') || q.includes('data') || q.includes('safe')) {
       return `
         <h4 style="color:var(--accent-green);margin-bottom:6px">🔒 100% Privacy & Zero Document Uploads</h4>
-        <p><strong>No Aadhaar card or personal document upload is required on Samarthya!</strong></p>
+        <p><strong>No Aadhaar card or personal document upload is required on Sanjeevani Grid!</strong></p>
         <ul style="margin-top:8px;padding-left:18px;font-size:13px;line-height:1.6">
-          <li>Samarthya matches schemes entirely in your browser using anonymous criteria (age, disability type, percentage, state, and income slab).</li>
+          <li>Sanjeevani Grid matches schemes entirely in your browser using anonymous criteria (age, disability type, percentage, state, and income slab).</li>
           <li>Your personal data is never stored on our servers, ensuring complete alignment with India's <strong>Digital Personal Data Protection (DPDP) Act 2023</strong>.</li>
           <li>When you are ready to apply officially, you directly submit your documents on authorized official government portals like <strong>scholarships.gov.in</strong> or <strong>swavlambancard.gov.in</strong>.</li>
         </ul>
@@ -399,7 +399,7 @@ const SamarthyaAI = {
 
     // 8. General matching query / default response
     return `
-      <p>I can help you explore all <strong>50+ Government Schemes</strong> listed on Samarthya:</p>
+      <p>I can help you explore all <strong>50+ Government Schemes</strong> listed on Sanjeevani Grid:</p>
       <div style="margin-top:8px;display:flex;flex-direction:column;gap:6px">
         <div style="font-size:13px">• <strong>Scholarships & Education:</strong> Pre-Matric, Post-Matric, Top Class, National Overseas.</div>
         <div style="font-size:13px">• <strong>Assistive Devices:</strong> ADIP, ALIMCO free kits, Motorized tricycles.</div>
@@ -421,3 +421,4 @@ const SamarthyaAI = {
 };
 
 window.SamarthyaAI = SamarthyaAI;
+window.SanjeevaniGridAI = SamarthyaAI;

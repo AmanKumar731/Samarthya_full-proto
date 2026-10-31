@@ -1,0 +1,808 @@
+/* ==========================================================================
+   SANJEEVANI GRID — APPLICATION DASHBOARD
+   Premium White & Blue UI/UX Redesign
+   Scope: STRICTLY #page-dashboard & Dashboard Components
+   ========================================================================== */
+
+/* ---------- 01. Section Wrapper & Ambient Atmosphere ---------- */
+#page-dashboard.dash-page-section,
+#page-dashboard {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #F8FAFF;
+  background-image: 
+    radial-gradient(100% 70% at 50% 0%, #FFFFFF 0%, #F8FAFF 55%, #F1F5FF 100%),
+    radial-gradient(circle at 50% 160px, rgba(36, 91, 255, 0.06) 0%, transparent 60%);
+  color: #101A3A;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding-top: 110px !important;
+  padding-bottom: 120px !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Ambient glow orb behind heading */
+#page-dashboard::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 380px;
+  background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.08) 0%, rgba(232, 240, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Centered layout container */
+.dash-layout-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* ---------- 02. Header & Typography System ---------- */
+.dash-header {
+  text-align: center;
+  margin-bottom: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Applications & Deadlines Eyebrow Tag */
+.dash-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #155EEF;
+  background: rgba(232, 240, 255, 0.88);
+  border: 1px solid #CFE0FF;
+  border-radius: 999px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dash-pill-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.10);
+  background: #E8F0FF;
+}
+
+/* Main Heading */
+.dash-main-heading {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(38px, 5.2vw, 60px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2.2px;
+  color: #101A3A;
+  margin: 0 0 16px 0;
+  text-align: center;
+  max-width: 950px;
+}
+
+/* Electric-blue highlight gradient for "Dashboard" */
+.dash-heading-highlight {
+  background: linear-gradient(135deg, #155EEF 0%, #245BFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* Supporting description */
+.dash-main-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 450;
+  line-height: 1.6;
+  color: #46577A;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* ---------- 03. Main Empty-State Container ---------- */
+.dash-empty-container {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 410px;
+  margin: 0 auto;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid #CFE0FF;
+  box-shadow: 0 18px 45px rgba(37, 99, 235, 0.09);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 36px;
+  box-sizing: border-box;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.dash-empty-container:hover {
+  border-color: #B9D2FF;
+  box-shadow: 0 24px 54px rgba(37, 99, 235, 0.12);
+}
+
+/* ---------- 04. Dashboard Illustration ---------- */
+.dash-illustration-wrap {
+  position: relative;
+  width: 220px;
+  height: 165px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: dashFloat 6s ease-in-out infinite;
+}
+
+@keyframes dashFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.dash-vector-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  display: block;
+}
+
+/* ---------- 05. Empty-State Typography ---------- */
+.dash-empty-title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(26px, 3.2vw, 32px);
+  font-weight: 800;
+  color: #101A3A;
+  letter-spacing: -0.6px;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.dash-empty-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 450;
+  color: #526486;
+  line-height: 1.65;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+/* ---------- 06. Primary CTA Button ---------- */
+.dash-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #245BFF 0%, #0756E8 100%);
+  color: #FFFFFF !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 650;
+  height: 60px;
+  padding: 0 38px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 10px 24px -2px rgba(36, 91, 255, 0.35);
+  transition: transform 250ms ease, box-shadow 250ms ease, background 250ms ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.dash-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px -4px rgba(36, 91, 255, 0.46);
+  background: linear-gradient(135deg, #1C52F8 0%, #034DD6 100%);
+  color: #FFFFFF !important;
+}
+
+.dash-cta-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 18px -2px rgba(36, 91, 255, 0.32);
+}
+
+.dash-cta-btn:focus-visible {
+  outline: 3px solid #CFE0FF;
+  outline-offset: 3px;
+}
+
+.dash-cta-icon-search {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.dash-cta-arrow {
+  display: inline-block;
+  font-size: 19px;
+  line-height: 1;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dash-cta-btn:hover .dash-cta-arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- 07. Bottom Flowing Waves ---------- */
+.dash-waves-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dash-wave-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  display: block;
+}
+
+.dash-wave-layer-1 {
+  animation: waveShiftSlow 24s linear infinite alternate;
+}
+
+.dash-wave-layer-2 {
+  animation: waveShiftMed 18s linear infinite alternate-reverse;
+}
+
+.dash-wave-layer-3 {
+  animation: waveShiftFast 14s linear infinite alternate;
+}
+
+@keyframes waveShiftSlow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes waveShiftMed {
+  0% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes waveShiftFast {
+  0% {
+    transform: translateX(-15%);
+  }
+  100% {
+    transform: translateX(-35%);
+  }
+}
+
+/* ---------- 08. Active Applications View (Tracked State) ---------- */
+/* When user has tracked applications, style cards to match premium white & blue theme */
+.dash-active-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dash-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 34px;
+}
+
+.dash-stat-card {
+  background: #FFFFFF;
+  border: 1px solid #CFE0FF;
+  border-radius: 20px;
+  padding: 22px 20px;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.dash-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #B9D2FF;
+  box-shadow: 0 14px 32px rgba(37, 99, 235, 0.09);
+}
+
+.dash-stat-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.dash-stat-number {
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #101A3A;
+  margin-bottom: 4px;
+}
+
+.dash-stat-number.blue {
+  color: #155EEF;
+}
+
+.dash-stat-number.mint {
+  color: #059669;
+}
+
+.dash-stat-number.purple {
+  color: #6366F1;
+}
+
+.dash-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #71809F;
+}
+
+.dash-tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #E1EDFF;
+}
+
+.dash-tracker-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #101A3A;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dash-tracker-subtitle {
+  font-size: 13.5px;
+  color: #526486;
+  margin: 3px 0 0 0;
+}
+
+.dash-add-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #E8F0FF;
+  color: #155EEF;
+  border: 1px solid #CFE0FF;
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.dash-add-more-btn:hover {
+  background: #155EEF;
+  color: #FFFFFF;
+  border-color: #155EEF;
+  box-shadow: 0 4px 14px rgba(21, 94, 239, 0.25);
+}
+
+/* Tracked Scheme Cards */
+.dash-card-item {
+  background: #FFFFFF;
+  border: 1px solid #CFE0FF;
+  border-radius: 22px;
+  padding: 26px 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.06);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.dash-card-item:hover {
+  border-color: #B9D2FF;
+  box-shadow: 0 16px 38px rgba(37, 99, 235, 0.10);
+}
+
+.dash-card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.dash-card-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.dash-badge-welfare {
+  background: #E8F8F0;
+  color: #059669;
+  border: 1px solid #A7F3D0;
+  font-size: 12px;
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.dash-badge-credit {
+  background: #EEF2FF;
+  color: #4F46E5;
+  border: 1px solid #C7D2FE;
+  font-size: 12px;
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.dash-badge-ref {
+  background: #F1F5FF;
+  color: #155EEF;
+  border: 1px solid #CFE0FF;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.dash-card-title {
+  font-size: 19px;
+  font-weight: 750;
+  color: #101A3A;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.dash-card-ministry {
+  font-size: 13px;
+  color: #526486;
+  margin: 0;
+}
+
+.dash-card-benefit {
+  font-size: 17px;
+  font-weight: 800;
+  color: #059669;
+  margin-bottom: 4px;
+  text-align: right;
+}
+
+.dash-card-deadline {
+  font-size: 12px;
+  font-weight: 600;
+  color: #DC2626;
+  text-align: right;
+}
+
+/* Stepper within White Cards */
+.dash-stepper-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 22px 0 16px 0;
+  padding: 0 8px;
+  gap: 8px;
+}
+
+.dash-stepper-track::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  right: 30px;
+  height: 3px;
+  background: #E8F0FF;
+  z-index: 1;
+}
+
+.dash-step-node {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dash-step-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #CFE0FF;
+  color: #71809F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+.dash-step-node.done .dash-step-dot {
+  background: #155EEF;
+  border-color: #155EEF;
+  color: #FFFFFF;
+}
+
+.dash-step-node.current .dash-step-dot {
+  background: #FFFFFF;
+  border-color: #245BFF;
+  color: #245BFF;
+  box-shadow: 0 0 0 4px rgba(36, 91, 255, 0.16);
+  font-weight: 800;
+}
+
+.dash-step-text {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #71809F;
+  line-height: 1.25;
+}
+
+.dash-step-node.current .dash-step-text {
+  color: #101A3A;
+  font-weight: 700;
+}
+
+.dash-card-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #EFF4FF;
+}
+
+.dash-card-applied-date {
+  font-size: 12.5px;
+  color: #71809F;
+}
+
+.dash-card-applied-date strong {
+  color: #101A3A;
+  font-weight: 600;
+}
+
+.dash-action-group {
+  display: flex;
+  gap: 10px;
+}
+
+.dash-action-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F1F5FF;
+  color: #155EEF;
+  border: 1px solid #CFE0FF;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dash-action-btn-secondary:hover {
+  background: #E0ECFF;
+  color: #0756E8;
+  border-color: #B9D2FF;
+}
+
+.dash-action-btn-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF1F2;
+  color: #E11D48;
+  border: 1px solid #FECDD3;
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dash-action-btn-remove:hover {
+  background: #FFE4E6;
+  color: #BE123C;
+  border-color: #FDA4AF;
+}
+
+/* ---------- 09. Responsive Design ---------- */
+@media (max-width: 992px) {
+  #page-dashboard.dash-page-section,
+  #page-dashboard {
+    padding-top: 100px !important;
+    padding-bottom: 90px !important;
+  }
+
+  .dash-main-heading {
+    font-size: clamp(34px, 4.8vw, 48px);
+    letter-spacing: -1.6px;
+  }
+
+  .dash-empty-container {
+    min-height: 380px;
+    padding: 40px 24px;
+    border-radius: 22px;
+  }
+
+  .dash-stepper-track {
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  #page-dashboard.dash-page-section,
+  #page-dashboard {
+    padding-top: 86px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .dash-layout-container {
+    padding: 0 16px;
+  }
+
+  .dash-pill-tag {
+    font-size: 12px;
+    padding: 8px 16px;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+  }
+
+  .dash-main-heading {
+    font-size: 34px;
+    letter-spacing: -1.2px;
+    line-height: 1.15;
+  }
+
+  .dash-main-description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .dash-empty-container {
+    padding: 34px 18px;
+    min-height: auto;
+    border-radius: 20px;
+  }
+
+  .dash-illustration-wrap {
+    width: 170px;
+    height: 130px;
+    margin-bottom: 16px;
+  }
+
+  .dash-empty-title {
+    font-size: 24px;
+    letter-spacing: -0.4px;
+  }
+
+  .dash-empty-description {
+    font-size: 14.5px;
+    line-height: 1.55;
+    margin-bottom: 24px;
+  }
+
+  .dash-cta-btn {
+    width: 100%;
+    height: 54px;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .dash-waves-container {
+    height: 120px;
+  }
+
+  .dash-card-item {
+    padding: 20px 16px;
+  }
+
+  .dash-card-benefit,
+  .dash-card-deadline {
+    text-align: left;
+  }
+
+  .dash-stepper-track::before {
+    display: none;
+  }
+
+  .dash-stepper-track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .dash-step-node {
+    flex-direction: row;
+    gap: 12px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .dash-step-dot {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .dash-illustration-wrap {
+    animation: none !important;
+  }
+  .dash-wave-layer-1,
+  .dash-wave-layer-2,
+  .dash-wave-layer-3 {
+    animation: none !important;
+  }
+  .dash-cta-btn,
+  .dash-cta-arrow,
+  .dash-empty-container,
+  .dash-pill-tag {
+    transition: none !important;
+  }
+}

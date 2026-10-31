@@ -1,0 +1,535 @@
+/* ==========================================================================
+   SANJEEVANI GRID — SECTION 01: LANDING / HERO SECTION REDESIGN
+   Premium, futuristic, Apple/Stripe/Linear inspired blue-white identity.
+   Spacious typography-driven hero with electric-blue accents & flowing waves.
+   ========================================================================== */
+
+/* ---------- Section 01 Hero Container ---------- */
+#section-01.sec01-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 76px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #F8F9FF;
+  background-image: 
+    radial-gradient(90% 65% at 50% 0%, #FFFFFF 0%, #F8F9FF 60%, #EDF2FF 100%);
+  overflow: hidden;
+  padding: 90px 24px 100px 24px;
+  box-sizing: border-box;
+}
+
+/* ---------- Subtle Atmospheric Background Details ---------- */
+/* Central Soft Blue-Violet Ambient Glow */
+.sec01-ambient-glow {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 760px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(36, 91, 255, 0.08) 0%, rgba(99, 60, 255, 0.035) 45%, transparent 70%);
+  filter: blur(55px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Upper-Left Subtle Dotted Pattern */
+.sec01-decor-dots {
+  position: absolute;
+  top: 40px;
+  left: 5%;
+  width: 180px;
+  height: 180px;
+  background-image: radial-gradient(#CFDCF8 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+  opacity: 0.65;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+/* Upper-Right Thin Ambient Curved Arc */
+.sec01-decor-arc {
+  position: absolute;
+  top: 25px;
+  right: 6%;
+  width: 240px;
+  height: 240px;
+  border: 1px dashed rgba(36, 91, 255, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: sec01ArcSpin 70s linear infinite;
+}
+
+@keyframes sec01ArcSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Main Centered Content Container ---------- */
+.sec01-hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* ---------- 1. Announcement Pill ---------- */
+.sec01-announcement-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #DCE3F5;
+  box-shadow: 0 4px 16px -3px rgba(16, 21, 47, 0.05), 0 1px 2px rgba(16, 21, 47, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 999px;
+  padding: 6px 18px;
+  margin-bottom: 28px;
+  cursor: default;
+  transition: all 0.25s ease;
+}
+
+.sec01-announcement-pill:hover {
+  border-color: #245BFF;
+  box-shadow: 0 6px 20px -3px rgba(36, 91, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.sec01-pill-status {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sec01-pill-dot-core {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.sec01-pill-dot-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(16, 185, 129, 0.45);
+  animation: sec01PillPulse 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+@keyframes sec01PillPulse {
+  0% { transform: scale(0.85); opacity: 0.9; }
+  60% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.sec01-pill-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #27385F;
+  letter-spacing: -0.01em;
+}
+
+.sec01-pill-arrow {
+  color: #155EEF;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.sec01-announcement-pill:hover .sec01-pill-arrow {
+  transform: translateX(3px);
+}
+
+/* ---------- 2. Main Hero Heading ---------- */
+.sec01-hero-headline {
+  font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(42px, 5.4vw, 72px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -3px;
+  color: #10152F;
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+.sec01-head-row-1 {
+  display: block;
+}
+
+.sec01-head-row-2 {
+  display: block;
+}
+
+.sec01-gradient-heading {
+  background: linear-gradient(135deg, #245BFF 0%, #155EEF 50%, #1648C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* ---------- 3. Supporting Description ---------- */
+.sec01-hero-description {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(17px, 1.35vw, 19.5px);
+  font-weight: 450;
+  line-height: 1.6;
+  color: #465477;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+/* ---------- 4. Primary and Secondary CTA Buttons ---------- */
+.sec01-cta-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+/* Primary CTA Button: Welfare Eligibility */
+.sec01-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 64px;
+  padding: 0 42px;
+  background: linear-gradient(135deg, #245BFF 0%, #155EEF 50%, #1648C7 100%);
+  color: #FFFFFF !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 650;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 
+    0 12px 28px -6px rgba(21, 94, 239, 0.42),
+    0 4px 10px -2px rgba(21, 94, 239, 0.22),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.25s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.sec01-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 16px 36px -6px rgba(21, 94, 239, 0.52),
+    0 6px 14px -2px rgba(21, 94, 239, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  filter: brightness(1.03);
+}
+
+.sec01-btn-primary:active {
+  transform: translateY(0);
+}
+
+.sec01-btn-primary .sec01-btn-arrow {
+  transition: transform 0.25s ease;
+}
+
+.sec01-btn-primary:hover .sec01-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Secondary CTA Button: Concessional Credit */
+.sec01-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 64px;
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #10152F !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 650;
+  border-radius: 999px;
+  border: 1.5px solid #DCE3F5;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 
+    0 8px 22px -6px rgba(16, 21, 47, 0.06),
+    0 1px 3px rgba(16, 21, 47, 0.03);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              box-shadow 0.25s ease,
+              color 0.25s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.sec01-btn-secondary:hover {
+  transform: translateY(-2px);
+  background: #F0F5FF;
+  border-color: #245BFF;
+  color: #155EEF !important;
+  box-shadow: 
+    0 12px 28px -6px rgba(36, 91, 255, 0.18),
+    0 2px 6px rgba(16, 21, 47, 0.04);
+}
+
+.sec01-btn-secondary:active {
+  transform: translateY(0);
+}
+
+.sec01-btn-secondary .sec01-btn-arrow {
+  color: #7784A5;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.sec01-btn-secondary:hover .sec01-btn-arrow {
+  transform: translateX(4px);
+  color: #155EEF;
+}
+
+/* Icon containers inside buttons */
+.sec01-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ---------- 5. Statistics Bar ---------- */
+.sec01-stats-bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  height: 64px;
+  padding: 0 34px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #DCE3F5;
+  border-radius: 999px;
+  box-shadow: 
+    0 10px 30px -8px rgba(16, 21, 47, 0.06),
+    0 1px 3px rgba(16, 21, 47, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-sizing: border-box;
+}
+
+.sec01-stat-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sec01-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #155EEF;
+  flex-shrink: 0;
+}
+
+.sec01-stat-content {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.sec01-stat-val {
+  font-family: 'Inter', sans-serif;
+  font-size: 15.5px;
+  font-weight: 750;
+  color: #10152F;
+  letter-spacing: -0.01em;
+}
+
+.sec01-stat-txt {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #7784A5;
+}
+
+.sec01-stat-sep {
+  width: 1px;
+  height: 28px;
+  background: #DCE3F5;
+  flex-shrink: 0;
+}
+
+/* ---------- 6. Atmospheric Flowing SVG Waves at Bottom ---------- */
+.sec01-wave-canvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.sec01-wave-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  max-height: 220px;
+}
+
+.sec01-wave-path-1 {
+  animation: sec01WaveDrift1 22s cubic-bezier(0.5, 0.2, 0.5, 0.8) infinite alternate;
+}
+
+.sec01-wave-path-2 {
+  animation: sec01WaveDrift2 18s cubic-bezier(0.4, 0.1, 0.6, 0.9) infinite alternate;
+}
+
+.sec01-wave-path-3 {
+  animation: sec01WaveDrift3 26s cubic-bezier(0.45, 0.15, 0.55, 0.85) infinite alternate;
+}
+
+.sec01-wave-accent-line {
+  animation: sec01WaveDrift2 18s cubic-bezier(0.4, 0.1, 0.6, 0.9) infinite alternate;
+}
+
+@keyframes sec01WaveDrift1 {
+  0% { transform: translate3d(-35px, 0, 0); }
+  100% { transform: translate3d(40px, -6px, 0); }
+}
+
+@keyframes sec01WaveDrift2 {
+  0% { transform: translate3d(45px, 0, 0); }
+  100% { transform: translate3d(-40px, 8px, 0); }
+}
+
+@keyframes sec01WaveDrift3 {
+  0% { transform: translate3d(-20px, 4px, 0); }
+  100% { transform: translate3d(30px, -4px, 0); }
+}
+
+/* ---------- Responsive Breakpoints ---------- */
+@media (max-width: 960px) {
+  #section-01.sec01-hero-section {
+    min-height: auto;
+    padding: 70px 20px 90px 20px;
+  }
+  .sec01-hero-headline {
+    font-size: clamp(36px, 6vw, 54px);
+    letter-spacing: -2px;
+  }
+  .sec01-hero-description {
+    font-size: 17px;
+    margin-bottom: 34px;
+  }
+  .sec01-btn-primary,
+  .sec01-btn-secondary {
+    height: 58px;
+    padding: 0 32px;
+    font-size: 16px;
+  }
+  .sec01-stats-bar {
+    height: auto;
+    padding: 14px 24px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 20px;
+  }
+  .sec01-stat-sep {
+    display: none;
+  }
+  .sec01-wave-canvas {
+    height: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  #section-01.sec01-hero-section {
+    padding: 50px 16px 80px 16px;
+  }
+  .sec01-hero-headline {
+    font-size: 34px;
+    letter-spacing: -1.2px;
+    line-height: 1.1;
+  }
+  .sec01-hero-description {
+    font-size: 15.5px;
+    line-height: 1.55;
+    margin-bottom: 28px;
+  }
+  .sec01-cta-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+  .sec01-btn-primary,
+  .sec01-btn-secondary {
+    width: 100%;
+    max-width: 340px;
+    height: 56px;
+    padding: 0 24px;
+    font-size: 15.5px;
+  }
+  .sec01-stats-bar {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 18px;
+    gap: 12px;
+  }
+  .sec01-stat-cell {
+    justify-content: center;
+  }
+  .sec01-announcement-pill {
+    padding: 5px 14px;
+    font-size: 12.5px;
+  }
+  .sec01-decor-dots,
+  .sec01-decor-arc {
+    display: none;
+  }
+}
+
+/* Reduced Motion Mode Support */
+@media (prefers-reduced-motion: reduce) {
+  .sec01-wave-path-1,
+  .sec01-wave-path-2,
+  .sec01-wave-path-3,
+  .sec01-wave-accent-line,
+  .sec01-pill-dot-ring,
+  .sec01-decor-arc {
+    animation: none !important;
+  }
+  .sec01-btn-primary,
+  .sec01-btn-secondary,
+  .sec01-announcement-pill,
+  .sec01-btn-arrow {
+    transition: none !important;
+  }
+}

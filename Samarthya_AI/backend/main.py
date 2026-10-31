@@ -7,7 +7,7 @@ import os
 from datetime import date
 
 app = FastAPI(
-    title="Samarthya Welfare & Credit Scheme Matching API",
+    title="Sanjeevani Grid Welfare & Credit Scheme Matching API",
     description="Backend API for matching special-needs student profiles and SC entrepreneurs with eligible government welfare schemes & NSFDC concessional loans.",
     version="2.0.0"
 )
@@ -294,7 +294,7 @@ def evaluate_scheme(profile: StudentProfile, age: int, scheme: Dict[str, Any]) -
 @app.get("/")
 def read_root():
     return {
-        "message": "Welcome to Samarthya Scheme Matching API",
+        "message": "Welcome to Sanjeevani Grid Scheme Matching API",
         "endpoints": {
             "GET /api/metadata": "Fetch Indian states, education levels, disability types, and categories.",
             "GET /api/schemes": "Fetch all welfare schemes in the database.",

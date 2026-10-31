@@ -16,35 +16,13 @@ const ApplicationTracker = {
       if (stored) {
         this.trackedApplications = JSON.parse(stored);
       } else {
-        // Default initial items
-        this.trackedApplications = [
-          {
-            id: 'app_1',
-            schemeId: 'post_matric_pwd',
-            schemeName: 'Post-Matric Scholarship for Students with Disabilities',
-            ministry: 'Department of Empowerment of Persons with Disabilities',
-            appliedDate: '2026-02-10',
-            deadline: '2026-03-31',
-            status: 'verification', // draft, applied, verification, review, disbursed
-            benefitAmount: '₹48,000 / year',
-            refNo: 'NSP-2026-PWD-849201'
-          },
-          {
-            id: 'app_2',
-            schemeId: 'adip_scheme',
-            schemeName: 'ADIP Scheme (Free Assistive Devices)',
-            ministry: 'Ministry of Social Justice and Empowerment',
-            appliedDate: '2026-01-20',
-            deadline: '2026-04-15',
-            status: 'review',
-            benefitAmount: 'Motorized Tricycle / Braille Kit',
-            refNo: 'ALIMCO-CAMP-2026-5531'
-          }
-        ];
+        // Default to empty array so user experiences the redesigned illustrated empty state
+        this.trackedApplications = [];
         this.saveToStorage();
       }
     } catch (e) {
       console.warn('Storage error:', e);
+      this.trackedApplications = [];
     }
   },
 
@@ -142,69 +120,166 @@ const ApplicationTracker = {
   },
 
   renderTracker() {
-    let container = document.getElementById('trackerApplicationsList');
     const dashContent = document.getElementById('dashboardContent');
+    if (!dashContent) return;
 
-    if (!container && dashContent) {
-      const totalApps = this.trackedApplications.length;
-      const creditCount = this.trackedApplications.filter(a => a.type === 'credit').length;
-      const welfareCount = this.trackedApplications.filter(a => a.type !== 'credit').length;
-      const approvedCount = this.trackedApplications.filter(a => a.status === 'disbursed' || a.status === 'sanctioned').length;
-
-      dashContent.innerHTML = `
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:28px">
-          <div class="form-card" style="text-align:center;padding:20px">
-            <div style="font-size:24px;margin-bottom:6px">📋</div>
-            <div style="font-family:var(--font-heading);font-size:28px;font-weight:800;color:var(--accent-mint)">${totalApps}</div>
-            <div style="font-size:12px;color:var(--text-muted)">Total Applications Tracked</div>
-          </div>
-          <div class="form-card" style="text-align:center;padding:20px">
-            <div style="font-size:24px;margin-bottom:6px">⏳</div>
-            <div style="font-family:var(--font-heading);font-size:28px;font-weight:800;color:#38BDF8">${totalApps - approvedCount}</div>
-            <div style="font-size:12px;color:var(--text-muted)">In Active Processing</div>
-          </div>
-          <div class="form-card" style="text-align:center;padding:20px">
-            <div style="font-size:24px;margin-bottom:6px">💼</div>
-            <div style="font-family:var(--font-heading);font-size:28px;font-weight:800;color:#818cf8">${creditCount} Credit / ${welfareCount} Welfare</div>
-            <div style="font-size:12px;color:var(--text-muted)">Track Split</div>
-          </div>
-          <div class="form-card" style="text-align:center;padding:20px">
-            <div style="font-size:24px;margin-bottom:6px">🎉</div>
-            <div style="font-family:var(--font-heading);font-size:28px;font-weight:800;color:var(--accent-gold)">${approvedCount}</div>
-            <div style="font-size:12px;color:var(--text-muted)">Sanctioned / Disbursed</div>
-          </div>
-        </div>
-
-        <div style="margin-top:32px">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px">
-            <div>
-              <h3 style="font-size:20px;font-weight:800;color:#fff;margin:0">📂 My Applications Tracker</h3>
-              <p style="font-size:13px;color:var(--text-muted);margin:2px 0 0">Live 5-stage DBT / Channel Credit verification pipeline</p>
-            </div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <button class="btn-sm btn-primary" onclick="App.navigate('match')">+ Find More Schemes</button>
-            </div>
-          </div>
-          <div id="trackerApplicationsList" class="tracker-container"></div>
-        </div>
-      `;
-      container = document.getElementById('trackerApplicationsList');
-    }
-
-    if (!container) return;
-
-    if (this.trackedApplications.length === 0) {
-      container.innerHTML = `
-        <div class="no-results" style="padding:30px">
-          <div class="no-results-icon">📂</div>
-          <h4>No Active Applications Tracked</h4>
-          <p>Find schemes and click "Track Application" to monitor their approval progress here.</p>
-          <button class="btn btn-primary" onclick="App.navigate('match')" style="margin-top:10px">Find Schemes →</button>
-        </div>
-      `;
+    if (!this.trackedApplications || this.trackedApplications.length === 0) {
+      dashContent.innerHTML = this.getEmptyStateHTML();
       return;
     }
 
+    const totalApps = this.trackedApplications.length;
+    const creditCount = this.trackedApplications.filter(a => a.type === 'credit').length;
+    const welfareCount = this.trackedApplications.filter(a => a.type !== 'credit').length;
+    const approvedCount = this.trackedApplications.filter(a => a.status === 'disbursed' || a.status === 'sanctioned').length;
+
+    dashContent.innerHTML = `
+      <div class="dash-active-wrapper">
+        <div class="dash-stats-grid">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon">📋</div>
+            <div class="dash-stat-number blue">${totalApps}</div>
+            <div class="dash-stat-label">Total Applications Tracked</div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon">⏳</div>
+            <div class="dash-stat-number">${totalApps - approvedCount}</div>
+            <div class="dash-stat-label">In Active Processing</div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon">💼</div>
+            <div class="dash-stat-number purple">${creditCount} <span style="font-size:15px;color:#71809F">Credit</span> / ${welfareCount} <span style="font-size:15px;color:#71809F">Welfare</span></div>
+            <div class="dash-stat-label">Channel Track Split</div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon">🎉</div>
+            <div class="dash-stat-number mint">${approvedCount}</div>
+            <div class="dash-stat-label">Sanctioned / Disbursed</div>
+          </div>
+        </div>
+
+        <div class="dash-tracker-header">
+          <div>
+            <h3 class="dash-tracker-title">📂 My Applications Tracker</h3>
+            <p class="dash-tracker-subtitle">Live 5-stage DBT / Channel Credit statutory verification pipeline</p>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <button class="dash-add-more-btn" onclick="App.navigate('match', event)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <span>+ Find More Schemes</span>
+            </button>
+            <button class="dash-action-btn-secondary" onclick="ApplicationTracker.clearAll()" style="font-size:12px;padding:6px 14px">
+              View Empty State
+            </button>
+          </div>
+        </div>
+
+        <div id="trackerApplicationsList" class="dash-tracker-list">
+          ${this.renderApplicationCards()}
+        </div>
+      </div>
+    `;
+  },
+
+  getEmptyStateHTML() {
+    return `
+      <div class="dash-empty-container">
+        <div class="dash-illustration-wrap">
+          <svg class="dash-vector-svg" viewBox="0 0 220 170" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Analytics Dashboard Illustration">
+            <defs>
+              <radialGradient id="dashBgDiscDyn" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#E8F1FF" stop-opacity="0.9" />
+                <stop offset="65%" stop-color="#EFF6FF" stop-opacity="0.6" />
+                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+              </radialGradient>
+              <linearGradient id="dashBar1Dyn" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3B82F6" />
+                <stop offset="100%" stop-color="#155EEF" />
+              </linearGradient>
+              <linearGradient id="dashBar2Dyn" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#10B981" />
+                <stop offset="100%" stop-color="#059669" />
+              </linearGradient>
+              <linearGradient id="dashBar3Dyn" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#245BFF" />
+                <stop offset="100%" stop-color="#0E46D7" />
+              </linearGradient>
+              <linearGradient id="glassRimDyn" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#245BFF" />
+                <stop offset="50%" stop-color="#60A5FA" />
+                <stop offset="100%" stop-color="#155EEF" />
+              </linearGradient>
+              <filter id="docShadowDyn" x="20" y="10" width="160" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#155EEF" flood-opacity="0.09" />
+              </filter>
+              <filter id="glassShadowDyn" x="110" y="70" width="100" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#155EEF" flood-opacity="0.18" />
+              </filter>
+            </defs>
+
+            <circle cx="110" cy="85" r="76" fill="url(#dashBgDiscDyn)" />
+            <ellipse cx="110" cy="144" rx="72" ry="8" fill="#155EEF" fill-opacity="0.06" />
+
+            <g filter="url(#docShadowDyn)">
+              <rect x="42" y="22" width="120" height="114" rx="14" fill="#FFFFFF" stroke="#CFE0FF" stroke-width="1.5" />
+              <rect x="56" y="34" width="44" height="6" rx="3" fill="#E0ECFF" />
+              <circle cx="146" cy="37" r="3" fill="#D7E6FF" />
+
+              <line x1="56" y1="48" x2="148" y2="48" stroke="#F1F5FF" stroke-width="1.5" stroke-linecap="round" />
+              <line x1="56" y1="62" x2="148" y2="62" stroke="#F1F5FF" stroke-width="1.5" stroke-linecap="round" />
+              <line x1="56" y1="76" x2="148" y2="76" stroke="#F1F5FF" stroke-width="1.5" stroke-linecap="round" />
+              <line x1="56" y1="90" x2="148" y2="90" stroke="#F1F5FF" stroke-width="1.5" stroke-linecap="round" />
+              <line x1="56" y1="104" x2="148" y2="104" stroke="#F1F5FF" stroke-width="1.5" stroke-linecap="round" />
+
+              <line x1="56" y1="116" x2="134" y2="116" stroke="#E1EDFF" stroke-width="2" stroke-linecap="round" />
+
+              <rect x="65" y="74" width="16" height="42" rx="4" fill="url(#dashBar1Dyn)" />
+              <rect x="88" y="52" width="16" height="64" rx="4" fill="url(#dashBar2Dyn)" />
+              <rect x="111" y="64" width="16" height="52" rx="4" fill="url(#dashBar3Dyn)" />
+            </g>
+
+            <g filter="url(#glassShadowDyn)">
+              <line x1="162" y1="126" x2="186" y2="150" stroke="#101A3A" stroke-width="6.5" stroke-linecap="round" />
+              <line x1="164" y1="128" x2="184" y2="148" stroke="#245BFF" stroke-width="2.5" stroke-linecap="round" />
+              
+              <circle cx="145" cy="109" r="23" fill="#FFFFFF" fill-opacity="0.88" stroke="url(#glassRimDyn)" stroke-width="3.5" />
+              
+              <path d="M 132 101 A 15 15 0 0 1 151 93" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.9" />
+              
+              <rect x="140" y="103" width="5" height="11" rx="2" fill="#245BFF" opacity="0.9" />
+              <rect x="147" y="107" width="5" height="7" rx="2" fill="#10B981" opacity="0.8" />
+            </g>
+
+            <path d="M 182 38 Q 182 46 190 46 Q 182 46 182 54 Q 182 46 174 46 Q 182 46 182 38 Z" fill="#245BFF" opacity="0.85" />
+            <circle cx="38" cy="78" r="3" fill="#3B82F6" opacity="0.6" />
+            <circle cx="180" cy="88" r="2.5" fill="#10B981" opacity="0.7" />
+          </svg>
+        </div>
+
+        <h3 class="dash-empty-title" data-i18n="dashEmptyTitle">No Application Tracked Yet</h3>
+        <p class="dash-empty-description" data-i18n="dashEmptyDesc">Complete the scheme search to see matched entitlements and track applications.</p>
+        
+        <button class="dash-cta-btn" onclick="App.navigate('match', event)" aria-label="Find Schemes Now">
+          <span class="dash-cta-icon-search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <span data-i18n="dashFindBtn">Find Schemes Now</span>
+          <span class="dash-cta-arrow">→</span>
+        </button>
+
+        <div style="margin-top:20px">
+          <button onclick="ApplicationTracker.loadSampleApplications()" style="background:none;border:none;color:#71809F;font-size:12.5px;cursor:pointer;text-decoration:underline;">
+            (Demo: Preview Active Applications State)
+          </button>
+        </div>
+      </div>
+    `;
+  },
+
+  renderApplicationCards() {
     const welfareStages = [
       { key: 'draft', label: '1. Draft' },
       { key: 'applied', label: '2. Applied' },
@@ -221,60 +296,63 @@ const ApplicationTracker = {
       { key: 'disbursed', label: '5. Loan Disbursed' }
     ];
 
-    container.innerHTML = this.trackedApplications.map(app => {
+    return this.trackedApplications.map(app => {
       const isCredit = app.type === 'credit';
       const stages = isCredit ? creditStages : welfareStages;
       const currentStageIndex = Math.max(0, stages.findIndex(s => s.key === app.status));
 
       const stepperHtml = stages.map((s, idx) => {
-        let dotClass = 'tracker-step-dot';
-        if (idx < currentStageIndex) dotClass += ' done';
-        else if (idx === currentStageIndex) dotClass += ' current';
+        let nodeClass = 'dash-step-node';
+        if (idx < currentStageIndex) nodeClass += ' done';
+        else if (idx === currentStageIndex) nodeClass += ' current';
 
         return `
-          <div class="tracker-step-item" style="flex:1;cursor:pointer" onclick="ApplicationTracker.updateStatus('${app.id}', '${s.key}')" title="Click to update status to ${s.label}">
-            <div class="${dotClass}">${idx < currentStageIndex ? '✓' : idx + 1}</div>
-            <div class="tracker-step-title">${s.label}</div>
+          <div class="${nodeClass}" onclick="ApplicationTracker.updateStatus('${app.id}', '${s.key}')" title="Click to update status to ${s.label}">
+            <div class="dash-step-dot">${idx < currentStageIndex ? '✓' : idx + 1}</div>
+            <div class="dash-step-text">${s.label}</div>
           </div>
         `;
       }).join('');
 
       const trackBadge = isCredit
-        ? `<span class="scheme-category-badge" style="background:rgba(99,102,241,0.2);color:#818cf8;border:1px solid rgba(99,102,241,0.4);font-size:11px;margin-right:6px">💼 NSFDC Credit</span>`
-        : `<span class="scheme-category-badge" style="background:rgba(52,211,153,0.2);color:#34d399;border:1px solid rgba(52,211,153,0.4);font-size:11px;margin-right:6px">♿ Welfare</span>`;
+        ? `<span class="dash-badge-credit">💼 NSFDC Credit</span>`
+        : `<span class="dash-badge-welfare">♿ Welfare</span>`;
+
+      const safeName = (app.schemeName || '').replace(/'/g, "\\'");
 
       return `
-        <div class="tracker-card">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+        <div class="dash-card-item">
+          <div class="dash-card-top-row">
             <div>
-              <div style="display:flex;align-items:center;margin-bottom:4px">
+              <div class="dash-card-badges">
                 ${trackBadge}
-                <span class="status-badge status-likely" style="font-size:11px">Ref: ${app.refNo}</span>
+                <span class="dash-badge-ref">Ref: ${app.refNo}</span>
               </div>
-              <h3 style="font-size:17px;font-weight:700;color:#fff;margin:4px 0 2px">${app.schemeName}</h3>
-              <p style="font-size:12px;color:var(--text-muted);margin:0">${app.ministry}</p>
+              <h3 class="dash-card-title">${app.schemeName}</h3>
+              <p class="dash-card-ministry">${app.ministry}</p>
             </div>
-            <div style="text-align:right">
-              <div style="font-size:15px;font-weight:800;color:#34d399">${app.benefitAmount}</div>
-              <div style="font-size:11px;color:#f87171">${isCredit ? 'Processing: Partner Window' : 'Deadline: ' + app.deadline}</div>
+            <div>
+              <div class="dash-card-benefit">${app.benefitAmount}</div>
+              <div class="dash-card-deadline">${isCredit ? 'Processing: Partner Window' : 'Deadline: ' + app.deadline}</div>
             </div>
           </div>
 
           <!-- Stepper -->
-          <div class="tracker-stepper">${stepperHtml}</div>
+          <div class="dash-stepper-track">${stepperHtml}</div>
 
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.06)">
-            <div style="font-size:12px;color:#94a3b8">
+          <!-- Bottom Action Row -->
+          <div class="dash-card-bottom-row">
+            <div class="dash-card-applied-date">
               Applied on: <strong>${app.appliedDate}</strong>
             </div>
-            <div style="display:flex;gap:8px">
-              <button class="btn-sm btn-secondary" onclick="ApplicationTracker.openReminderModal('${app.schemeName}', '${app.deadline}')">
+            <div class="dash-action-group">
+              <button class="dash-action-btn-secondary" onclick="ApplicationTracker.openReminderModal('${safeName}', '${app.deadline}')">
                 🔔 Set Alert
               </button>
-              <button class="btn-sm btn-secondary" onclick="ApplicationTracker.downloadCalendar('${app.schemeName}', '${app.deadline}')">
+              <button class="dash-action-btn-secondary" onclick="ApplicationTracker.downloadCalendar('${safeName}', '${app.deadline}')">
                 📅 Add to Calendar
               </button>
-              <button class="btn-sm" style="background:rgba(239,68,68,0.1);color:#f87171;border:1px solid rgba(239,68,68,0.2)" onclick="ApplicationTracker.removeApplication('${app.id}')">
+              <button class="dash-action-btn-remove" onclick="ApplicationTracker.removeApplication('${app.id}')" title="Remove Application">
                 ✕
               </button>
             </div>
@@ -282,6 +360,45 @@ const ApplicationTracker = {
         </div>
       `;
     }).join('');
+  },
+
+  loadSampleApplications() {
+    this.trackedApplications = [
+      {
+        id: 'app_1',
+        type: 'welfare',
+        schemeId: 'post_matric_pwd',
+        schemeName: 'Post-Matric Scholarship for Students with Disabilities',
+        ministry: 'Department of Empowerment of Persons with Disabilities',
+        appliedDate: '2026-02-10',
+        deadline: '2026-03-31',
+        status: 'verification',
+        benefitAmount: '₹48,000 / year',
+        refNo: 'NSP-2026-PWD-849201'
+      },
+      {
+        id: 'app_2',
+        type: 'credit',
+        schemeId: 'adip_scheme',
+        schemeName: 'ADIP Scheme (Free Assistive Devices)',
+        ministry: 'Ministry of Social Justice and Empowerment',
+        appliedDate: '2026-01-20',
+        deadline: '2026-04-15',
+        status: 'review',
+        benefitAmount: 'Motorized Tricycle / Braille Kit',
+        refNo: 'ALIMCO-CAMP-2026-5531'
+      }
+    ];
+    this.saveToStorage();
+    this.renderTracker();
+  },
+
+  clearAll() {
+    if (confirm('Clear all tracked applications to view the empty state?')) {
+      this.trackedApplications = [];
+      this.saveToStorage();
+      this.renderTracker();
+    }
   },
 
   openReminderModal(schemeName, deadline) {
@@ -311,7 +428,7 @@ const ApplicationTracker = {
 
           <div class="form-group" style="margin-bottom:12px">
             <label class="form-label">Email Address for Notifications</label>
-            <input type="email" class="form-input" id="alertEmail" placeholder="student@example.com" value="student@samarthya.in">
+            <input type="email" class="form-input" id="alertEmail" placeholder="student@example.com" value="student@sanjeevanigrid.in">
           </div>
 
           <div class="form-group">
@@ -340,10 +457,10 @@ const ApplicationTracker = {
     const icsData = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//Samarthya Portal//Govt Scheme Deadlines//EN',
+      'PRODID:-//Sanjeevani Grid Portal//Govt Scheme Deadlines//EN',
       'BEGIN:VEVENT',
       `SUMMARY:Deadline: ${schemeName}`,
-      `DESCRIPTION:Samarthya Welfare Portal Application Deadline for ${schemeName}. Apply at NSP / Govt Portal.`,
+      `DESCRIPTION:Sanjeevani Grid Welfare Portal Application Deadline for ${schemeName}. Apply at NSP / Govt Portal.`,
       `DTSTART:${deadline.replace(/-/g, '')}T090000Z`,
       `DTEND:${deadline.replace(/-/g, '')}T180000Z`,
       'STATUS:CONFIRMED',
